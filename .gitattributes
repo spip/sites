@@ -1,0 +1,18 @@
+* text=auto !eol
+action/instituer_syndic_article.php -text
+images/actions-24.png -text
+images/actions-filigrane-24.png -text
+images/annuler-recherche.png -text
+images/syndic-bg-item.png -text
+images/syndic-statut-dispo-24.png -text
+images/syndic-statut-off-24.png -text
+images/syndic-statut-publie-24.png -text
+lang/syndic_fr.php -text
+/plugin.xml -text
+prive/exec/controler_syndication.html -text
+prive/listes/controler_syndication.html -text
+prive/listes/inc-boutons-filtres-statut-syndic.html -text
+prive/modeles/syndic-actions-moderer.html -text
+prive/modeles/syndic_article.html -text
+prive/style_prive_plugin_syndic.html -text
+/syndic_autoriser.php -text
