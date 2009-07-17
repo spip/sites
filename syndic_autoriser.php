@@ -10,7 +10,8 @@
  *  Pour plus de details voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
-
+// fonction pour le pipeline
+function syndic_autoriser() {}
 
 // Moderer le forum ?
 // = modifier l'objet correspondant (si forum attache a un objet)
