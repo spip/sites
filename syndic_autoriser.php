@@ -23,7 +23,7 @@ function autoriser_moderersyndic_dist($faire, $type, $id, $qui, $opt) {
 }
 
 
-function autoriser_bouton_controle_syndic_dist($faire, $type, $id, $qui, $opt){
+function autoriser_controle_syndic_bouton_dist($faire, $type, $id, $qui, $opt){
 	return 	(sql_countsel('spip_syndic_articles'));
 }
 
