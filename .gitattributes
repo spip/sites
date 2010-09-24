@@ -1,4 +1,7 @@
 * text=auto !eol
+action/editer_site.php -text
+action/instituer_site.php -text
+action/instituer_syndic.php -text
 action/instituer_syndic_article.php -text
 balise/formulaire_site.php -text
 exec/sites.php -text
@@ -12,6 +15,9 @@ images/syndic-bg-item.png -text
 images/syndic-statut-dispo-24.png -text
 images/syndic-statut-off-24.png -text
 images/syndic-statut-publie-24.png -text
+inc/instituer_site.php -text
+inc/site.php -text
+inc/syndic.php -text
 lang/sites_fr.php -text
 /plugin.xml -text
 prive/exec/controler_syndication.html -text
