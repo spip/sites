@@ -1,5 +1,5 @@
 #SET{self,#SELF|parametre_url{id_syndic_article|lesauteurs|debut_id_syndic_article,''}}
-<BOUCLE_repart(SITES){id_syndic}><a class='annule_filtre' href='[(#GET{self}|parametre_url{id_article,''})]' title="<:syndic:tout_voir|attribut_html:>">[(#CHEMIN{images/annuler-recherche.png}|balise_img|inserer_attribut{alt,<:syndic:tout_voir:>})]</a>
+<BOUCLE_repart(SITES){id_syndic}><a class='annule_filtre' href='[(#GET{self}|parametre_url{id_article,''})]' title="<:sites:tout_voir|attribut_html:>">[(#CHEMIN{images/annuler-recherche.png}|balise_img|inserer_attribut{alt,<:sites:tout_voir:>})]</a>
 <:texte_messages_publics:><h1><a href='[(#URL_SITE|ancre_url{syndic#ID_SYNDIC_ARTICLE})]'>#NOM_SITE</a></h1>
 </BOUCLE_repart>
 [<h1><:resultats_recherche:> &#171;&nbsp;(#ENV{recherche})&nbsp;&#187;</h1>]
@@ -10,7 +10,7 @@
 <B_syndic>
 [(#REM) Les boutons pour tout le lot de message d'un emetteur ---------------------------------------------------------]
 [(#ENV{lesauteurs}|ou{#ENV{id_syndic}})
-<a class='annule_filtre ajax' href='#GET{self}' title="<:syndic:tout_voir|attribut_html:>">[(#CHEMIN{images/annuler-recherche.png}|balise_img|inserer_attribut{alt,<:syndic:tout_voir:>})]</a>
+<a class='annule_filtre ajax' href='#GET{self}' title="<:sites:tout_voir|attribut_html:>">[(#CHEMIN{images/annuler-recherche.png}|balise_img|inserer_attribut{alt,<:sites:tout_voir:>})]</a>
 ]
 [
 <div class='source'>
@@ -19,7 +19,7 @@
 ]
 
 [(#INCLURE{fond=prive/listes/inc-boutons-filtres-statut-syndic}{env})]
-<h2>[(#GRAND_TOTAL|singulier_ou_pluriel{syndic:un_article_syndic,syndic:nombre_articles_syndic}|sinon{<:syndic:aucun_article_syndic:>})]</h2>
+<h2>[(#GRAND_TOTAL|singulier_ou_pluriel{sites:un_article_syndic,sites:nombre_articles_syndic}|sinon{<:sites:aucun_article_sites:>})]</h2>
 
 [<p class='pagination'>(#PAGINATION)</p>]
 <ul class='liste_items syndic_articles'>
@@ -33,6 +33,6 @@
 </B_syndic>
 
 [(#INCLURE{fond=prive/listes/inc-boutons-filtres-statut-syndic}{env})]
-<h2><:syndic:aucun_article_syndic:></h2>
+<h2><:sites:aucun_article_sites:></h2>
 
 <//B_syndic>
