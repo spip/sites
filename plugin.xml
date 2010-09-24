@@ -5,15 +5,20 @@
 	<version_base>1.0</version_base>
 	<etat>test</etat>
 	<description>Sites et syndication dans SPIP (priv&eacute; et public)</description>
-	<prefix>syndic</prefix>
+	<prefix>sites</prefix>
 
 	<pipeline>
 		<nom>autoriser</nom>
-		<inclure>syndic_autoriser.php</inclure>
+		<inclure>sites_autoriser.php</inclure>
 	</pipeline>
 
+	<pipeline>
+		<nom>declarer_url_objets</nom>
+		<inclure>sites_pipelines.php</inclure>
+	</pipeline>
+	
 	<bouton id='controler_syndication' parent='bando_publication' position="-1">
 		<icone>images/v1/site-16.png</icone>
-		<titre>syndic:icone_controler_syndication</titre>
+		<titre>sites:icone_controler_syndication</titre>
 	</bouton>
 </plugin>
