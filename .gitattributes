@@ -1,5 +1,10 @@
 * text=auto !eol
 action/instituer_syndic_article.php -text
+balise/formulaire_site.php -text
+exec/sites.php -text
+exec/sites_edit.php -text
+exec/sites_tous.php -text
+genie/syndic.php -text
 images/actions-24.png -text
 images/actions-filigrane-24.png -text
 images/annuler-recherche.png -text

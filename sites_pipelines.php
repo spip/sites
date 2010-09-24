@@ -23,4 +23,21 @@ function sites_declarer_url_objets($array){
 	return $array;
 }
 
+
+
+/**
+ * Taches periodiques de syndication 
+ *
+ * @param 
+ * @return 
+**/
+function sites_taches_generales_cron($taches_generales){
+
+	if ($GLOBALS['meta']["activer_syndic"] == "oui") {
+		$taches_generales['syndic'] = 90; 
+	}
+		
+	return $taches_generales;
+}
+
 ?>
