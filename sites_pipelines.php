@@ -101,6 +101,34 @@ function sites_accueil_encours($flux){
 	return $flux;
 }
 
+
+/**
+ * Ajouter les sites references sur les vues de rubriques
+ *
+ * @param 
+ * @return 
+**/
+function sites_affiche_enfants($flux) {
+	global $spip_lang_right;
+	
+	if ($flux['args']['exec'] == 'naviguer') {
+		$id_rubrique = $flux['id_rubrique']['exec'];
+  
+		if ($GLOBALS['meta']["activer_sites"] == 'oui') {
+			$lister_objets = charger_fonction('lister_objets','inc');
+			if (autoriser('creersitedans','rubrique',$id_rubrique)) {
+				$bouton_sites .= icone_inline(_T('info_sites_referencer'), generer_url_ecrire('sites_edit', "id_rubrique=$id_rubrique"), "site-24.png", "new", $spip_lang_right)
+					. "<br class='nettoyeur' />";
+			}
+			
+			$flux['data'] .= $lister_objets('sites',array('titre'=>_T('titre_sites_references_rubrique') ,'where'=>"statut!='refuse' AND statut != 'prop' AND syndication NOT IN ('off','sus')", 'id_rubrique'=>$id_rubrique,'par'=>'nom_site'));
+			$flux['data'] .= $bouton_sites;
+		}
+	}
+	return $flux;
+}
+
+
 /**
  * Definir les meta de configuration liee aux syndications et sites
  *

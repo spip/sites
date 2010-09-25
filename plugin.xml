@@ -46,6 +46,10 @@
 		<nom>accueil_encours</nom>
 		<inclure>sites_pipelines.php</inclure>
 	</pipeline>
+	<pipeline>
+		<nom>affiche_enfants</nom>
+		<inclure>sites_pipelines.php</inclure>
+	</pipeline>
 	
 	<pipeline>
 		<nom>declarer_url_objets</nom>
