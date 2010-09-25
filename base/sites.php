@@ -41,14 +41,13 @@ function sites_declarer_tables_interfaces($interfaces){
 	$interfaces['table_des_traitements']['NOM_SITE'][]=  _TRAITEMENT_TYPO;
 
 	// Articles syndiques : passage des donnees telles quelles, sans traitement typo
-	// A noter, dans applique_filtres la securite et conformite XHTML de ces champs
-	// est assuree par safehtml()
-	foreach(array('TITRE','DESCRIPTIF','SOURCE','URL','LESAUTEURS','URL_SOURCE','TAGS') as $balise)
-		if (!isset($table_des_traitements[$balise]['syndic_articles']))
-			$table_des_traitements[$balise]['syndic_articles'] = 'safehtml(%s)';
+	// la securite et conformite XHTML de ces champs est assuree par safehtml()
+	foreach(array('DESCRIPTIF','SOURCE','URL','URL_SOURCE','LESAUTEURS','TAGS') as $balise)
+		if (!isset($interfaces['table_des_traitements'][$balise]['syndic_articles']))
+			$interfaces['table_des_traitements'][$balise]['syndic_articles'] = 'safehtml(%s)';
 		else
-			if (strpos($table_des_traitements[$balise]['syndic_articles'],'safehtml')==false)
-				$table_des_traitements[$balise]['syndic_articles'] = 'safehtml('.$table_des_traitements[$balise]['syndic_articles'].')';
+			if (strpos($interfaces['table_des_traitements'][$balise]['syndic_articles'],'safehtml')==false)
+				$interfaces['table_des_traitements'][$balise]['syndic_articles'] = 'safehtml('.$interfaces['table_des_traitements'][$balise]['syndic_articles'].')';
 
 	return $interfaces;
 }
