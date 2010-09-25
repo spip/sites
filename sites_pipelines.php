@@ -220,8 +220,6 @@ function sites_optimiser_base_disparus($flux){
 }
 
 
-
-
 /**
  * Definir la liste des champs de recherche sur la table syndic_articles 
  *
@@ -234,6 +232,21 @@ function sites_rechercher_liste_des_champs($liste){
 	);
 
 	return $liste;
+}
+
+/**
+ * Publier et dater les rubriques qui ont un site publie
+ * 
+ * @param <type> $flux
+ * @return <type>
+ */
+function sites_calculer_rubriques($flux) {
+	
+	$r = sql_select("R.id_rubrique AS id, max(A.date) AS date_h", "spip_rubriques AS R, spip_syndic AS A", "R.id_rubrique = A.id_rubrique AND R.date_tmp <= A.date AND A.statut='publie' ", "R.id_rubrique");
+	while ($row = sql_fetch($r))
+		sql_updateq('spip_rubriques', array('statut_tmp'=>'publie', 'date_tmp'=>$row['date_h']),"id_rubrique=".$row['id']);
+
+	return $flux;
 }
 
 ?>
