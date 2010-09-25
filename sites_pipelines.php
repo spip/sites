@@ -249,4 +249,17 @@ function sites_calculer_rubriques($flux) {
 	return $flux;
 }
 
+/**
+ * Compter les sites dans une rubrique
+ * 
+ * @param array $flux
+ * @return array
+ */
+function sites_objet_compte_enfants($flux){
+	if ($flux['args']['objet']=='rubrique'
+	  AND $id_rubrique=intval($flux['args']['id_objet']))
+		$flux['data']['site'] = sql_countsel('spip_syndic', "id_rubrique=".intval($id_rubrique)." AND (statut='publie' OR statut='prop')");
+
+	return $flux;
+}
 ?>

@@ -83,6 +83,11 @@
 		<nom>calculer_rubriques</nom>
 		<inclure>sites_pipelines.php</inclure>
 	</pipeline>
+
+	<pipeline>
+		<nom>objet_compte_enfants</nom>
+		<inclure>sites_pipelines.php</inclure>
+	</pipeline>
 	
 	<bouton id='controler_syndication' parent='bando_publication' position="-1">
 		<icone>images/v1/site-16.png</icone>
