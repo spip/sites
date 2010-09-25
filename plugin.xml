@@ -20,7 +20,9 @@
 	<pipeline>
 		<nom>taches_generales_cron</nom>
 		<inclure>sites_pipelines.php</inclure>
-	</pipeline>	
+	</pipeline>
+
+	
 	<bouton id='controler_syndication' parent='bando_publication' position="-1">
 		<icone>images/v1/site-16.png</icone>
 		<titre>sites:icone_controler_syndication</titre>
