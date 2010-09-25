@@ -43,6 +43,8 @@ prive/modeles/syndic-actions-moderer.html -text
 prive/modeles/syndic_article.html -text
 prive/style_prive_plugin_syndic.html -text
 public/sites.php -text
+puce_statut/site.php -text
+puce_statut/syndic_article.php -text
 /sites_autoriser.php -text
 /sites_pipelines.php -text
 urls/generer_url_ecrire_site.php -text
