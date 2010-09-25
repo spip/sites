@@ -32,6 +32,10 @@
 		<nom>declarer_tables_objets_surnoms</nom>
 		<inclure>base/sites.php</inclure>
 	</pipeline>
+	<pipeline>
+		<nom>declarer_type_surnoms</nom>
+		<inclure>base/sites.php</inclure>
+	</pipeline>
 
 	<pipeline>
 		<nom>configurer_liste_metas</nom>

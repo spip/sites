@@ -132,7 +132,17 @@ function sites_declarer_tables_principales($tables_principales){
 function sites_declarer_tables_objets_surnoms($table){
 	$table['syndic'] = 'syndic'; 
 	$table['site'] = 'syndic';  # hum hum
-	$table['syndic_article'] = 'syndic_article'; 
+	$table['syndic_article'] = 'syndic_articles';
+	return $table;
+}
+
+/**
+ * Declarer le surnom 'site' pour le type de spip_syndic
+ * @param array $table
+ * @return string
+ */
+function sites_declarer_type_surnoms($table){
+	$table['syndic'] = 'site';
 	return $table;
 }
 
