@@ -129,21 +129,6 @@ function sites_affiche_enfants($flux) {
 }
 
 
-/**
- * Ajouter le nombre de site sur la rubrique 
- *
- * @param 
- * @return 
-**/
-function sites_objet_compte_enfants($flux) {
-	if ($flux['args']['objet']=='rubrique'){
-		$id_rubrique = $flux['args']['id_objet'];
-		$flux['data']['sites'] =
-			sql_countsel("spip_syndic",  "id_rubrique=$id_rubrique AND statut='publie'");
-	}
-	return $flux;
-}
-
 
 /**
  * Definir les meta de configuration liee aux syndications et sites
