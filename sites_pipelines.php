@@ -10,6 +10,97 @@
  *  Pour plus de details voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
+
+/**
+ * Ajouter les sites et syndication a valider sur les rubriques 
+ *
+ * @param 
+ * @return 
+**/
+function sites_rubrique_encours($flux){
+	if ($flux['args']['type'] == 'rubrique') {
+		$lister_objets = charger_fonction('lister_objets','inc');
+
+		$id_rubrique = $flux['args']['id_objet'];
+	
+		//
+		// Les sites references a valider
+		//
+		if ($GLOBALS['meta']['activer_sites'] != 'non') {
+			$flux['data'] .= $lister_objets('sites',array('titre'=> _T('info_site_valider') ,'statut'=>'prop','id_rubrique'=>$id_rubrique, 'par'=>'nom_site'));
+		}
+
+		//
+		// Les sites a probleme
+		//
+		if ($GLOBALS['meta']['activer_sites'] != 'non'
+		AND autoriser('publierdans','rubrique',$id_rubrique)) {
+			$flux['data'] .= $lister_objets('sites',array('titre'=> _T('avis_sites_syndiques_probleme') ,'statut'=>'publie', 'syndication'=>array('off','sus'),'id_rubrique'=>$id_rubrique, 'par'=>'nom_site'));
+		}
+
+		// Les articles syndiques en attente de validation
+		if ($id_rubrique == 0
+		AND autoriser('publierdans','rubrique',$id_rubrique)) {
+
+			$cpt = sql_countsel("spip_syndic_articles", "statut='dispo'");
+			if ($cpt)
+				$flux['data'] .= "<br /><small><a href='" .
+					generer_url_ecrire("sites_tous") .
+					"' style='color: black;'>" .
+					$cpt .
+					" " .
+					_T('info_liens_syndiques_1') .
+					" " .
+					_T('info_liens_syndiques_2') .
+					"</a></small>";
+		}
+	}
+	
+	return $flux;
+}
+
+
+/**
+ * Ajouter les sites et syndication a valider sur la page d'accueil 
+ *
+ * @param 
+ * @return 
+**/
+function sites_accueil_encours($flux){
+	$lister_objets = charger_fonction('lister_objets','inc');
+	
+	//
+	// Les sites references a valider
+	//
+	if ($GLOBALS['meta']['activer_sites'] != 'non') {
+		$flux .= $lister_objets('sites',array('titre'=>afficher_plus_info(generer_url_ecrire('sites_tous')). _T('info_site_valider') ,'statut'=>'prop', 'par'=>'nom_site'));
+	}
+
+	if ($GLOBALS['visiteur_session']['statut'] == '0minirezo') {
+		//
+		// Les sites a probleme
+		//
+		if ($GLOBALS['meta']['activer_sites'] != 'non') {
+			$flux .= $lister_objets('sites',array('titre'=>afficher_plus_info(generer_url_ecrire('sites_tous')). _T('avis_sites_syndiques_probleme') ,'statut'=>'publie', 'syndication'=>array('off','sus'), 'par'=>'nom_site'));
+		}
+
+		// Les articles syndiques en attente de validation
+		$cpt = sql_countsel("spip_syndic_articles", "statut='dispo'");
+		if ($cpt)
+			$flux .= "\n<br /><small><a href='"
+			. generer_url_ecrire("sites_tous","")
+			. "' style='color: black;'>"
+			. $cpt
+			. " "
+			. _T('info_liens_syndiques_1')
+			. " "
+			. _T('info_liens_syndiques_2')
+			. "</a></small>";
+
+	}
+	return $flux;
+}
+
 /**
  * Definir les meta de configuration liee aux syndications et sites
  *

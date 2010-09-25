@@ -39,6 +39,15 @@
 	</pipeline>
 	
 	<pipeline>
+		<nom>rubrique_encours</nom>
+		<inclure>sites_pipelines.php</inclure>
+	</pipeline>
+	<pipeline>
+		<nom>accueil_encours</nom>
+		<inclure>sites_pipelines.php</inclure>
+	</pipeline>
+	
+	<pipeline>
 		<nom>declarer_url_objets</nom>
 		<inclure>sites_pipelines.php</inclure>
 	</pipeline>
