@@ -4,9 +4,16 @@ action/instituer_site.php -text
 action/instituer_syndic.php -text
 action/instituer_syndic_article.php -text
 balise/formulaire_site.php -text
+base/sites.php -text
+base/sites_upgrade.php -text
 exec/sites.php -text
 exec/sites_edit.php -text
 exec/sites_tous.php -text
+formulaires/configurer_sites.html -text
+formulaires/configurer_sites.php -text
+formulaires/editer_site.html -text
+formulaires/editer_site.php -text
+formulaires/editer_site_fonctions.php -text
 genie/syndic.php -text
 images/actions-24.png -text
 images/actions-filigrane-24.png -text
@@ -24,11 +31,6 @@ prive/contenu/site.html -text
 prive/contenu/syndic_article.html -text
 prive/editer/site.html -text
 prive/exec/controler_syndication.html -text
-prive/formulaires/configurer_sites.html -text
-prive/formulaires/configurer_sites.php -text
-prive/formulaires/editer_site.html -text
-prive/formulaires/editer_site.php -text
-prive/formulaires/editer_site_fonctions.php -text
 prive/infos/site.html -text
 prive/infos/site_fonctions.php -text
 prive/listes/controler_syndication.html -text
@@ -39,6 +41,7 @@ prive/listes/syndic_articles_fonctions.php -text
 prive/modeles/syndic-actions-moderer.html -text
 prive/modeles/syndic_article.html -text
 prive/style_prive_plugin_syndic.html -text
+public/sites.php -text
 /sites_autoriser.php -text
 /sites_pipelines.php -text
 urls/generer_url_ecrire_site.php -text

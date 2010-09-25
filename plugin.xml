@@ -6,12 +6,38 @@
 	<etat>test</etat>
 	<description>Sites et syndication dans SPIP (priv&eacute; et public)</description>
 	<prefix>sites</prefix>
+	
+	<install>base/sites_upgrade.php</install>
+	
+	<!-- boucles SYNDICATION et SYNDIC_ARTICLES -->
+	<fonctions>public/sites.php</fonctions>
 
+	<pipeline><nom>pre_syndication</nom><action></action></pipeline>
+	<pipeline><nom>post_syndication</nom><action></action></pipeline>
+	
 	<pipeline>
 		<nom>autoriser</nom>
 		<inclure>sites_autoriser.php</inclure>
 	</pipeline>
 
+	<pipeline>
+		<nom>declarer_tables_principales</nom>
+		<inclure>base/sites.php</inclure>
+	</pipeline>
+	<pipeline>
+		<nom>declarer_tables_interfaces</nom>
+		<inclure>base/sites.php</inclure>
+	</pipeline>
+	<pipeline>
+		<nom>declarer_tables_objets_surnoms</nom>
+		<inclure>base/sites.php</inclure>
+	</pipeline>
+
+	<pipeline>
+		<nom>configurer_liste_metas</nom>
+		<inclure>sites_pipelines.php</inclure>
+	</pipeline>
+	
 	<pipeline>
 		<nom>declarer_url_objets</nom>
 		<inclure>sites_pipelines.php</inclure>
@@ -21,7 +47,15 @@
 		<nom>taches_generales_cron</nom>
 		<inclure>sites_pipelines.php</inclure>
 	</pipeline>
-
+	<pipeline>
+		<nom>optimiser_base_disparus</nom>
+		<inclure>sites_pipelines.php</inclure>
+	</pipeline>
+	
+	<pipeline>
+		<nom>rechercher_liste_des_champs</nom>
+		<inclure>sites_pipelines.php</inclure>
+	</pipeline>
 	
 	<bouton id='controler_syndication' parent='bando_publication' position="-1">
 		<icone>images/v1/site-16.png</icone>
