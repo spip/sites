@@ -28,4 +28,4 @@ prive/modeles/syndic_article.html -text
 prive/style_prive_plugin_syndic.html -text
 /sites_autoriser.php -text
 /sites_pipelines.php -text
-urls/site.php -text
+urls/generer_url_ecrire_site.php -text
