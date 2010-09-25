@@ -31,6 +31,13 @@ function boucle_SYNDICATION_dist($id_boucle, &$boucles) {
 	return calculer_boucle($id_boucle, $boucles); 
 }
 
+function boucle_SITES_dist($id_boucle, &$boucles) {
+	$boucle = &$boucles[$id_boucle];
+	$boucle->type_requete = 'syndication'; // pas sur que ce soit indispensable
+	if (!function_exists($f='boucle_SYNDICATION'))
+		$f.='_dist';
+	return $f($id_boucle, $boucles);
+}
 //
 // <BOUCLE(SYNDIC_ARTICLES)>
 //

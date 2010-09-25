@@ -18,6 +18,7 @@
  */
 function sites_declarer_tables_interfaces($interfaces){
 
+	$interfaces['table_des_tables']['sites']='syndic'; // compat pour les boucles (SITES)
 	$interfaces['table_des_tables']['syndication']='syndic';
 	$interfaces['table_des_tables']['syndic']='syndic';
 	$interfaces['table_des_tables']['syndic_articles']='syndic_articles';
