@@ -184,7 +184,7 @@ function revisions_sites ($id_syndic, $c=false) {
 	// Si le site est publie, invalider les caches et demander sa reindexation
 	$t = sql_getfetsel("statut", "spip_syndic", "id_syndic=$id_syndic");
 	if ($t == 'publie') {
-		$invalideur = "id='id_syndic/$id_syndic'";
+		$invalideur = "id='site/$id_syndic'";
 		$indexation = true;
 	}
 	include_spip('inc/modifier');
@@ -246,7 +246,7 @@ function revisions_sites ($id_syndic, $c=false) {
 	// Invalider les caches
 	if ($statut == 'publie') {
 		include_spip('inc/invalideur');
-		suivre_invalideur("id='id_syndic/$id_syndic'");
+		suivre_invalideur("id='site/$id_syndic'");
 	}
 
 	// Notifications
