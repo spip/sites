@@ -87,6 +87,10 @@
 		<nom>trig_propager_les_secteurs</nom>
 		<inclure>sites_pipelines.php</inclure>
 	</pipeline>
+	<pipeline>
+		<nom>rechercher_liste_des_champs</nom>
+		<inclure>sites_pipelines.php</inclure>
+	</pipeline>
 	
 	
 	<bouton id='controler_syndication' parent='bando_publication' position="-1">

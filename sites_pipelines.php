@@ -258,4 +258,19 @@ function sites_trig_propager_les_secteurs($flux){
 	return $flux;
 }
 
+
+/**
+ * Liste et ponderation des champs pour la recherche
+ *
+ * @param array $tables
+ * @return int
+ */
+function sites_rechercher_liste_des_champs($tables){
+	$tables['site'] = array(
+				'nom_site' => 5, 'url_site' => 1, 'descriptif' => 3
+			);
+
+	return $tables;
+}
+
 ?>
