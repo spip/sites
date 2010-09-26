@@ -206,17 +206,20 @@ function sites_optimiser_base_disparus($flux){
 
 
 /**
- * Definir la liste des champs de recherche sur la table syndic_articles 
+ * Liste et ponderation des champs pour la recherche
  *
- * @param array $liste
- * @return array
+ * @param array $tables
+ * @return int
  */
-function sites_rechercher_liste_des_champs($liste){
-	$liste['syndic_article'] = array(
+function sites_rechercher_liste_des_champs($tables){
+	$tables['syndic_article'] = array(
 	  'titre' => 5, 'descriptif' => 1
 	);
+	$tables['site'] = array(
+				'nom_site' => 5, 'url_site' => 1, 'descriptif' => 3
+			);
 
-	return $liste;
+	return $tables;
 }
 
 /**
@@ -258,19 +261,5 @@ function sites_trig_propager_les_secteurs($flux){
 	return $flux;
 }
 
-
-/**
- * Liste et ponderation des champs pour la recherche
- *
- * @param array $tables
- * @return int
- */
-function sites_rechercher_liste_des_champs($tables){
-	$tables['site'] = array(
-				'nom_site' => 5, 'url_site' => 1, 'descriptif' => 3
-			);
-
-	return $tables;
-}
 
 ?>
