@@ -112,10 +112,11 @@ function sites_affiche_enfants($flux) {
 	global $spip_lang_right;
 	
 	if ($flux['args']['exec'] == 'naviguer') {
-		$id_rubrique = $flux['id_rubrique']['exec'];
+		$id_rubrique = $flux['args']['id_rubrique'];
   
 		if ($GLOBALS['meta']["activer_sites"] == 'oui') {
 			$lister_objets = charger_fonction('lister_objets','inc');
+			$bouton_sites = '';
 			if (autoriser('creersitedans','rubrique',$id_rubrique)) {
 				$bouton_sites .= icone_inline(_T('info_sites_referencer'), generer_url_ecrire('sites_edit', "id_rubrique=$id_rubrique"), "site-24.png", "new", $spip_lang_right)
 					. "<br class='nettoyeur' />";
