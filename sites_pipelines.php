@@ -214,14 +214,15 @@ function sites_optimiser_base_disparus($flux){
  */
 function sites_rechercher_liste_des_champs($tables){
 	$tables['syndic_article'] = array(
-	  'titre' => 5, 'descriptif' => 1
+		'titre' => 5, 'descriptif' => 1
 	);
 	$tables['site'] = array(
-				'nom_site' => 5, 'url_site' => 1, 'descriptif' => 3
-			);
+		'nom_site' => 5, 'url_site' => 1, 'descriptif' => 3
+	);
 
 	return $tables;
 }
+
 
 /**
  * Publier et dater les rubriques qui ont un site publie
@@ -246,9 +247,14 @@ function sites_calculer_rubriques($flux) {
  */
 function sites_objet_compte_enfants($flux){
 	if ($flux['args']['objet']=='rubrique'
-	  AND $id_rubrique=intval($flux['args']['id_objet']))
-		$flux['data']['site'] = sql_countsel('spip_syndic', "id_rubrique=".intval($id_rubrique)." AND (statut='publie' OR statut='prop')");
-
+	  AND $id_rubrique=intval($flux['args']['id_objet'])) {
+		// juste les publies ?
+		if (array_key_exists('statut', $flux['args']) and ($flux['args']['statut'] == 'publie')) {
+			$flux['data']['site'] = sql_countsel('spip_syndic', "id_rubrique=".intval($id_rubrique)." AND (statut='publie')");
+		} else {
+			$flux['data']['site'] = sql_countsel('spip_syndic', "id_rubrique=".intval($id_rubrique)." AND (statut='publie' OR statut='prop')");
+		}
+	}
 	return $flux;
 }
 
