@@ -11,7 +11,7 @@
 \***************************************************************************/
 
 // fonction pour le pipeline
-function syndic_autoriser() {}
+function sites_autoriser() {}
 
 // Moderer le forum ?
 // = modifier l'objet correspondant (si forum attache a un objet)
