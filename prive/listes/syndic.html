@@ -22,7 +22,8 @@
 		<tr class="[(#COMPTEUR_BOUCLE|alterner{row_odd,row_even})]">
 			<td class='statut'>[(#ID_SYNDIC|puce_changement_statut{#STATUT,#ID_RUBRIQUE,site})]</td>
 			<td class='nom_site principale'>[(#LOGO_SITE|image_reduire{26,20})]
-				<a href="[(#ID_SYNDIC|generer_url_entite{site})]">#NOM_SITE</a> [<span class='visiter'>&#91;<a href='(#URL_SITE)'><:lien_visite_site:></a>&#93;</span>]
+				<a href="[(#ID_SYNDIC|generer_url_entite{site})]"
+					title="<:info_numero_abbreviation|attribut_html:> #ID_SYNDIC">#NOM_SITE</a> [<span class='visiter'>&#91;<a href='(#URL_SITE)'><:lien_visite_site:></a>&#93;</span>]
 			</td>
 			<td class='syndication'>[(#SYNDICATION|match{off|sus}|oui)
 				<span class="etat #SYNDICATION">[(#CHEMIN{puce-orange-anim.gif}|balise_img|inserer_attribut{alt,<:info_panne_site_syndique:>})<:info_probleme_grave:>]</span>
