@@ -48,3 +48,4 @@ puce_statut/syndic_article.php -text
 /sites_autoriser.php -text
 /sites_pipelines.php -text
 urls/generer_url_ecrire_site.php -text
+urls/generer_url_ecrire_syndic.php -text
