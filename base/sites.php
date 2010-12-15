@@ -36,6 +36,11 @@ function sites_declarer_tables_interfaces($interfaces){
 	$interfaces['table_titre']['site'] = "nom_site AS titre, '' AS lang";
 	$interfaces['table_titre']['syndic'] = "nom_site AS titre, '' AS lang";
 
+	$interfaces['table_statut']['spip_syndic'][] = array('champ'=>'statut','publie'=>'publie','previsu'=>'publie,prop','exception'=>'statut');
+	$interfaces['table_statut']['spip_syndic_articles'][] = array('champ'=>'statut','publie'=>'publie','previsu'=>'publie,prop','exception'=>'statut');
+	$interfaces['table_statut']['spip_syndic_articles'][] = array('champ'=>array(array('spip_syndic','id_syndic'),'statut'),'publie'=>'publie','previsu'=>'publie,prop','exception'=>'statut');
+
+
 	$interfaces['tables_jointures']['spip_syndic_articles'][]= 'syndic';
 
 	$interfaces['table_des_traitements']['NOM_SITE'][]=  _TRAITEMENT_TYPO;
