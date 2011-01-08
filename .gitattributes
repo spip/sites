@@ -42,6 +42,16 @@ prive/listes/syndic_articles_fonctions.php -text
 prive/modeles/syndic-actions-moderer.html -text
 prive/modeles/syndic_article.html -text
 prive/style_prive_plugin_syndic.html -text
+prive/themes/spip/images/site-16.png -text
+prive/themes/spip/images/site-24.png -text
+prive/themes/spip/images/site-add-16.png -text
+prive/themes/spip/images/site-add-24.png -text
+prive/themes/spip/images/site-del-16.png -text
+prive/themes/spip/images/site-del-24.png -text
+prive/themes/spip/images/site-edit-16.png -text
+prive/themes/spip/images/site-edit-24.png -text
+prive/themes/spip/images/site-new-16.png -text
+prive/themes/spip/images/site-new-24.png -text
 public/sites.php -text
 puce_statut/site.php -text
 puce_statut/syndic_article.php -text
