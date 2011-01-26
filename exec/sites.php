@@ -134,11 +134,8 @@ function afficher_site($id_syndic, $id_rubrique, $nom_site, $row){
 	$fond = "<div id='wysiwyg'>$fond</div>";
 
 	$onglet_contenu =
-		(_INTERFACE_ONGLETS?
-		($statut == 'prop' ? "<p class='site_prop'>"._T('info_site_propose')." <b>".affdate($date_heure)."&nbsp;</b></p>" : "")
-		 . $fond:"")
 
-		. (($syndication == "oui" OR $syndication == "off" OR $syndication == "sus") ?
+		(($syndication == "oui" OR $syndication == "off" OR $syndication == "sus") ?
 		  "<p class='site_syndique'><a href='".htmlspecialchars($url_syndic)."'>"
 		  .	http_img_pack('feed.png', 'RSS').	'</a>'._T('info_site_syndique').'</p>'
 
@@ -164,45 +161,29 @@ function afficher_site($id_syndic, $id_rubrique, $nom_site, $row){
 			. "</div>"
 
 			: choix_feed($id_syndic, $id_rubrique, $nom_site, $row))
-		. (_INTERFACE_ONGLETS?"":($flag_administrable ? options_moderation($row) : ""))
+		. (($flag_administrable ? options_moderation($row) : ""))
 
 	  ;
 
 	$onglet_proprietes =
-		(_INTERFACE_ONGLETS?"":
+		(
 		$fond
 		. ($statut == 'prop' ? "<p class='site_prop'>"._T('info_site_propose')." <b>".affdate($date_heure)."&nbsp;</b></p>" : "")
 		)
-		. afficher_site_rubrique($id_syndic, $id_rubrique, $id_secteur)
 		. ($dater ? $dater($id_syndic, $flag_editable, $statut, 'syndic', 'sites', $date_heure) : "")
-	  . (_INTERFACE_ONGLETS?($flag_administrable ? options_moderation($row) : ""):"")
 	  . pipeline('affiche_milieu',array('args'=>array('exec'=>'sites','id_syndic'=>$id_syndic),'data'=>''))
 	  ;
-
-	$onglet_documents = "" ;
-	$onglet_interactivite = "";
 
 	echo
 	  pipeline('afficher_fiche_objet',array('args'=>array('type'=>'site','id'=>$id_syndic),'data'=>
 	  "<div class='fiche_objet'>"
 	  . $haut
-	  . afficher_onglets_pages(array(
-	  	'voir' => _T('onglet_contenu'),
-	  	'props' => _T('onglet_proprietes'),
-	  	'docs' => _T('onglet_documents'),
-	  	'interactivite' => _T('onglet_interactivite'),
-			),
-	  _INTERFACE_ONGLETS?
-	  array(
-	    'voir'=>$onglet_contenu,
-	    'props'=>$onglet_proprietes,
-	    'docs'=>$onglet_documents,
-	    'interactivite'=>$onglet_interactivite,
-			)
-	  :array(
-	    'props'=>$onglet_proprietes,
-	    'voir'=>$onglet_contenu	    )
-	   )
+		. "<div class='nettoyeur'></div>"
+		.	$onglet_proprietes
+		. "<div class='nettoyeur'></div>"
+		.	$onglet_contenu
+		.	pipeline('afficher_complement_objet',array('args'=>array('type'=>'site','id'=>$id_syndic),'data'=>"<div class='nettoyeur'></div>"))
+		. "<div class='nettoyeur'></div>"
 	  . "</div>"));
 }
 
@@ -316,31 +297,4 @@ function choix_feed($id_syndic, $id_rubrique, $nom_site, $row) {
 	return debut_cadre_relief('', true) . $res . fin_cadre_relief(true);
 }
 
-// http://doc.spip.org/@afficher_site_rubrique
-function afficher_site_rubrique($id_syndic, $id_rubrique, $id_secteur)
-{
-	global $spip_lang_right;
-
-	if (!_INTERFACE_ONGLETS) return "";
-
-	$chercher_rubrique = charger_fonction('chercher_rubrique', 'inc');
-
-	$form = $chercher_rubrique($id_rubrique, 'site', false);
-	if (strpos($form,'<select')!==false) {
-		$form .= "<div style='text-align: $spip_lang_right;'>"
-			. '<input class="fondo" type="submit" value="'._T('bouton_choisir').'"/>'
-			. "</div>";
-	}
-
-	$msg = _T('titre_cadre_interieur_rubrique');
-
-	$form = "<input type='hidden' name='editer_article' value='oui' />\n" . $form;
-	$form = redirige_action_post("editer_site", $id_syndic, 'sites', $form, " class='submit_plongeur'");
-
-	if ($id_rubrique == 0) $logo = "racine-24.png";
-	elseif ($id_secteur == $id_rubrique) $logo = "secteur-24.png";
-	else $logo = "rubrique-24.png";
-
-	return debut_cadre_couleur($logo, true, "", $msg) . $form .fin_cadre_couleur(true);
-}
 ?>
