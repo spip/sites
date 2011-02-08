@@ -36,6 +36,7 @@ prive/infos/site.html -text
 prive/infos/site_fonctions.php -text
 prive/listes/controler_syndication.html -text
 prive/listes/inc-boutons-filtres-statut-syndic.html -text
+prive/listes/sites.html -text
 prive/listes/syndic.html -text
 prive/listes/syndic_articles.html -text
 prive/listes/syndic_articles_fonctions.php -text
