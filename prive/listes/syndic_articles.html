@@ -20,7 +20,7 @@
 		</tr>
 	</thead>
 	<tbody>
-	<BOUCLE_liste_syndicart(SYNDIC_ARTICLES){id_syndic_article?}{id_syndic?}{where?}{statut?}{tri #ENV{par,date},#GET{defaut_tri}}{pagination #ENV{nb,10}}>
+	<BOUCLE_liste_syndicart(SYNDIC_ARTICLES){id_syndic_article?}{id_syndic?}{where?}{recherche?}{statut?}{tri #ENV{par,date},#GET{defaut_tri}}{pagination #ENV{nb,10}}>
 		<tr class="[(#COMPTEUR_BOUCLE|alterner{row_odd,row_even})]">
 			<td class='statut'>[(#ID_SYNDIC_ARTICLE|puce_changement_statut{#STATUT,#ID_SYNDIC,syndic_article})]</td>
 			<td class='titre principale'>[<a

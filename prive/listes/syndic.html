@@ -18,7 +18,7 @@
 		</tr>
 	</thead>
 	<tbody>
-	<BOUCLE_liste_sites(SYNDIC){id_syndic?}{id_mot?}{id_rubrique?}{where?}{statut?}{syndication?}{tri #ENV{par,date},#GET{defaut_tri}}{pagination #ENV{nb,10}}>
+	<BOUCLE_liste_sites(SYNDIC){id_syndic?}{id_mot?}{id_rubrique?}{where?}{recherche?}{statut?}{syndication?}{tri #ENV{par,date},#GET{defaut_tri}}{pagination #ENV{nb,10}}>
 		<tr class="[(#COMPTEUR_BOUCLE|alterner{row_odd,row_even})]">
 			<td class='statut'>[(#ID_SYNDIC|puce_changement_statut{#STATUT,#ID_RUBRIQUE,site})]</td>
 			<td class='nom_site principale'>[(#LOGO_SITE|image_reduire{26,20})]
