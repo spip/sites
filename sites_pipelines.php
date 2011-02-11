@@ -45,7 +45,7 @@ function sites_rubrique_encours($flux){
 			$cpt = sql_countsel("spip_syndic_articles", "statut='dispo'");
 			if ($cpt)
 				$flux['data'] .= "<br /><small><a href='" .
-					generer_url_ecrire("sites_tous") .
+					generer_url_ecrire("sites") .
 					"' style='color: black;'>" .
 					$cpt .
 					" " .
@@ -73,7 +73,7 @@ function sites_accueil_encours($flux){
 	// Les sites references a valider
 	//
 	if ($GLOBALS['meta']['activer_sites'] != 'non') {
-		$flux .= $lister_objets('sites',array('titre'=>afficher_plus_info(generer_url_ecrire('sites_tous')). _T('info_site_valider') ,'statut'=>'prop', 'par'=>'nom_site'));
+		$flux .= $lister_objets('sites',array('titre'=>afficher_plus_info(generer_url_ecrire('sites')). _T('info_site_valider') ,'statut'=>'prop', 'par'=>'nom_site'));
 	}
 
 	if ($GLOBALS['visiteur_session']['statut'] == '0minirezo') {
@@ -81,14 +81,14 @@ function sites_accueil_encours($flux){
 		// Les sites a probleme
 		//
 		if ($GLOBALS['meta']['activer_sites'] != 'non') {
-			$flux .= $lister_objets('sites',array('titre'=>afficher_plus_info(generer_url_ecrire('sites_tous')). _T('avis_sites_syndiques_probleme') ,'statut'=>'publie', 'syndication'=>array('off','sus'), 'par'=>'nom_site'));
+			$flux .= $lister_objets('sites',array('titre'=>afficher_plus_info(generer_url_ecrire('sites')). _T('avis_sites_syndiques_probleme') ,'statut'=>'publie', 'syndication'=>array('off','sus'), 'par'=>'nom_site'));
 		}
 
 		// Les articles syndiques en attente de validation
 		$cpt = sql_countsel("spip_syndic_articles", "statut='dispo'");
 		if ($cpt)
 			$flux .= "\n<br /><small><a href='"
-			. generer_url_ecrire("sites_tous","")
+			. generer_url_ecrire("sites","")
 			. "' style='color: black;'>"
 			. $cpt
 			. " "

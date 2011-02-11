@@ -8,7 +8,6 @@ base/sites.php -text
 base/sites_upgrade.php -text
 exec/sites.php -text
 exec/sites_edit.php -text
-exec/sites_tous.php -text
 formulaires/configurer_sites.html -text
 formulaires/configurer_sites.php -text
 formulaires/editer_site.html -text
@@ -42,6 +41,7 @@ prive/listes/syndic_articles.html -text
 prive/listes/syndic_articles_fonctions.php -text
 prive/modeles/syndic-actions-moderer.html -text
 prive/modeles/syndic_article.html -text
+prive/squelettes/contenu/sites.html -text
 prive/style_prive_plugin_syndic.html -text
 prive/themes/spip/images/site-16.png -text
 prive/themes/spip/images/site-24.png -text

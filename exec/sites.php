@@ -98,7 +98,7 @@ function afficher_site($id_syndic, $id_rubrique, $nom_site, $row){
 	echo pipeline('affiche_droite',array('args'=>array('exec'=>'sites','id_syndic'=>$id_syndic),'data'=>''));
 
 	echo bloc_des_raccourcis(
-		icone_horizontale(_T('icone_voir_sites_references'), generer_url_ecrire("sites_tous",""), "site-24.png","", false)
+		icone_horizontale(_T('icone_voir_sites_references'), generer_url_ecrire("sites",""), "site-24.png","", false)
 	);
 
 
