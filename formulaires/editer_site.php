@@ -30,7 +30,7 @@ function formulaires_editer_site_charger_dist($id_syndic='new', $id_rubrique=0, 
  * ne representent pas l'objet edite
  */
 function formulaires_editer_site_identifier_dist($id_syndic='new', $id_rubrique=0, $retour='', $lier_trad=0, $config_fonc='sites_edit_config', $row=array(), $hidden=''){
-	return serialize(array($id_syndic,$lier_trad,$row));
+	return serialize(array(intval($id_syndic),$lier_trad));
 }
 
 // Choix par defaut des options de presentation
