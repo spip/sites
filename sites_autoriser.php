@@ -13,6 +13,16 @@
 // fonction pour le pipeline
 function sites_autoriser() {}
 
+
+// bouton du bandeau
+function autoriser_sites_bouton_dist($faire, $type='', $id=0, $qui = NULL, $opt = NULL){
+	return 	($GLOBALS['meta']["activer_sites"] != "non");
+}
+function autoriser_site_creer_bouton_dist($faire, $type, $id, $qui, $opt){
+	return 	($GLOBALS['meta']["activer_sites"] != "non");
+}
+
+
 // Moderer le forum ?
 // = modifier l'objet correspondant (si forum attache a un objet)
 // = droits par defaut sinon (admin complet pour moderation complete)
