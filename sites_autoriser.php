@@ -29,6 +29,19 @@ function autoriser_controle_syndic_bouton_dist($faire, $type, $id, $qui, $opt){
 
 
 
+// Autoriser a creer un site dans la rubrique $id
+// http://doc.spip.org/@autoriser_rubrique_creersitedans_dist
+function autoriser_rubrique_creersitedans_dist($faire, $type, $id, $qui, $opt) {
+	return
+		$id
+		AND autoriser('voir','rubrique',$id)
+		AND $GLOBALS['meta']['activer_sites'] != 'non'
+		AND (
+			$qui['statut']=='0minirezo'
+			OR ($GLOBALS['meta']["proposer_sites"] >=
+			    ($qui['statut']=='1comite' ? 1 : 2)));
+}
+
 
 // Autoriser a modifier un site
 // http://doc.spip.org/@autoriser_site_modifier_dist
