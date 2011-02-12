@@ -6,7 +6,6 @@ action/instituer_syndic_article.php -text
 balise/formulaire_site.php -text
 base/sites.php -text
 base/sites_upgrade.php -text
-exec/sites_edit.php -text
 formulaires/configurer_sites.html -text
 formulaires/configurer_sites.php -text
 formulaires/editer_site.html -text
@@ -31,10 +30,8 @@ liens/implicite_site.php -text
 prive/contenu/site.html -text
 prive/contenu/syndic_article.html -text
 prive/editer/site.html -text
-prive/exec/controler_syndication.html -text
 prive/infos/site.html -text
 prive/infos/site_fonctions.php -text
-prive/listes/controler_syndication.html -text
 prive/listes/inc-boutons-filtres-statut-syndic.html -text
 prive/listes/sites.html -text
 prive/listes/syndic.html -text
@@ -42,10 +39,13 @@ prive/listes/syndic_articles.html -text
 prive/listes/syndic_articles_fonctions.php -text
 prive/modeles/syndic-actions-moderer.html -text
 prive/modeles/syndic_article.html -text
+prive/squelettes/contenu/controler_syndication.html -text
 prive/squelettes/contenu/site.html -text
+prive/squelettes/contenu/site_edit.html -text
 prive/squelettes/contenu/sites.html -text
 prive/squelettes/extra/site.html -text
 prive/squelettes/navigation/site.html -text
+prive/squelettes/navigation/site_edit.html -text
 prive/style_prive_plugin_syndic.html -text
 prive/themes/spip/images/site-16.png -text
 prive/themes/spip/images/site-24.png -text

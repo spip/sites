@@ -89,9 +89,22 @@
 		<inclure>sites_pipelines.php</inclure>
 	</pipeline>
 	
+	<bouton id='sites' parent="bando_edition">
+		<icone>images/site-16.png</icone>
+		<titre>icone_sites_references</titre>
+		<url>sites</url>
+	</bouton>
+
+	<bouton id='site_creer' parent="outils_rapides">
+		<icone>images/site-new-16.png</icone>
+		<titre>icone_referencer_nouveau_site</titre>
+		<url>site_edit</url>
+		<args>new=oui&amp;id_rubrique=@id_rubrique@</args>
+	</bouton>
 	
 	<bouton id='controler_syndication' parent='bando_publication' position="-1">
 		<icone>images/v1/site-16.png</icone>
 		<titre>sites:icone_controler_syndication</titre>
 	</bouton>
+
 </plugin>
