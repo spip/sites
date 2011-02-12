@@ -19,7 +19,7 @@ function urls_generer_url_ecrire_site_dist($id, $args='', $ancre='', $statut='',
 	$a = "id_syndic=" . intval($id);
 	$h = (!$statut OR $connect)
 	?  generer_url_entite_absolue($id, 'site', $args, $ancre, $connect)
-	: (generer_url_ecrire('sites',$a . ($args ? "&$args" : ''))
+	: (generer_url_ecrire('site',$a . ($args ? "&$args" : ''))
 		. ($ancre ? "#$ancre" : ''));
 	return $h;
 }

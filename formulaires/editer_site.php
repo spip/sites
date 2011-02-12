@@ -69,6 +69,16 @@ function formulaires_editer_site_verifier_dist($id_syndic='new', $id_rubrique=0,
 }
 
 function formulaires_editer_site_traiter_dist($id_syndic='new', $id_rubrique=0, $retour='', $lier_trad=0, $config_fonc='sites_edit_config', $row=array(), $hidden=''){
+	// forcer reload du site si on change une des valeurs de syndication
+	if (intval($id_syndic)
+	  AND (_request('url_syndic') OR _request('resume') OR _request('syndication'))
+	  AND $t = sql_fetsel('url_syndic,syndication,resume', 'spip_syndic', "id_syndic=".sql_quote($id_syndic))){
+
+		foreach(array('url_syndic','syndication','resume') as $k)
+			if ($v=_request($k) AND $v!=$t[$k])
+				set_request('reload', 'oui');
+	}
+
 	return formulaires_editer_objet_traiter('site',$id_syndic,$id_rubrique,$lier_trad,$retour,$config_fonc,$row,$hidden);
 }
 

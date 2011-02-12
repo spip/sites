@@ -19,7 +19,7 @@
 #SET{left,#ENV{ltr}|choixsiegal{left,left,right}}
 #SET{right,#ENV{ltr}|choixsiegal{left,right,left}}
 
-/* exec/sites */
+/* exec/site */
 .sites h1 { color: #000;font-size: large; margin-top:5px; }
 #voir .site_prop {text-align: center;font-weight: bold;font-size: small;color:red; }
 #voir .site_syndique { font-weight: bold; text-align: center; }
@@ -27,6 +27,8 @@
 #voir .date_syndic { margin-top: 1em; }
 #voir .mise_a_jour_syndic { text-align: #GET{right}; }
 /* --- */
+.site .fiche_objet .site_syndique img {float:#GET{left};margin-top:-4px;margin-#GET{right}:3px;}
+
 
 .filtres { margin:1em 0;clear:#GET{left};border-bottom:1px solid #GET{foncee};padding-#GET{left}:5px;}
 .filtres ul {list-style:none;margin-left:1px;padding:0;}

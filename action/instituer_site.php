@@ -19,15 +19,16 @@ function action_instituer_site_dist() {
 	$arg = $securiser_action();
 
 	list($id_syndic, $statut) = preg_split('/\W/', $arg);
+	if (autoriser('instituer','site',$id_syndic)){
 
-	$cond = "id_syndic=" . intval($id_syndic);
-	$row = sql_fetsel("statut, id_rubrique", "spip_syndic", $cond);
-	if (!$row OR ($row['statut'] == $statut)) return;
+		$cond = "id_syndic=" . intval($id_syndic);
+		$row = sql_fetsel("statut, id_rubrique", "spip_syndic", $cond);
+		if (!$row OR ($row['statut'] == $statut)) return;
 
-	sql_updateq("spip_syndic", array("statut" => $statut), $cond);
-	include_spip('inc/rubriques');
-	calculer_rubriques_if($row['id_rubrique'], array('statut' => $statut), $row['statut']);
-
+		sql_updateq("spip_syndic", array("statut" => $statut), $cond);
+		include_spip('inc/rubriques');
+		calculer_rubriques_if($row['id_rubrique'], array('statut' => $statut), $row['statut']);
+	}
 
 }
 ?>

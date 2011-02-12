@@ -22,7 +22,7 @@ function urls_generer_url_ecrire_syndic($id, $args='', $ancre='', $statut='', $c
 	}
 	$h = ($statut == 'publie' OR $connect)
 	?  generer_url_entite_absolue($id, 'syndic', $args, $ancre, $connect)
-	: (generer_url_ecrire('sites_voir',$a . ($args ? "&$args" : ''))
+	: (generer_url_ecrire('site',$a . ($args ? "&$args" : ''))
 		. ($ancre ? "#$ancre" : ''));
 	return $h;
 }

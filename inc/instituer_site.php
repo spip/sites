@@ -11,7 +11,7 @@
 \***************************************************************************/
 
 if (!defined("_ECRIRE_INC_VERSION")) return;
-
+include_spip('inc/puce_statut');
 // http://doc.spip.org/@inc_instituer_site_dist
 function inc_instituer_site_dist($id_syndic, $statut=-1)
 {
@@ -31,9 +31,8 @@ function inc_instituer_site_dist($id_syndic, $statut=-1)
 	  . "<li>" . _T('info_statut_site_1') 
 	  ."<ul>";
 	
-	$href = redirige_action_auteur('editer_site',$id_syndic,'sites', "id_syndic=$id_syndic" /*"&id_parent=$id_rubrique"*/);
 	foreach($liste_statuts as $s=>$affiche){
-		$href = parametre_url($href,'statut',$s);
+		$href = generer_action_auteur('instituer_site',"$id_syndic-$s",self());
 		if ($s==$statut)
 			$res .= "<li class='$s selected'>" . puce_statut($s) . $affiche[0] . '</li>';
 		else

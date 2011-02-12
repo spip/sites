@@ -7,8 +7,20 @@
 
 	Bouton voir en ligne
 
-][(#VAL{site}|voir_en_ligne{#ID_SYNDIC,#STATUT,racine-24.gif,0,0})]
-
+]
+<BOUCLE_publie(SITES){id_syndic}>
+	[(#VAL{redirect}
+		|generer_url_action{type=site&id=#ID_SYNDIC}
+		|parametre_url{var_mode,calcul}
+		|icone_horizontale{<:icone_voir_en_ligne:>,racine})]
+</BOUCLE_publie>
+	[(#AUTORISER{previsualiser,site,#ID_SYNDIC,'',#ARRAY{statut,#STATUT}})
+		[(#VAL{redirect}
+			|generer_url_action{type=site&id=#ID_SYNDIC}
+			|parametre_url{var_mode,preview}
+			|icone_horizontale{<:previsualiser:>,racine})]
+	]
+<//B_publie>
 
 
 </div>
