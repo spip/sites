@@ -8,7 +8,7 @@
 <div class='date'>[(#DATE|date_interface)]</div>
 [<div class='par'><:par:> <a class='ajax' href='[(#GET{self}|parametre_url{lesauteurs,#LESAUTEURS})]' title='<:sites:articles_meme_auteur|attribut_html:>' >(#LESAUTEURS)</a> &mdash;</div>]
 
-<BOUCLE_sit(SITES){id_syndic}><div class='reponse_a'><a href='[(#URL_ECRIRE{sites,id_syndic=#ID_SYNDIC})]'>#NOM_SITE</a></div></BOUCLE_sit>
+<BOUCLE_sit(SITES){id_syndic}><div class='reponse_a'><a href='[(#URL_ECRIRE{site,id_syndic=#ID_SYNDIC})]'>#NOM_SITE</a></div></BOUCLE_sit>
 </div>
 [(#REM) Le corps ---------------------------------------------------------]
 [<div class='texte'>(#DESCRIPTIF|lignes_longues)</div>]

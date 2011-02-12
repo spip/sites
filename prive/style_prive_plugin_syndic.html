@@ -9,6 +9,7 @@
 
 	ATTENTION: il faut absolument le charset sinon Firefox croit que
 	c'est du text/html !
+	<style>
 ]
 #CACHE{3600*100,cache-client}
 #HTTP_HEADER{Content-Type: text/css; charset=iso-8859-15}
@@ -34,9 +35,9 @@
 .filtres ul {list-style:none;margin-left:1px;padding:0;}
 .filtres ul li {float:left;padding:0;margin:0;margin-bottom:-1px;}
 
-.filtres ul li.publie strong,.filtres ul li.publie a {background-image:url(#CHEMIN{images/syndic-statut-publie-24.png});padding-#GET{right}:27px;}
-.filtres ul li.off strong,.filtres ul li.off a {background-image:url(#CHEMIN{images/syndic-statut-off-24.png});padding-#GET{right}:27px;}
-.filtres ul li.dispo strong,.filtres ul li.dispo a {background-image:url(#CHEMIN{images/syndic-statut-prop-24.png});padding-#GET{right}:27px;}
+.filtres ul li.publie strong,.filtres ul li.publie a {background-image:url(#CHEMIN_IMAGE{syndic-statut-publie-24.png});padding-#GET{right}:27px;}
+.filtres ul li.off strong,.filtres ul li.off a {background-image:url(#CHEMIN_IMAGE{syndic-statut-off-24.png});padding-#GET{right}:27px;}
+.filtres ul li.dispo strong,.filtres ul li.dispo a {background-image:url(#CHEMIN_IMAGE{syndic-statut-dispo-24.png});padding-#GET{right}:27px;}
 
 .filtres ul li strong,.filtres ul li a {display:block;float:#GET{left};padding:4px 7px;border:1px solid #GET{foncee};margin-#GET{left}:5px;background-color:#eee;background-position:center right;background-repeat:no-repeat;}
 .filtres ul li strong,.filtres ul li a:hover {background-color:#f8f7f3;}
@@ -54,7 +55,7 @@
 
 /* Habillage des articles syndic en liste pour moderation
 ---------------------------------------------- */
-ul.syndic_articles li.item { margin: 0; padding: 0 0 .8em 0; background: #F8F7F3 url(#CHEMIN{images/syndic-bg-item.png}); border: 0; border-top: 5px solid #ccc; }
+ul.syndic_articles li.item { margin: 0; padding: 0 0 .8em 0; background: #F8F7F3 url(#CHEMIN_IMAGE{syndic-bg-item.png}); border: 0; border-top: 5px solid #ccc; }
 
 ul.syndic_articles li.statut_publie { background-image: none; border-color: #9dba00; }
 ul.syndic_articles li.statut_off,
@@ -74,7 +75,7 @@ ul.syndic_articles li .cartouche .lien_admin {display:block;}
 
 ul.syndic_articles li.item .texte { margin: 0; padding: .8em 30px; }
 
-ul.syndic_articles >li.item .actions.moderer {padding-top:5px;padding-bottom:5px;margin-#GET{right}:5px;background:url(#CHEMIN{images/actions-filigrane-24.png}) no-repeat bottom right;padding-#GET{right}:30px;}
+ul.syndic_articles >li.item .actions.moderer {padding-top:5px;padding-bottom:5px;margin-#GET{right}:5px;background:url(#CHEMIN_IMAGE{actions-filigrane-24.png}) no-repeat bottom right;padding-#GET{right}:30px;}
 ul.syndic_articles >li.item:hover .actions.moderer {/*background-image:none;*/}
 ul.syndic_articles >li.item .actions.moderer > span {visibility:hidden;}
 ul.syndic_articles >li.item:hover .actions.moderer > span  {visibility:visible;}

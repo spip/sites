@@ -2,7 +2,7 @@
 	<nom>Sites</nom>
 	<icon>prive/themes/spip/images/site-24.png</icon>
 	<auteur>Collectif SPIP</auteur>
-	<version>1.1.0</version>
+	<version>1.2.0</version>
 	<version_base>1.0</version_base>
 	<etat>test</etat>
 	<description>Sites et syndication dans SPIP (priv&eacute; et public)</description>
@@ -103,7 +103,7 @@
 	</bouton>
 	
 	<bouton id='controler_syndication' parent='bando_publication' position="-1">
-		<icone>images/v1/site-16.png</icone>
+		<icone>images/site-16.png</icone>
 		<titre>sites:icone_controler_syndication</titre>
 	</bouton>
 

@@ -77,13 +77,8 @@ function action_editer_site_dist($arg=null) {
 	}
 
 	if ($resyndiquer) {
-	  // ah si PHP connaisait les fermetures...
-	  // A la place, une constante utilisee exclusivement
-	  // dans la fct suivante.
-		define('_GENIE_SYNDIC_NOW', $id_syndic);
-		// forcer l'execution immediate de cette tache
-		// (i.e. appeler la fct suivante avec gestion du verrou)
-		cron(0, array('syndic' => -91));
+		$syndiquer_site = charger_fonction('syndiquer_site','action');
+	  $syndiquer_site($id_syndic);
 	}
 
 	if (_request('redirect')) {

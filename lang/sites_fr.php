@@ -20,7 +20,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 // statuts
 'articles_tous' => 'Tous',
 'articles_publie' => 'Publi&eacute;s',
-'articles_prop' => 'En attente',
+'articles_dispo' => 'En attente',
 'articles_off' => 'Supprim&eacute;s',
 
 'statut_prop' => 'En attente',

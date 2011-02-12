@@ -3,6 +3,7 @@ action/editer_site.php -text
 action/instituer_site.php -text
 action/instituer_syndic.php -text
 action/instituer_syndic_article.php -text
+action/syndiquer_site.php -text
 balise/formulaire_site.php -text
 base/sites.php -text
 base/sites_upgrade.php -text
@@ -16,11 +17,6 @@ formulaires/regler_moderation_site.php -text
 genie/syndic.php -text
 images/actions-24.png -text
 images/actions-filigrane-24.png -text
-images/annuler-recherche.png -text
-images/syndic-bg-item.png -text
-images/syndic-statut-dispo-24.png -text
-images/syndic-statut-off-24.png -text
-images/syndic-statut-publie-24.png -text
 inc/instituer_site.php -text
 inc/site.php -text
 inc/syndic.php -text
@@ -57,6 +53,10 @@ prive/themes/spip/images/site-edit-16.png -text
 prive/themes/spip/images/site-edit-24.png -text
 prive/themes/spip/images/site-new-16.png -text
 prive/themes/spip/images/site-new-24.png -text
+prive/themes/spip/images/syndic-bg-item.png -text
+prive/themes/spip/images/syndic-statut-dispo-24.png -text
+prive/themes/spip/images/syndic-statut-off-24.png -text
+prive/themes/spip/images/syndic-statut-publie-24.png -text
 public/sites.php -text
 puce_statut/site.php -text
 puce_statut/syndic_article.php -text
