@@ -25,7 +25,6 @@ liens/implicite_site.php -text
 /plugin.xml -text
 prive/contenu/site.html -text
 prive/contenu/syndic_article.html -text
-prive/editer/site.html -text
 prive/infos/site.html -text
 prive/infos/site_fonctions.php -text
 prive/listes/inc-boutons-filtres-statut-syndic.html -text
