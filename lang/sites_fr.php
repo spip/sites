@@ -21,7 +21,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'articles_tous' => 'Tous',
 'articles_publie' => 'Publi&eacute;s',
 'articles_dispo' => 'En attente',
-'articles_off' => 'Supprim&eacute;s',
+'articles_refuse' => 'Supprim&eacute;s',
 
 'statut_prop' => 'En attente',
 'statut_publie' => 'Publi&eacute;',

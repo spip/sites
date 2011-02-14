@@ -55,6 +55,7 @@ prive/themes/spip/images/site-new-24.png -text
 prive/themes/spip/images/syndic-bg-item.png -text
 prive/themes/spip/images/syndic-statut-dispo-24.png -text
 prive/themes/spip/images/syndic-statut-off-24.png -text
+prive/themes/spip/images/syndic-statut-poubelle-24.png -text
 prive/themes/spip/images/syndic-statut-publie-24.png -text
 public/sites.php -text
 puce_statut/site.php -text

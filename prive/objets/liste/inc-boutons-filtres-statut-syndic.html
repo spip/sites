@@ -1,19 +1,11 @@
 #SET{self,#SELF|parametre_url{debut_syndic_article,''}}
-<div class='filtres second'>
-<ul>
+<div class='onglets_simple second clearfix'>
+<ul class="statut statut_syndic_articles">
 <li>[(#GET{self}|parametre_url{statut,''}|lien_ou_expose{<:sites:articles_tous:>,#ENV{statut,''}|=={''},ajax})]</li>
 
-#SET{statut,publie}
-<BOUCLE_cpt_1(SYNDIC_ARTICLES){id_syndic?}{statut=#GET{statut}}{recherche?} />
-[(#TOTAL_BOUCLE|oui) <li class='#GET{statut}'>[(#GET{self}|parametre_url{statut,#GET{statut}}|lien_ou_expose{#VAL{sites:articles_#GET{statut}}|_T|concat{' (',#TOTAL_BOUCLE,')'},#ENV{statut,''}|=={#GET{statut}},'ajax'})]</li>]<//B_cpt_1>
-
-#SET{statut,dispo}
-<BOUCLE_cpt_2(SYNDIC_ARTICLES){id_syndic?}{statut=#GET{statut}}{recherche?} />
-[(#TOTAL_BOUCLE|oui) <li class='#GET{statut}'>[(#GET{self}|parametre_url{statut,#GET{statut}}|lien_ou_expose{#VAL{sites:articles_#GET{statut}}|_T|concat{' (',#TOTAL_BOUCLE,')'},#ENV{statut,''}|=={#GET{statut}},'ajax'})]</li>]<//B_cpt_2>
-
-#SET{statut,off}
-<BOUCLE_cpt_3(SYNDIC_ARTICLES){id_syndic?}{statut=#GET{statut}}{recherche?} />
-[(#TOTAL_BOUCLE|oui) <li class='#GET{statut}'>[(#GET{self}|parametre_url{statut,#GET{statut}}|lien_ou_expose{#VAL{sites:articles_#GET{statut}}|_T|concat{' (',#TOTAL_BOUCLE,')'},#ENV{statut,''}|=={#GET{statut}},'ajax'})]</li>]<//B_cpt_3>
+<BOUCLE_st(POUR){tableau #ARRAY{0,publie,1,dispo,2,off,3,refuse}}>
+	<BOUCLE_cpt(SYNDIC_ARTICLES){id_syndic?}{statut=#VALEUR}{recherche?} />
+	[(#TOTAL_BOUCLE|oui) <li class='#VALEUR'>[(#GET{self}|parametre_url{statut,#VALEUR}|lien_ou_expose{#VAL{sites:articles_#VALEUR}|_T|concat{' (',#TOTAL_BOUCLE,')'},#ENV{statut,''}|=={#VALEUR},'ajax'})]</li>]<//B_cpt>
+</BOUCLE_st>
 </ul>
-<div class='nettoyeur'></div>
 </div>
