@@ -18,7 +18,7 @@ function sites_autoriser() {}
 function autoriser_sites_bouton_dist($faire, $type='', $id=0, $qui = NULL, $opt = NULL){
 	return 	($GLOBALS['meta']["activer_sites"] != "non");
 }
-function autoriser_site_creer_bouton_dist($faire, $type, $id, $qui, $opt){
+function autoriser_sitecreer_bouton_dist($faire, $type, $id, $qui, $opt){
 	return 	($GLOBALS['meta']["activer_sites"] != "non");
 }
 
