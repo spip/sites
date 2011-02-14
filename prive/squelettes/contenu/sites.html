@@ -2,9 +2,9 @@
 
 <BOUCLE_rubrique_existe(RUBRIQUES){statut?}{racine}{0, 1}>
 
-<INCLURE{fond=prive/listes/sites,titre=<:titre_sites_tous:>,syndication=non,statut=publie,par=nom_site,ajax}>
-<INCLURE{fond=prive/listes/sites,titre=<:titre_sites_syndiques:>,syndication=#ARRAY{0,oui,1,sus},statut=publie,par=nom_site,ajax}>
-<INCLURE{fond=prive/listes/sites,titre=<:titre_sites_proposes:>,statut=prop,par=nom_site,ajax}>
+<INCLURE{fond=prive/objets/liste/sites,titre=<:titre_sites_tous:>,syndication=non,statut=publie,par=nom_site,ajax}>
+<INCLURE{fond=prive/objets/liste/sites,titre=<:titre_sites_syndiques:>,syndication=#ARRAY{0,oui,1,sus},statut=publie,par=nom_site,ajax}>
+<INCLURE{fond=prive/objets/liste/sites,titre=<:titre_sites_proposes:>,statut=prop,par=nom_site,ajax}>
 
 [(#AUTORISER{creersitedans,rubrique,#ID_RUBRIQUE})
 	[(#URL_ECRIRE{site_edit}|icone_verticale{<:icone_referencer_nouveau_site:>,site-24.png,new,right})]
@@ -12,10 +12,10 @@
 ]
 
 <!--affiche_milieu-->
-<INCLURE{fond=prive/listes/sites,titre=<:avis_sites_probleme_syndication:>,syndication=off,statut=publie,par=nom_site,ajax}>
+<INCLURE{fond=prive/objets/liste/sites,titre=<:avis_sites_probleme_syndication:>,syndication=off,statut=publie,par=nom_site,ajax}>
 [(#AUTORISER{instituer,site}|oui)
-	<INCLURE{fond=prive/listes/sites,titre=<:info_sites_refuses:>,statut=refuse,par=nom_site,ajax}>
+	<INCLURE{fond=prive/objets/liste/sites,titre=<:info_sites_refuses:>,statut=refuse,par=nom_site,ajax}>
 ]
-<INCLURE{fond=prive/listes/syndic_articles,titre=<:titre_dernier_article_syndique:>,par=date,ajax}>
+<INCLURE{fond=prive/objets/liste/syndic_articles,titre=<:titre_dernier_article_syndique:>,par=date,ajax}>
 
 </BOUCLE_rubrique_existe>

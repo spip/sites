@@ -17,7 +17,7 @@
 </div>
 ]
 
-[(#INCLURE{fond=prive/listes/inc-boutons-filtres-statut-syndic}{env})]
+[(#INCLURE{fond=prive/objets/liste/inc-boutons-filtres-statut-syndic}{env})]
 #FORMULAIRE_RECHERCHE_ECRIRE{#SELF|parametre_url{debut_id_syndic_article,''},ajax}
 [<h3><:resultats_recherche:> &#171;&nbsp;(#ENV{recherche})&nbsp;&#187;</h3>]
 
@@ -34,7 +34,7 @@
 [<p class='pagination'>(#PAGINATION)</p>]
 </B_syndic>
 
-[(#INCLURE{fond=prive/listes/inc-boutons-filtres-statut-syndic}{env})]
+[(#INCLURE{fond=prive/objets/liste/inc-boutons-filtres-statut-syndic}{env})]
 <h2><:sites:aucun_article_sites:></h2>
 
 <//B_syndic>
