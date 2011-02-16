@@ -1,5 +1,5 @@
 #SET{self,#SELF|parametre_url{debut_syndic_article,''}}
-<div class='onglets_simple second clearfix'>
+<div class='onglets_simple clearfix'>
 <ul class="statut statut_syndic_articles">
 <li>[(#GET{self}|parametre_url{statut,''}|lien_ou_expose{<:sites:articles_tous:>,#ENV{statut,''}|=={''},ajax})]</li>
 

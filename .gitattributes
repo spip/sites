@@ -29,7 +29,6 @@ prive/objets/contenu/site.html -text
 prive/objets/contenu/syndic_article.html -text
 prive/objets/infos/site.html -text
 prive/objets/infos/site_fonctions.php -text
-prive/objets/liste/inc-boutons-filtres-statut-syndic.html -text
 prive/objets/liste/sites.html -text
 prive/objets/liste/syndic.html -text
 prive/objets/liste/syndic_articles.html -text
@@ -39,6 +38,7 @@ prive/squelettes/contenu/site.html -text
 prive/squelettes/contenu/site_edit.html -text
 prive/squelettes/contenu/sites.html -text
 prive/squelettes/extra/site.html -text
+prive/squelettes/inclure/boutons-filtres-statut-syndic.html -text
 prive/squelettes/navigation/site.html -text
 prive/squelettes/navigation/site_edit.html -text
 prive/style_prive_plugin_syndic.html -text
