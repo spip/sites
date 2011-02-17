@@ -145,22 +145,6 @@ function sites_configurer_liste_metas($metas){
 	return $metas;
 }
 
-
-
-/**
- * Permet des calculs de noms d'url sur les sites. 
- *
- * @param array $array liste des objets acceptant des urls
- * @return array
-**/
-function sites_declarer_url_objets($array){
-	$array[] = 'site';
-	$array[] = 'syndic';
-	return $array;
-}
-
-
-
 /**
  * Taches periodiques de syndication 
  *
