@@ -207,24 +207,6 @@ function sites_optimiser_base_disparus($flux){
 
 
 /**
- * Liste et ponderation des champs pour la recherche
- *
- * @param array $tables
- * @return int
- */
-function sites_rechercher_liste_des_champs($tables){
-	$tables['syndic_article'] = array(
-		'titre' => 5, 'descriptif' => 1
-	);
-	$tables['site'] = array(
-		'nom_site' => 5, 'url_site' => 1, 'descriptif' => 3
-	);
-
-	return $tables;
-}
-
-
-/**
  * Publier et dater les rubriques qui ont un site publie
  * 
  * @param <type> $flux

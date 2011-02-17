@@ -63,11 +63,6 @@
 	</pipeline>
 	
 	<pipeline>
-		<nom>rechercher_liste_des_champs</nom>
-		<inclure>sites_pipelines.php</inclure>
-	</pipeline>
-
-	<pipeline>
 		<nom>calculer_rubriques</nom>
 		<inclure>sites_pipelines.php</inclure>
 	</pipeline>

@@ -101,7 +101,10 @@ function sites_declarer_tables_objets_sql($tables){
 		'join' => array(
 			"id_syndic"=>"id_syndic",
 			"id_rubrique"=>"id_rubrique"
-		)
+		),
+		'rechercher_champs' => array(
+			'nom_site' => 5, 'url_site' => 1, 'descriptif' => 3
+		),
 	);
 
 	$tables['spip_syndic_articles'] = array(
@@ -140,6 +143,9 @@ function sites_declarer_tables_objets_sql($tables){
 		'join' => array(
 			"id_syndic_article"=>"id_syndic_article",
 			"id_syndic"=>"id_syndic"
+		),
+		'rechercher_champs' => array(
+				'titre' => 5, 'descriptif' => 1
 		)
 	);
 
