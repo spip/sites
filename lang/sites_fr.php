@@ -6,6 +6,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 'icone_controler_syndication'=>'Publication des articles syndiqu&eacute;s',
 
+'icone_articles_syndic'=>'Articles syndiqu&eacute;s',
 'aucun_article_syndic' => 'Aucun article syndiqu&eacute;',
 'un_article_syndic' => '1 article syndiqu&eacute;',
 'nombre_articles_syndic' => '@nb@ articles syndiqu&eacute;s',

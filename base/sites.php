@@ -31,10 +31,10 @@ function sites_declarer_tables_interfaces($interfaces){
 	$interfaces['exceptions_des_tables']['syndic_articles']['nom_site']=array('syndic', 'nom_site');
 
 	$interfaces['table_date']['syndication'] = 'date';
-	$interfaces['table_date']['syndic_articles'] = 'date';
+	#$interfaces['table_date']['syndic_articles'] = 'date';
 
-	$interfaces['table_titre']['site'] = "nom_site AS titre, '' AS lang";
-	$interfaces['table_titre']['syndic'] = "nom_site AS titre, '' AS lang";
+	#$interfaces['table_titre']['site'] = "nom_site AS titre, '' AS lang";
+	#$interfaces['table_titre']['syndic'] = "nom_site AS titre, '' AS lang";
 
 	$interfaces['table_statut']['spip_syndic'][] = array('champ'=>'statut','publie'=>'publie','previsu'=>'publie,prop','exception'=>'statut');
 	$interfaces['table_statut']['spip_syndic_articles'][] = array('champ'=>'statut','publie'=>'publie','previsu'=>'publie,prop','exception'=>'statut');
@@ -58,16 +58,22 @@ function sites_declarer_tables_interfaces($interfaces){
 }
 
 
-/**
- * Table principale spip_syndic et spip_syndic_articles 
- *
- * @param array $tables_principales
- * @return array
- */
-function sites_declarer_tables_principales($tables_principales){
-
-
-	$spip_syndic = array(
+function sites_declarer_tables_objets_sql($tables){
+	$tables['spip_syndic'] = array(
+		'table_objet_surnoms'=>array('site'),
+		'type'=>'site',
+	  'type_surnoms' => array('syndic'),
+		
+		'texte_retour' => 'icone_retour',
+		'texte_objets' => 'icone_sites_references',
+		'texte_modifier' => 'icone_modifier_site',
+		'info_aucun_objet'=> 'info_aucun_site',
+		'info_1_objet' => 'info_1_site',
+		'info_nb_objets' => 'info_nb_sites',
+		'titre' => "nom_site AS titre, '' AS lang",
+		'date' => 'date',
+		'principale' => 'oui',
+		'field'=> array(
 			"id_syndic"	=> "bigint(21) NOT NULL",
 			"id_rubrique"	=> "bigint(21) DEFAULT '0' NOT NULL",
 			"id_secteur"	=> "bigint(21) DEFAULT '0' NOT NULL",
@@ -85,19 +91,32 @@ function sites_declarer_tables_principales($tables_principales){
 			"miroir"	=> "VARCHAR(3) DEFAULT 'non'",
 			"oubli"	=> "VARCHAR(3) DEFAULT 'non'",
 			"resume"	=> "VARCHAR(3) DEFAULT 'oui'"
-	);
-
-	$spip_syndic_key = array(
+		),
+		'key' => array(
 			"PRIMARY KEY"	=> "id_syndic",
 			"KEY id_rubrique"	=> "id_rubrique",
 			"KEY id_secteur"	=> "id_secteur",
 			"KEY statut"	=> "statut, date_syndic",
-	);
-	$spip_syndic_join = array(
+		),
+		'join' => array(
 			"id_syndic"=>"id_syndic",
-			"id_rubrique"=>"id_rubrique");
-			
-	$spip_syndic_articles = array(
+			"id_rubrique"=>"id_rubrique"
+		)
+	);
+
+	$tables['spip_syndic_articles'] = array(
+		'table_objet_surnoms'=>array('syndic_article'),
+
+		'texte_retour' => 'icone_retour',
+		'texte_objets' => 'sites:icone_articles_syndic',
+		'texte_modifier' => 'icone_modifier_article', # inutile en vrai
+		'info_aucun_objet'=> 'info_aucun_article_syndique',
+		'info_1_objet' => 'info_1_article_syndique',
+		'info_nb_objets' => 'info_nb_articles_syndiques',
+		'date' => 'date',
+		'editable' => 'non',
+		'principale' => 'oui',
+		'field'=> array(
 			"id_syndic_article"	=> "bigint(21) NOT NULL",
 			"id_syndic"	=> "bigint(21) DEFAULT '0' NOT NULL",
 			"titre"	=> "text DEFAULT '' NOT NULL",
@@ -110,48 +129,21 @@ function sites_declarer_tables_principales($tables_principales){
 			"lang"	=> "VARCHAR(10) DEFAULT '' NOT NULL",
 			"url_source" => "TINYTEXT DEFAULT '' NOT NULL",
 			"source" => "TINYTEXT DEFAULT '' NOT NULL",
-			"tags" => "TEXT DEFAULT '' NOT NULL");
-
-	$spip_syndic_articles_key = array(
+			"tags" => "TEXT DEFAULT '' NOT NULL"
+		),
+		'key' => array(
 			"PRIMARY KEY"	=> "id_syndic_article",
 			"KEY id_syndic"	=> "id_syndic",
 			"KEY statut"	=> "statut",
-			"KEY url"	=> "url");
-	$spip_syndic_articles_join = array(
+			"KEY url"	=> "url"
+		),
+		'join' => array(
 			"id_syndic_article"=>"id_syndic_article",
-			"id_syndic"=>"id_syndic");
+			"id_syndic"=>"id_syndic"
+		)
+	);
 
-	$tables_principales['spip_syndic'] =
-		array('field' => &$spip_syndic, 'key' => &$spip_syndic_key, 'join' => &$spip_syndic_join);
-	$tables_principales['spip_syndic_articles']	=
-		array('field' => &$spip_syndic_articles, 'key' => &$spip_syndic_articles_key, 'join' => &$spip_syndic_articles_join);
-	
-
-	return $tables_principales;
-}
-
-
-/**
- * Declarer le surnom des syndic
- *
- * @param array $table
- * @return array
- */
-function sites_declarer_tables_objets_surnoms($table){
-	$table['syndic'] = 'syndic'; 
-	$table['site'] = 'syndic';  # hum hum
-	$table['syndic_article'] = 'syndic_articles';
-	return $table;
-}
-
-/**
- * Declarer le surnom 'site' pour le type de spip_syndic
- * @param array $table
- * @return string
- */
-function sites_declarer_type_surnoms($table){
-	$table['syndic'] = 'site';
-	return $table;
+	return $tables;
 }
 
 ?>
