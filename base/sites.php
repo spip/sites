@@ -105,6 +105,7 @@ function sites_declarer_tables_objets_sql($tables){
 		'rechercher_champs' => array(
 			'nom_site' => 5, 'url_site' => 1, 'descriptif' => 3
 		),
+		'champs_versionnes' => array('id_rubrique', 'id_secteur', 'nom_site', 'url_site', 'url_syndic','descriptif'),
 	);
 
 	$tables['spip_syndic_articles'] = array(
