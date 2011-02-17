@@ -66,6 +66,7 @@ function sites_declarer_tables_objets_sql($tables){
 		
 		'texte_retour' => 'icone_retour',
 		'texte_objets' => 'icone_sites_references',
+		'texte_objet' => 'sites:icone_site_reference',
 		'texte_modifier' => 'icone_modifier_site',
 		'info_aucun_objet'=> 'info_aucun_site',
 		'info_1_objet' => 'info_1_site',
@@ -113,6 +114,7 @@ function sites_declarer_tables_objets_sql($tables){
 
 		'texte_retour' => 'icone_retour',
 		'texte_objets' => 'sites:icone_articles_syndic',
+		'texte_objet' => 'sites:icone_article_syndic',
 		'texte_modifier' => 'icone_modifier_article', # inutile en vrai
 		'info_aucun_objet'=> 'info_aucun_article_syndique',
 		'info_1_objet' => 'info_1_article_syndique',
