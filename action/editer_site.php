@@ -68,10 +68,13 @@ function action_editer_site_dist($arg=null) {
 						revisions_sites($id_syndic, array('descriptif' => $auto['descriptif']));
 				}
 				if (!$logo
-				AND $auto['logo'] AND $auto['format_logo'])
+				AND $auto['logo'] AND $auto['format_logo']){
+					include_spip('inc/distant');
 					@rename($auto['logo'],
 					_DIR_IMG . 'siteon'.$id_syndic.'.'.$auto['format_logo']);
+				}
 			}
+			
 			$resyndiquer = true;
 		}
 	}
