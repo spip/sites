@@ -1,9 +1,9 @@
 <BOUCLE_site(SITES){id_syndic}{statut?}{si #ENV{exec}|=={site}}>
 [(#BOITE_OUVRIR{[
 				
-	[(#AUTORISER{modifier,site,#ID_BREVE})
+	[(#AUTORISER{modifier,site,#ID_SYNDIC})
 				
-		[(#ID_BREVE|afficher_qui_edite{site}|non)
+		[(#ID_SYNDIC|afficher_qui_edite{site}|non)
 			[(#URL_ECRIRE{site_edit,id_syndic=#ID_SYNDIC}|icone_verticale{<:icone_modifier_site:>,site,edit,right ajax preload})]
 		]
 		[(#ID_SYNDIC|afficher_qui_edite{site}|oui)
