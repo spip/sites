@@ -118,7 +118,7 @@ function sites_affiche_enfants($flux) {
 			$lister_objets = charger_fonction('lister_objets','inc');
 			$bouton_sites = '';
 			if (autoriser('creersitedans','rubrique',$id_rubrique)) {
-				$bouton_sites .= icone_inline(_T('info_sites_referencer'), generer_url_ecrire('site_edit', "id_rubrique=$id_rubrique"), "site-24.png", "new", $spip_lang_right)
+				$bouton_sites .= icone_verticale(_T('info_sites_referencer'), generer_url_ecrire('site_edit', "id_rubrique=$id_rubrique"), "site-24.png", "new", $spip_lang_right)
 					. "<br class='nettoyeur' />";
 			}
 			
