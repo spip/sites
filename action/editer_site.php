@@ -153,20 +153,21 @@ function insert_syndic($id_rubrique) {
 // Enregistre une revision de syndic
 // $c est un contenu (par defaut on prend le contenu via _request())
 // http://doc.spip.org/@revisions_sites
-function revisions_sites($id_syndic, $c=false) {
+function revisions_sites($id_syndic, $set=false) {
 
 	include_spip('inc/rubriques');
-
-	// champs normaux
-	if ($c === false) {
-		$c = array();
-		foreach (array(
-			'nom_site', 'url_site', 'descriptif', 'url_syndic', 'syndication', 'statut', 'id_parent',
-		  'moderation','miroir','oubli','resume'
-		) as $champ)
-			if (($a = _request($champ)) !== null)
-				$c[$champ] = $a;
-	}
+	include_spip('inc/modifier');
+	$c = collecter_requests(
+		// white list
+		array(
+		 'nom_site', 'url_site', 'descriptif', 'url_syndic', 'syndication',
+		 'moderation','miroir','oubli','resume'
+		),
+		// black list
+		array('statut', 'id_parent', 'date'),
+		// donnees eventuellement fournies
+		$set
+	);
 
 	// Si le site est publie, invalider les caches et demander sa reindexation
 	$t = sql_getfetsel("statut", "spip_syndic", "id_syndic=".intval($id_syndic));
@@ -174,7 +175,6 @@ function revisions_sites($id_syndic, $c=false) {
 		$invalideur = "id='site/$id_syndic'";
 		$indexation = true;
 	}
-	include_spip('inc/modifier');
 
 	modifier_contenu('syndic', $id_syndic,
 		array(
@@ -190,27 +190,30 @@ function revisions_sites($id_syndic, $c=false) {
 	$statut_ancien = $row['statut'];
 	$id_secteur_old = $row['id_secteur'];
 
-	$statut = $c['statut'];
+	$c = collecter_requests(array('statut','id_parent','date'),array(),$set);
 
-	if ($statut
+	if (isset($c['statut'])
+		AND $statut = $c['statut']
 	  AND $statut != $statut_ancien
 	  AND autoriser('publierdans','rubrique',$id_rubrique)) {
 		$champs['statut'] = $statut;
 		if ($statut == 'publie') {
-			if ($d = _request('date', $c)) {
-				$champs['date'] = $d;
+			if (isset($c['date']) AND $c['date']) {
+				$champs['date'] = $c['date'];
 			} else {
 				$champs['date'] = date('Y-m-d H:i:s');
 			}
 		}
-	} else
+	}
+	else
 		$statut = $statut_ancien;
 
 	// Changer de rubrique ?
 	// Verifier que la rubrique demandee est differente de l'actuelle,
 	// et qu'elle existe. Recuperer son secteur
 
-	if ($id_parent = intval(_request('id_parent', $c))
+	if (isset($c['id_parent'])
+		AND $id_parent = $c['id_parent']
 	  AND $id_parent != $id_rubrique
 	  AND ($id_secteur = sql_getfetsel('id_secteur', 'spip_rubriques', "id_rubrique=".intval($id_parent)))) {
 		$champs['id_rubrique'] = $id_parent;
