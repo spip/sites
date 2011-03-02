@@ -64,11 +64,11 @@
 				<ul>
 					<li class="editer_syndication">
 						<div class="choix">
-							<input type='radio' class="radio" name='syndication' value='non' id='syndication_non'[ (#ENV{syndication}|=={oui}|?{'','checked="checked"'})] />
+							<input type='radio' class="radio" name='syndication' value='non' id='syndication_non'[ (#ENV{syndication}|match{oui|off}|?{'','checked="checked"'})] />
 							<label for='syndication_non'><:bouton_radio_non_syndication:></label>
 						</div>
 						<div class="choix">
-							<input type='radio' class="radio" name='syndication' value='oui' id='syndication_oui'[ (#ENV{syndication}|=={oui}|?{'checked="checked"'})] />
+							<input type='radio' class="radio" name='syndication' value='oui' id='syndication_oui'[ (#ENV{syndication}|match{oui|off}|?{'checked="checked"'})] />
 							<label for='syndication_oui'><:bouton_radio_syndication:></label>
 						</div>
 					</li>
