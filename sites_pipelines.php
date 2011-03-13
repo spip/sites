@@ -110,8 +110,10 @@ function sites_accueil_encours($flux){
 **/
 function sites_affiche_enfants($flux) {
 	global $spip_lang_right;
-	
-	if ($flux['args']['exec'] == 'naviguer') {
+
+	if ($e = trouver_objet_exec($flux['args']['exec'])
+	  AND $e['type'] == 'rubrique'
+	  AND $e['edition'] == false) {
 		$id_rubrique = $flux['args']['id_rubrique'];
   
 		if ($GLOBALS['meta']["activer_sites"] == 'oui') {
