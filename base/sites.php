@@ -68,6 +68,7 @@ function sites_declarer_tables_objets_sql($tables){
 		'texte_objets' => 'icone_sites_references',
 		'texte_objet' => 'sites:icone_site_reference',
 		'texte_modifier' => 'icone_modifier_site',
+		'texte_creer' => 'icone_referencer_nouveau_site',
 		'info_aucun_objet'=> 'info_aucun_site',
 		'info_1_objet' => 'info_1_site',
 		'info_nb_objets' => 'info_nb_sites',
