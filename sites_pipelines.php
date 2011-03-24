@@ -171,7 +171,7 @@ function sites_taches_generales_cron($taches_generales){
  */
 function sites_optimiser_base_disparus($flux){
 	$n = &$flux['data'];
-
+	$mydate = $flux['args']['date'];
 
 
 	sql_delete("spip_syndic", "maj < $mydate AND statut = 'refuse'");
