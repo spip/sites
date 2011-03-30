@@ -33,8 +33,8 @@ function autoriser_moderersyndic_dist($faire, $type, $id, $qui, $opt) {
 }
 
 
-function autoriser_controle_syndic_bouton_dist($faire, $type, $id, $qui, $opt){
-	return 	(sql_countsel('spip_syndic_articles'));
+function autoriser_controlersyndication_bouton_dist($faire, $type, $id, $qui, $opt){
+	return 	($qui['statut']=='0minirezo' AND sql_countsel('spip_syndic_articles'));
 }
 
 
