@@ -29,7 +29,7 @@ function puce_statut_site_dist($id, $statut, $id_rubrique, $type, $ajax=''){
 		       2 => 'puce-refuser-8.png',
 		       3 => 'puce-supprimer-8.png');
 
-	$t = sql_getfetsel("syndication", "spip_syndic", "id_syndic=".sql_quote($id));
+	$t = sql_getfetsel("syndication", "spip_syndic", "id_syndic=".intval($id));
 
 	if ($t == 'off' OR $t == 'sus')
 		$anim = 'anim';

@@ -84,7 +84,7 @@ function formulaires_editer_site_traiter_dist($id_syndic='new', $id_rubrique=0, 
 	// forcer reload du site si on change une des valeurs de syndication
 	if (intval($id_syndic)
 	  AND (_request('url_syndic') OR _request('resume') OR _request('syndication'))
-	  AND $t = sql_fetsel('url_syndic,syndication,resume', 'spip_syndic', "id_syndic=".sql_quote($id_syndic))){
+	  AND $t = sql_fetsel('url_syndic,syndication,resume', 'spip_syndic', "id_syndic=".intval($id_syndic))){
 
 		foreach(array('url_syndic','syndication','resume') as $k)
 			if ($v=_request($k) AND $v!=$t[$k])

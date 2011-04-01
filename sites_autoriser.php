@@ -59,7 +59,7 @@ function autoriser_site_modifier_dist($faire, $type, $id, $qui, $opt) {
 	if ($qui['statut'] == '0minirezo' AND !$qui['restreint'])
 		return true;
 
-	$t = sql_fetsel("id_rubrique,statut", "spip_syndic", "id_syndic=".sql_quote($id));
+	$t = sql_fetsel("id_rubrique,statut", "spip_syndic", "id_syndic=".intval($id));
 	return ($t
 		AND autoriser('voir','rubrique',$t['id_rubrique'])
 		AND ($t['statut'] == 'prop'
