@@ -9,5 +9,5 @@
 
 #PIPELINE{afficher_config_objet,#ARRAY{args,#ARRAY{type,site,id,#ID_SYNDIC},data,''}}
 </BOUCLE_nav>
-[(#ENV{exec}|=={site_edit}|oui)<INCLURE{fond=prive/squelettes/navigation/site_edit,env}>]
+[(#ENV{exec}|=={site_edit}|oui)<INCLURE{fond=prive/squelettes/navigation/site_edit,env} />]
 <//B_nav>
