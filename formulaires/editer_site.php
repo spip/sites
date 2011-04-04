@@ -49,7 +49,7 @@ function sites_edit_config($row)
 function formulaires_editer_site_verifier_dist($id_syndic='new', $id_rubrique=0, $retour='', $lier_trad=0, $config_fonc='sites_edit_config', $row=array(), $hidden=''){
 	include_spip('inc/filtres');
 	include_spip('inc/site');
-	$oblis = array('nom_site','url_site');
+	$oblis = array('nom_site','url_site','id_parent');
 	// Envoi depuis le formulaire d'analyse automatique d'un site
 	if (_request('ajoute_url_auto') AND strlen(vider_url($u = _request('url_auto')))) {
 		if ($auto = analyser_site($u)) {

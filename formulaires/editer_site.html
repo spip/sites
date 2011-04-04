@@ -45,8 +45,10 @@
 		    	]<input type='text' class='text' name='url_site' id='url_site' value="[(#ENV**{url_site})]" />
 	    </li>
 
-	 	[<li class="editer_parent[ (#ENV**{erreurs}|table_valeur{id_rubrique}|oui)erreur]">
-				<label for="titreparent"><:titre_cadre_interieur_rubrique:>
+	 	[<li class="editer_parent[ (#ENV**{erreurs}|table_valeur{id_parent}|oui)erreur]">
+				<label for="titreparent"><:titre_cadre_interieur_rubrique:>[
+				<span class='erreur_message'>(#ENV**{erreurs}|table_valeur{id_parent})</span>
+				]
 				</label>(#VAL|chercher_rubrique{#ENV{id_syndic},#ENV{id_rubrique}|sinon{#ENV{id_parent}},'site',#ENV{id_secteur},#ENV**{config}|table_valeur{restreint},0,form_simple})
 	    </li>]
 	    
