@@ -120,6 +120,7 @@ function sites_declarer_tables_objets_sql($tables){
 		'info_aucun_objet'=> 'info_aucun_article_syndique',
 		'info_1_objet' => 'info_1_article_syndique',
 		'info_nb_objets' => 'info_nb_articles_syndiques',
+		'icone_objet' => 'site',
 
 		// pas de page propre ni dans ecrire ni dans le site public
 		'url_voir'=>'',
