@@ -59,6 +59,5 @@ prive/themes/spip/images/syndic-statut-poubelle-24.png -text
 prive/themes/spip/images/syndic-statut-publie-24.png -text
 public/sites.php -text
 puce_statut/site.php -text
-puce_statut/syndic_article.php -text
 /sites_autoriser.php -text
 /sites_pipelines.php -text

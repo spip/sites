@@ -31,15 +31,6 @@ function sites_declarer_tables_interfaces($interfaces){
 	$interfaces['exceptions_des_tables']['syndic_articles']['nom_site']=array('syndic', 'nom_site');
 
 	$interfaces['table_date']['syndication'] = 'date';
-	#$interfaces['table_date']['syndic_articles'] = 'date';
-
-	#$interfaces['table_titre']['site'] = "nom_site AS titre, '' AS lang";
-	#$interfaces['table_titre']['syndic'] = "nom_site AS titre, '' AS lang";
-
-	$interfaces['table_statut']['spip_syndic'][] = array('champ'=>'statut','publie'=>'publie','previsu'=>'publie,prop','exception'=>'statut');
-	$interfaces['table_statut']['spip_syndic_articles'][] = array('champ'=>'statut','publie'=>'publie','previsu'=>'publie,prop','exception'=>'statut');
-	$interfaces['table_statut']['spip_syndic_articles'][] = array('champ'=>array(array('spip_syndic','id_syndic'),'statut'),'publie'=>'publie','previsu'=>'publie,prop','exception'=>'statut');
-
 
 	$interfaces['tables_jointures']['spip_syndic_articles'][]= 'syndic';
 
@@ -104,6 +95,15 @@ function sites_declarer_tables_objets_sql($tables){
 			"id_syndic"=>"id_syndic",
 			"id_rubrique"=>"id_rubrique"
 		),
+		'statut' => array(
+			 array('champ'=>'statut','publie'=>'publie','previsu'=>'publie,prop','exception'=>'statut')
+		),
+		'statut_textes_instituer' => 	array(
+			'prop' => 'texte_statut_propose_evaluation',
+			'publie' => 'texte_statut_publie',
+			'refuse' => 'texte_statut_refuse',
+		),
+
 		'rechercher_champs' => array(
 			'nom_site' => 5, 'url_site' => 1, 'descriptif' => 3
 		),
@@ -154,6 +154,13 @@ function sites_declarer_tables_objets_sql($tables){
 		'join' => array(
 			"id_syndic_article"=>"id_syndic_article",
 			"id_syndic"=>"id_syndic"
+		),
+		'statut' => array(
+			array('champ'=>'statut','publie'=>'publie','previsu'=>'publie,prop','exception'=>'statut'),
+			array('champ'=>array(array('spip_syndic','id_syndic'),'statut'),'publie'=>'publie','previsu'=>'publie,prop','exception'=>'statut'),
+		),
+		'statut_images' => array(
+			'puce-rouge-anim.gif','publie'=>'puce-publier-8.png','refuse'=>'puce-supprimer-8.png','dispo'=>'puce-proposer-8.png',
 		),
 		'rechercher_champs' => array(
 				'titre' => 5, 'descriptif' => 1

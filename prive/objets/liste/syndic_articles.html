@@ -22,7 +22,7 @@
 	<tbody>
 	<BOUCLE_liste_syndicart(SYNDIC_ARTICLES){id_syndic_article?}{id_syndic?}{where?}{recherche?}{statut?}{id_rubrique?}{lesauteurs?}{tri #ENV{par,date},#GET{defaut_tri}}{pagination #ENV{nb,10}}>
 		<tr class="[(#COMPTEUR_BOUCLE|alterner{row_odd,row_even})]">
-			<td class='statut'>[(#ID_SYNDIC_ARTICLE|puce_changement_statut{#STATUT,#ID_SYNDIC,syndic_article})]</td>
+			<td class='statut'>[(#STATUT|puce_statut{syndic_article})]</td>
 			<td class='titre principale'>[<a
 					href="(#URL_ARTICLE)"
 						title="<:info_numero_abbreviation|attribut_html:> #ID_SYNDIC_ARTICLE">#SET{a,'</a>'}]#TITRE[(#GET{a})]
