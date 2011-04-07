@@ -5,10 +5,8 @@
 
 [(#TAGS|afficher_enclosures)]
 
-[<div class="arial1">(#DESCRIPTIF|couper{600}|image_reduire{385,550})</div>]
-
-[<div style='float:#LANG_RIGHT;'>&nbsp;<em>(#TAGS|afficher_tags)</em></div>]
-
-[<div style='float:#LANG_RIGHT;'>[<a href="(#URL_SOURCE)">#SET{b,'</a>'}](#SOURCE|sinon{#URL_SOURCE})#GET{b}</div>]
+[<div class="descriptif">(#DESCRIPTIF|couper{600}|image_reduire{385,550})</div>]
+[<div class="tags">&nbsp;<em>(#TAGS|afficher_tags)</em></div>]
+[<div class="source">[<a href="(#URL_SOURCE)">#SET{b,'</a>'}](#SOURCE|sinon{#URL_SOURCE})#GET{b}</div>]
 
 </BOUCLE_afficher_contenu>
