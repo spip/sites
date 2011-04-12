@@ -19,38 +19,21 @@ function action_editer_site_dist($arg=null) {
 		$securiser_action = charger_fonction('securiser_action', 'inc');
 		$arg = $securiser_action();
 	}
-	$resyndiquer = false;
 
-	include_spip('inc/filtres'); // pour vider_url()
-
-	if ($id_syndic = intval($arg)) {
-		// resyndiquer si resume modifie et pas deja un reload demande
-		if (!_request('reload') AND _request('resume') AND _request('resume') != sql_getfetsel('resume', 'spip_syndic', "id_syndic=".intval($id_syndic)))
-			$resyndiquer = true;
-		revisions_sites($id_syndic);
-	
-	}
-	// Cas de la creation d'un site
-	elseif (strlen(vider_url(_request('url_site')))
-	          AND strlen(_request('nom_site'))) {
-		set_request('reload', 'oui');
+	if (!$id_syndic = intval($arg)){
 		$id_syndic = insert_syndic(_request('id_parent'));
-		revisions_sites($id_syndic);
 		if ($logo = _request('logo')
 		  AND $format_logo = _request('format_logo')) {
+			include_spip('inc/distant');
+			$logo = _DIR_RACINE . copie_locale($logo);
 			@rename($logo,_DIR_IMG . 'siteon'.$id_syndic.'.'.$format_logo);
 		}
 	}
-	// Erreur
-	else {
-		if (!_request('redirect'))
-			return array(0,'');
-		include_spip('inc/headers');
-		redirige_url_ecrire();
-	}
 
-	if ($resyndiquer OR _request('reload'))
-		syndic_resyndic($id_syndic,_request('reload'));
+	if (!$id_syndic)
+		return array(0,'');
+
+	syndic_set($id_syndic);
 
 	if (_request('redirect')) {
 		$redirect = parametre_url(urldecode(_request('redirect')),'id_syndic', $id_syndic, '&');
@@ -61,53 +44,6 @@ function action_editer_site_dist($arg=null) {
 		return array($id_syndic,'');
 }
 
-/**
- * Re-syndiquer un site,
- * en forcant eventuellement aussi le rechargement de ses infos
- *
- * @param int $id_syndic
- * @param bool $reload
- *   recharger les infos de description depuis le site en ligne
- * @param bool $purge
- *   purger les articles syndiques si on arrete la syndication
- * @return void
- */
-function syndic_resyndic($id_syndic, $reload=false, $purge=true){
-	// Re-syndiquer le site
-	if ($reload) {
-		// Effacer les messages si on supprime la syndication
-		if ($purge AND _request('syndication') == 'non')
-			sql_delete("spip_syndic_articles", "id_syndic=".intval($id_syndic));
-
-		$t = sql_getfetsel('descriptif', 'spip_syndic', "id_syndic=$id_syndic AND syndication IN ('oui', 'sus', 'off')", '','', 1);
-		if ($t !== NULL) {
-
-			// Si descriptif vide, chercher le logo si pas deja la
-			$chercher_logo = charger_fonction('chercher_logo', 'inc');
-			if (!$logo = $chercher_logo($id_syndic, 'id_syndic', 'on')
-			OR !$t) {
-				if ($auto = vider_url(_request('url_auto'))) {
-					$auto = analyser_site($auto);
-					if (!strlen($t) AND strlen($auto['descriptif']))
-						revisions_sites($id_syndic, array('descriptif' => $auto['descriptif']));
-				}
-				if (!$logo
-				AND $auto['logo'] AND $auto['format_logo']){
-					include_spip('inc/distant');
-					@rename($auto['logo'],
-					_DIR_IMG . 'siteon'.$id_syndic.'.'.$auto['format_logo']);
-				}
-			}
-
-			$resyndiquer = true;
-		}
-	}
-
-	if ($resyndiquer) {
-		$syndiquer_site = charger_fonction('syndiquer_site','action');
-		$syndiquer_site($id_syndic);
-	}
-}
 
 // http://doc.spip.org/@insert_syndic
 function insert_syndic($id_rubrique) {
@@ -154,11 +90,17 @@ function insert_syndic($id_rubrique) {
 	return $id_syndic;
 }
 
-
-// Enregistre une revision de syndic
-// $c est un contenu (par defaut on prend le contenu via _request())
-// http://doc.spip.org/@revisions_sites
-function revisions_sites($id_syndic, $set=false) {
+/**
+ * Modifier un site
+ *
+ * $c est un contenu (par defaut on prend le contenu via _request())
+ *
+ * @param int $id_syndic
+ * @param bool $set
+ * @return mixed|string
+ */
+function syndic_set($id_syndic, $set=false) {
+	$resyndiquer = false;
 
 	include_spip('inc/rubriques');
 	include_spip('inc/modifier');
@@ -173,6 +115,13 @@ function revisions_sites($id_syndic, $set=false) {
 		// donnees eventuellement fournies
 		$set
 	);
+
+	// resyndiquer si un element de syndication modifie
+	if ($t = sql_fetsel('url_syndic,syndication,resume', 'spip_syndic', "id_syndic=".intval($id_syndic))){
+		foreach($t as $k=>$v)
+			if (isset($c[$k]) AND $v!=$c[$k])
+				$resyndiquer = true;
+	}
 
 	// Si le site est publie, invalider les caches et demander sa reindexation
 	$t = sql_getfetsel("statut", "spip_syndic", "id_syndic=".intval($id_syndic));
@@ -190,69 +139,34 @@ function revisions_sites($id_syndic, $set=false) {
 		$c);
 
 
-	$row = sql_fetsel("statut, id_rubrique, id_secteur", "spip_syndic", "id_syndic=".intval($id_syndic));
-	$id_rubrique = $row['id_rubrique'];
-	$statut_ancien = $row['statut'];
-	$id_secteur_old = $row['id_secteur'];
-
-	$c = collecter_requests(array('statut','id_parent','date'),array(),$set);
-
-	if (isset($c['statut'])
-		AND $statut = $c['statut']
-	  AND $statut != $statut_ancien
-	  AND autoriser('publierdans','rubrique',$id_rubrique)) {
-		$champs['statut'] = $statut;
-		if ($statut == 'publie') {
-			if (isset($c['date']) AND $c['date']) {
-				$champs['date'] = $c['date'];
-			} else {
-				$champs['date'] = date('Y-m-d H:i:s');
-			}
-		}
-	}
-	else
-		$statut = $statut_ancien;
-
-	// Changer de rubrique ?
-	// Verifier que la rubrique demandee est differente de l'actuelle,
-	// et qu'elle existe. Recuperer son secteur
-
-	if (isset($c['id_parent'])
-		AND $id_parent = $c['id_parent']
-	  AND $id_parent != $id_rubrique
-	  AND ($id_secteur = sql_getfetsel('id_secteur', 'spip_rubriques', "id_rubrique=".intval($id_parent)))) {
-		$champs['id_rubrique'] = $id_parent;
-		if ($id_secteur_old != $id_secteur)
-			$champs['id_secteur'] = $id_secteur;
-		// si le site est publie
-		// et que le demandeur n'est pas admin de la rubrique
-		// repasser le site en statut 'prop'.
-		if ($statut == 'publie') {
-			if (!autoriser('publierdans','rubrique',$id_parent))
-				$champs['statut'] = $statut = 'prop';
-		}
+	if ($resyndiquer AND sql_getfetsel('syndication','spip_syndic',"id_syndic=".intval($id_syndic))!=='non') {
+		$syndiquer_site = charger_fonction('syndiquer_site','action');
+		$syndiquer_site($id_syndic);
 	}
 
-	if (!$champs) return;
 
-	// Enregistrer les modifications
-	sql_updateq('spip_syndic', $champs, "id_syndic=".intval($id_syndic));
+	// Modification de statut, changement de rubrique ?
+	$c = collecter_requests(array('date', 'statut', 'id_parent'),array(),$set);
+	$err = instituer_syndic($id_syndic, $c);
 
-	// Invalider les caches
-	if ($statut == 'publie') {
-		include_spip('inc/invalideur');
-		suivre_invalideur("id='site/$id_syndic'");
-	}
+	return $err;
+}
 
-	// Notifications
-	if ($notifications = charger_fonction('notifications', 'inc')) {
-		$notifications('instituersite', $id_syndic,
-			array('statut' => $statut, 'statut_ancien' => $statut_ancien, 'date'=>($champs['date']?$champs['date']:$row['date']))
-		);
-	}
+// http://doc.spip.org/@revisions_sites
+function revisions_sites($id_syndic, $set=false){
+	return syndic_set($id_syndic,$set);
+}
 
-	include_spip('inc/rubriques');
-	calculer_rubriques_if($id_rubrique, $champs, $statut_ancien);
+/**
+ * Instituer un site : on se repose sur la fonction generique
+ * @param int $id_syndic
+ * @param array $c
+ * @param bool $calcul_rub
+ * @return mixed|string
+ */
+function instituer_syndic($id_syndic, $c, $calcul_rub=true){
+	include_spip('action/editer_objet');
+	return instituer_objet('site', $id_syndic, $c, $calcul_rub);
 }
 
 

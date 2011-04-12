@@ -1,8 +1,8 @@
 * text=auto !eol
 action/editer_site.php -text
 action/instituer_site.php -text
-action/instituer_syndic.php -text
 action/instituer_syndic_article.php -text
+action/purger_site.php -text
 action/syndiquer_site.php -text
 balise/formulaire_site.php -text
 base/sites.php -text

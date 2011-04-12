@@ -12,17 +12,18 @@
 
 if (!defined("_ECRIRE_INC_VERSION")) return;
 
-// http://doc.spip.org/@action_instituer_syndic_dist
-function action_instituer_syndic_dist() {
+function action_purger_site_dist($id_syndic = null) {
 
-	$securiser_action = charger_fonction('securiser_action', 'inc');
-	$arg = $securiser_action();
+	if (is_null($id_syndic)) {
+		$securiser_action = charger_fonction('securiser_action', 'inc');
+		$id_syndic = $securiser_action();
+	}
 
-	list($id_syndic_article, $statut) = preg_split('/\W/', $arg);
+	if ($id_syndic = intval($id_syndic)
+	  AND autoriser('purger','site',$id_syndic)){
 
-	$id_syndic_article = intval($id_syndic_article);
-	sql_updateq("spip_syndic_articles", array("statut" => $statut), "id_syndic_article=$id_syndic_article");
-
-
+		include_spip('base/abstract_sql');
+		sql_delete('spip_syndic_articles','id_syndic='.intval($id_syndic));
+	}
 }
 ?>

@@ -4,13 +4,13 @@
 
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
-'icone_controler_syndication'=>'Publication des articles syndiqu&eacute;s',
-'icone_site_reference' => 'Sites r&eacute;f&eacute;renc&eacute;s',
-'icone_articles_syndic'=>'Articles syndiqu&eacute;s',
-'icone_article_syndic'=>'Article syndiqu&eacute;',
-'aucun_article_syndic' => 'Aucun article syndiqu&eacute;',
-'un_article_syndic' => '1 article syndiqu&eacute;',
-'nombre_articles_syndic' => '@nb@ articles syndiqu&eacute;s',
+'icone_controler_syndication'=>'Publication des articles syndiqués',
+'icone_site_reference' => 'Sites référencés',
+'icone_articles_syndic'=>'Articles syndiqués',
+'icone_article_syndic'=>'Article syndiqué',
+'aucun_article_syndic' => 'Aucun article syndiqué',
+'un_article_syndic' => '1 article syndiqué',
+'nombre_articles_syndic' => '@nb@ articles syndiqués',
 
 'icone_valider_article' => 'Valider cet article',
 'icone_supprimer_article' => 'Supprimer cet article',
@@ -21,15 +21,19 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 // statuts
 'articles_tous' => 'Tous',
-'articles_publie' => 'Publi&eacute;s',
+'articles_publie' => 'Publiés',
 'articles_dispo' => 'En attente',
-'articles_refuse' => 'Supprim&eacute;s',
+'articles_off' => 'Bloqués',
+'articles_refuse' => 'Supprimés',
 
 'statut_prop' => 'En attente',
-'statut_publie' => 'Publi&eacute;',
-'statut_off' => 'Supprim&eacute;',
+'statut_publie' => 'Publié',
+'statut_off' => 'Supprimé',
 
-'tout_voir' => 'Voir tous les articles syndiqu&eacute;s',
+'tout_voir' => 'Voir tous les articles syndiqués',
+
+'lien_purger_syndication' => 'Effacer tous les articles syndiqués',
+'confirmer_purger_syndication' => 'Êtes-vous certain de vouloir supprimer tous les articles syndiqués de ce site ?',
 );
 
 

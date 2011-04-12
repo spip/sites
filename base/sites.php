@@ -160,7 +160,7 @@ function sites_declarer_tables_objets_sql($tables){
 			array('champ'=>array(array('spip_syndic','id_syndic'),'statut'),'publie'=>'publie','previsu'=>'publie,prop','exception'=>'statut'),
 		),
 		'statut_images' => array(
-			'puce-rouge-anim.gif','publie'=>'puce-publier-8.png','refuse'=>'puce-supprimer-8.png','dispo'=>'puce-proposer-8.png',
+			'puce-rouge-anim.gif','publie'=>'puce-publier-8.png','refuse'=>'puce-supprimer-8.png','dispo'=>'puce-proposer-8.png','off'=>'puce-refuser-8.png',
 		),
 		'rechercher_champs' => array(
 				'titre' => 5, 'descriptif' => 1

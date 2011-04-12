@@ -14,6 +14,7 @@ if (!defined("_ECRIRE_INC_VERSION")) return;
 
 include_spip('inc/actions');
 include_spip('inc/editer');
+include_spip('inc/filtres'); // pour vider_url()
 
 function formulaires_editer_site_charger_dist($id_syndic='new', $id_rubrique=0, $retour='', $lier_trad=0, $config_fonc='sites_edit_config', $row=array(), $hidden=''){
 	$valeurs = formulaires_editer_objet_charger('site',$id_syndic,$id_rubrique,$lier_trad,$retour,$config_fonc,$row,$hidden);
@@ -66,8 +67,7 @@ function formulaires_editer_site_verifier_dist($id_syndic='new', $id_rubrique=0,
 			foreach($auto as $k=>$v){
 				set_request($k,$v);
 			}
-			$erreurs['message_ok'] =
-			_T('texte_referencement_automatique_verifier', array('url' => $u));
+			$erreurs['verif_url_auto'] = _T('texte_referencement_automatique_verifier', array('url' => $u));
 		}
 		else{
 			$erreurs['url_auto'] = _T('avis_site_introuvable');
@@ -79,15 +79,9 @@ function formulaires_editer_site_verifier_dist($id_syndic='new', $id_rubrique=0,
 }
 
 function formulaires_editer_site_traiter_dist($id_syndic='new', $id_rubrique=0, $retour='', $lier_trad=0, $config_fonc='sites_edit_config', $row=array(), $hidden=''){
-	// forcer reload du site si on change une des valeurs de syndication
-	if (intval($id_syndic)
-	  AND (_request('url_syndic') OR _request('resume') OR _request('syndication'))
-	  AND $t = sql_fetsel('url_syndic,syndication,resume', 'spip_syndic', "id_syndic=".intval($id_syndic))){
-
-		foreach(array('url_syndic','syndication','resume') as $k)
-			if ($v=_request($k) AND $v!=$t[$k])
-				set_request('reload', 'oui');
-	}
+	// netoyer les entrees
+	if (!is_null(_request('url_site')))
+		set_request('url_site',vider_url(_request('url_site')));
 
 	return formulaires_editer_objet_traiter('site',$id_syndic,$id_rubrique,$lier_trad,$retour,$config_fonc,$row,$hidden);
 }

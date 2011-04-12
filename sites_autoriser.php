@@ -23,13 +23,18 @@ function autoriser_sitecreer_bouton_dist($faire, $type, $id, $qui, $opt){
 }
 
 
-// Moderer le forum ?
+// Moderer la syndication ?
 // = modifier l'objet correspondant (si forum attache a un objet)
 // = droits par defaut sinon (admin complet pour moderation complete)
 // http://doc.spip.org/@autoriser_modererforum_dist
-function autoriser_moderersyndic_dist($faire, $type, $id, $qui, $opt) {
+function autoriser_site_moderer_dist($faire, $type, $id, $qui, $opt) {
 	return
-		autoriser('modifier', $type, $id, $qui, $opt);
+		autoriser('modifier', 'site', $id, $qui, $opt);
+}
+
+function autoriser_site_purger_dist($faire, $type, $id, $qui, $opt) {
+	return
+		autoriser('moderer', 'site', $id, $qui, $opt);
 }
 
 

@@ -19,11 +19,13 @@ function action_instituer_syndic_article_dist() {
 	$arg = $securiser_action();
 
 	list($id_syndic_article, $statut) = preg_split('/\W/', $arg);
-	$id_syndic_article = intval($id_syndic_article);
-	$row = sql_fetsel("*", "spip_syndic_articles", "id_syndic_article=$id_syndic_article");
-	if (!$row) return;
-	
-	sql_updateq("spip_syndic_articles", array("statut" => $statut), "id_syndic_article=".intval($id_syndic_article));
+
+	if ($id_syndic_article = intval($id_syndic_article)
+	  AND $id_syndic = sql_getfetsel('id_syndic','spip_syndic_articles',"id_syndic_article=".intval($id_syndic_article))
+		AND autoriser('moderer','site',$id_syndic)) {
+		sql_updateq("spip_syndic_articles", array("statut" => $statut), "id_syndic_article=".intval($id_syndic_article));
+	}
+
 }
 
 ?>
