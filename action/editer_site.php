@@ -49,10 +49,34 @@ function action_editer_site_dist($arg=null) {
 		redirige_url_ecrire();
 	}
 
+	if ($resyndiquer OR _request('reload'))
+		syndic_resyndic($id_syndic,_request('reload'));
+
+	if (_request('redirect')) {
+		$redirect = parametre_url(urldecode(_request('redirect')),'id_syndic', $id_syndic, '&');
+		include_spip('inc/headers');
+		redirige_par_entete($redirect);
+	}
+	else 
+		return array($id_syndic,'');
+}
+
+/**
+ * Re-syndiquer un site,
+ * en forcant eventuellement aussi le rechargement de ses infos
+ *
+ * @param int $id_syndic
+ * @param bool $reload
+ *   recharger les infos de description depuis le site en ligne
+ * @param bool $purge
+ *   purger les articles syndiques si on arrete la syndication
+ * @return void
+ */
+function syndic_resyndic($id_syndic, $reload=false, $purge=true){
 	// Re-syndiquer le site
-	if (_request('reload') == 'oui') {
+	if ($reload) {
 		// Effacer les messages si on supprime la syndication
-		if (_request('syndication') == 'non')
+		if ($purge AND _request('syndication') == 'non')
 			sql_delete("spip_syndic_articles", "id_syndic=".intval($id_syndic));
 
 		$t = sql_getfetsel('descriptif', 'spip_syndic', "id_syndic=$id_syndic AND syndication IN ('oui', 'sus', 'off')", '','', 1);
@@ -74,34 +98,15 @@ function action_editer_site_dist($arg=null) {
 					_DIR_IMG . 'siteon'.$id_syndic.'.'.$auto['format_logo']);
 				}
 			}
-			
+
 			$resyndiquer = true;
 		}
 	}
 
 	if ($resyndiquer) {
 		$syndiquer_site = charger_fonction('syndiquer_site','action');
-	  $syndiquer_site($id_syndic);
+		$syndiquer_site($id_syndic);
 	}
-
-	if (_request('redirect')) {
-		$redirect = parametre_url(urldecode(_request('redirect')),'id_syndic', $id_syndic, '&');
-		include_spip('inc/headers');
-		redirige_par_entete($redirect);
-	}
-	else 
-		return array($id_syndic,'');
-}
-
-// Cette fonction redefinit la tache standard de syndication
-// pour la forcer a syndiquer le site dans la globale genie_syndic_now
-
-// http://doc.spip.org/@genie_syndic
-function genie_syndic($t) {
-	include_spip('genie/syndic');
-	define('_GENIE_SYNDIC', 2); // Pas de faux message d'erreur
-	$t = syndic_a_jour(_GENIE_SYNDIC_NOW);
-	return $t ? 0 : _GENIE_SYNDIC_NOW;
 }
 
 // http://doc.spip.org/@insert_syndic

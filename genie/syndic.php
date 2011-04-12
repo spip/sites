@@ -13,9 +13,16 @@
 if (!defined("_ECRIRE_INC_VERSION")) return;
 include_spip('inc/syndic');
 
+## valeurs modifiables dans mes_options
+## attention il est tres mal vu de prendre une periode < 20 minutes
+if (!defined('_PERIODE_SYNDICATION'))
+	define('_PERIODE_SYNDICATION', 2*60);
+if (!defined('_PERIODE_SYNDICATION_SUSPENDUE'))
+	define('_PERIODE_SYNDICATION_SUSPENDUE', 24*60);
+
+
 // http://doc.spip.org/@genie_syndic_dist
 function genie_syndic_dist($t) {
-	define('_GENIE_SYNDIC', 1); // pour message de compatibilite ci-dessous
 	return executer_une_syndication();
 }
 
@@ -27,19 +34,15 @@ function genie_syndic_dist($t) {
 // http://doc.spip.org/@executer_une_syndication
 function executer_une_syndication() {
 
-	## valeurs modifiables dans mes_options
-	## attention il est tres mal vu de prendre une periode < 20 minutes
-	define('_PERIODE_SYNDICATION', 2*60);
-	define('_PERIODE_SYNDICATION_SUSPENDUE', 24*60);
-
 	// On va tenter un site 'sus' ou 'off' de plus de 24h, et le passer en 'off'
 	// s'il echoue
 	$where = sql_in("syndication", array('sus','off')) . "
 	AND NOT(" . sql_date_proche('date_syndic', (0 - _PERIODE_SYNDICATION_SUSPENDUE) , "MINUTE") . ')';
 	$id_syndic = sql_getfetsel("id_syndic", "spip_syndic", $where, '', "date_syndic", "1");
 	if ($id_syndic) {
-		$res1 = syndic_a_jour($id_syndic, 'off');
-	} else $res1 = true;
+		// inserer la tache dans la file, avec controle d'unicite
+		job_queue_add('syndic_a_jour','syndic_a_jour',array($id_syndic),'genie/syndic',true);
+	}
 
 	// Et un site 'oui' de plus de 2 heures, qui passe en 'sus' s'il echoue
 	$where = "syndication='oui'
@@ -47,28 +50,32 @@ function executer_une_syndication() {
 	$id_syndic = sql_getfetsel("id_syndic", "spip_syndic", $where, '', "date_syndic", "1");
 
 	if ($id_syndic) {
-		$res2 = syndic_a_jour($id_syndic, 'sus');
-	} else $res2 = true;
+		// inserer la tache dans la file, avec controle d'unicite
+		job_queue_add('syndic_a_jour','syndic_a_jour',array($id_syndic),'genie/syndic',true);
+	}
 
-	return ($res1 OR $res2) ? 0 : $id_syndic;
+	return 0;
 }
 
 
-//
-// Mettre a jour le site
-//
-// Attention, cette fonction ne doit pas etre appellee simultanement
-// sur un meme site: un verrouillage a du etre pose en amont.
-//
-
-// http://doc.spip.org/@syndic_a_jour
-function syndic_a_jour($now_id_syndic, $statut = 'off') {
+/**
+ * Mettre a jour le site
+ * Attention, cette fonction ne doit pas etre appellee simultanement
+ * sur un meme site: un verrouillage a du etre pose en amont.
+ * => elle doit toujours etre appelee par job_queue_add
+ *
+ * http://doc.spip.org/@syndic_a_jour
+ *
+ * @param int $now_id_syndic
+ * @return bool|string
+ */
+function syndic_a_jour($now_id_syndic) {
 	include_spip('inc/texte');
-	if (!defined('_GENIE_SYNDIC'))
-		spip_log("syndic_a_jour doit etre appelee par Cron. Cf. " .
-			 "http://trac.rezo.net/trac/spip/changeset/10294",
-			 'vieilles_defs');
-	$row = sql_fetsel("*", "spip_syndic", "id_syndic=$now_id_syndic");
+	$call = debug_backtrace();
+	if ($call[1]['function']!=='queue_start_job')
+		spip_log("syndic_a_jour doit etre appelee par JobQueue Cf. http://trac.rezo.net/trac/spip/changeset/10294",_LOG_ERREUR);
+
+	$row = sql_fetsel("*", "spip_syndic", "id_syndic=".intval($now_id_syndic));
 
 	if (!$row) return;
 
@@ -80,7 +87,16 @@ function syndic_a_jour($now_id_syndic, $statut = 'off') {
 	else
 		$moderation = 'publie';	// en ligne sans validation
 
-	sql_updateq('spip_syndic', array('syndication'=>$statut, 'date_syndic'=>date('Y-m-d H:i:s')), "id_syndic=$now_id_syndic");
+	// determiner le statut a poser en cas d'echec : sus par defaut
+	// off si le site est deja off, ou sus depuis trop longtemps
+	$statut = 'sus';
+	if (
+		$row['statut']=='off'
+	  OR ($row['statut']=='sus' AND time()-strtotime($row['date_syndic'])>_PERIODE_SYNDICATION_SUSPENDUE*60)
+	  )
+		$statut = 'off';
+
+	sql_updateq('spip_syndic', array('syndication'=>$statut, 'date_syndic'=>date('Y-m-d H:i:s')), "id_syndic=".intval($now_id_syndic));
 
 	// Aller chercher les donnees du RSS et les analyser
 	include_spip('inc/distant');
@@ -109,12 +125,12 @@ function syndic_a_jour($now_id_syndic, $statut = 'off') {
 	// suppression apres 2 mois des liens qui sont sortis du feed
 		if ($row['oubli'] == 'oui') {
 
-		  sql_delete('spip_syndic_articles', "id_syndic=$now_id_syndic AND NOT(" . sqL_date_proche('maj', -2, 'MONTH') . ') AND NOT(' . sql_date_proche('date', -2, 'MONTH') . ") AND $faits");
+		  sql_delete('spip_syndic_articles', "id_syndic=$now_id_syndic AND NOT(" . sql_date_proche('maj', -2, 'MONTH') . ') AND NOT(' . sql_date_proche('date', -2, 'MONTH') . ") AND $faits");
 		}
 	}
 
 	// Noter que la syndication est OK
-	sql_updateq("spip_syndic", array("syndication" => 'oui'), "id_syndic=$now_id_syndic");
+	sql_updateq("spip_syndic", array("syndication" => 'oui'), "id_syndic=".intval($now_id_syndic));
 
 	return false; # c'est bon
 }
