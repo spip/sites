@@ -2,6 +2,7 @@
 	<!-- <br class='bugajaxie' /> -->
 	[<p class="reponse_formulaire reponse_formulaire_ok">(#ENV**{message_ok})</p>]
 	[<p class="reponse_formulaire reponse_formulaire_erreur">(#ENV*{message_erreur})</p>]
+	[<p class="notice">(#ENV*{erreurs}|table_valeur{verif_url_auto})</p>]
 	[(#ENV{editable})
 	<form method='post' action='#ENV{action}'><div>
 		[(#REM) declarer les hidden qui declencheront le service du formulaire 
@@ -14,7 +15,7 @@
 
 
 		[<!-- Le logo auto-detecte -->
-		<div class='previsu_logo_site'>(#ENV**{logo}|copie_locale|image_reduire{180,999})</div>]
+		<div class='previsu_logo_site'>(#ENV**{logo}|image_reduire{180,999})</div>]
 
 		<ul>
 		[(#ENV{id_syndic}|intval|>{0}|sinon{#ENV{url_site}}|non)
@@ -45,7 +46,7 @@
 		    	]<input type='text' class='text' name='url_site' id='url_site' value="[(#ENV**{url_site})]" />
 	    </li>
 
-	 	[<li class="editer_parent[ (#ENV**{erreurs}|table_valeur{id_parent}|oui)erreur]">
+	 		[<li class="editer_parent[ (#ENV**{erreurs}|table_valeur{id_parent}|oui)erreur]">
 				<label for="titreparent"><:titre_cadre_interieur_rubrique:>[
 				<span class='erreur_message'>(#ENV**{erreurs}|table_valeur{id_parent})</span>
 				]
