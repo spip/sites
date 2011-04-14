@@ -96,8 +96,8 @@ function insert_syndic($id_rubrique) {
  * $c est un contenu (par defaut on prend le contenu via _request())
  *
  * @param int $id_syndic
- * @param bool $set
- * @return mixed|string
+ * @param array|bool $set
+ * @return string
  */
 function syndic_set($id_syndic, $set=false) {
 	$resyndiquer = false;
