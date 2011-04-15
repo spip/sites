@@ -21,7 +21,7 @@ function action_editer_site_dist($arg=null) {
 	}
 
 	if (!$id_syndic = intval($arg)){
-		$id_syndic = insert_syndic(_request('id_parent'));
+		$id_syndic = site_inserer(_request('id_parent'));
 		if ($logo = _request('logo')
 		  AND $format_logo = _request('format_logo')) {
 			include_spip('inc/distant');
@@ -33,20 +33,21 @@ function action_editer_site_dist($arg=null) {
 	if (!$id_syndic)
 		return array(0,'');
 
-	syndic_set($id_syndic);
+	$err = site_modifier($id_syndic);
 
-	if (_request('redirect')) {
-		$redirect = parametre_url(urldecode(_request('redirect')),'id_syndic', $id_syndic, '&');
-		include_spip('inc/headers');
-		redirige_par_entete($redirect);
-	}
-	else 
-		return array($id_syndic,'');
+	return array($id_syndic,$err);
 }
 
 
-// http://doc.spip.org/@insert_syndic
-function insert_syndic($id_rubrique) {
+/**
+ * Inserer un nouveau site en base
+ *
+ * http://doc.spip.org/@insert_syndic
+ *
+ * @param  $id_rubrique
+ * @return bool
+ */
+function site_inserer($id_rubrique) {
 
 	include_spip('inc/rubriques');
 
@@ -57,8 +58,10 @@ function insert_syndic($id_rubrique) {
 	}
 
 	// Le secteur a la creation : c'est le secteur de la rubrique
-
 	$id_secteur = sql_getfetsel("id_secteur", "spip_rubriques", "id_rubrique=".intval($id_rubrique));
+	// eviter un null si la rubrique n'existe pas (rubrique -1 par exemple)
+	if (!$id_secteur)
+		$id_secteur = 0;
 
 	$champs = array(
 		'id_rubrique' => $id_rubrique,
@@ -99,7 +102,7 @@ function insert_syndic($id_rubrique) {
  * @param array|bool $set
  * @return string
  */
-function syndic_set($id_syndic, $set=false) {
+function site_modifier($id_syndic, $set=false) {
 	$resyndiquer = false;
 
 	include_spip('inc/rubriques');
@@ -147,14 +150,9 @@ function syndic_set($id_syndic, $set=false) {
 
 	// Modification de statut, changement de rubrique ?
 	$c = collecter_requests(array('date', 'statut', 'id_parent'),array(),$set);
-	$err = instituer_syndic($id_syndic, $c);
+	$err = site_instituer($id_syndic, $c);
 
 	return $err;
-}
-
-// http://doc.spip.org/@revisions_sites
-function revisions_sites($id_syndic, $set=false){
-	return syndic_set($id_syndic,$set);
 }
 
 /**
@@ -164,10 +162,23 @@ function revisions_sites($id_syndic, $set=false){
  * @param bool $calcul_rub
  * @return mixed|string
  */
-function instituer_syndic($id_syndic, $c, $calcul_rub=true){
+function site_instituer($id_syndic, $c, $calcul_rub=true){
 	include_spip('action/editer_objet');
-	return instituer_objet('site', $id_syndic, $c, $calcul_rub);
+	return objet_instituer('site', $id_syndic, $c, $calcul_rub);
 }
 
 
+function insert_syndic($id_rubrique) {
+	return site_inserer($id_rubrique);
+}
+function syndic_set($id_syndic, $set=false) {
+	return site_modifier($id_syndic,$set);
+}
+// http://doc.spip.org/@revisions_sites
+function revisions_sites($id_syndic, $set=false){
+	return site_modifier($id_syndic,$set);
+}
+function instituer_syndic($id_syndic, $c, $calcul_rub=true){
+	return site_instituer($id_syndic, $c, $calcul_rub);
+}
 ?>

@@ -23,7 +23,7 @@ function action_instituer_site_dist() {
 	  AND autoriser('instituer','site',$id_syndic)){
 
 		include_spip('action/editer_site');
-		syndic_set($id_syndic,array('statut'=>$statut));
+		site_modifier($id_syndic,array('statut'=>$statut));
 
 	}
 }
