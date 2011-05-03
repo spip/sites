@@ -19,16 +19,16 @@ function inc_instituer_site_dist($id_syndic, $statut=-1)
 
 	$liste_statuts = array(
 	  // statut => array(titre,image)
-		'prop' => array(_T('info_statut_site_3'),''),	
-		'publie' => array(_T('info_statut_site_2'),''),	
-		'refuse' => array(_T('info_statut_site_4'),'')	
+		'prop' => array(_T('sites:info_statut_site_3'),''),
+		'publie' => array(_T('sites:info_statut_site_2'),''),
+		'refuse' => array(_T('sites:info_statut_site_4'),'')
 	);
 	if (!in_array($statut, array_keys($liste_statuts)))
 		$liste_statuts[$statut] =  array($statut,'');
 
 	$res =
 	  "<ul id='instituer_site-$id_syndic' class='instituer_site instituer'>" 
-	  . "<li>" . _T('info_statut_site_1') 
+	  . "<li>" . _T('sites:info_statut_site_1')
 	  ."<ul>";
 	
 	foreach($liste_statuts as $s=>$affiche){

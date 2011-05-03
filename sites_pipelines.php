@@ -27,7 +27,7 @@ function sites_rubrique_encours($flux){
 		// Les sites references a valider
 		//
 		if ($GLOBALS['meta']['activer_sites'] != 'non') {
-			$flux['data'] .= $lister_objets('sites',array('titre'=> _T('info_site_valider') ,'statut'=>'prop','id_rubrique'=>$id_rubrique, 'par'=>'nom_site'));
+			$flux['data'] .= $lister_objets('sites',array('titre'=> _T('sites:info_site_valider') ,'statut'=>'prop','id_rubrique'=>$id_rubrique, 'par'=>'nom_site'));
 		}
 
 		//
@@ -35,7 +35,7 @@ function sites_rubrique_encours($flux){
 		//
 		if ($GLOBALS['meta']['activer_sites'] != 'non'
 		AND autoriser('publierdans','rubrique',$id_rubrique)) {
-			$flux['data'] .= $lister_objets('sites',array('titre'=> _T('avis_sites_syndiques_probleme') ,'statut'=>'publie', 'syndication'=>array('off','sus'),'id_rubrique'=>$id_rubrique, 'par'=>'nom_site'));
+			$flux['data'] .= $lister_objets('sites',array('titre'=> _T('sites:avis_sites_syndiques_probleme') ,'statut'=>'publie', 'syndication'=>array('off','sus'),'id_rubrique'=>$id_rubrique, 'par'=>'nom_site'));
 		}
 
 		// Les articles syndiques en attente de validation
@@ -49,9 +49,9 @@ function sites_rubrique_encours($flux){
 					"' style='color: black;'>" .
 					$cpt .
 					" " .
-					_T('info_liens_syndiques_1') .
+					_T('sites:info_liens_syndiques_1') .
 					" " .
-					_T('info_liens_syndiques_2') .
+					_T('sites:info_liens_syndiques_2') .
 					"</a></small>";
 		}
 	}
@@ -73,7 +73,7 @@ function sites_accueil_encours($flux){
 	// Les sites references a valider
 	//
 	if ($GLOBALS['meta']['activer_sites'] != 'non') {
-		$flux .= $lister_objets('sites',array('titre'=>afficher_plus_info(generer_url_ecrire('sites')). _T('info_site_valider') ,'statut'=>'prop', 'par'=>'nom_site'));
+		$flux .= $lister_objets('sites',array('titre'=>afficher_plus_info(generer_url_ecrire('sites')). _T('sites:info_site_valider') ,'statut'=>'prop', 'par'=>'nom_site'));
 	}
 
 	if ($GLOBALS['visiteur_session']['statut'] == '0minirezo') {
@@ -81,7 +81,7 @@ function sites_accueil_encours($flux){
 		// Les sites a probleme
 		//
 		if ($GLOBALS['meta']['activer_sites'] != 'non') {
-			$flux .= $lister_objets('sites',array('titre'=>afficher_plus_info(generer_url_ecrire('sites')). _T('avis_sites_syndiques_probleme') ,'statut'=>'publie', 'syndication'=>array('off','sus'), 'par'=>'nom_site'));
+			$flux .= $lister_objets('sites',array('titre'=>afficher_plus_info(generer_url_ecrire('sites')). _T('sites:avis_sites_syndiques_probleme') ,'statut'=>'publie', 'syndication'=>array('off','sus'), 'par'=>'nom_site'));
 		}
 
 		// Les articles syndiques en attente de validation
@@ -92,9 +92,9 @@ function sites_accueil_encours($flux){
 			. "' style='color: black;'>"
 			. $cpt
 			. " "
-			. _T('info_liens_syndiques_1')
+			. _T('sites:info_liens_syndiques_1')
 			. " "
-			. _T('info_liens_syndiques_2')
+			. _T('sites:info_liens_syndiques_2')
 			. "</a></small>";
 
 	}
@@ -120,11 +120,11 @@ function sites_affiche_enfants($flux) {
 			$lister_objets = charger_fonction('lister_objets','inc');
 			$bouton_sites = '';
 			if (autoriser('creersitedans','rubrique',$id_rubrique)) {
-				$bouton_sites .= icone_verticale(_T('info_sites_referencer'), generer_url_ecrire('site_edit', "id_rubrique=$id_rubrique"), "site-24.png", "new", $spip_lang_right)
+				$bouton_sites .= icone_verticale(_T('sites:info_sites_referencer'), generer_url_ecrire('site_edit', "id_rubrique=$id_rubrique"), "site-24.png", "new", $spip_lang_right)
 					. "<br class='nettoyeur' />";
 			}
 			
-			$flux['data'] .= $lister_objets('sites',array('titre'=>_T('titre_sites_references_rubrique') ,'where'=>"statut!='refuse' AND statut != 'prop' AND syndication NOT IN ('off','sus')", 'id_rubrique'=>$id_rubrique,'par'=>'nom_site'));
+			$flux['data'] .= $lister_objets('sites',array('titre'=>_T('sites:titre_sites_references_rubrique') ,'where'=>"statut!='refuse' AND statut != 'prop' AND syndication NOT IN ('off','sus')", 'id_rubrique'=>$id_rubrique,'par'=>'nom_site'));
 			$flux['data'] .= $bouton_sites;
 		}
 	}

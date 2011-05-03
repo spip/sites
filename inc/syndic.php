@@ -71,7 +71,7 @@ function analyser_backend($rss, $url_syndic='') {
 	// Analyser chaque <item>...</item> du backend et le transformer en tableau
 	//
 
-	if (!count($items)) return _T('avis_echec_syndication_01');
+	if (!count($items)) return _T('sites:avis_echec_syndication_01');
 
 	foreach ($items as $item) {
 		$data = array();

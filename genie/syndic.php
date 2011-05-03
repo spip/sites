@@ -102,7 +102,7 @@ function syndic_a_jour($now_id_syndic) {
 	include_spip('inc/distant');
 	$rss = recuperer_page($url_syndic, true);
 	if (!$rss)
-		$articles = _T('avis_echec_syndication_02');
+		$articles = _T('sites:avis_echec_syndication_02');
 	else
 		$articles = analyser_backend($rss, $url_syndic);
 

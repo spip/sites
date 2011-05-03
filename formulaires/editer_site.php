@@ -67,10 +67,10 @@ function formulaires_editer_site_verifier_dist($id_syndic='new', $id_rubrique=0,
 			foreach($auto as $k=>$v){
 				set_request($k,$v);
 			}
-			$erreurs['verif_url_auto'] = _T('texte_referencement_automatique_verifier', array('url' => $u));
+			$erreurs['verif_url_auto'] = _T('sites:texte_referencement_automatique_verifier', array('url' => $u));
 		}
 		else{
-			$erreurs['url_auto'] = _T('avis_site_introuvable');
+			$erreurs['url_auto'] = _T('sites:avis_site_introuvable');
 		}
 	}
 	else

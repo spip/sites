@@ -4,7 +4,7 @@
 <INCLURE{fond=prive/objets/liste/sites,id_rubrique=#ID_RUBRIQUE,where=#GET{where},statut=#GET{statut},ajax} />
 
 #BOITE_OUVRIR{'','raccourcis'}
-	[(#URL_ECRIRE{sites}|icone_horizontale{<:icone_voir_sites_references:>,site-24.png})]
+	[(#URL_ECRIRE{sites}|icone_horizontale{<:sites:icone_voir_sites_references:>,site-24.png})]
 #BOITE_FERMER
 </BOUCLE_extra>
 [(#ENV{exec}|=={site_edit}|oui)<INCLURE{fond=prive/squelettes/extra/site_edit,env} />]
