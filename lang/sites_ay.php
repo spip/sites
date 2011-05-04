@@ -23,6 +23,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_sites_syndiques_probleme' => 'Aka apxasit qamawinakax jan walt\'anakaniwa',
 
 	// B
+	'bouton_radio_modere_posteriori' => 'qhipurunx k\'achata',
+	'bouton_radio_modere_priori' => 'nayraqatax k\'achata',
 	'bouton_radio_non_syndication' => 'Ni kunas apxasiwi',
 	'bouton_radio_syndication' => 'Apxasiwi',
 

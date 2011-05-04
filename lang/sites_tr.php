@@ -23,6 +23,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_sites_syndiques_probleme' => 'Haber paylaşımlı şu sitelerde sorun çıktı',
 
 	// B
+	'bouton_radio_modere_posteriori' => 'sonradan onayla yönetim',
+	'bouton_radio_modere_priori' => 'önceden onayla yönetim',
 	'bouton_radio_non_syndication' => 'Paylaşım (syndication) yok',
 	'bouton_radio_syndication' => 'Paylaşım :',
 

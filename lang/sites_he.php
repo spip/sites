@@ -23,6 +23,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_sites_syndiques_probleme' => 'אתרי הסינדיקציה האלה יצרו בעיה',
 
 	// B
+	'bouton_radio_modere_posteriori' => 'צמצום לאחר מכן',
+	'bouton_radio_modere_priori' => 'צמצום מראש',
 	'bouton_radio_non_syndication' => 'אין סינדיקציה',
 	'bouton_radio_syndication' => ':סינדיקציה',
 

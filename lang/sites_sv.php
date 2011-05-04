@@ -23,6 +23,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_sites_syndiques_probleme' => 'Det har uppstått ett problem med syndikeringen av sajterna',
 
 	// B
+	'bouton_radio_modere_posteriori' => 'moderering i efterhand',
+	'bouton_radio_modere_priori' => 'moderering i förhand',
 	'bouton_radio_non_syndication' => 'Ingen syndikering',
 	'bouton_radio_syndication' => 'Syndikering:',
 

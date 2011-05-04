@@ -23,6 +23,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_sites_syndiques_probleme' => 'Tiuj abonligitaj retejoj okazigis problemon',
 
 	// B
+	'bouton_radio_modere_posteriori' => 'aposteriore moderigata',
+	'bouton_radio_modere_priori' => 'apriore moderigata',
 	'bouton_radio_non_syndication' => 'Neniu abonrilato',
 	'bouton_radio_syndication' => 'Abonrilato:',
 

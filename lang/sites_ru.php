@@ -23,6 +23,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_sites_syndiques_probleme' => 'Эти объединенные сайты вызвали проблему',
 
 	// B
+	'bouton_radio_modere_posteriori' => 'пост-модерация',
+	'bouton_radio_modere_priori' => 'пре-модерация',
 	'bouton_radio_non_syndication' => 'Не объединятся',
 	'bouton_radio_syndication' => 'Объединение:',
 

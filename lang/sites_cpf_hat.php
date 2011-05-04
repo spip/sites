@@ -23,6 +23,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_sites_syndiques_probleme' => 'Sit yon se sit sak té bay yon pwoblèm',
 
 	// B
+	'bouton_radio_modere_posteriori' => 'Modewe dèyè',
+	'bouton_radio_modere_priori' => 'modewe avan',
 	'bouton_radio_non_syndication' => 'Okenn sendikasyon',
 	'bouton_radio_syndication' => 'Sendikasyon :',
 

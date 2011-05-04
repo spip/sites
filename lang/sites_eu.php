@@ -23,6 +23,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_sites_syndiques_probleme' => 'Sindikatutako leku hauek arazoak dituzte',
 
 	// B
+	'bouton_radio_modere_posteriori' => 'gerora moderatua',
+	'bouton_radio_modere_priori' => 'aurretiaz moderatua',
 	'bouton_radio_non_syndication' => 'Sindikaziorik ez',
 	'bouton_radio_syndication' => 'Sindikazioa',
 

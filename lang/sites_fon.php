@@ -23,6 +23,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_sites_syndiques_probleme' => 'gblogbloji yé  ma é lɔ lɛ̂ yé klɛn afɔ ɖé lɛ̂',
 
 	// B
+	'bouton_radio_modere_posteriori' => 'mi dalɔ wu ',
+	'bouton_radio_modere_priori' => 'mi dalɔ wu ',
 	'bouton_radio_non_syndication' => 'mima ɖē tin a ',
 	'bouton_radio_syndication' => 'mimamɛ',
 

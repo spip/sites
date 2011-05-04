@@ -23,6 +23,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_sites_syndiques_probleme' => 'Deze gesyndiceerde sites hebben een probleem',
 
 	// B
+	'bouton_radio_modere_posteriori' => 'nadien modereren',
+	'bouton_radio_modere_priori' => 'vooraf modereren',
 	'bouton_radio_non_syndication' => 'Geen syndicatie',
 	'bouton_radio_syndication' => 'Syndicatie :',
 

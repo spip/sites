@@ -23,6 +23,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_sites_syndiques_probleme' => 'Aquests llocs sindicats donen un problema ',
 
 	// B
+	'bouton_radio_modere_posteriori' => 'moderació a posteriori',
+	'bouton_radio_modere_priori' => 'moderació a priori',
 	'bouton_radio_non_syndication' => 'Cap sindicació',
 	'bouton_radio_syndication' => 'Sindicació:',
 

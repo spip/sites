@@ -23,6 +23,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_sites_syndiques_probleme' => 'اين سايتهاى پيوندى به مشكلى برخورده اند',
 
 	// B
+	'bouton_radio_modere_posteriori' => 'اعلان پيش از تأئيد',
+	'bouton_radio_modere_priori' => 'اعلان پس از تأئيد',
 	'bouton_radio_non_syndication' => 'بدون پيوند به سايتهاى ديگر',
 	'bouton_radio_syndication' => 'پيوند سايتى',
 

@@ -23,6 +23,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_sites_syndiques_probleme' => 'Situs-situs tersindikasi ini menimbulkan sebuah permasalahan',
 
 	// B
+	'bouton_radio_modere_posteriori' => 'moderasi akhir',
+	'bouton_radio_modere_priori' => 'moderasi awal',
 	'bouton_radio_non_syndication' => 'Tidak ada sindikasi',
 	'bouton_radio_syndication' => 'Sindikasi:',
 

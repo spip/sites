@@ -23,6 +23,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_sites_syndiques_probleme' => '7h353 5ynd1c473d 51735 g3n3r473d 4 pr0b13m',
 
 	// B
+	'bouton_radio_modere_posteriori' => '4f73rw4rd5 m0d3r4710n',
+	'bouton_radio_modere_priori' => 'b3f0r3h4nd m0d3r4710n',
 	'bouton_radio_non_syndication' => 'N0 5ynd1c4710n',
 	'bouton_radio_syndication' => '5ynd1c4710n:',
 

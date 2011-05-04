@@ -23,6 +23,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_sites_syndiques_probleme' => 'ဤ​ပူးတွဲချိတ်ဆက်ထား​သည့် ဆိုက်များတွင် ပြသနာရှိသည်',
 
 	// B
+	'bouton_radio_modere_posteriori' => 'နောက်မှ ထိန်းသိမ်းခြင်း',
+	'bouton_radio_modere_priori' => 'ကြိုတင် ထိန်းသိမ်းထားခြင်း',
 	'bouton_radio_non_syndication' => 'ပူးတွဲချတ်ဆက်မှုမလို',
 	'bouton_radio_syndication' => '​ပူးတွဲချတ်ဆက်မှု',
 

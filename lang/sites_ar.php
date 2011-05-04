@@ -23,6 +23,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_sites_syndiques_probleme' => 'ظهرت مشاكل في هذه المواقع المرخصة',
 
 	// B
+	'bouton_radio_modere_posteriori' => 'مراقبة بعدية',
+	'bouton_radio_modere_priori' => 'مراقبة استباقية',
 	'bouton_radio_non_syndication' => 'عدم ترخيص',
 	'bouton_radio_syndication' => 'ترخيص:',
 

@@ -23,6 +23,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_sites_syndiques_probleme' => '这些联合站点出现问题',
 
 	// B
+	'bouton_radio_modere_posteriori' => '预存后', # MODIF
+	'bouton_radio_modere_priori' => '预存前', # MODIF
 	'bouton_radio_non_syndication' => '没有联合',
 	'bouton_radio_syndication' => '联合:',
 

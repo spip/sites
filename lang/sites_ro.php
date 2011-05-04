@@ -23,6 +23,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_sites_syndiques_probleme' => 'Aceste site-uri sindicalizate au avut o problemă',
 
 	// B
+	'bouton_radio_modere_posteriori' => 'moderare ulterioară',
+	'bouton_radio_modere_priori' => 'moderare à priori',
 	'bouton_radio_non_syndication' => 'Fără sindicalizare',
 	'bouton_radio_syndication' => 'Sindicalizare :',
 

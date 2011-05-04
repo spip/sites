@@ -23,6 +23,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_sites_syndiques_probleme' => 'それらは問題を生じるサイトを配給しました',
 
 	// B
+	'bouton_radio_modere_posteriori' => 'コメントを投稿後に検査',
+	'bouton_radio_modere_priori' => '検査したコメントのみ表示',
 	'bouton_radio_non_syndication' => '供給（シンジケート）しない',
 	'bouton_radio_syndication' => '供給（シンジケート）:',
 

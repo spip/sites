@@ -24,6 +24,8 @@ Verifica l\'indirizzo del file per la syndication di (<b>@url_syndic@</b>) e pro
 	'avis_sites_syndiques_probleme' => 'Si sono verificati alcuni problemi nella syndication di questi siti',
 
 	// B
+	'bouton_radio_modere_posteriori' => 'moderato a posteriori',
+	'bouton_radio_modere_priori' => 'moderato a priori',
 	'bouton_radio_non_syndication' => 'Nessuna syndication',
 	'bouton_radio_syndication' => 'Syndication:',
 

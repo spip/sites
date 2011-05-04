@@ -23,6 +23,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_sites_syndiques_probleme' => 'Disse syndikerede sider giver problemer',
 
 	// B
+	'bouton_radio_modere_posteriori' => 'Efterfølgende godkendelse (bidrag er straks synlige men en administrator kan senere slette dem)',
+	'bouton_radio_modere_priori' => 'Forhåndsgodkendelse',
 	'bouton_radio_non_syndication' => 'Ingen syndikering',
 	'bouton_radio_syndication' => 'Syndikering:',
 

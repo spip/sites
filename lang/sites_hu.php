@@ -23,6 +23,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_sites_syndiques_probleme' => 'Azok a szindikált honlapok valami problémát okoztak',
 
 	// B
+	'bouton_radio_modere_posteriori' => 'utólag moderált',
+	'bouton_radio_modere_priori' => 'elözőleg moderálva',
 	'bouton_radio_non_syndication' => 'Nincs szindikálás',
 	'bouton_radio_syndication' => 'Szindikálás :',
 

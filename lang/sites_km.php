@@ -23,6 +23,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_sites_syndiques_probleme' => 'វ៉ែបសៃថ៍បញ្ជាប់ទាំងនេះ បានមានបញ្ហា',
 
 	// B
+	'bouton_radio_modere_posteriori' => 'សំរបសំរួល ពេលបន្ទាប់',
+	'bouton_radio_modere_priori' => 'សំរបសំរួល ជាដំបូង',
 	'bouton_radio_non_syndication' => 'គ្មានបញ្ជាប់',
 	'bouton_radio_syndication' => 'ការបញ្ជាប់​គ្នា ៖',
 

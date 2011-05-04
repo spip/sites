@@ -23,6 +23,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_sites_syndiques_probleme' => 'Sindikovane stranice su postavljale problem',
 
 	// B
+	'bouton_radio_modere_posteriori' => '\\f1 post-moderation\\f0 ',
+	'bouton_radio_modere_priori' => '\\f1 pre-moderation\\f0 ',
 	'bouton_radio_non_syndication' => 'Bez sindikacije',
 	'bouton_radio_syndication' => 'Sindikacija:',
 

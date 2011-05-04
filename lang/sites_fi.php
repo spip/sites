@@ -23,6 +23,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_sites_syndiques_probleme' => 'Nämä syndikoidut sivustot tuottivat ongelman',
 
 	// B
+	'bouton_radio_modere_posteriori' => 'moderointi jälkikäteen', # MODIF
+	'bouton_radio_modere_priori' => 'moderointi etukäteen', # MODIF
 	'bouton_radio_non_syndication' => 'Ei syndikointia',
 	'bouton_radio_syndication' => 'Syndikointi:',
 

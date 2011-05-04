@@ -23,6 +23,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_sites_syndiques_probleme' => 'Những website xuất bản song hành này cho biết có vấn đề',
 
 	// B
+	'bouton_radio_modere_posteriori' => 'đăng trước, xét sau',
+	'bouton_radio_modere_priori' => 'xét trước, đăng sau',
 	'bouton_radio_non_syndication' => 'Không có syndication',
 	'bouton_radio_syndication' => 'Syndication:',
 

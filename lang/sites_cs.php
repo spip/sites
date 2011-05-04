@@ -23,6 +23,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_sites_syndiques_probleme' => 'Problém pochází z těchto syndikovaných webů',
 
 	// B
+	'bouton_radio_modere_posteriori' => 'moderování ex post',
+	'bouton_radio_modere_priori' => 'moderování předem',
 	'bouton_radio_non_syndication' => 'Bez syndikace',
 	'bouton_radio_syndication' => 'Syndikace:',
 

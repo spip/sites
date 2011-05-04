@@ -23,6 +23,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_sites_syndiques_probleme' => 'Kudennoù zo savet gant al lec\'hiennoù sindikadet-se',
 
 	// B
+	'bouton_radio_modere_posteriori' => 'gwiriañ goude an embann',
+	'bouton_radio_modere_priori' => 'gwiriañ a-raok embann',
 	'bouton_radio_non_syndication' => 'Sindikadur ebet',
 	'bouton_radio_syndication' => 'Sindikadur :',
 

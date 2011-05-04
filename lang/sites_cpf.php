@@ -23,6 +23,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_sites_syndiques_probleme' => 'Bann sitwèb sak néna inn larlik ',
 
 	// B
+	'bouton_radio_modere_posteriori' => 'lé modèré apré konfirmasyon ',
+	'bouton_radio_modere_priori' => 'lé modèré-dovan',
 	'bouton_radio_non_syndication' => 'Anpès lasindikasyon',
 	'bouton_radio_syndication' => 'Lasindikasyon :',
 
