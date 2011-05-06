@@ -20,6 +20,7 @@ images/actions-filigrane-24.png -text
 inc/instituer_site.php -text
 inc/site.php -text
 inc/syndic.php -text
+lang/sites.xml -text
 lang/sites_ar.php -text
 lang/sites_ast.php -text
 lang/sites_ay.php -text
