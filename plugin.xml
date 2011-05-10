@@ -90,5 +90,5 @@
 	</bouton>
 	<categorie>edition</categorie>
 	<traduire gestionnaire="salvatore" module="sites" reference="fr" />
-
+	<necessite id="SPIP" version="[3.0.0-dev;)" />
 </plugin>
