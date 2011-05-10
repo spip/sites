@@ -14,6 +14,8 @@ formulaires/editer_site.php -text
 formulaires/editer_site_fonctions.php -text
 formulaires/regler_moderation_site.html -text
 formulaires/regler_moderation_site.php -text
+formulaires/site.html -text
+formulaires/site.php -text
 genie/syndic.php -text
 images/actions-24.png -text
 images/actions-filigrane-24.png -text
