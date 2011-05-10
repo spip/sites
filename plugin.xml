@@ -88,5 +88,7 @@
 		<icone>images/site-16.png</icone>
 		<titre>sites:icone_controler_syndication</titre>
 	</bouton>
+	<categorie>edition</categorie>
+	<traduire gestionnaire="salvatore" module="sites" reference="fr" />
 
 </plugin>
