@@ -20,17 +20,6 @@
 #SET{left,#ENV{ltr}|choixsiegal{left,left,right}}
 #SET{right,#ENV{ltr}|choixsiegal{left,right,left}}
 
-/* exec/site */
-.sites h1 { color: #000;font-size: large; margin-top:5px; }
-#voir .site_prop {text-align: center;font-weight: bold;font-size: small;color:red; }
-#voir .site_syndique { font-weight: bold; text-align: center; }
-#voir .site_syndique img { vertical-align:middle; }
-#voir .date_syndic { margin-top: 1em; }
-#voir .mise_a_jour_syndic { text-align: #GET{right}; }
-/* --- */
-.site .fiche_objet .site_syndique img {float:#GET{left};margin-top:-4px;margin-#GET{right}:3px;}
-
-
 .onglets_simple ul.statut_syndic_articles li.publie strong,.onglets_simple ul.statut_syndic_articles li.publie a {background-image:url(#CHEMIN_IMAGE{syndic-statut-publie-24.png});padding-#GET{left}:27px;}
 .onglets_simple ul.statut_syndic_articles li.off strong,.onglets_simple ul.statut_syndic_articles li.off a {background-image:url(#CHEMIN_IMAGE{syndic-statut-off-24.png});padding-#GET{left}:27px;}
 .onglets_simple ul.statut_syndic_articles li.refuse strong,.onglets_simple ul.statut_syndic_articles li.refuse a {background-image:url(#CHEMIN_IMAGE{syndic-statut-poubelle-24.png});padding-#GET{left}:27px;}

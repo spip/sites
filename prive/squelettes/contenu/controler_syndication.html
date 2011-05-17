@@ -1,4 +1,4 @@
-<h1><:sites:icone_controler_syndication:></h1>
+<h1 class="grostitre"><:sites:icone_controler_syndication:></h1>
 #SET{self,#SELF|parametre_url{id_syndic_article|lesauteurs|debut_id_syndic_article,''}}
 <BOUCLE_repart(SITES){id_syndic}><a class='annule_filtre' href='[(#GET{self}|parametre_url{id_syndic,''})]' title="<:sites:tout_voir|attribut_html:>">[(#CHEMIN_IMAGE{fermer-16.png}|balise_img|inserer_attribut{alt,<:sites:tout_voir:>})]</a>
 <:sites:texte_messages_publics:><h1><a href='[(#URL_SITE|ancre_url{syndic#ID_SYNDIC_ARTICLE})]'>#NOM_SITE</a></h1>
