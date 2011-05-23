@@ -23,16 +23,15 @@
 			<li class="editer_referencement_automatise fieldset">
 			  <fieldset>
 				  <ul>
-					  <li class="editer_url_auto[ (#ENV**{erreurs}|table_valeur{url_auto}|oui)erreur]">
+					  <li class="editer_url_auto pleine_largeur[ (#ENV**{erreurs}|table_valeur{url_auto}|oui)erreur]">
 							[<span class='erreur_message'>(#ENV**{erreurs}|table_valeur{url_auto})</span>]
 							<p class="explication"><:sites:texte_referencement_automatique:></p>
 							<input type="text" name="url_auto" id="url_auto" class='text' size='40' value="[(#ENV{url_site}|sinon{http://})]" />
 					  </li>
 				  </ul>
 				  <p class="boutons"><input type='submit' class='submit' name='ajoute_url_auto' value='<:bouton_ajouter:>' /></p>
+					<p class="explication"><:sites:texte_non_fonction_referencement:></p>
 				</fieldset>
-				<p class="explication"><:sites:texte_non_fonction_referencement:></p>
-				
 		  </li>
 			]]
 	    <li class="editer_nom_site obligatoire[ (#ENV**{erreurs}|table_valeur{nom_site}|oui)erreur]">
@@ -65,7 +64,7 @@
 				<:sites:bouton_radio_syndication:>
 				#AIDER{rubsyn}</h3>
 				<ul>
-					<li class="editer_syndication">
+					<li class="editer_syndication pleine_largeur">
 						<div class="choix">
 							<input type='radio' class="radio" name='syndication' value='non' id='syndication_non'[ (#ENV{syndication}|match{oui|off}|?{'','checked="checked"'})] />
 							<label for='syndication_non'><:sites:bouton_radio_non_syndication:></label>

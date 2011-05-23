@@ -15,25 +15,20 @@
 #HTTP_HEADER{Content-Type: text/css; charset=iso-8859-15}
 #HTTP_HEADER{Vary: Accept-Encoding}
 
-#SET{claire,##ENV{couleur_claire,edf3fe}}
-#SET{foncee,##ENV{couleur_foncee,3874b0}}
-#SET{left,#ENV{ltr}|choixsiegal{left,left,right}}
-#SET{right,#ENV{ltr}|choixsiegal{left,right,left}}
-
-.onglets_simple ul.statut_syndic_articles li.publie strong,.onglets_simple ul.statut_syndic_articles li.publie a {background-image:url(#CHEMIN_IMAGE{syndic-statut-publie-24.png});padding-#GET{left}:27px;}
-.onglets_simple ul.statut_syndic_articles li.off strong,.onglets_simple ul.statut_syndic_articles li.off a {background-image:url(#CHEMIN_IMAGE{syndic-statut-off-24.png});padding-#GET{left}:27px;}
-.onglets_simple ul.statut_syndic_articles li.refuse strong,.onglets_simple ul.statut_syndic_articles li.refuse a {background-image:url(#CHEMIN_IMAGE{syndic-statut-poubelle-24.png});padding-#GET{left}:27px;}
-.onglets_simple ul.statut_syndic_articles li.dispo strong,.onglets_simple ul.statut_syndic_articles li.dispo a {background-image:url(#CHEMIN_IMAGE{syndic-statut-dispo-24.png});padding-#GET{left}:27px;}
+.onglets_simple ul.statut_syndic_articles li.publie strong,.onglets_simple ul.statut_syndic_articles li.publie a {background-image:url(#CHEMIN_IMAGE{syndic-statut-publie-24.png});padding-#ENV{left}:27px;}
+.onglets_simple ul.statut_syndic_articles li.off strong,.onglets_simple ul.statut_syndic_articles li.off a {background-image:url(#CHEMIN_IMAGE{syndic-statut-off-24.png});padding-#ENV{left}:27px;}
+.onglets_simple ul.statut_syndic_articles li.refuse strong,.onglets_simple ul.statut_syndic_articles li.refuse a {background-image:url(#CHEMIN_IMAGE{syndic-statut-poubelle-24.png});padding-#ENV{left}:27px;}
+.onglets_simple ul.statut_syndic_articles li.dispo strong,.onglets_simple ul.statut_syndic_articles li.dispo a {background-image:url(#CHEMIN_IMAGE{syndic-statut-dispo-24.png});padding-#ENV{left}:27px;}
 
 
-.controler_syndication .filtres.second {font-size:0.9em;border:0;padding-#GET{left}:0;}
-.controler_syndication .filtres.second ul li strong,.controler_syndication .filtres.second ul li a {margin-#GET{left}:0px;margin-#GET{right}:5px;margin-bottom:5px;}
-.controler_syndication .filtres.second ul li strong {border:1px solid #GET{foncee};}
+.controler_syndication .filtres.second {font-size:0.9em;border:0;padding-#ENV{left}:0;}
+.controler_syndication .filtres.second ul li strong,.controler_syndication .filtres.second ul li a {margin-#ENV{left}:0px;margin-#ENV{right}:5px;margin-bottom:5px;}
+.controler_syndication .filtres.second ul li strong {border:1px solid #ENV{foncee};}
 .controler_syndication .filtres.second ul li strong,.controler_syndication .filtres.second ul li a:hover {background-color:#fff;}
 
-.source {font-size:12px;font-weight:bold;background:#fff;padding:5px;border:1px solid #GET{foncee};}
+.source {font-size:12px;font-weight:bold;background:#fff;padding:5px;border:1px solid #ENV{foncee};}
 .source .actions {font-weight:normal;}
-.annule_filtre {float:#GET{right};}
+.annule_filtre {float:#ENV{right};}
 
 
 /* Habillage des articles syndic en liste pour moderation
@@ -46,19 +41,19 @@ ul.syndic_articles li.statut_off.odd { background-color: #edd3d3; border-color: 
 ul.syndic_articles li.statut_dispo,
 ul.syndic_articles li.statut_dispo.odd { background-color: #FFFBEF; border-color: #EFCA68; }
 
-ul.syndic_articles li .cartouche { min-height: 30px; padding: 5px; padding-#GET{left}: 30px; }
+ul.syndic_articles li .cartouche { min-height: 30px; padding: 5px; padding-#ENV{left}: 30px; }
 ul.syndic_articles li.statut_off .cartouche { border-color: #edd3d3; }
 ul.syndic_articles li.statut_dispo .cartouche { border-color: #FFFBEF; }
 ul.syndic_articles li .cartouche h3 {font-size:1.1em;margin-bottom:0.25em;}
 ul.syndic_articles li .cartouche .date,ul.syndic_articles li .cartouche .par {display:inline;}
-ul.syndic_articles li .cartouche .info_statut {display:block;float:#GET{left};margin-#GET{left}:-30px;position:relative;display:inline;}
+ul.syndic_articles li .cartouche .info_statut {display:block;float:#ENV{left};margin-#ENV{left}:-30px;position:relative;display:inline;}
 ul.syndic_articles li .cartouche .reponse_a {font-weight:bold;}
 ul.syndic_articles li .cartouche .reponse_a a {font-weight:normal;}
 ul.syndic_articles li .cartouche .lien_admin {display:block;}
 
 ul.syndic_articles li.item .texte { margin: 0; padding: .8em 30px; }
 
-ul.syndic_articles >li.item .actions.moderer {padding-top:5px;padding-bottom:5px;margin-#GET{right}:5px;background:url(#CHEMIN_IMAGE{actions-filigrane-24.png}) no-repeat bottom right;padding-#GET{right}:30px;}
+ul.syndic_articles >li.item .actions.moderer {padding-top:5px;padding-bottom:5px;margin-#ENV{right}:5px;background:url(#CHEMIN_IMAGE{actions-filigrane-24.png}) no-repeat bottom right;padding-#ENV{right}:30px;}
 ul.syndic_articles >li.item:hover .actions.moderer {/*background-image:none;*/}
 ul.syndic_articles >li.item .actions.moderer > span {visibility:hidden;}
 ul.syndic_articles >li.item:hover .actions.moderer > span  {visibility:visible;}
@@ -66,15 +61,11 @@ ul.syndic_articles >li.item:hover .actions.moderer > span  {visibility:visible;}
 ul.syndic_articles li .actions .supprimer input.submit {color:#cf4d4d;}
 
 /**
- * Le logo du site dans le formulaire
+ * formulaire_editer_site
  */
 
-.formulaire_editer_site div.previsu_logo_site{
-	height:1px;
-}
+.formulaire_editer_site div.previsu_logo_site{height:1px;}
+.formulaire_editer_site div.previsu_logo_site img{position: relative;#ENV{left}: -220px;top: -60px;}
 
-.formulaire_editer_site div.previsu_logo_site img{
-	position: relative;
-	#GET{left}: -220px;
-	top: -60px;
-}
+/* Inscription du flux RSS */
+.formulaire_editer_site .editer_referencement_automatise fieldset,.formulaire_editer_site .editer_referencement_automatise .boutons{background-color:#E9E9E9;border:0;}
