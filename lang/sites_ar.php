@@ -8,13 +8,13 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// A
-	'articles_dispo' => 'En attente', # NEW
-	'articles_meme_auteur' => 'Tous les articles de cet auteur', # NEW
-	'articles_off' => 'Bloqués', # NEW
-	'articles_publie' => 'Publiés', # NEW
-	'articles_refuse' => 'Supprimés', # NEW
-	'articles_tous' => 'Tous', # NEW
-	'aucun_article_syndic' => 'Aucun article syndiqué', # NEW
+	'articles_dispo' => 'بالانتظار',
+	'articles_meme_auteur' => 'كل مقالات هذا المؤلف',
+	'articles_off' => 'مصدودة',
+	'articles_publie' => 'منشورة',
+	'articles_refuse' => 'محذوفة',
+	'articles_tous' => 'الكل',
+	'aucun_article_syndic' => 'لا توجد مقالات مرخصة',
 	'avis_echec_syndication_01' => 'الترخيص فشل: فإما لا يمكن قراءة ملف الترخيص الخلفي أو أنه لا يوفر أي مقال.',
 	'avis_echec_syndication_02' => 'الترخيص فشل: ليس من الممكن الوصول إلى ملف الترخيص الخلفي في هذا الموقع.',
 	'avis_site_introuvable' => 'الموقع غير موجود',
@@ -29,7 +29,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_radio_syndication' => 'ترخيص:',
 
 	// C
-	'confirmer_purger_syndication' => 'Êtes-vous certain de vouloir supprimer tous les articles syndiqués de ce site ?', # NEW
+	'confirmer_purger_syndication' => 'هل تريد فعلاً حذف كل المقالات المرخصة في هذا الموقع؟',
 
 	// E
 	'entree_adresse_fichier_syndication' => 'عنوان ملف الترخيص:',
@@ -40,16 +40,16 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'form_prop_nom_site' => 'اسم الموقع',
 
 	// I
-	'icone_article_syndic' => 'Article syndiqué', # NEW
-	'icone_articles_syndic' => 'Articles syndiqués', # NEW
-	'icone_controler_syndication' => 'Publication des articles syndiqués', # NEW
+	'icone_article_syndic' => 'مقال مرخص',
+	'icone_articles_syndic' => 'مقالات مرخصة',
+	'icone_controler_syndication' => 'نشر المقالات المرخصة',
 	'icone_modifier_site' => 'تعديل الموقع',
 	'icone_referencer_nouveau_site' => 'تبويب موقع جديد',
-	'icone_site_reference' => 'Sites référencés', # NEW
-	'icone_supprimer_article' => 'Supprimer cet article', # NEW
-	'icone_supprimer_articles' => 'Supprimer ces articles', # NEW
-	'icone_valider_article' => 'Valider cet article', # NEW
-	'icone_valider_articles' => 'Valider ces articles', # NEW
+	'icone_site_reference' => 'مواقع مبوبة',
+	'icone_supprimer_article' => 'حذف هذا المقال',
+	'icone_supprimer_articles' => 'حذف هذه المقالات',
+	'icone_valider_article' => 'التصديق على هذا المقال',
+	'icone_valider_articles' => 'التصديق على هذه المقالات',
 	'icone_voir_sites_references' => 'عرض المواقع المبوبة',
 	'info_a_valider' => '[بانتظار التصديق]',
 	'info_bloquer' => 'إيقاف',
@@ -86,15 +86,15 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// L
 	'lien_mise_a_jour_syndication' => 'تحديث الآن',
 	'lien_nouvelle_recuperation' => 'محاولة تنفيذ إسترجاع جديد للبيانات',
-	'lien_purger_syndication' => 'Effacer tous les articles syndiqués', # NEW
+	'lien_purger_syndication' => 'حذف كل المقالات المرخصة',
 
 	// N
-	'nombre_articles_syndic' => '@nb@ articles syndiqués', # NEW
+	'nombre_articles_syndic' => '@nb@ مقال مرخص',
 
 	// S
-	'statut_off' => 'Supprimé', # NEW
-	'statut_prop' => 'En attente', # NEW
-	'statut_publie' => 'Publié', # NEW
+	'statut_off' => 'محذوف',
+	'statut_prop' => 'بالانتظار',
+	'statut_publie' => 'منشور',
 	'syndic_choix_moderation' => 'ماذا تريد ان تفعل بالوصلات المقبلة القادمة من هذا الموقع؟',
 	'syndic_choix_oublier' => 'ماذا تريد ان تفعل بالوصلات التي لم تعد واردة في ملف الترخيص؟',
 	'syndic_choix_resume' => 'هناك بعض المواقع التي تنشر النص الكامل لمقالاتها. فإذا كان هذا النص متوافراً، عل تريد ترخيص:',
@@ -133,10 +133,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_sites_syndiques' => 'المواقع المرخصة',
 	'titre_sites_tous' => 'المواقع المبوبة',
 	'titre_syndication' => 'ترخيص المواقع',
-	'tout_voir' => 'Voir tous les articles syndiqués', # NEW
+	'tout_voir' => 'عرض كل المقالات المرخصة',
 
 	// U
-	'un_article_syndic' => '1 article syndiqué' # NEW
+	'un_article_syndic' => 'مقال مرخص واحد'
 );
 
 ?>

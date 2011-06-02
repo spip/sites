@@ -8,13 +8,13 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// A
-	'articles_dispo' => 'En attente', # NEW
-	'articles_meme_auteur' => 'Tous les articles de cet auteur', # NEW
-	'articles_off' => 'Bloqués', # NEW
-	'articles_publie' => 'Publiés', # NEW
-	'articles_refuse' => 'Supprimés', # NEW
-	'articles_tous' => 'Tous', # NEW
-	'aucun_article_syndic' => 'Aucun article syndiqué', # NEW
+	'articles_dispo' => 'En attente',
+	'articles_meme_auteur' => 'Tous les articles de cet auteur',
+	'articles_off' => 'Bloqués',
+	'articles_publie' => 'Publiés',
+	'articles_refuse' => 'Supprimés',
+	'articles_tous' => 'Tous',
+	'aucun_article_syndic' => 'Aucun article syndiqué',
 	'avis_echec_syndication_01' => 'La syndication a échoué : le backend indiqué est indéchiffrable ou ne propose aucun article.',
 	'avis_echec_syndication_02' => 'La syndication a échoué : impossible d\'accéder au backend de ce site.',
 	'avis_site_introuvable' => 'Site introuvable',
@@ -29,7 +29,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_radio_syndication' => 'Syndication :',
 
 	// C
-	'confirmer_purger_syndication' => 'Êtes-vous certain de vouloir supprimer tous les articles syndiqués de ce site ?', # NEW
+	'confirmer_purger_syndication' => 'Es-tu certain de vouloir supprimer tous les articles syndiqués de ce site ?',
 
 	// E
 	'entree_adresse_fichier_syndication' => 'Adresse du fichier de syndication :',
@@ -40,16 +40,16 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'form_prop_nom_site' => 'Nom du site',
 
 	// I
-	'icone_article_syndic' => 'Article syndiqué', # NEW
-	'icone_articles_syndic' => 'Articles syndiqués', # NEW
-	'icone_controler_syndication' => 'Publication des articles syndiqués', # NEW
+	'icone_article_syndic' => 'Article syndiqué',
+	'icone_articles_syndic' => 'Articles syndiqués',
+	'icone_controler_syndication' => 'Publication des articles syndiqués',
 	'icone_modifier_site' => 'Modifier ce site',
 	'icone_referencer_nouveau_site' => 'Référencer un nouveau site',
-	'icone_site_reference' => 'Sites référencés', # NEW
-	'icone_supprimer_article' => 'Supprimer cet article', # NEW
-	'icone_supprimer_articles' => 'Supprimer ces articles', # NEW
-	'icone_valider_article' => 'Valider cet article', # NEW
-	'icone_valider_articles' => 'Valider ces articles', # NEW
+	'icone_site_reference' => 'Sites référencés',
+	'icone_supprimer_article' => 'Supprimer cet article',
+	'icone_supprimer_articles' => 'Supprimer ces articles',
+	'icone_valider_article' => 'Valider cet article',
+	'icone_valider_articles' => 'Valider ces articles',
 	'icone_voir_sites_references' => 'Voir les sites référencés',
 	'info_a_valider' => '[à valider]',
 	'info_bloquer' => 'bloquer',
@@ -86,15 +86,15 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// L
 	'lien_mise_a_jour_syndication' => 'Mettre à jour maintenant',
 	'lien_nouvelle_recuperation' => 'Tenter une nouvelle récupération des données',
-	'lien_purger_syndication' => 'Effacer tous les articles syndiqués', # NEW
+	'lien_purger_syndication' => 'Effacer tous les articles syndiqués',
 
 	// N
-	'nombre_articles_syndic' => '@nb@ articles syndiqués', # NEW
+	'nombre_articles_syndic' => '@nb@ articles syndiqués',
 
 	// S
-	'statut_off' => 'Supprimé', # NEW
-	'statut_prop' => 'En attente', # NEW
-	'statut_publie' => 'Publié', # NEW
+	'statut_off' => 'Supprimé',
+	'statut_prop' => 'En attente',
+	'statut_publie' => 'Publié',
 	'syndic_choix_moderation' => 'Que faire des prochains liens en provenance de ce site ?',
 	'syndic_choix_oublier' => 'Que faire des liens qui ne figurent plus dans le fichier de syndication ?',
 	'syndic_choix_resume' => 'Certains sites diffusent le texte complet des articles. Lorsque celui-ci est disponible souhaites-tu syndiquer :',
@@ -133,10 +133,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_sites_syndiques' => 'Les sites syndiqués',
 	'titre_sites_tous' => 'Les sites référencés',
 	'titre_syndication' => 'Syndication de sites',
-	'tout_voir' => 'Voir tous les articles syndiqués', # NEW
+	'tout_voir' => 'Voir tous les articles syndiqués',
 
 	// U
-	'un_article_syndic' => '1 article syndiqué' # NEW
+	'un_article_syndic' => '1 article syndiqué'
 );
 
 ?>
