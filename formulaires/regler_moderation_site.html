@@ -9,7 +9,7 @@
 		#ACTION_FORMULAIRE{#ENV{action}}
 		<ul>
 			#SET{name,moderation}#SET{obli,''}#SET{erreurs,#ENV**{erreurs}|table_valeur{#GET{name}}}
-			<li class="editer_[(#GET{name})] long_label[ (#GET{obli})][ (#GET{erreurs}|oui)erreur]">
+			<li class="editer editer_[(#GET{name})] long_label[ (#GET{obli})][ (#GET{erreurs}|oui)erreur]">
 				<label><:sites:syndic_choix_moderation:></label>[
 				<span class='erreur_message'>(#GET{erreurs})</span>
 				]<div class="choix">
@@ -22,7 +22,7 @@
 				</div>
 			</li>
 			#SET{name,choix_oublier}#SET{obli,''}#SET{erreurs,#ENV**{erreurs}|table_valeur{#GET{name}}}
-			<li class="editer_[(#GET{name})] long_label[ (#GET{obli})][ (#GET{erreurs}|oui)erreur]">
+			<li class="editer editer_[(#GET{name})] long_label[ (#GET{obli})][ (#GET{erreurs}|oui)erreur]">
 				<label><:sites:syndic_choix_oublier:></label>[
 				<span class='erreur_message'>(#GET{erreurs})</span>
 				]
@@ -38,7 +38,7 @@
 				</div>
 			</li>
 			#SET{name,resume}#SET{obli,''}#SET{erreurs,#ENV**{erreurs}|table_valeur{#GET{name}}}
-			<li class="editer_[(#GET{name})] long_label[ (#GET{obli})][ (#GET{erreurs}|oui)erreur]">
+			<li class="editer editer_[(#GET{name})] long_label[ (#GET{obli})][ (#GET{erreurs}|oui)erreur]">
 				<label><:sites:syndic_choix_resume:></label>[
 				<span class='erreur_message'>(#GET{erreurs})</span>
 				]<div class="choix">
