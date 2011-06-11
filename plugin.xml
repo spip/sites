@@ -5,6 +5,7 @@
 	<version>1.4.1</version>
 	<version_base>1.0.0</version_base>
 	<etat>test</etat>
+	<slogan>Gestion des sites et de la syndication dans SPIP</slogan>
 	<description>Sites et syndication dans SPIP (priv&eacute; et public)</description>
 	<prefix>sites</prefix>
 	
