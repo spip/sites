@@ -2,8 +2,7 @@
 
 <BOUCLE_rubrique_existe(RUBRIQUES){statut?}{racine}{0, 1}>
 
-<INCLURE{fond=prive/objets/liste/sites,titre=<:sites:titre_sites_tous:>,syndication=non,statut=publie,par=nom_site,ajax} />
-<INCLURE{fond=prive/objets/liste/sites,titre=<:sites:titre_sites_syndiques:>,syndication=#ARRAY{0,oui,1,sus},statut=publie,par=nom_site,ajax} />
+<INCLURE{fond=prive/objets/liste/sites,titre=<:sites:titre_sites_tous:>,statut=publie,par=nom_site,ajax} />
 <INCLURE{fond=prive/objets/liste/sites,titre=<:sites:titre_sites_proposes:>,statut=prop,par=nom_site,ajax} />
 
 [(#AUTORISER{creersitedans,rubrique,#ID_RUBRIQUE})
