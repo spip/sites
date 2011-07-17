@@ -35,7 +35,7 @@ function formulaires_editer_site_identifier_dist($id_syndic='new', $id_rubrique=
 // Choix par defaut des options de presentation
 function sites_edit_config($row)
 {
-	global $spip_ecran, $spip_lang, $spip_display;
+	global $spip_ecran, $spip_lang;
 
 	$config = $GLOBALS['meta'];
 	$config['lignes'] = ($spip_ecran == "large")? 8 : 5;
