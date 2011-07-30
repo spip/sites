@@ -10,11 +10,11 @@
 [<caption><strong class="caption">(#ENV*{titre,#GRAND_TOTAL|singulier_ou_pluriel{info_1_site,info_nb_sites}})</strong></caption>]
 	<thead>
 		<tr class='first_row'>
-			<th class='statut'>[(#TRI{statut,<span title="<:lien_trier_statut|attribut_html:>">#</span>,ajax})]</th>
-			<th class='nom_site'>[(#TRI{nom_site,<:sites:form_prop_nom_site:>,ajax})]</th>
-			<th class='syndication'><:sites:info_syndication:></th>
-			<th class='date'>[(#TRI{date,<:date:>,ajax})]</th>
-			<th class='id'>[(#TRI{id_syndic,<:info_numero_abbreviation:>,ajax})]</th>
+			<th class='statut' scope='col'>[(#TRI{statut,<span title="<:lien_trier_statut|attribut_html:>">#</span>,ajax})]</th>
+			<th class='nom_site' scope='col'>[(#TRI{nom_site,<:sites:form_prop_nom_site:>,ajax})]</th>
+			<th class='syndication' scope='col'><:sites:info_syndication:></th>
+			<th class='date' scope='col'>[(#TRI{date,<:date:>,ajax})]</th>
+			<th class='id' scope='col'>[(#TRI{id_syndic,<:info_numero_abbreviation:>,ajax})]</th>
 		</tr>
 	</thead>
 	<tbody>
