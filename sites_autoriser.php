@@ -15,10 +15,10 @@ function sites_autoriser() {}
 
 
 // bouton du bandeau
-function autoriser_sites_bouton_dist($faire, $type='', $id=0, $qui = NULL, $opt = NULL){
+function autoriser_sites_menu_dist($faire, $type='', $id=0, $qui = NULL, $opt = NULL){
 	return 	($GLOBALS['meta']["activer_sites"] != "non");
 }
-function autoriser_sitecreer_bouton_dist($faire, $type, $id, $qui, $opt){
+function autoriser_sitecreer_menu_dist($faire, $type, $id, $qui, $opt){
 	return 	($GLOBALS['meta']["activer_sites"] != "non");
 }
 
@@ -38,7 +38,7 @@ function autoriser_site_purger_dist($faire, $type, $id, $qui, $opt) {
 }
 
 
-function autoriser_controlersyndication_bouton_dist($faire, $type, $id, $qui, $opt){
+function autoriser_controlersyndication_menu_dist($faire, $type, $id, $qui, $opt){
 	return 	($qui['statut']=='0minirezo' AND sql_countsel('spip_syndic_articles'));
 }
 
