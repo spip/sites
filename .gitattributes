@@ -6,7 +6,6 @@ action/purger_site.php -text
 action/syndiquer_site.php -text
 balise/formulaire_site.php -text
 base/sites.php -text
-base/sites_upgrade.php -text
 formulaires/configurer_sites.html -text
 formulaires/configurer_sites.php -text
 formulaires/editer_site.html -text
@@ -79,7 +78,6 @@ lang/sites_tr.php -text
 lang/sites_vi.php -text
 lang/sites_zh.php -text
 liens/implicite_site.php -text
-/plugin.xml -text
 prive/modeles/syndic-actions-moderer.html -text
 prive/modeles/syndic_article.html -text
 prive/objets/contenu/site.html -text
@@ -135,7 +133,8 @@ prive/themes/spip2/images/syndic-statut-dispo-24.png -text
 prive/themes/spip2/images/syndic-statut-off-24.png -text
 prive/themes/spip2/images/syndic-statut-poubelle-24.png -text
 prive/themes/spip2/images/syndic-statut-publie-24.png -text
-public/sites.php -text
 puce_statut/site.php -text
+/sites_administrations.php -text
 /sites_autoriser.php -text
+/sites_fonctions.php -text
 /sites_pipelines.php -text
