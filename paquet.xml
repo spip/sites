@@ -30,7 +30,7 @@
 	<pipeline nom="objet_compte_enfants" inclure="sites_pipelines.php" />
 	<pipeline nom="trig_propager_les_secteurs" inclure="sites_pipelines.php" />
 
-	<menu nom="sites" titre="icone_sites_references" parent="bando_edition" icone="images/site-16.png" action="sites" />
+	<menu nom="sites" titre="icone_sites_references" parent="menu_edition" icone="images/site-16.png" action="sites" />
 	<menu nom="site_creer" titre="sites:icone_referencer_nouveau_site" parent="outils_rapides" icone="images/site-new-16.png" action="site_edit" parametres="new=oui&amp;id_rubrique=@id_rubrique@" />
-	<menu nom="controler_syndication" titre="sites:icone_controler_syndication" parent="bando_publication" position="-1" icone="images/site-16.png" />
+	<menu nom="controler_syndication" titre="sites:icone_controler_syndication" parent="menu_publication" position="-1" icone="images/site-16.png" />
 </paquet>
