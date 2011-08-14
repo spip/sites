@@ -234,5 +234,22 @@ function sites_trig_propager_les_secteurs($flux){
 	return $flux;
 }
 
+/**
+ * Afficher le nombre de sites dans chaque rubrique
+ *
+ * @param array $flux
+ * @return array
+ */
+function sites_boite_infos($flux){
+	if ($flux['args']['type']=='rubrique'
+	  AND $id_rubrique = $flux['args']['id']){
+		if ($nb = sql_countsel('spip_syndic',"statut='publie' AND id_rubrique=".intval($id_rubrique))){
+			$nb = "<div>". singulier_ou_pluriel($nb, "info_1_site", "info_nb_sites") . "</div>";
+			if ($p = strpos($flux['data'],"<!--nb_elements-->"))
+				$flux['data'] = substr_replace($flux['data'],$nb,$p,0);
+		}
+	}
+	return $flux;
+}
 
 ?>

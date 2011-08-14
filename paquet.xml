@@ -1,7 +1,7 @@
 <paquet
 	prefix="sites"
 	categorie="edition"
-	version="1.5.0"
+	version="1.5.1"
 	etat="test"
 	compatibilite="[3.0.0-alpha2;["
 	logo="prive/themes/spip/images/site-32.png"
@@ -29,6 +29,7 @@
 	<pipeline nom="calculer_rubriques" inclure="sites_pipelines.php" />
 	<pipeline nom="objet_compte_enfants" inclure="sites_pipelines.php" />
 	<pipeline nom="trig_propager_les_secteurs" inclure="sites_pipelines.php" />
+	<pipeline nom="boite_infos" inclure="sites_pipelines.php" />
 
 	<menu nom="sites" titre="icone_sites_references" parent="menu_edition" icone="images/site-16.png" action="sites" />
 	<menu nom="site_creer" titre="sites:icone_referencer_nouveau_site" parent="outils_rapides" icone="images/site-new-16.png" action="site_edit" parametres="new=oui&amp;id_rubrique=@id_rubrique@" />
