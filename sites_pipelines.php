@@ -14,8 +14,8 @@
 /**
  * Ajouter les sites et syndication a valider sur les rubriques 
  *
- * @param 
- * @return 
+ * @param array $flux
+ * @return array
 **/
 function sites_rubrique_encours($flux){
 	if ($flux['args']['type'] == 'rubrique') {
@@ -59,12 +59,23 @@ function sites_rubrique_encours($flux){
 	return $flux;
 }
 
+/**
+ * Configuration des contenus
+ * @param array $flux
+ * @return array
+ */
+function sites_affiche_milieu($flux){
+	if ($flux["args"]["exec"] == "configurer_contenu") {
+		$flux["data"] .=  recuperer_fond('prive/squelettes/inclure/configurer',array('configurer'=>'configurer_sites'));
+	}
+	return $flux;
+}
 
 /**
  * Ajouter les sites et syndication a valider sur la page d'accueil 
  *
- * @param 
- * @return 
+ * @param array $flux
+ * @return array
 **/
 function sites_accueil_encours($flux){
 	$lister_objets = charger_fonction('lister_objets','inc');
@@ -105,8 +116,8 @@ function sites_accueil_encours($flux){
 /**
  * Ajouter les sites references sur les vues de rubriques
  *
- * @param 
- * @return 
+ * @param array $flux
+ * @return array
 **/
 function sites_affiche_enfants($flux) {
 	if ($e = trouver_objet_exec($flux['args']['exec'])
@@ -148,8 +159,8 @@ function sites_configurer_liste_metas($metas){
 /**
  * Taches periodiques de syndication 
  *
- * @param 
- * @return 
+ * @param array $taches_generales
+ * @return array
 **/
 function sites_taches_generales_cron($taches_generales){
 
@@ -164,8 +175,8 @@ function sites_taches_generales_cron($taches_generales){
 /**
  * Optimiser la base de donnee en supprimant les liens orphelins
  *
- * @param int $n
- * @return int
+ * @param array $flux
+ * @return array
  */
 function sites_optimiser_base_disparus($flux){
 	$n = &$flux['data'];
@@ -193,8 +204,8 @@ function sites_optimiser_base_disparus($flux){
 /**
  * Publier et dater les rubriques qui ont un site publie
  * 
- * @param <type> $flux
- * @return <type>
+ * @param array $flux
+ * @return array
  */
 function sites_calculer_rubriques($flux) {
 	
