@@ -150,21 +150,10 @@ function site_modifier($id_syndic, $set=false) {
 
 	// Modification de statut, changement de rubrique ?
 	$c = collecter_requests(array('date', 'statut', 'id_parent'),array(),$set);
-	$err = site_instituer($id_syndic, $c);
+	include_spip('action/editer_objet');
+	$err = objet_instituer('site',$id_syndic, $c);
 
 	return $err;
-}
-
-/**
- * Instituer un site : on se repose sur la fonction generique
- * @param int $id_syndic
- * @param array $c
- * @param bool $calcul_rub
- * @return mixed|string
- */
-function site_instituer($id_syndic, $c, $calcul_rub=true){
-	include_spip('action/editer_objet');
-	return objet_instituer('site', $id_syndic, $c, $calcul_rub);
 }
 
 
@@ -179,6 +168,7 @@ function revisions_sites($id_syndic, $set=false){
 	return site_modifier($id_syndic,$set);
 }
 function instituer_syndic($id_syndic, $c, $calcul_rub=true){
-	return site_instituer($id_syndic, $c, $calcul_rub);
+	include_spip('action/editer_objet');
+	return objet_instituer('site',$id_syndic, $c, $calcul_rub);
 }
 ?>
