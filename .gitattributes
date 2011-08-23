@@ -18,7 +18,6 @@ formulaires/site.php -text
 genie/syndic.php -text
 images/actions-24.png -text
 images/actions-filigrane-24.png -text
-inc/instituer_site.php -text
 inc/site.php -text
 inc/syndic.php -text
 lang/sites.xml -text
@@ -83,7 +82,6 @@ prive/modeles/syndic_article.html -text
 prive/objets/contenu/site.html -text
 prive/objets/contenu/syndic_article.html -text
 prive/objets/infos/site.html -text
-prive/objets/infos/site_fonctions.php -text
 prive/objets/liste/sites.html -text
 prive/objets/liste/syndic.html -text
 prive/objets/liste/syndic_articles.html -text

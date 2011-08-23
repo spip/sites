@@ -1,4 +1,4 @@
-<BOUCLE_nav(SITES){id_syndic}{statut?}{si #ENV{exec}|=={site}}>
+<BOUCLE_nav(SITES){id_syndic}{statut==.*}{si #ENV{exec}|=={site}}>
 #BOITE_OUVRIR{'','info'}
 #PIPELINE{boite_infos,#ARRAY{data,'',args,#ARRAY{'type','site','id',#ENV{id_syndic}}}}
 #BOITE_FERMER

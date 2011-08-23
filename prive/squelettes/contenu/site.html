@@ -1,4 +1,4 @@
-<BOUCLE_site(SITES){id_syndic}{statut?}{si #ENV{exec}|=={site}}>
+<BOUCLE_site(SITES){id_syndic}{statut==.*}{si #ENV{exec}|=={site}}>
 [(#BOITE_OUVRIR{[
 				
 	[(#AUTORISER{modifier,site,#ID_SYNDIC})

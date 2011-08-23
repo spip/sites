@@ -98,10 +98,11 @@ function sites_declarer_tables_objets_sql($tables){
 		'statut' => array(
 			 array('champ'=>'statut','publie'=>'publie','previsu'=>'publie,prop','exception'=>'statut')
 		),
+		'texte_changer_statut' => 'sites:info_statut_site_1',
 		'statut_textes_instituer' => 	array(
 			'prop' => 'texte_statut_propose_evaluation',
 			'publie' => 'texte_statut_publie',
-			'refuse' => 'texte_statut_refuse',
+			'refuse' => 'texte_statut_poubelle',
 		),
 
 		'rechercher_champs' => array(
