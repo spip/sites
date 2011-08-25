@@ -133,7 +133,7 @@ function site_modifier($id_syndic, $set=false) {
 		$indexation = true;
 	}
 
-	modifier_contenu('syndic', $id_syndic,
+	modifier_contenu('site', $id_syndic,
 		array(
 			'nonvide' => array('nom_site' => _T('info_sans_titre')),
 			'invalideur' => $invalideur,
