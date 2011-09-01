@@ -60,9 +60,7 @@
 
 #BOITE_FERMER
 [(#EVAL{_AJAX}|oui)
-<script type="text/javascript">if (window.jQuery)
-jQuery(function(){jQuery('#navigation>div').ajaxReload({args:{exec:'site'}});})
-</script>
+	<script type="text/javascript">/*<!\[CDATA\[*/reloadExecPage('#ENV{exec}','#navigation,#chemin');/*\]\]>*/</script>
 ]
 </BOUCLE_site>
 [(#ENV**{exec}|=={site_edit}|?{#INCLURE{fond=prive/squelettes/contenu/site_edit,redirect='',env,retourajax=oui},#REM|sinon_interdire_acces})]
