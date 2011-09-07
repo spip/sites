@@ -9,12 +9,12 @@
 		<p class='explication'><:proposer_site:></p>
 		<ul>
 			<li class='editer saisie_nom_site obligatoire[ (#ENV*{erreurs}|table_valeur{nom_site}|oui)erreur]'>
-				<label for="nom_site"><:sites:form_prop_nom_site:></label>
+				<label for="nom_site"><:sites:form_prop_nom_site:><:required:></label>
 				[<span class="erreur_message">(#ENV*{erreurs}|table_valeur{nom_site})</span>]
 				<input type="text" class="text" name="nom_site" id="nom_site" value="#ENV{nom_site}" size="30"[(#HTML5) required="required"] />
 			</li>
-			<li class='editer saisie_url_site[ (#ENV*{erreurs}|table_valeur{url_site}|oui)erreur]'>
-				<label for="url_site"><:form_prop_url_site:></label>
+			<li class='editer saisie_url_site obligatoire[ (#ENV*{erreurs}|table_valeur{url_site}|oui)erreur]'>
+				<label for="url_site"><:form_prop_url_site:><:required:></label>
 				[<span class="erreur_message">(#ENV*{erreurs}|table_valeur{url_site})</span>]
 				<input[ (#HTML5|?{type="url" class="text url",type="text" class="text"})] name="url_site" id="url_site" value="#ENV{url_site}" size="30" />
 			</li>
