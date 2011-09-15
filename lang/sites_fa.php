@@ -8,28 +8,28 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// A
-	'articles_dispo' => 'En attente', # NEW
-	'articles_meme_auteur' => 'Tous les articles de cet auteur', # NEW
-	'articles_off' => 'Bloqués', # NEW
-	'articles_publie' => 'Publiés', # NEW
-	'articles_refuse' => 'Supprimés', # NEW
-	'articles_tous' => 'Tous', # NEW
-	'aucun_article_syndic' => 'Aucun article syndiqué', # NEW
-	'avis_echec_syndication_01' => 'ارتباط با سايتهاى ديگر برقرار نشد : يا فايل بك اند نا خوانا ست يا هيچ مقاله اى ندارد',
-	'avis_echec_syndication_02' => 'ارتباط با سايتهاى ديگر برقرار نشد : دسترسى به بك اند در اين سايت ممكن نميباشد       ',
+	'articles_dispo' => 'در انتظار',
+	'articles_meme_auteur' => 'تمام مقاله‌هاي اين نويسنده',
+	'articles_off' => 'بلوك‌ها',
+	'articles_publie' => 'منتشر شده',
+	'articles_refuse' => 'حذفي‌ها',
+	'articles_tous' => 'تمام',
+	'aucun_article_syndic' => 'بدون مقاله‌ي پيوندي',
+	'avis_echec_syndication_01' => 'پيوند برقرار نشد : يا فايل «بك اند» ناخوانا ست يا هيچ مقاله اى ندارد',
+	'avis_echec_syndication_02' => 'پيوند برقرار نشد : دسترسى به «بك اند» اين سايت ممكن نيست.',
 	'avis_site_introuvable' => 'سايت پيدا نميشود',
-	'avis_site_syndique_probleme' => 'توجه: مشترك‌سازي اين سايت به مشكلى برخورد كرده است؛ و سيستم موقتأ  قطع مي‌باشد. به فايل فهرست تازه ها ى اين سايت  نگاه كنيد، (<b>@url_syndic@</b>)و دوباره براى دريافت اطلاعات جديد اقدام كنيد. ',
-	'avis_sites_probleme_syndication' => 'اين سايتها مشكل پيوند به سايتهاى ديگر را دارند ',
+	'avis_site_syndique_probleme' => 'توجه: مشترك‌سازي اين سايت به مشكلى برخورد كرده است؛ و سيستم موقتأ  قطع مي‌باشد. به نشاني فايل پيوندي اين سايت را چك كنيد (<b>@url_syndic@</b>)و دوباره براى دريافت اطلاعات جديد اقدام كنيد. ',
+	'avis_sites_probleme_syndication' => 'اين سايتها در مشترك‌سازي با مشكل مواجه شده‌اند',
 	'avis_sites_syndiques_probleme' => 'اين سايتهاى پيوندى به مشكلى برخورده اند',
 
 	// B
-	'bouton_radio_modere_posteriori' => 'اعلان پيش از تأئيد',
-	'bouton_radio_modere_priori' => 'اعلان پس از تأئيد',
+	'bouton_radio_modere_posteriori' => 'بعد از تعديل ',
+	'bouton_radio_modere_priori' => 'پيش از تعديل',
 	'bouton_radio_non_syndication' => 'بدون پيوند به سايتهاى ديگر',
-	'bouton_radio_syndication' => 'پيوند سايتى',
+	'bouton_radio_syndication' => 'مشترك سازي: ',
 
 	// C
-	'confirmer_purger_syndication' => 'Êtes-vous certain de vouloir supprimer tous les articles syndiqués de ce site ?', # NEW
+	'confirmer_purger_syndication' => 'آيا مي‌خواهيد تمام مقاله‌هاي پيوندي با اين سايت را حذف كنيد؟',
 
 	// E
 	'entree_adresse_fichier_syndication' => 'آدرس فايل براى ارتباط ميان سايتى:',
@@ -40,43 +40,43 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'form_prop_nom_site' => 'نام سايت',
 
 	// I
-	'icone_article_syndic' => 'Article syndiqué', # NEW
-	'icone_articles_syndic' => 'Articles syndiqués', # NEW
-	'icone_controler_syndication' => 'Publication des articles syndiqués', # NEW
+	'icone_article_syndic' => 'مقاله‌ي پيوندي',
+	'icone_articles_syndic' => 'مقاله‌هاي پيوندي',
+	'icone_controler_syndication' => 'انتشار مقاله‌هاي پيوندي ',
 	'icone_modifier_site' => 'اين سايت را اصلاح كنيد',
-	'icone_referencer_nouveau_site' => 'مشخصات يك سايت جديد را بدهيد',
-	'icone_site_reference' => 'Sites référencés', # NEW
-	'icone_supprimer_article' => 'Supprimer cet article', # NEW
-	'icone_supprimer_articles' => 'Supprimer ces articles', # NEW
-	'icone_valider_article' => 'Valider cet article', # NEW
-	'icone_valider_articles' => 'Valider ces articles', # NEW
-	'icone_voir_sites_references' => 'به سايتهاى مرجع نگاه كنيد',
+	'icone_referencer_nouveau_site' => 'ارجاع يك سايت جديد',
+	'icone_site_reference' => 'سايت‌هاي ارجاعي',
+	'icone_supprimer_article' => 'حذف اين مقاله',
+	'icone_supprimer_articles' => 'حذف اين مقاله‌ها',
+	'icone_valider_article' => 'ثبت اين مقاله',
+	'icone_valider_articles' => 'ثبت اين مقاله‌ها',
+	'icone_voir_sites_references' => 'به سايتهاى ارجاعي نگاه كنيد',
 	'info_a_valider' => '[معتبر شود]',
 	'info_bloquer' => 'ببندید',
 	'info_bloquer_lien' => 'اين پيوند را مسدود كنيد',
 	'info_derniere_syndication' => ':آخرين پيوند سايتى انجام شده در تاريخ ',
-	'info_liens_syndiques_1' => 'پيوند ميان سايتى',
-	'info_liens_syndiques_2' => '.در انتظار تأئيد شدن هستند',
+	'info_liens_syndiques_1' => 'پيوند‌هاي مشترك‌سازي شده',
+	'info_liens_syndiques_2' => 'در انتظار تأئيد شدن هستند.',
 	'info_nom_site_2' => ' [اجبارى] <b>نام سايت</b>',
 	'info_panne_site_syndique' => 'سايت پيوندى خراب است',
-	'info_probleme_grave' => 'نقص در',
+	'info_probleme_grave' => 'مشكل',
 	'info_question_proposer_site' => 'كى ميتواند سايتهاى مرجع را پيشنهاد كند ؟',
 	'info_retablir_lien' => 'اين پيوند را دوباره برقرار كنيد',
 	'info_site_attente' => 'سايت در انتظار تائيد',
-	'info_site_propose' => ':اين سايت در تاريخ زير پيشنهاد شده ',
-	'info_site_reference' => 'سايت مرجع روى خط ',
+	'info_site_propose' => 'اين سايت در تاريخ زير پيشنهاد شده: ',
+	'info_site_reference' => 'سايت ارجاعي آنلاين',
 	'info_site_refuse' => 'سايت پذيرفته نشده',
-	'info_site_syndique' => '...اين سايت پيوند دارد',
+	'info_site_syndique' => 'اين سايت پيوند دارد . . . ',
 	'info_site_valider' => 'اين سايت ها بايد معتبر شوند',
 	'info_sites_referencer' => 'ارجاع يك سايت',
 	'info_sites_refuses' => 'سايت هاى پذيرفته نشده',
-	'info_statut_site_1' => ': اين سايت',
+	'info_statut_site_1' => 'اين سايت :',
 	'info_statut_site_2' => 'منتشر شده',
 	'info_statut_site_3' => 'پيشنهاد شده',
 	'info_statut_site_4' => 'در سطل',
-	'info_syndication' => ':پيوند سايتى',
-	'info_syndication_articles' => 'مقاله',
-	'item_bloquer_liens_syndiques' => 'پيوندهاى سايتى را براى تأئيد مسدود كنيد',
+	'info_syndication' => 'پيوند سايتى :',
+	'info_syndication_articles' => 'مقاله(ها)',
+	'item_bloquer_liens_syndiques' => 'پيوندهاى سايتى را براى تأئيد بلوكه كنيد',
 	'item_gerer_annuaire_site_web' => 'يك راهنما از سايتهاى تارنما بسازيد',
 	'item_non_bloquer_liens_syndiques' => 'پيوندهاى نتيجه ى ارتباط ميان سايتى را مسدود نكنيد',
 	'item_non_gerer_annuaire_site_web' => 'راهنماى سايتهاى تارنما را غير فعال كنيد',
@@ -86,24 +86,24 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// L
 	'lien_mise_a_jour_syndication' => 'اكنون به روز كنيد',
 	'lien_nouvelle_recuperation' => 'اقدام به بازگيرى دوباره داده ها كنيد',
-	'lien_purger_syndication' => 'Effacer tous les articles syndiqués', # NEW
+	'lien_purger_syndication' => 'پاك سازي تمام مقاله‌هاي پيوندي',
 
 	// N
-	'nombre_articles_syndic' => '@nb@ articles syndiqués', # NEW
+	'nombre_articles_syndic' => '@nb@ مقاله‌ي پيوندي',
 
 	// S
-	'statut_off' => 'Supprimé', # NEW
-	'statut_prop' => 'En attente', # NEW
-	'statut_publie' => 'Publié', # NEW
+	'statut_off' => 'حذفي',
+	'statut_prop' => 'در انتظار',
+	'statut_publie' => 'منتشر شده',
 	'syndic_choix_moderation' => 'برای پیوندهای بعدی از سوی این سایت چه کار میکنید؟',
-	'syndic_choix_oublier' => 'برای پیوندهایی که در فایل سایتهای مرجع یافت نمیشوند چه میکنید ؟',
+	'syndic_choix_oublier' => 'برای پیوندهایی که در فایل سایتهای پيوندي ظاهر نمیشوند چه میکنید؟',
 	'syndic_choix_resume' => 'بعضی از سایتها متن کامل مقالات را عرضه میکنند. در اینصورت آیا مایلید که آنرا به سایتتان پیوند بزنید:',
 	'syndic_lien_obsolete' => 'پیوند بیفایده',
 	'syndic_option_miroir' => 'بطور خودکار مسدود کنید',
-	'syndic_option_oubli' => 'پاک کنید (پس از @mois@ ماه)',
-	'syndic_option_resume_non' => 'متن کامل مقالات (به زبان HTML)',
-	'syndic_option_resume_oui' => 'خلاصه ی مقاله (بصورت متن)',
-	'syndic_options' => 'گزینش سایتهای مرجع :',
+	'syndic_option_oubli' => '(پس از @mois@ ماه) پاکشان کنید',
+	'syndic_option_resume_non' => 'متن کامل مقالات (با فرمت اج‌تي‌ام‌ال)',
+	'syndic_option_resume_oui' => 'خلاصه ی مقاله (با فرمت متن)',
+	'syndic_options' => 'گزینه‌هاي مشترك‌سازي:',
 
 	// T
 	'texte_liens_sites_syndiques' => 'پيوندهاى مربوط به سايتهاى مرجع ميتوانند مسدود شوند، سپس ميتوانيد آنها را تك تك باز كنيد يا اينكه سايت به سايت پيوندهاى آينده را مسدود كنيد. ',
@@ -115,17 +115,17 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_articles_syndiques' => 'مقالات پيوندى گرفته شده از اين سايت',
 	'titre_dernier_article_syndique' => 'آخرين مقالات پيوندى',
 	'titre_page_sites_tous' => 'سايتهاى مرجع',
-	'titre_referencement_sites' => 'ارجاع و پيوند سايتها ',
+	'titre_referencement_sites' => 'ارجاع سايت‌ها و مشترك‌سازي',
 	'titre_site_numero' => 'سايت شماره :',
 	'titre_sites_proposes' => 'سايتهاى پيشنهادى',
 	'titre_sites_references_rubrique' => 'سايتهاى مرجع در اين بخش',
 	'titre_sites_syndiques' => 'سايتهاى پيوندى',
-	'titre_sites_tous' => 'سايتهاى مرجع',
-	'titre_syndication' => 'پيوند سايتها',
-	'tout_voir' => 'Voir tous les articles syndiqués', # NEW
+	'titre_sites_tous' => 'سايتهاى ارجاعي',
+	'titre_syndication' => 'مشترك‌سازي سايتها',
+	'tout_voir' => 'تمام مقاله‌هاي پيوندي را بنگريد',
 
 	// U
-	'un_article_syndic' => '1 article syndiqué' # NEW
+	'un_article_syndic' => '1 مقاله پيوندي'
 );
 
 ?>

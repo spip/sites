@@ -18,7 +18,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_echec_syndication_01' => 'Syndikácia zlyhala: buď sa vybrané backendové rozhranie nedá čítať, alebo neobsahuje žiadne články.',
 	'avis_echec_syndication_02' => 'Syndication failed: could not reach the backend of this site.',
 	'avis_site_introuvable' => 'Stránka sa nenašla',
-	'avis_site_syndique_probleme' => 'Attention : la syndication de ce site a rencontré un problème ; le système est donc temporairement interrompu pour l\'instant. Vérifiez l\'adresse du fichier de syndication de ce site (<b>@url_syndic@</b>), et tentez une nouvelle récupération des informations.', # MODIF
+	'avis_site_syndique_probleme' => 'Upozornenie: pri syndikácii tejto stránky sa vyskytol problém; systém je dočasne narušený. Skontrolujte adresu syndikačného súboru tejto stránky (<b>@url_syndic@</b>) a skúste získať informácie znova.',
 	'avis_sites_probleme_syndication' => 'These sites encountered a syndication problem',
 	'avis_sites_syndiques_probleme' => 'These syndicated sites generated a problem',
 
@@ -118,11 +118,11 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'texte_non_fonction_referencement' => 'You can choose not to use this automated feature, and enter the elements concerning that site manually...',
 	'texte_referencement_automatique' => '<b>Automatické odkazovanie na stránky</b><br />Na stránku môžete odkázať rýchlo uvedením jej adresy alebo adresy jej syndikačného súboru. SPIP automaticky získa údaje o stránke (názov, popis...).',
 	'texte_referencement_automatique_verifier' => 'Please, verify the information provided by <tt>@url@</tt> before saving.',
-	'texte_syndication' => 'Il est possible de récupérer automatiquement, lorsqu\'un site Web le permet, 
-		la liste de ses nouveautés. Pour cela, vous devez activer la syndication. 
-		<blockquote><i>Certains hébergeurs désactivent cette fonctionnalité ; 
-		dans ce cas, vous ne pourrez pas utiliser la syndication de contenu
-		depuis votre site.</i></blockquote>', # MODIF
+	'texte_syndication' => 'Zoznam nových funkcií sa dá získať automaticky, keď to stránka povoľuje
+Na to musíte aktivovať syndikáciu. 
+  <blockquote><i>Niektorí poskytovatelia hostingu deaktivujú túto funkciu; 
+ v tom prípade nemôžete využívať syndikáciu obsahu
+   zo svojej stránky.</i></blockquote>',
 	'titre_articles_syndiques' => 'Syndicated articles pulled out from this site',
 	'titre_dernier_article_syndique' => 'Latest syndicated articles',
 	'titre_page_sites_tous' => 'Odkazované stránky',
