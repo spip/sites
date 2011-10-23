@@ -25,6 +25,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_radio_modere_priori' => 'modération à priori',
 	'bouton_radio_non_syndication' => 'Pas de syndication',
 	'bouton_radio_syndication' => 'Syndication :',
+	'bouton_exporter' => 'Exporter',
+	'bouton_importer' => 'Importer',
 
 	// C
 	'confirmer_purger_syndication' => 'Êtes-vous certain de vouloir supprimer tous les articles syndiqués de ce site ?',
@@ -33,6 +35,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'entree_adresse_fichier_syndication' => 'Adresse du fichier de syndication :',
 	'entree_adresse_site' => '<b>Adresse du site</b> [Obligatoire]',
 	'entree_description_site' => 'Description du site',
+	'erreur_fichier_incorrect' => 'Impossible de lire le fichier.',
+	'erreur_fichier_format_inconnu' => 'Le format du fichier @fichier@ n\'est pas pris en charge.',
 
 	// F
 	'form_prop_nom_site' => 'Nom du site',
@@ -50,6 +54,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_valider_articles' => 'Valider ces articles',
 	'icone_voir_sites_references' => 'Voir les sites référencés',
 	'info_a_valider' => '[à valider]',
+	'info_aucun_site_importe' => 'Aucun site n\'a pu être importé',
+	'info_1_site_importe' => '1 site a été importé',
+	'info_nb_sites_importes' => '@nb@ sites ont été importés',
 	'info_bloquer' => 'bloquer',
 	'info_bloquer_lien' => 'bloquer ce lien',
 	'info_derniere_syndication' => 'La dernière syndication de ce site a été effectuée le',
@@ -82,6 +89,12 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'item_utiliser_syndication' => 'Utiliser la syndication automatique',
 
 	// L
+	'label_exporter_publie_seulement_1' => 'Exporter uniquement les sites publiés',
+	'label_exporter_avec_mots_cles_1' => 'Exporter les mots-clés sous forme de tags',
+	'label_exporter_id_parent' => 'Exporter les sites de la rubrique',
+	'label_fichier_import' => 'Fichier HTML',
+	'label_importer_statut_publie_1' => 'Publier automatiquement les sites',
+	'label_importer_les_tags_1' => 'Importer les tags sous forme de mot-clé',
 	'lien_mise_a_jour_syndication' => 'Mettre à jour maintenant',
 	'lien_nouvelle_recuperation' => 'Tenter une nouvelle récupération des données',
 	'lien_purger_syndication' => 'Effacer tous les articles syndiqués',
@@ -104,6 +117,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'syndic_options' => 'Options de syndication :',
 
 	// T
+	'texte_expliquer_export_bookmarks' => 'Vous pouvez exporter une liste de sites au format Marque-page HTML,
+	pour vous permettre ensuite de l\'importer dans votre navigateur ou dans un service en ligne',
+	'texte_expliquer_import_bookmarks' => 'Vous pouvez importer une liste de sites au format Marque-page HTML,
+	en provenance de votre navigateur ou d\'un service en ligne de gestion des Marques-pages.',
 	'texte_liens_sites_syndiques' => 'Les liens issus des sites syndiqués peuvent
 			être bloqués a priori ; le réglage
 			ci-dessous indique le réglage par défaut des
@@ -122,6 +139,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 		dans ce cas, vous ne pourrez pas utiliser la syndication de contenu
 		depuis votre site.</i></blockquote>',
 	'titre_articles_syndiques' => 'Articles syndiqués tirés de ce site',
+	'titre_exporter_bookmarks' => 'Exporter des Marques-pages',
+	'titre_importer_bookmarks' => 'Importer des Marques-pages',
+	'titre_importer_exporter_bookmarks' => 'Importer et Exporter des Marques-pages',
 	'titre_dernier_article_syndique' => 'Derniers articles syndiqués',
 	'titre_page_sites_tous' => 'Les sites référencés',
 	'titre_referencement_sites' => 'Référencement de sites et syndication',

@@ -1,5 +1,7 @@
 * text=auto !eol
 action/editer_site.php -text
+action/exporter_bookmarks.php -text
+action/importer_bookmarks_netscape.php -text
 action/instituer_syndic_article.php -text
 action/purger_site.php -text
 action/syndiquer_site.php -text
@@ -10,6 +12,10 @@ formulaires/configurer_sites.php -text
 formulaires/editer_site.html -text
 formulaires/editer_site.php -text
 formulaires/editer_site_fonctions.php -text
+formulaires/exporter_sites.html -text
+formulaires/exporter_sites.php -text
+formulaires/importer_sites.html -text
+formulaires/importer_sites.php -text
 formulaires/regler_moderation_site.html -text
 formulaires/regler_moderation_site.php -text
 formulaires/site.html -text
@@ -89,11 +95,14 @@ prive/squelettes/contenu/controler_syndication.html -text
 prive/squelettes/contenu/site.html -text
 prive/squelettes/contenu/site_edit.html -text
 prive/squelettes/contenu/sites.html -text
+prive/squelettes/contenu/sites_export.html -text
+prive/squelettes/contenu/sites_import.html -text
 prive/squelettes/extra/site.html -text
 prive/squelettes/inclure/boutons-filtres-statut-syndic.html -text
 prive/squelettes/inclure/plan-syndic.html -text
 prive/squelettes/navigation/site.html -text
 prive/squelettes/navigation/site_edit.html -text
+prive/squelettes/navigation/sites.html -text
 prive/style_prive_plugin_syndic.html -text
 prive/themes/spip/images/site-16.png -text
 prive/themes/spip/images/site-24.png -text
@@ -130,6 +139,7 @@ prive/themes/spip2/images/syndic-statut-dispo-24.png -text
 prive/themes/spip2/images/syndic-statut-off-24.png -text
 prive/themes/spip2/images/syndic-statut-poubelle-24.png -text
 prive/themes/spip2/images/syndic-statut-publie-24.png -text
+prive/transmettre/bookmarks.html -text
 puce_statut/site.php -text
 /sites_administrations.php -text
 /sites_autoriser.php -text
