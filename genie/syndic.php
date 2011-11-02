@@ -272,9 +272,14 @@ function inserer_article_syndique ($data, $now_id_syndic, $statut, $url_site, $u
 	// Point d'entree post_syndication
 	pipeline('post_syndication',
 		array(
-			$le_lien,
-			$now_id_syndic,
-			$data
+			'args' => array(
+				'table' => 'spip_syndic_articles',
+				'id_objet' => $id_syndic_article,
+				'url' => $le_lien,
+				'id_syndic' => $now_id_syndic,
+				'ajout' => $ajout,
+			),
+			'data' => $data
 		)
 	);
 
