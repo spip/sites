@@ -23,6 +23,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_sites_syndiques_probleme' => 'ظهرت مشاكل في هذه المواقع المرخصة',
 
 	// B
+	'bouton_exporter' => 'Exporter', # NEW
+	'bouton_importer' => 'Importer', # NEW
 	'bouton_radio_modere_posteriori' => 'مراقبة بعدية',
 	'bouton_radio_modere_priori' => 'مراقبة استباقية',
 	'bouton_radio_non_syndication' => 'عدم ترخيص',
@@ -35,6 +37,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'entree_adresse_fichier_syndication' => 'عنوان ملف الترخيص:',
 	'entree_adresse_site' => '<b>عنوان الموقع</b> [إجباري]',
 	'entree_description_site' => 'وصف الموقع',
+	'erreur_fichier_format_inconnu' => 'Le format du fichier @fichier@ n\'est pas pris en charge.', # NEW
+	'erreur_fichier_incorrect' => 'Impossible de lire le fichier.', # NEW
 
 	// F
 	'form_prop_nom_site' => 'اسم الموقع',
@@ -51,12 +55,15 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_valider_article' => 'التصديق على هذا المقال',
 	'icone_valider_articles' => 'التصديق على هذه المقالات',
 	'icone_voir_sites_references' => 'عرض المواقع المبوبة',
+	'info_1_site_importe' => '1 site a été importé', # NEW
 	'info_a_valider' => '[بانتظار التصديق]',
+	'info_aucun_site_importe' => 'Aucun site n\'a pu être importé', # NEW
 	'info_bloquer' => 'إيقاف',
 	'info_bloquer_lien' => 'صد هذه الوصلة',
 	'info_derniere_syndication' => 'تم تنفيذ آخر ترخيص لهذا الموقع في',
 	'info_liens_syndiques_1' => 'وصلة مرخصة',
 	'info_liens_syndiques_2' => 'تنتظر التصديق.',
+	'info_nb_sites_importes' => '@nb@ sites ont été importés', # NEW
 	'info_nom_site_2' => '<b>إسم الموقع</b> [إجباري]',
 	'info_panne_site_syndique' => 'موقع مرخص معطل',
 	'info_probleme_grave' => 'مشكلة',
@@ -84,6 +91,12 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'item_utiliser_syndication' => 'إستخدام الترخيص الآلي',
 
 	// L
+	'label_exporter_avec_mots_cles_1' => 'Exporter les mots-clés sous forme de tags', # NEW
+	'label_exporter_id_parent' => 'Exporter les sites de la rubrique', # NEW
+	'label_exporter_publie_seulement_1' => 'Exporter uniquement les sites publiés', # NEW
+	'label_fichier_import' => 'Fichier HTML', # NEW
+	'label_importer_les_tags_1' => 'Importer les tags sous forme de mot-clé', # NEW
+	'label_importer_statut_publie_1' => 'Publier automatiquement les sites', # NEW
 	'lien_mise_a_jour_syndication' => 'تحديث الآن',
 	'lien_nouvelle_recuperation' => 'محاولة تنفيذ إسترجاع جديد للبيانات',
 	'lien_purger_syndication' => 'حذف كل المقالات المرخصة',
@@ -106,6 +119,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'syndic_options' => 'خيارات الترخيص:',
 
 	// T
+	'texte_expliquer_export_bookmarks' => 'Vous pouvez exporter une liste de sites au format Marque-page HTML,
+	pour vous permettre ensuite de l\'importer dans votre navigateur ou dans un service en ligne', # NEW
+	'texte_expliquer_import_bookmarks' => 'Vous pouvez importer une liste de sites au format Marque-page HTML,
+	en provenance de votre navigateur ou d\'un service en ligne de gestion des Marques-pages.', # NEW
 	'texte_liens_sites_syndiques' => 'يمكن صد الوصلات الآتية من المواقع المرخصة
 استباقياً؛ ويعرض الخيار
    التالي الإعداد الافتراضي
@@ -125,6 +142,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 من موقعك. </blockquote>',
 	'titre_articles_syndiques' => 'المقالات المرخصة المسحوبة من هذا الموقع',
 	'titre_dernier_article_syndique' => 'أحدث المقالات المرخصة',
+	'titre_exporter_bookmarks' => 'Exporter des Marques-pages', # NEW
+	'titre_importer_bookmarks' => 'Importer des Marques-pages', # NEW
+	'titre_importer_exporter_bookmarks' => 'Importer et Exporter des Marques-pages', # NEW
 	'titre_page_sites_tous' => 'المواقع المبوبة',
 	'titre_referencement_sites' => 'تبويب وترخيص المواقع',
 	'titre_site_numero' => 'موقع رقم:',
