@@ -242,7 +242,7 @@ function inserer_article_syndique ($data, $now_id_syndic, $statut, $url_site, $u
 	}
 
 	// tags & enclosures (preparer spip_syndic_articles.tags)
-	$tags = $data['enclosures'];
+	$tags = ($data['enclosures']?$data['enclosures']:'');
 	# eviter les doublons (cle = url+titre) et passer d'un tableau a une chaine
 	if ($data['tags']) {
 		$vus = array();
