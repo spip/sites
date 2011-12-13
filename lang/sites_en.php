@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -8,13 +8,13 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// A
-	'articles_dispo' => 'En attente', # NEW
-	'articles_meme_auteur' => 'Tous les articles de cet auteur', # NEW
+	'articles_dispo' => 'Waiting',
+	'articles_meme_auteur' => 'All articles by this author',
 	'articles_off' => 'Bloqués', # NEW
-	'articles_publie' => 'Publiés', # NEW
-	'articles_refuse' => 'Supprimés', # NEW
-	'articles_tous' => 'Tous', # NEW
-	'aucun_article_syndic' => 'Aucun article syndiqué', # NEW
+	'articles_publie' => 'Published',
+	'articles_refuse' => 'Deleted',
+	'articles_tous' => 'All',
+	'aucun_article_syndic' => 'No syndicated article',
 	'avis_echec_syndication_01' => 'Syndication failed: either the selected backend is unreadable, or it does not contain any articles.',
 	'avis_echec_syndication_02' => 'Syndication failed: could not find the backend file for this site.',
 	'avis_site_introuvable' => 'Site not found',
@@ -23,8 +23,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_sites_syndiques_probleme' => 'These syndicated sites generated a problem',
 
 	// B
-	'bouton_exporter' => 'Exporter', # NEW
-	'bouton_importer' => 'Importer', # NEW
+	'bouton_exporter' => 'Export',
+	'bouton_importer' => 'Import',
 	'bouton_radio_modere_posteriori' => 'post-moderation',
 	'bouton_radio_modere_priori' => 'pre-moderation',
 	'bouton_radio_non_syndication' => 'No syndication',
@@ -38,24 +38,24 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'entree_adresse_site' => '<b>Site URL</b> [Required]',
 	'entree_description_site' => 'Site description',
 	'erreur_fichier_format_inconnu' => 'Le format du fichier @fichier@ n\'est pas pris en charge.', # NEW
-	'erreur_fichier_incorrect' => 'Impossible de lire le fichier.', # NEW
+	'erreur_fichier_incorrect' => 'Unable to read the file.',
 
 	// F
 	'form_prop_nom_site' => 'Site name',
 
 	// I
-	'icone_article_syndic' => 'Article syndiqué', # NEW
-	'icone_articles_syndic' => 'Articles syndiqués', # NEW
+	'icone_article_syndic' => 'Syndicated article',
+	'icone_articles_syndic' => 'Syndicated articles',
 	'icone_controler_syndication' => 'Publication des articles syndiqués', # NEW
 	'icone_modifier_site' => 'Edit this site',
 	'icone_referencer_nouveau_site' => 'Reference a new site',
 	'icone_site_reference' => 'Sites référencés', # NEW
-	'icone_supprimer_article' => 'Supprimer cet article', # NEW
-	'icone_supprimer_articles' => 'Supprimer ces articles', # NEW
-	'icone_valider_article' => 'Valider cet article', # NEW
-	'icone_valider_articles' => 'Valider ces articles', # NEW
+	'icone_supprimer_article' => 'Delete this article',
+	'icone_supprimer_articles' => 'Delete these articles',
+	'icone_valider_article' => 'Confirm this article',
+	'icone_valider_articles' => 'Confirm these articles',
 	'icone_voir_sites_references' => 'Show referenced websites',
-	'info_1_site_importe' => '1 site a été importé', # NEW
+	'info_1_site_importe' => '1 site has been imported',
 	'info_a_valider' => '[awaiting validation]',
 	'info_aucun_site_importe' => 'Aucun site n\'a pu être importé', # NEW
 	'info_bloquer' => 'block',
@@ -105,9 +105,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'nombre_articles_syndic' => '@nb@ articles syndiqués', # NEW
 
 	// S
-	'statut_off' => 'Supprimé', # NEW
+	'statut_off' => 'Deleted',
 	'statut_prop' => 'En attente', # NEW
-	'statut_publie' => 'Publié', # NEW
+	'statut_publie' => 'Published',
 	'syndic_choix_moderation' => 'What should be done with future links from this site?',
 	'syndic_choix_oublier' => 'What should be done with links which are no longer present in the syndication file?',
 	'syndic_choix_resume' => 'Some sites include the full text of articles. When the full text is available, do you wish to syndicate:',
@@ -153,7 +153,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_sites_syndiques' => 'Syndicated sites',
 	'titre_sites_tous' => 'Referenced sites',
 	'titre_syndication' => 'Sites syndication',
-	'tout_voir' => 'Voir tous les articles syndiqués', # NEW
+	'tout_voir' => 'Show all syndicated articles',
 
 	// U
 	'un_article_syndic' => '1 article syndiqué' # NEW

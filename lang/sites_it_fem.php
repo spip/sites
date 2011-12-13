@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -110,9 +110,9 @@ Verifica l\'indirizzo del file per la syndication di (<b>@url_syndic@</b>) e pro
 	'statut_prop' => 'En attente', # NEW
 	'statut_publie' => 'Publié', # NEW
 	'syndic_choix_moderation' => 'Come comportarsi con i prossimi link provenienti da questo sito?',
-	'syndic_choix_oublier' => 'Come comportarsi con i link che non compaiono pi&amp;ugrave; nel file di syndication?',
+	'syndic_choix_oublier' => 'Come comportarsi con i link che non compaiono pi&ugrave; nel file di syndication?',
 	'syndic_choix_resume' => 'Alcuni siti diffondono il testo completo degli articoli. Nel caso esso sia disponibile desiderate metterlo in syndication:',
-	'syndic_lien_obsolete' => 'link non pi&amp;ugrave; valido',
+	'syndic_lien_obsolete' => 'link non pi&ugrave; valido',
 	'syndic_option_miroir' => 'bloccarli automaticamente',
 	'syndic_option_oubli' => 'cancellarli (dopo @mois@ mesi)',
 	'syndic_option_resume_non' => 'il contenuto completo degli articoli (in formato HTML)',
