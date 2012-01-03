@@ -1,6 +1,6 @@
 <traduction module="sites" gestionnaire="salvatore" url="http://trad.spip.org" source="svn://zone.spip.org/spip-zone/_core_/plugins/sites/lang/" reference="fr">
 	<langue code="ar">
-		<traducteur nom="kandalaft" />
+		<traducteur nom="George" />
 	</langue>
 	<langue code="ast" />
 	<langue code="bg" />
@@ -15,18 +15,18 @@
 	<langue code="cs" />
 	<langue code="da" />
 	<langue code="de">
-		<traducteur nom="klaus" />
+		<traducteur nom="klaus++" />
 	</langue>
 	<langue code="en">
-		<traducteur nom="squonk" />
-		<traducteur nom="davood" />
+		<traducteur nom="sQuonk" />
+		<traducteur nom="Davood Hossein" />
 	</langue>
 	<langue code="en_hx" />
 	<langue code="eo" />
 	<langue code="es" />
 	<langue code="eu" />
 	<langue code="fa">
-		<traducteur nom="davood" />
+		<traducteur nom="Davood Hossein" />
 	</langue>
 	<langue code="fon" />
 	<langue code="fr" />
