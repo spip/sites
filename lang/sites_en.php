@@ -10,7 +10,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// A
 	'articles_dispo' => 'Waiting',
 	'articles_meme_auteur' => 'All articles by this author',
-	'articles_off' => 'Bloqués', # NEW
+	'articles_off' => 'Blocked',
 	'articles_publie' => 'Published',
 	'articles_refuse' => 'Deleted',
 	'articles_tous' => 'All',
@@ -31,13 +31,13 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_radio_syndication' => 'Syndication:',
 
 	// C
-	'confirmer_purger_syndication' => 'Êtes-vous certain de vouloir supprimer tous les articles syndiqués de ce site ?', # NEW
+	'confirmer_purger_syndication' => 'Are you sure you want to delete all articles from syndicated Web site?',
 
 	// E
 	'entree_adresse_fichier_syndication' => 'Address of syndication file:',
 	'entree_adresse_site' => '<b>Site URL</b> [Required]',
 	'entree_description_site' => 'Site description',
-	'erreur_fichier_format_inconnu' => 'Le format du fichier @fichier@ n\'est pas pris en charge.', # NEW
+	'erreur_fichier_format_inconnu' => 'The format of the file @fichier@ is not supported.',
 	'erreur_fichier_incorrect' => 'Unable to read the file.',
 
 	// F
@@ -46,10 +46,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// I
 	'icone_article_syndic' => 'Syndicated article',
 	'icone_articles_syndic' => 'Syndicated articles',
-	'icone_controler_syndication' => 'Publication des articles syndiqués', # NEW
+	'icone_controler_syndication' => 'Publication of syndicated articles',
 	'icone_modifier_site' => 'Edit this site',
 	'icone_referencer_nouveau_site' => 'Reference a new site',
-	'icone_site_reference' => 'Sites référencés', # NEW
+	'icone_site_reference' => 'Referenced Web sites',
 	'icone_supprimer_article' => 'Delete this article',
 	'icone_supprimer_articles' => 'Delete these articles',
 	'icone_valider_article' => 'Confirm this article',
@@ -57,13 +57,13 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_voir_sites_references' => 'Show referenced websites',
 	'info_1_site_importe' => '1 site has been imported',
 	'info_a_valider' => '[awaiting validation]',
-	'info_aucun_site_importe' => 'Aucun site n\'a pu être importé', # NEW
+	'info_aucun_site_importe' => 'No Web site has been imported',
 	'info_bloquer' => 'block',
 	'info_bloquer_lien' => 'block this link',
 	'info_derniere_syndication' => 'The last syndication of this site was on',
 	'info_liens_syndiques_1' => 'syndicated links',
 	'info_liens_syndiques_2' => 'awaiting validation.',
-	'info_nb_sites_importes' => '@nb@ sites ont été importés', # NEW
+	'info_nb_sites_importes' => '@nb@ web sites have been imported',
 	'info_nom_site_2' => '<b>Site name</b> [Required]',
 	'info_panne_site_syndique' => 'Syndicated site unavailable',
 	'info_probleme_grave' => 'error with',
@@ -91,22 +91,22 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'item_utiliser_syndication' => 'Use automatic syndication',
 
 	// L
-	'label_exporter_avec_mots_cles_1' => 'Exporter les mots-clés sous forme de tags', # NEW
-	'label_exporter_id_parent' => 'Exporter les sites de la rubrique', # NEW
-	'label_exporter_publie_seulement_1' => 'Exporter uniquement les sites publiés', # NEW
+	'label_exporter_avec_mots_cles_1' => 'Export the keywords as tags',
+	'label_exporter_id_parent' => 'Export the Web sites of the section',
+	'label_exporter_publie_seulement_1' => 'Export only the published Web sites',
 	'label_fichier_import' => 'HTML file',
-	'label_importer_les_tags_1' => 'Importer les tags sous forme de mot-clé', # NEW
-	'label_importer_statut_publie_1' => 'Publier automatiquement les sites', # NEW
+	'label_importer_les_tags_1' => 'Import tags as keywords',
+	'label_importer_statut_publie_1' => 'Automatically publish the Web sites',
 	'lien_mise_a_jour_syndication' => 'Update now',
 	'lien_nouvelle_recuperation' => 'Try to retrieve data again',
-	'lien_purger_syndication' => 'Effacer tous les articles syndiqués', # NEW
+	'lien_purger_syndication' => 'Delete all syndicated articles',
 
 	// N
-	'nombre_articles_syndic' => '@nb@ articles syndiqués', # NEW
+	'nombre_articles_syndic' => '@nb@ syndicated articles',
 
 	// S
 	'statut_off' => 'Deleted',
-	'statut_prop' => 'En attente', # NEW
+	'statut_prop' => 'Waiting',
 	'statut_publie' => 'Published',
 	'syndic_choix_moderation' => 'What should be done with future links from this site?',
 	'syndic_choix_oublier' => 'What should be done with links which are no longer present in the syndication file?',
@@ -119,10 +119,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'syndic_options' => 'Syndication options:',
 
 	// T
-	'texte_expliquer_export_bookmarks' => 'Vous pouvez exporter une liste de sites au format Marque-page HTML,
-	pour vous permettre ensuite de l\'importer dans votre navigateur ou dans un service en ligne', # NEW
-	'texte_expliquer_import_bookmarks' => 'Vous pouvez importer une liste de sites au format Marque-page HTML,
-	en provenance de votre navigateur ou d\'un service en ligne de gestion des Marques-pages.', # NEW
+	'texte_expliquer_export_bookmarks' => 'You can export a list of websites as bookmark HTML format, so you can then import it into your browser or an online service',
+	'texte_expliquer_import_bookmarks' => 'You can import a list of websites from bookmark HTML format, from your browser or an online service of bookmarks management.',
 	'texte_liens_sites_syndiques' => 'Links from syndicated sites can
    be held for moderation.Below is
    the default setting of syndicated
@@ -142,9 +140,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
   from your site.</i></blockquote>',
 	'titre_articles_syndiques' => 'Syndicated articles taken from this site',
 	'titre_dernier_article_syndique' => 'Latest syndicated articles',
-	'titre_exporter_bookmarks' => 'Exporter des Marques-pages', # NEW
-	'titre_importer_bookmarks' => 'Importer des Marques-pages', # NEW
-	'titre_importer_exporter_bookmarks' => 'Importer et Exporter des Marques-pages', # NEW
+	'titre_exporter_bookmarks' => 'Export bookmarks',
+	'titre_importer_bookmarks' => 'Import bookmarks',
+	'titre_importer_exporter_bookmarks' => 'Import and export bookmarks',
 	'titre_page_sites_tous' => 'Referenced sites',
 	'titre_referencement_sites' => 'Sites referencing and syndication',
 	'titre_site_numero' => 'SITE NUMBER:',
@@ -156,7 +154,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'tout_voir' => 'Show all syndicated articles',
 
 	// U
-	'un_article_syndic' => '1 article syndiqué' # NEW
+	'un_article_syndic' => '1 syndicated article'
 );
 
 ?>
