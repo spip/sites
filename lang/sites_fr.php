@@ -23,8 +23,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// B
 	'bouton_exporter' => 'Exporter',
 	'bouton_importer' => 'Importer',
-	'bouton_radio_modere_posteriori' => 'modération à posteriori',
-	'bouton_radio_modere_priori' => 'modération à priori',
+	'bouton_radio_modere_posteriori' => 'modération a posteriori',
+	'bouton_radio_modere_priori' => 'modération a priori',
 	'bouton_radio_non_syndication' => 'Pas de syndication',
 	'bouton_radio_syndication' => 'Syndication :',
 
@@ -71,14 +71,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_site_propose' => 'Site proposé le :',
 	'info_site_reference' => 'Site référencé en ligne',
 	'info_site_refuse' => 'Site Web refusé',
-	'info_site_syndique' => 'Ce site est syndiqué...',
+	'info_site_syndique' => 'Ce site est syndiqué…',
 	'info_site_valider' => 'Sites à valider',
 	'info_sites_referencer' => 'Référencer un site',
 	'info_sites_refuses' => 'Les sites refusés',
 	'info_statut_site_1' => 'Ce site est :',
 	'info_statut_site_2' => 'Publié',
 	'info_statut_site_3' => 'Proposé',
-	'info_statut_site_4' => 'A la poubelle',
+	'info_statut_site_4' => 'À la poubelle',
 	'info_syndication' => 'syndication :',
 	'info_syndication_articles' => 'article(s)',
 	'item_bloquer_liens_syndiques' => 'Bloquer les liens syndiqués pour validation',
@@ -93,7 +93,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'label_exporter_id_parent' => 'Exporter les sites de la rubrique',
 	'label_exporter_publie_seulement_1' => 'Exporter uniquement les sites publiés',
 	'label_fichier_import' => 'Fichier HTML',
-	'label_importer_les_tags_1' => 'Importer les tags sous forme de mot-clé',
+	'label_importer_les_tags_1' => 'Importer les tags sous forme de mots-clés',
 	'label_importer_statut_publie_1' => 'Publier automatiquement les sites',
 	'lien_mise_a_jour_syndication' => 'Mettre à jour maintenant',
 	'lien_nouvelle_recuperation' => 'Tenter une nouvelle récupération des données',
@@ -121,23 +121,13 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	pour vous permettre ensuite de l\'importer dans votre navigateur ou dans un service en ligne',
 	'texte_expliquer_import_bookmarks' => 'Vous pouvez importer une liste de sites au format Marque-page HTML,
 	en provenance de votre navigateur ou d\'un service en ligne de gestion des Marques-pages.',
-	'texte_liens_sites_syndiques' => 'Les liens issus des sites syndiqués peuvent
-			être bloqués a priori ; le réglage
-			ci-dessous indique le réglage par défaut des
-			sites syndiqués après leur création. Il
-			est ensuite possible, de toutes façons, de
-			débloquer chaque lien individuellement, ou de
-			choisir, site par site, de bloquer les liens à venir
-			de tel ou tel site.',
+	'texte_liens_sites_syndiques' => 'Les liens issus des sites syndiqués peuvent être bloqués a priori ; le réglage ci-dessous indique le réglage par défaut des sites syndiqués après leur création. Il est ensuite possible de débloquer chaque lien individuellement ou de choisir, site par site, de bloquer les liens à venir de tel ou tel site.',
 	'texte_messages_publics' => 'Messages publics de l\'article :',
-	'texte_non_fonction_referencement' => 'Vous pouvez préférer ne pas utiliser cette fonction automatique, et indiquer vous-même les éléments concernant ce site...',
-	'texte_referencement_automatique' => '<b>Référencement automatisé d\'un site</b><br />Vous pouvez référencer rapidement un site Web en indiquant ci-dessous l\'adresse URL désirée, ou l\'adresse de son fichier de syndication. SPIP va récupérer automatiquement les informations concernant ce site (titre, description...).',
+	'texte_non_fonction_referencement' => 'Vous pouvez préférer ne pas utiliser cette fonction automatique, et indiquer vous-même les éléments concernant ce site…',
+	'texte_referencement_automatique' => '<b>Référencement automatisé d\'un site</b><br />Vous pouvez référencer rapidement un site Web en indiquant ci-dessous l\'adresse URL désirée, ou l\'adresse de son fichier de syndication. SPIP va récupérer automatiquement les informations concernant ce site (titre, description…).',
 	'texte_referencement_automatique_verifier' => 'Veuillez vérifier les informations fournies par <tt>@url@</tt> avant d\'enregistrer.',
-	'texte_syndication' => 'Il est possible de récupérer automatiquement, lorsqu\'un site Web le permet,
-		la liste de ses nouveautés. Pour cela, vous devez activer la syndication.
-		<blockquote><i>Certains hébergeurs désactivent cette fonctionnalité ;
-		dans ce cas, vous ne pourrez pas utiliser la syndication de contenu
-		depuis votre site.</i></blockquote>',
+	'texte_syndication' => 'Il est possible de récupérer automatiquement, lorsqu\'un site Web le permet, la liste de ses nouveautés. Pour cela, vous devez activer la syndication.
+	<blockquote><i>Certains hébergeurs désactivent cette fonctionnalité ; dans ce cas, vous ne pourrez pas utiliser la syndication de contenu depuis votre site.</i></blockquote>',
 	'titre_articles_syndiques' => 'Articles syndiqués tirés de ce site',
 	'titre_dernier_article_syndique' => 'Derniers articles syndiqués',
 	'titre_exporter_bookmarks' => 'Exporter des Marques-pages',
