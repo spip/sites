@@ -25,8 +25,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// B
 	'bouton_exporter' => 'Exporter', # NEW
 	'bouton_importer' => 'Importer', # NEW
-	'bouton_radio_modere_posteriori' => 'nadien modereren',
-	'bouton_radio_modere_priori' => 'vooraf modereren',
+	'bouton_radio_modere_posteriori' => 'nadien modereren', # MODIF
+	'bouton_radio_modere_priori' => 'vooraf modereren', # MODIF
 	'bouton_radio_non_syndication' => 'Geen syndicatie',
 	'bouton_radio_syndication' => 'Syndicatie :',
 
@@ -73,14 +73,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_site_propose' => 'Site voorgesteld op :',
 	'info_site_reference' => 'Online gekoppelde site',
 	'info_site_refuse' => 'Website weigerd',
-	'info_site_syndique' => 'Gesyndiceerde site...',
+	'info_site_syndique' => 'Gesyndiceerde site...', # MODIF
 	'info_site_valider' => 'Goed te keuren sites',
 	'info_sites_referencer' => 'Een site koppelen',
 	'info_sites_refuses' => 'De geweigerde websites',
 	'info_statut_site_1' => 'Deze site is:',
 	'info_statut_site_2' => 'Publicerd',
 	'info_statut_site_3' => 'Voorgesteld',
-	'info_statut_site_4' => 'Naar de vuilnisbak',
+	'info_statut_site_4' => 'Naar de vuilnisbak', # MODIF
 	'info_syndication' => 'nieuwsovername (syndicatie) :',
 	'info_syndication_articles' => 'artikel(s)',
 	'item_bloquer_liens_syndiques' => 'Gesyndiceerde koppelingen tegenhouden voor goedkeuring ',
@@ -129,17 +129,17 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    voor gesyndiceerde sites als ze aangemaakt worden.
    Het is vervolgens perfect mogelijk om elke koppeling
    individueel te ontgrendelen, of om per site
-   te kiezen of je koppelingen wil blokkeren of niet.',
+   te kiezen of je koppelingen wil blokkeren of niet.', # MODIF
 	'texte_messages_publics' => 'Publieke berichten van dit artikel :',
-	'texte_non_fonction_referencement' => 'Je kan kiezen om deze automatische functie uit te schakelen en zelf aangeven welke elementen je wil opnemen voor deze site.',
-	'texte_referencement_automatique' => '..<b>Geautomatiseerde koppelen van een site</b><br />U kunt een website snel verwijzen door het verlangde naar URL adres, of het adres van zijn bestand van syndication hieronder aan te geven. SPIP zal de informatie automatisch terugkrijgen betreffende deze plaats (titel, beschrijving...).',
+	'texte_non_fonction_referencement' => 'Je kan kiezen om deze automatische functie uit te schakelen en zelf aangeven welke elementen je wil opnemen voor deze site.', # MODIF
+	'texte_referencement_automatique' => '..<b>Geautomatiseerde koppelen van een site</b><br />U kunt een website snel verwijzen door het verlangde naar URL adres, of het adres van zijn bestand van syndication hieronder aan te geven. SPIP zal de informatie automatisch terugkrijgen betreffende deze plaats (titel, beschrijving...).', # MODIF
 	'texte_referencement_automatique_verifier' => 'Gelieve de inlichtingen te controleren die per <tt>@url@</tt> worden verstrekt, alvorens te registreren.',
 	'texte_syndication' => 'Het is mogelijk om van een site automatisch een lijst met
  nieuws, als de website het toelaat, binnen te halen.
  Hiervoor dien je de syndicatie (nieuwsovername) te
  activeren. <blockquote><i>Sommige hostingproviders laten
  dit niet toe; in dat geval kan je geen nieuwsovername
- vanaf je site laten gebeuren.</i></blockquote>',
+ vanaf je site laten gebeuren.</i></blockquote>', # MODIF
 	'titre_articles_syndiques' => 'Gesyndiceerde artikels komende van deze site',
 	'titre_dernier_article_syndique' => 'Meest recente gesyndiceerde artikels',
 	'titre_exporter_bookmarks' => 'Exporter des Marques-pages', # NEW

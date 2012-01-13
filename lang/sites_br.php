@@ -25,8 +25,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// B
 	'bouton_exporter' => 'Exporter', # NEW
 	'bouton_importer' => 'Importer', # NEW
-	'bouton_radio_modere_posteriori' => 'gwiriañ goude an embann',
-	'bouton_radio_modere_priori' => 'gwiriañ a-raok embann',
+	'bouton_radio_modere_posteriori' => 'gwiriañ goude an embann', # MODIF
+	'bouton_radio_modere_priori' => 'gwiriañ a-raok embann', # MODIF
 	'bouton_radio_non_syndication' => 'Sindikadur ebet',
 	'bouton_radio_syndication' => 'Sindikadur :',
 
@@ -73,14 +73,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_site_propose' => 'Lec\'hienn kinniget d\'an :',
 	'info_site_reference' => 'Lec\'hienn menegeret enlinenn',
 	'info_site_refuse' => 'Lec\'hienn bet nac\'het',
-	'info_site_syndique' => 'Sindikadet eo al lec\'hienn-mañ...',
+	'info_site_syndique' => 'Sindikadet eo al lec\'hienn-mañ...', # MODIF
 	'info_site_valider' => 'Lec\'hiennoù da aprouiñ',
 	'info_sites_referencer' => 'Menegeriñ ul lec\'hienn',
 	'info_sites_refuses' => 'Al lec\'hiennoù bet nac\'het',
 	'info_statut_site_1' => 'Al lec\'hienn-mañ zo :',
 	'info_statut_site_2' => 'Embannet',
 	'info_statut_site_3' => 'Kinniget',
-	'info_statut_site_4' => 'Er pod-lastez',
+	'info_statut_site_4' => 'Er pod-lastez', # MODIF
 	'info_syndication' => 'Sindikadur :',
 	'info_syndication_articles' => 'pennad(où)',
 	'item_bloquer_liens_syndiques' => 'Stankañ al liammoù sindikadet evit o c\'hadarnaat',
@@ -125,15 +125,15 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	en provenance de votre navigateur ou d\'un service en ligne de gestion des Marques-pages.', # NEW
 	'texte_liens_sites_syndiques' => 'Gallout a ra al liammoù deuet diwar lec\'hiennoù sindikadet bezañ stanket a-raok embann ;
    amañ dindan emañ diskouezet reizhadenn dre ziouer al lec\'hiennoù sindikadet goude dezho bezañ bet krouet.
-   Goude e c\'hallit atav dibab distankañ pep liamm unan-hag-unan pe dibab, evit pep lec\'hienn, stankañ al liammoù a zeu eus lec\'hienn pe lec\'hienn.',
+   Goude e c\'hallit atav dibab distankañ pep liamm unan-hag-unan pe dibab, evit pep lec\'hienn, stankañ al liammoù a zeu eus lec\'hienn pe lec\'hienn.', # MODIF
 	'texte_messages_publics' => 'Kemennadennoù foran ar pennad :',
-	'texte_non_fonction_referencement' => 'Gallout a rit dibab chom hep ober gant an arc\'hwel emgefre-mañ, ha merkañ an elfennoù diwar-benn al lec\'hienn hoc\'h-unan...',
-	'texte_referencement_automatique' => '<b>Menegeradur emgefre ul lec\'hienn</b><br />Gallout a rit menegeriñ buan ul lec\'hienn Web en ur verkañ skrivañ amañ dindan hec\'h URL, pe chomlec\'h he restr sindikadañ. SPIP a zastumo e-unan an titouroù diwar-benn al lec\'hienn (titl, deskrivadur, ...).',
+	'texte_non_fonction_referencement' => 'Gallout a rit dibab chom hep ober gant an arc\'hwel emgefre-mañ, ha merkañ an elfennoù diwar-benn al lec\'hienn hoc\'h-unan...', # MODIF
+	'texte_referencement_automatique' => '<b>Menegeradur emgefre ul lec\'hienn</b><br />Gallout a rit menegeriñ buan ul lec\'hienn Web en ur verkañ skrivañ amañ dindan hec\'h URL, pe chomlec\'h he restr sindikadañ. SPIP a zastumo e-unan an titouroù diwar-benn al lec\'hienn (titl, deskrivadur, ...).', # MODIF
 	'texte_referencement_automatique_verifier' => 'Gwiriit an titouroù bet roet gant <tt>@url@</tt> a-raok enrollañ.',
 	'texte_syndication' => 'Pa vez aotreet gant ul lec\'hienn Web eo posupl adtapout en un doare emgefre roll an nevezinti.
   Evit se eo dav gweredekaat ar sindikadur.
   <blockquote><i>Herberc\'hierien a ziweredeka an arc\'hwel-se ; 
-  neuze n\'hallit ket implijout ar sindikadur adalek ho lec\'hienn.</i></blockquote>',
+  neuze n\'hallit ket implijout ar sindikadur adalek ho lec\'hienn.</i></blockquote>', # MODIF
 	'titre_articles_syndiques' => 'Pennadoù sindikadet tennet eus al lec\'hienn-mañ',
 	'titre_dernier_article_syndique' => 'Pennadoù sindikadet da ziwezhañ',
 	'titre_exporter_bookmarks' => 'Exporter des Marques-pages', # NEW

@@ -25,8 +25,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// B
 	'bouton_exporter' => 'Exporter', # NEW
 	'bouton_importer' => 'Importer', # NEW
-	'bouton_radio_modere_posteriori' => 'đăng trước, xét sau',
-	'bouton_radio_modere_priori' => 'xét trước, đăng sau',
+	'bouton_radio_modere_posteriori' => 'đăng trước, xét sau', # MODIF
+	'bouton_radio_modere_priori' => 'xét trước, đăng sau', # MODIF
 	'bouton_radio_non_syndication' => 'Không có syndication',
 	'bouton_radio_syndication' => 'Syndication:',
 
@@ -73,14 +73,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_site_propose' => 'website đã nộp lúc:',
 	'info_site_reference' => 'Website nối kết online',
 	'info_site_refuse' => 'Website bị từ chối',
-	'info_site_syndique' => 'Website này được syndicated...',
+	'info_site_syndique' => 'Website này được syndicated...', # MODIF
 	'info_site_valider' => 'Website chờ chấp thuận',
 	'info_sites_referencer' => 'Nối kết một website',
 	'info_sites_refuses' => 'Website bị từ chối',
 	'info_statut_site_1' => 'Website này là:',
 	'info_statut_site_2' => 'Đã phát hành',
 	'info_statut_site_3' => 'Đã nộp vào',
-	'info_statut_site_4' => 'Vô thùng rác',
+	'info_statut_site_4' => 'Vô thùng rác', # MODIF
 	'info_syndication' => 'phát hành:',
 	'info_syndication_articles' => 'bài',
 	'item_bloquer_liens_syndiques' => 'Ngăn lại, không chấp thuận các điểm nối syndicated',
@@ -123,9 +123,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	pour vous permettre ensuite de l\'importer dans votre navigateur ou dans un service en ligne', # NEW
 	'texte_expliquer_import_bookmarks' => 'Vous pouvez importer une liste de sites au format Marque-page HTML,
 	en provenance de votre navigateur ou d\'un service en ligne de gestion des Marques-pages.', # NEW
-	'texte_liens_sites_syndiques' => 'Những điểm nối từ website syndicated có thể được chặn trước; lối bố trí sau đây cho thấy cách bố trí định sẵn cho những website syndicated khi được lập ra. Có thể ngăn chặn từng điểm nối một, hoặc chặn tất cả các điểm nối đến từ bất cứ website nào.',
+	'texte_liens_sites_syndiques' => 'Những điểm nối từ website syndicated có thể được chặn trước; lối bố trí sau đây cho thấy cách bố trí định sẵn cho những website syndicated khi được lập ra. Có thể ngăn chặn từng điểm nối một, hoặc chặn tất cả các điểm nối đến từ bất cứ website nào.', # MODIF
 	'texte_messages_publics' => 'Thư tín công cộng của bài:',
-	'texte_non_fonction_referencement' => 'Bạn có thể chọn không dùng đặc điểm tự động này, và tự tay cho vào dữ kiện... ',
+	'texte_non_fonction_referencement' => 'Bạn có thể chọn không dùng đặc điểm tự động này, và tự tay cho vào dữ kiện... ', # MODIF
 	'texte_referencement_automatique' => '<b>Nối kết website tự động</b> Bạn có thể nối kết một website nhanh chóng bằng cách cho vào dưới đây địa chỉ URL, hay địa chỉ của hồ sơ backend. SPIP sẽ tự động thu thập lấy các dữ kiện liên hệ đến website đó (tựa đề, mô tả ...).', # MODIF
 	'texte_referencement_automatique_verifier' => 'Veuillez vérifier les informations fournies par <tt>@url@</tt> avant d\'enregistrer.', # NEW
 	'texte_syndication' => 'Nếu website cho phép, bạn có thể truy tìm tự động danh sách các dữ liệu mới nhất. Để làm chuyện này, bạn phải mở đặc điểm syndication lên. <blockquote><i>Một số máy không cho phép dùng chức năng này, trong trường hợp đó, bạn không dùng đặc điểm syndication từ website của bạn được.</i></blockquote>', # MODIF

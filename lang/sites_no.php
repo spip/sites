@@ -25,8 +25,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// B
 	'bouton_exporter' => 'Exporter', # NEW
 	'bouton_importer' => 'Importer', # NEW
-	'bouton_radio_modere_posteriori' => '<NEW> modéré à posteriori',
-	'bouton_radio_modere_priori' => '<NEW> modéré à priori',
+	'bouton_radio_modere_posteriori' => '<NEW> modéré à posteriori', # MODIF
+	'bouton_radio_modere_priori' => '<NEW> modéré à priori', # MODIF
 	'bouton_radio_non_syndication' => '<NEW> Pas de syndication',
 	'bouton_radio_syndication' => '<NEW> Syndication :',
 
@@ -73,14 +73,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_site_propose' => '<NEW> Site proposé le :',
 	'info_site_reference' => '<NEW> Site référencé en ligne',
 	'info_site_refuse' => '<NEW> Site Web refusé',
-	'info_site_syndique' => '<NEW> Ce site est syndiqué...',
+	'info_site_syndique' => '<NEW> Ce site est syndiqué...', # MODIF
 	'info_site_valider' => '<NEW> Sites à valider',
 	'info_sites_referencer' => '<NEW> Référencer un site',
 	'info_sites_refuses' => '<NEW> Les sites refusés',
 	'info_statut_site_1' => '<NEW> Ce site est :',
 	'info_statut_site_2' => '<NEW> Publié',
 	'info_statut_site_3' => '<NEW> Proposé',
-	'info_statut_site_4' => '<NEW> A la poubelle',
+	'info_statut_site_4' => '<NEW> A la poubelle', # MODIF
 	'info_syndication' => '<NEW> syndication :',
 	'info_syndication_articles' => '<NEW> article(s)',
 	'item_bloquer_liens_syndiques' => '<NEW> Bloquer les liens syndiqués pour validation',
@@ -130,10 +130,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 			est ensuite possible, de toutes façons, de
 			débloquer chaque lien individuellement, ou de
 			choisir, site par site, de bloquer les liens à venir
-			de tel ou tel site.',
+			de tel ou tel site.', # MODIF
 	'texte_messages_publics' => '<NEW> Messages publics de l\'article :',
-	'texte_non_fonction_referencement' => '<NEW> Vous pouvez préférer ne pas utiliser cette fonction automatique, et indiquer vous-même les éléments concernant ce site...',
-	'texte_referencement_automatique' => '<NEW> <b>Référencement automatisé d\'un site</b><br />Vous pouvez référencer rapidement un site Web en indiquant ci-dessous l\'adresse URL désirée, ou l\'adresse de son fichier backend. SPIP va récupérer automatiquement les informations concernant ce site (titre, description...).',
+	'texte_non_fonction_referencement' => '<NEW> Vous pouvez préférer ne pas utiliser cette fonction automatique, et indiquer vous-même les éléments concernant ce site...', # MODIF
+	'texte_referencement_automatique' => '<NEW> <b>Référencement automatisé d\'un site</b><br />Vous pouvez référencer rapidement un site Web en indiquant ci-dessous l\'adresse URL désirée, ou l\'adresse de son fichier backend. SPIP va récupérer automatiquement les informations concernant ce site (titre, description...).', # MODIF
 	'texte_referencement_automatique_verifier' => 'Please, verify the information provided by <tt>@url@</tt> before saving.', # NEW
 	'texte_syndication' => '<NEW> Il est possible de récupérer automatiquement, lorsqu\'un site Web le permet, 
 		la liste de ses nouveautés. Pour cela, vous devez activer la syndication. 

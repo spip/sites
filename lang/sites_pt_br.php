@@ -25,8 +25,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// B
 	'bouton_exporter' => 'Exporter', # NEW
 	'bouton_importer' => 'Importer', # NEW
-	'bouton_radio_modere_posteriori' => 'moderação à posteriori',
-	'bouton_radio_modere_priori' => 'moderação à priori',
+	'bouton_radio_modere_posteriori' => 'moderação à posteriori', # MODIF
+	'bouton_radio_modere_priori' => 'moderação à priori', # MODIF
 	'bouton_radio_non_syndication' => 'Sem sindicação',
 	'bouton_radio_syndication' => 'Sindicação:',
 
@@ -73,14 +73,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_site_propose' => 'Site proposto em:',
 	'info_site_reference' => 'Site referenciado online',
 	'info_site_refuse' => 'Website recusado',
-	'info_site_syndique' => 'Este site está sindicado...',
+	'info_site_syndique' => 'Este site está sindicado...', # MODIF
 	'info_site_valider' => 'Sites para validar',
 	'info_sites_referencer' => 'Referenciar um site',
 	'info_sites_refuses' => 'Os sites recusados',
 	'info_statut_site_1' => 'Este site está:',
 	'info_statut_site_2' => 'Publicado',
 	'info_statut_site_3' => 'Proposto',
-	'info_statut_site_4' => 'Na lixeira',
+	'info_statut_site_4' => 'Na lixeira', # MODIF
 	'info_syndication' => 'sindicação:',
 	'info_syndication_articles' => 'matéria(s)',
 	'item_bloquer_liens_syndiques' => 'Bloquear os links sindicados para validação',
@@ -123,14 +123,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	pour vous permettre ensuite de l\'importer dans votre navigateur ou dans un service en ligne', # NEW
 	'texte_expliquer_import_bookmarks' => 'Vous pouvez importer une liste de sites au format Marque-page HTML,
 	en provenance de votre navigateur ou d\'un service en ligne de gestion des Marques-pages.', # NEW
-	'texte_liens_sites_syndiques' => 'Os links gerados pelos sites sindicados podem ser bloqueados previamente; a configuração abaixo indica a opção padrão para os sites sindicados, após a sua inclusão. É possível, em seguida, desbloquear cada link individualmente, ou escolher, site a site, o bloqueio de links originados de um ou outro site.',
+	'texte_liens_sites_syndiques' => 'Os links gerados pelos sites sindicados podem ser bloqueados previamente; a configuração abaixo indica a opção padrão para os sites sindicados, após a sua inclusão. É possível, em seguida, desbloquear cada link individualmente, ou escolher, site a site, o bloqueio de links originados de um ou outro site.', # MODIF
 	'texte_messages_publics' => 'Mensagens públicas da matéria:',
-	'texte_non_fonction_referencement' => 'Você pode preferir não usar esta função automática, e indicar você mesmo os elementos relativos a este site...',
-	'texte_referencement_automatique' => '<b>Referenciamento automatizado de um site</b><br />Você pode referenciar rapidamente um websites indicando abaixo o URL desejado, ou o endereço do seu arquivo de sindicação. O SPIP recuperará automaticamente as informações relativas ao site (título, descrição...).',
+	'texte_non_fonction_referencement' => 'Você pode preferir não usar esta função automática, e indicar você mesmo os elementos relativos a este site...', # MODIF
+	'texte_referencement_automatique' => '<b>Referenciamento automatizado de um site</b><br />Você pode referenciar rapidamente um websites indicando abaixo o URL desejado, ou o endereço do seu arquivo de sindicação. O SPIP recuperará automaticamente as informações relativas ao site (título, descrição...).', # MODIF
 	'texte_referencement_automatique_verifier' => 'Por favor, verifique as informações fornecidas em <tt>@url@</tt> antes de se registrar.',
 	'texte_syndication' => 'É possível recuperar automaticamente, desde que o site o permita, a lista das suas novidades. Para isso, você deverá ativar a sindicação.
   <blockquote><i>Alguns serviços de hospedagem desativam esta funcionalidade;
-neste caso, você não poderá usar a sindicação de conteúdo no seu site.</i></blockquote>',
+neste caso, você não poderá usar a sindicação de conteúdo no seu site.</i></blockquote>', # MODIF
 	'titre_articles_syndiques' => 'Matérias sindicadas extraídas deste site',
 	'titre_dernier_article_syndique' => 'Últimas matérias sindicadas',
 	'titre_exporter_bookmarks' => 'Exporter des Marques-pages', # NEW

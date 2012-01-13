@@ -25,8 +25,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// B
 	'bouton_exporter' => 'Exporter', # NEW
 	'bouton_importer' => 'Importer', # NEW
-	'bouton_radio_modere_posteriori' => 'コメントを投稿後に検査',
-	'bouton_radio_modere_priori' => '検査したコメントのみ表示',
+	'bouton_radio_modere_posteriori' => 'コメントを投稿後に検査', # MODIF
+	'bouton_radio_modere_priori' => '検査したコメントのみ表示', # MODIF
 	'bouton_radio_non_syndication' => '供給（シンジケート）しない',
 	'bouton_radio_syndication' => '供給（シンジケート）:',
 
@@ -73,14 +73,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_site_propose' => 'サイトに提出された:',
 	'info_site_reference' => 'オンラインでサイトを参照',
 	'info_site_refuse' => '拒否されたウェブサイト',
-	'info_site_syndique' => 'このサイトは供給（シンジケート）されています...',
+	'info_site_syndique' => 'このサイトは供給（シンジケート）されています...', # MODIF
 	'info_site_valider' => '適正検査済みサイト',
 	'info_sites_referencer' => 'サイトを参照',
 	'info_sites_refuses' => 'サイトに拒否された',
 	'info_statut_site_1' => 'このサイトは:',
 	'info_statut_site_2' => '公開中',
 	'info_statut_site_3' => '提出中',
-	'info_statut_site_4' => 'ゴミ箱の中',
+	'info_statut_site_4' => 'ゴミ箱の中', # MODIF
 	'info_syndication' => '供給（シンジケーション):',
 	'info_syndication_articles' => '記事',
 	'item_bloquer_liens_syndiques' => '供給（シンジケート）リンクを検査前、妨害する',
@@ -123,10 +123,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	pour vous permettre ensuite de l\'importer dans votre navigateur ou dans un service en ligne', # NEW
 	'texte_expliquer_import_bookmarks' => 'Vous pouvez importer une liste de sites au format Marque-page HTML,
 	en provenance de votre navigateur ou d\'un service en ligne de gestion des Marques-pages.', # NEW
-	'texte_liens_sites_syndiques' => '供給（シンジケート）サイトから生じるリンクをあらかじめ排除しておけます; 次の設定はそれらを作った後供給（シンジケート）サイトのデフォルト設定を表示します。それは、そのとき、とにかく可能なそれぞれの個別のリンクを排除するか、それぞれのサイトに、特定のサイトから来ているリンクを排除する。',
+	'texte_liens_sites_syndiques' => '供給（シンジケート）サイトから生じるリンクをあらかじめ排除しておけます; 次の設定はそれらを作った後供給（シンジケート）サイトのデフォルト設定を表示します。それは、そのとき、とにかく可能なそれぞれの個別のリンクを排除するか、それぞれのサイトに、特定のサイトから来ているリンクを排除する。', # MODIF
 	'texte_messages_publics' => '記事の公開メッセージ:',
-	'texte_non_fonction_referencement' => 'あなたはこの自動化機能を使わず、そのサイトに関する要素を手作業で入力することができます...',
-	'texte_referencement_automatique' => '<b>サイトの自動参照</b><br />下にあなたの望むURLか、そのbackendファイルのアドレスを入力することによってすばやくウェブサイトを参照することができます。SPIPは自動的にそのサイトに関する情報を拾ってくるでしょう（タイトル、記述...）。',
+	'texte_non_fonction_referencement' => 'あなたはこの自動化機能を使わず、そのサイトに関する要素を手作業で入力することができます...', # MODIF
+	'texte_referencement_automatique' => '<b>サイトの自動参照</b><br />下にあなたの望むURLか、そのbackendファイルのアドレスを入力することによってすばやくウェブサイトを参照することができます。SPIPは自動的にそのサイトに関する情報を拾ってくるでしょう（タイトル、記述...）。', # MODIF
 	'texte_referencement_automatique_verifier' => 'Veuillez vérifier les informations fournies par <tt>@url@</tt> avant d\'enregistrer.', # NEW
 	'texte_syndication' => 'これを許可すると、最新の資料のリストを自動的に検索することが可能になります。これをするには供給（シンジケート）を作動させなければなりません。
   <blockquote><i>若干のホストではこの機能は無効です。そういう場合、あなたはあなたのサイトから内容を供給（シンジケート）することは出来ないでしょう。</i></blockquote>', # MODIF

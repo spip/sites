@@ -25,8 +25,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// B
 	'bouton_exporter' => 'Exporter', # NEW
 	'bouton_importer' => 'Importer', # NEW
-	'bouton_radio_modere_posteriori' => 'mi dalɔ wu ',
-	'bouton_radio_modere_priori' => 'mi dalɔ wu ',
+	'bouton_radio_modere_posteriori' => 'mi dalɔ wu ', # MODIF
+	'bouton_radio_modere_priori' => 'mi dalɔ wu ', # MODIF
 	'bouton_radio_non_syndication' => 'mima ɖē tin a ',
 	'bouton_radio_syndication' => 'mimamɛ',
 
@@ -73,14 +73,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_site_propose' => ' Gblogblojí yè sɛɖó ɖò :',
 	'info_site_reference' => ' Gblogblojí yé ɖèkúnú ɖò kánú',
 	'info_site_refuse' => 'Yè gbɛ gblogblojí ɔ ',
-	'info_site_syndique' => 'Yè má gblogblojí ɔ ...',
+	'info_site_syndique' => 'Yè má gblogblojí ɔ ...', # MODIF
 	'info_site_valider' => 'Gblogblojí yè ná sɔ kɛn ná',
 	'info_sites_referencer' => 'ɖèkúnú nú gblogblojí ɔ',
 	'info_sites_refuses' => 'gblogblojí yé gbɛ lɛ',
 	'info_statut_site_1' => 'Gblogblojí é lɔ  :',
 	'info_statut_site_2' => 'ɖɔdótòjì',
 	'info_statut_site_3' => 'sɛɖó',
-	'info_statut_site_4' => 'sɔ nyìzùnkɔgbámɛ',
+	'info_statut_site_4' => 'sɔ nyìzùnkɔgbámɛ', # MODIF
 	'info_syndication' => 'mìmámɛ :',
 	'info_syndication_articles' => 'wěmà lɛ',
 	'item_bloquer_liens_syndiques' => 'Mi ján àlɔwlí nú kɛnsísɔ',
@@ -123,10 +123,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	pour vous permettre ensuite de l\'importer dans votre navigateur ou dans un service en ligne', # NEW
 	'texte_expliquer_import_bookmarks' => 'Vous pouvez importer une liste de sites au format Marque-page HTML,
 	en provenance de votre navigateur ou d\'un service en ligne de gestion des Marques-pages.', # NEW
-	'texte_liens_sites_syndiques' => 'mi sɔ ɖidé ɖó wěmà lɛ mɛsùpípù tɔn nú mi ná tò wěmà mi tɔn gànjí ɔ mi síwú zán kwín é lɔ lɛmi kó mɔ mi àmɔ mi sɔ ɖò xóxòkplégbàví ɔ mɛ ámi lɛ vɔ yí kànjí',
+	'texte_liens_sites_syndiques' => 'mi sɔ ɖidé ɖó wěmà lɛ mɛsùpípù tɔn nú mi ná tò wěmà mi tɔn gànjí ɔ mi síwú zán kwín é lɔ lɛmi kó mɔ mi àmɔ mi sɔ ɖò xóxòkplégbàví ɔ mɛ ámi lɛ vɔ yí kànjí', # MODIF
 	'texte_messages_publics' => 'wɛn wékpá tɔn yé sɔ xlɛ :',
-	'texte_non_fonction_referencement' => 'mi hɛn mi ná zán wàlɔ càcàcà ɔ ámi ɖé sú mi bló jɛ xá myɔ  ...',
-	'texte_referencement_automatique' => 'gbàví ɔ jɛ vɔwɛn é lɔ yé sɛ ɖó ɔ mi kɛnklɛ̂n bó ná lìnlìn mi tɔn ɖé wúɖò kplékplé yé sɔ ɖó dò wɔ mɛnú àtɛ wô má mì ɔ mi zìn fími ná sɔ mɔ àlì gégéwékpá é lɔxógbè lɛ nyɔwlántɔ lɛ gblogblojí é lɔ nɔ zɔn bɔ mi nɔ sɛ  wɛn ɖó bó nɔ lɛ yí wɛnxó kléwun lɛ wěmà kléwún ɖé lɛ wɛbɔ yé nɔ zɔn bɔ xó lɛ nɔ yí àtɛjí gànmɛgànmɛmi sɔ xóxòkplégbàví mi tɔn mɔnɔ hɛnmi cyían ɖê jɛ ɖéwú ɔ...).',
+	'texte_non_fonction_referencement' => 'mi hɛn mi ná zán wàlɔ càcàcà ɔ ámi ɖé sú mi bló jɛ xá myɔ  ...', # MODIF
+	'texte_referencement_automatique' => 'gbàví ɔ jɛ vɔwɛn é lɔ yé sɛ ɖó ɔ mi kɛnklɛ̂n bó ná lìnlìn mi tɔn ɖé wúɖò kplékplé yé sɔ ɖó dò wɔ mɛnú àtɛ wô má mì ɔ mi zìn fími ná sɔ mɔ àlì gégéwékpá é lɔxógbè lɛ nyɔwlántɔ lɛ gblogblojí é lɔ nɔ zɔn bɔ mi nɔ sɛ  wɛn ɖó bó nɔ lɛ yí wɛnxó kléwun lɛ wěmà kléwún ɖé lɛ wɛbɔ yé nɔ zɔn bɔ xó lɛ nɔ yí àtɛjí gànmɛgànmɛmi sɔ xóxòkplégbàví mi tɔn mɔnɔ hɛnmi cyían ɖê jɛ ɖéwú ɔ...).', # MODIF
 	'texte_referencement_automatique_verifier' => 'Veuillez vérifier les informations fournies par <tt>@url@</tt> avant d\'enregistrer.', # NEW
 	'texte_syndication' => 'wékwín é lɔ ɖò wěmámɛyé mɔ wěmà ɖé ɖò gbè é lɔ mɛ áwékwín ɖê yé mà tùn à lɛ ɔ ɖò vɔvɔmɛ. Zìn yé bó kpɔn àyì é yè b ɖó yèwú ɔbló wékwín ɔ ɖómi kpɔn winwlán fɔ ɖìɖéBɛ wékwín sín wěmámɛVlɛ mi klɛn àfɔ súkpɔ ɖò wěmà mi tɔn mɛ Mi jɛ wěmà lɛ blóɖó jí nú mi má wá wàzɔ gɔná óMi sɔ càvì ɖévóklɛn àfɔ ɖò fí ámi sɔ yí gblogblo é lɔ jí áyé hùn fí nú mɛ bí ámi byɔ ɖɔ é mi ná ɖɔ xó ɖò kplékplé ɔ mɛmi sɔ e-mailú mi tɔn xlɛ Wɛn é lɔ wɛn càcà wɛ Nú mi ná ɖó mɔ nɔtɛn gblogblojí  é lɔ tɔn  mi yìwàlɔ bìbɛ tɔnsɔ ɖémɛ ɖê ɖé gbɔn ɔ gbètá ɔ kló ɖín', # MODIF
 	'titre_articles_syndiques' => 'wékpá ɖê yé má sín gblogblo é lɔ jí',

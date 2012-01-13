@@ -25,8 +25,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// B
 	'bouton_exporter' => 'Exporter', # NEW
 	'bouton_importer' => 'Importer', # NEW
-	'bouton_radio_modere_posteriori' => 'moderering i efterhand',
-	'bouton_radio_modere_priori' => 'moderering i förhand',
+	'bouton_radio_modere_posteriori' => 'moderering i efterhand', # MODIF
+	'bouton_radio_modere_priori' => 'moderering i förhand', # MODIF
 	'bouton_radio_non_syndication' => 'Ingen syndikering',
 	'bouton_radio_syndication' => 'Syndikering:',
 
@@ -73,14 +73,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_site_propose' => 'Sajt föreslagen den:',
 	'info_site_reference' => 'Länkade sajter ',
 	'info_site_refuse' => 'Webbsajten refuserad',
-	'info_site_syndique' => 'Denna sajt är syndikerad...',
+	'info_site_syndique' => 'Denna sajt är syndikerad...', # MODIF
 	'info_site_valider' => 'Sajter som väntar på godkännande',
 	'info_sites_referencer' => 'Länka till en sajt',
 	'info_sites_refuses' => 'Refuserade sajter',
 	'info_statut_site_1' => 'Denna sajt är:',
 	'info_statut_site_2' => 'Publicerad',
 	'info_statut_site_3' => 'Inskickad',
-	'info_statut_site_4' => 'I papperskorgen',
+	'info_statut_site_4' => 'I papperskorgen', # MODIF
 	'info_syndication' => 'syndikering:',
 	'info_syndication_articles' => 'artikel(ar)',
 	'item_bloquer_liens_syndiques' => 'Stoppa syndikerade länkar från godkännande',
@@ -132,7 +132,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 			choisir, site par site, de bloquer les liens à venir
 			de tel ou tel site.', # NEW
 	'texte_messages_publics' => 'Messages publics de l\'article :', # NEW
-	'texte_non_fonction_referencement' => 'Du kan välja att inte använda den automatiska funktionen och i stället mata in information om sajetn manuellt...',
+	'texte_non_fonction_referencement' => 'Du kan välja att inte använda den automatiska funktionen och i stället mata in information om sajetn manuellt...', # MODIF
 	'texte_referencement_automatique' => '<b>Référencement automatisé d\'un site</b><br />Vous pouvez référencer rapidement un site Web en indiquant ci-dessous l\'adresse URL désirée, ou l\'adresse de son fichier de syndication. SPIP va récupérer automatiquement les informations concernant ce site (titre, description...).', # NEW
 	'texte_referencement_automatique_verifier' => 'Veuillez vérifier les informations fournies par <tt>@url@</tt> avant d\'enregistrer.', # NEW
 	'texte_syndication' => 'If a site allows it, it is possible to retrieve automatically

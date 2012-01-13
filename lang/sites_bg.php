@@ -25,8 +25,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// B
 	'bouton_exporter' => 'Exporter', # NEW
 	'bouton_importer' => 'Importer', # NEW
-	'bouton_radio_modere_posteriori' => 'последваща модерация',
-	'bouton_radio_modere_priori' => 'предварителна модерация',
+	'bouton_radio_modere_posteriori' => 'последваща модерация', # MODIF
+	'bouton_radio_modere_priori' => 'предварителна модерация', # MODIF
 	'bouton_radio_non_syndication' => 'Без обединяване',
 	'bouton_radio_syndication' => 'Обединеняване на сайтове:',
 
@@ -73,14 +73,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_site_propose' => 'Сайтът е изпратен на:',
 	'info_site_reference' => 'Свързани сайтове',
 	'info_site_refuse' => 'Интернет страницата е отхвърлена',
-	'info_site_syndique' => 'Този сайт е обединен.',
+	'info_site_syndique' => 'Този сайт е обединен.', # MODIF
 	'info_site_valider' => 'Сайтове, очакващи одобрение за публикуване',
 	'info_sites_referencer' => 'Свързване на сайт',
 	'info_sites_refuses' => 'Отхвърлени сайтове',
 	'info_statut_site_1' => 'Сайтът е:',
 	'info_statut_site_2' => 'Публикуван',
 	'info_statut_site_3' => 'Изпратен',
-	'info_statut_site_4' => 'За изтриване',
+	'info_statut_site_4' => 'За изтриване', # MODIF
 	'info_syndication' => 'обединение:',
 	'info_syndication_articles' => 'статия (статии)',
 	'item_bloquer_liens_syndiques' => 'Блокиране на обединените връзки за одобрение',
@@ -130,10 +130,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    След това е възможно да се блокира
    индивидуално всяка препратка поотделно или да
    се избере от всеки сайт, да се блокира препратката,
-   идваща от него.',
+   идваща от него.', # MODIF
 	'texte_messages_publics' => 'Публични съобщения към статията:',
-	'texte_non_fonction_referencement' => 'Можете да изберете да не използвате автоматичното свойство и да въвжедате ръчно елементите, свързани със сайта.',
-	'texte_referencement_automatique' => '<b>Автоматично свързване на сайт</b><br />Можете лесно да свъжетете уеб страници чрез обозначаване по-долу на желания URL на страницата или адресът на нейния файл за обединение. СПИП автоматично ще събере нужната информация, отнасяща се до сайта (наименование, описание и т.н.).',
+	'texte_non_fonction_referencement' => 'Можете да изберете да не използвате автоматичното свойство и да въвжедате ръчно елементите, свързани със сайта.', # MODIF
+	'texte_referencement_automatique' => '<b>Автоматично свързване на сайт</b><br />Можете лесно да свъжетете уеб страници чрез обозначаване по-долу на желания URL на страницата или адресът на нейния файл за обединение. СПИП автоматично ще събере нужната информация, отнасяща се до сайта (наименование, описание и т.н.).', # MODIF
 	'texte_referencement_automatique_verifier' => 'Veuillez vérifier les informations fournies par <tt>@url@</tt> avant d\'enregistrer.', # NEW
 	'texte_syndication' => 'Ако сайтът го позволява, възможно е автоматично да възстановява
   списъка с най-новия материал. За да постигнете това, нужно е да активирате обединяване. 

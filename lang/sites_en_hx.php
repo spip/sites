@@ -25,8 +25,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// B
 	'bouton_exporter' => 'Exporter', # NEW
 	'bouton_importer' => 'Importer', # NEW
-	'bouton_radio_modere_posteriori' => '4f73rw4rd5 m0d3r4710n',
-	'bouton_radio_modere_priori' => 'b3f0r3h4nd m0d3r4710n',
+	'bouton_radio_modere_posteriori' => '4f73rw4rd5 m0d3r4710n', # MODIF
+	'bouton_radio_modere_priori' => 'b3f0r3h4nd m0d3r4710n', # MODIF
 	'bouton_radio_non_syndication' => 'N0 5ynd1c4710n',
 	'bouton_radio_syndication' => '5ynd1c4710n:',
 
@@ -73,14 +73,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_site_propose' => '5173 5ubm1773d 0n:',
 	'info_site_reference' => 'R3f3r3nc3d 51735 0n11n3',
 	'info_site_refuse' => 'W3b 5173 r3j3c73d',
-	'info_site_syndique' => '7h15 5173 15 5ynd1c473d...',
+	'info_site_syndique' => '7h15 5173 15 5ynd1c473d...', # MODIF
 	'info_site_valider' => '51735 70 b3 v411d473d',
 	'info_sites_referencer' => 'R3f3r3nc1ng 4 5173',
 	'info_sites_refuses' => 'R3j3c73d 51735',
 	'info_statut_site_1' => '7h15 5173 15:',
 	'info_statut_site_2' => 'Pub115h3d',
 	'info_statut_site_3' => '5ubm1773d',
-	'info_statut_site_4' => '1n 7h3 du57b1n',
+	'info_statut_site_4' => '1n 7h3 du57b1n', # MODIF
 	'info_syndication' => '5ynd1c4710n:', # MODIF
 	'info_syndication_articles' => '4r71c13(5)',
 	'item_bloquer_liens_syndiques' => 'B10ck 5ynd1c473d 11nk5 f0r v411d4710n',
@@ -130,10 +130,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 			15, 7h3n, p0551b13 4nyw4y 70
 			b10ck 34ch 11nk 1nd1v1du411y, 0r 70
 			ch0053, f0r 34ch 5173, 70 b10ck 7h3 11nk5 c0m1ng
-			fr0m 4ny p4r71cu14r 5173.',
+			fr0m 4ny p4r71cu14r 5173.', # MODIF
 	'texte_messages_publics' => 'Pub11c M3554g35 0f 7h3 4r71c13:',
-	'texte_non_fonction_referencement' => 'Y0u c4n ch0053 n07 70 u53 7h15 4u70m473d f347ur3, 4nd 3n73r 7h3 313m3n75 c0nc3rn1ng 7h47 5173 m4nu411y...',
-	'texte_referencement_automatique' => '<b>4u70m473d 5173 r3f3r3nc1ng</b><br />Y0u c4n r3f3r3nc3 4 W3b 5173 qu1ck1y by 1nd1c471ng b310w 7h3 d351r3d UR1, 0r 7h3 4ddr355 0f 175 b4ck3nd f113. 5P1P w111 4u70m471c411y p1ck up 7h3 1nf0rm4710n c0nc3rn1ng 7h47 5173 (71713, d35cr1p710n...).',
+	'texte_non_fonction_referencement' => 'Y0u c4n ch0053 n07 70 u53 7h15 4u70m473d f347ur3, 4nd 3n73r 7h3 313m3n75 c0nc3rn1ng 7h47 5173 m4nu411y...', # MODIF
+	'texte_referencement_automatique' => '<b>4u70m473d 5173 r3f3r3nc1ng</b><br />Y0u c4n r3f3r3nc3 4 W3b 5173 qu1ck1y by 1nd1c471ng b310w 7h3 d351r3d UR1, 0r 7h3 4ddr355 0f 175 b4ck3nd f113. 5P1P w111 4u70m471c411y p1ck up 7h3 1nf0rm4710n c0nc3rn1ng 7h47 5173 (71713, d35cr1p710n...).', # MODIF
 	'texte_referencement_automatique_verifier' => 'Veuillez vérifier les informations fournies par <tt>@url@</tt> avant d\'enregistrer.', # NEW
 	'texte_syndication' => '1f 4 5173 4110w5 17, 17 15 p0551b13 70 r37r13v3 4u70m471c411y
 		7h3 1157 0f 175 147357 m473r141. 70 4ch13v3 7h15, y0u mu57 4c71v473 7h3 5ynd1c4710n. 

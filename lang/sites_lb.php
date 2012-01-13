@@ -25,8 +25,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// B
 	'bouton_exporter' => 'Exporter', # NEW
 	'bouton_importer' => 'Importer', # NEW
-	'bouton_radio_modere_posteriori' => 'modéréiert "à posteriori"',
-	'bouton_radio_modere_priori' => 'modéréiert "à priori"',
+	'bouton_radio_modere_posteriori' => 'modéréiert "à posteriori"', # MODIF
+	'bouton_radio_modere_priori' => 'modéréiert "à priori"', # MODIF
 	'bouton_radio_non_syndication' => 'Keng Syndicatioun',
 	'bouton_radio_syndication' => 'Syndicatioun:',
 
@@ -73,14 +73,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_site_propose' => 'Site proposéiert den:',
 	'info_site_reference' => 'Referenzéierten Site, publizéiert',
 	'info_site_refuse' => 'Refuséierten Site',
-	'info_site_syndique' => 'Dëse Site ass syndiquéiert...',
+	'info_site_syndique' => 'Dëse Site ass syndiquéiert...', # MODIF
 	'info_site_valider' => 'Siten ze validéieren',
 	'info_sites_referencer' => 'E Site referenzéieren',
 	'info_sites_refuses' => 'Déi refuséiert Siten',
 	'info_statut_site_1' => 'Dëse Site ass:',
 	'info_statut_site_2' => 'Publizéiert',
 	'info_statut_site_3' => 'Proposéiert',
-	'info_statut_site_4' => 'An der Dreckskëscht',
+	'info_statut_site_4' => 'An der Dreckskëscht', # MODIF
 	'info_syndication' => 'Syndicatioun:',
 	'info_syndication_articles' => 'Artikel(en)',
 	'item_bloquer_liens_syndiques' => 'Déi syndiquéiert Linken fir eng Validatioun blockéieren',
@@ -123,13 +123,13 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	pour vous permettre ensuite de l\'importer dans votre navigateur ou dans un service en ligne', # NEW
 	'texte_expliquer_import_bookmarks' => 'Vous pouvez importer une liste de sites au format Marque-page HTML,
 	en provenance de votre navigateur ou d\'un service en ligne de gestion des Marques-pages.', # NEW
-	'texte_liens_sites_syndiques' => 'D\'Linken vun de syndiquéierten Siten kënnen fir d\'éischt mol blockéiert ginn; déi Astellung ass den Default fir déi nei syndiquéiert Siten. Duerno kann een all Link eenzel deblockéieren, oder Site fir Site blockéieren oder nët.',
+	'texte_liens_sites_syndiques' => 'D\'Linken vun de syndiquéierten Siten kënnen fir d\'éischt mol blockéiert ginn; déi Astellung ass den Default fir déi nei syndiquéiert Siten. Duerno kann een all Link eenzel deblockéieren, oder Site fir Site blockéieren oder nët.', # MODIF
 	'texte_messages_publics' => 'Öffentlëch Messagen vum Artikel:',
-	'texte_non_fonction_referencement' => 'Dir wëllt villäicht dës automatesch Fonktioun nët aschalten a selwer d\'Elementer vun ärem Site uginn...',
-	'texte_referencement_automatique' => '<b>Automatëscht Referenzéieren vun engem Site</b><br />Dir kënnt e Site séier referenzéieren an dem der hei d\'URL oder d\'Adress vun sengem Syndicatiouns-Fichier ugitt. SPIP kritt dann automatesch d\'Informatiounen (Titel, Beschreiwung...).',
+	'texte_non_fonction_referencement' => 'Dir wëllt villäicht dës automatesch Fonktioun nët aschalten a selwer d\'Elementer vun ärem Site uginn...', # MODIF
+	'texte_referencement_automatique' => '<b>Automatëscht Referenzéieren vun engem Site</b><br />Dir kënnt e Site séier referenzéieren an dem der hei d\'URL oder d\'Adress vun sengem Syndicatiouns-Fichier ugitt. SPIP kritt dann automatesch d\'Informatiounen (Titel, Beschreiwung...).', # MODIF
 	'texte_referencement_automatique_verifier' => 'Kontrolléiert d\'Informatiounen déi vun <tt>@url@</tt> koum sinn ier dër späichert.',
 	'texte_syndication' => 'Et ass méiglech, wann de Site ët erlaabt, automatesch d\'Lëscht vun senge Neiegkeeten ze kréien. Schalt duerfir d\'Syndicatioun an.
-<blockquote><i>Verschidde Provideren verhënneren dës Prozedur; an deem Fall kënnt dir d\'Syndicatioun nët op ärem Site benotzen.</i></blockquote>',
+<blockquote><i>Verschidde Provideren verhënneren dës Prozedur; an deem Fall kënnt dir d\'Syndicatioun nët op ärem Site benotzen.</i></blockquote>', # MODIF
 	'titre_articles_syndiques' => 'Syndiquéiert Artikelen vun dësem Site',
 	'titre_dernier_article_syndique' => 'Läscht syndiquéiert Artikelen',
 	'titre_exporter_bookmarks' => 'Exporter des Marques-pages', # NEW

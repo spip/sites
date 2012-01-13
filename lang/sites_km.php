@@ -25,8 +25,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// B
 	'bouton_exporter' => 'Exporter', # NEW
 	'bouton_importer' => 'Importer', # NEW
-	'bouton_radio_modere_posteriori' => 'សំរបសំរួល ពេលបន្ទាប់',
-	'bouton_radio_modere_priori' => 'សំរបសំរួល ជាដំបូង',
+	'bouton_radio_modere_posteriori' => 'សំរបសំរួល ពេលបន្ទាប់', # MODIF
+	'bouton_radio_modere_priori' => 'សំរបសំរួល ជាដំបូង', # MODIF
 	'bouton_radio_non_syndication' => 'គ្មានបញ្ជាប់',
 	'bouton_radio_syndication' => 'ការបញ្ជាប់​គ្នា ៖',
 
@@ -73,14 +73,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_site_propose' => 'បានស្នើ សៃថ៍ ៖',
 	'info_site_reference' => 'វ៉ែបសៃថ៍យោង លើអិនរើណែត',
 	'info_site_refuse' => '​បាន​បដិសេធ វ៉ែបសៃថ៍',
-	'info_site_syndique' => 'សៃថ៍នេះ​ ត្រូវ​បានបញ្ជាប់...',
+	'info_site_syndique' => 'សៃថ៍នេះ​ ត្រូវ​បានបញ្ជាប់...', # MODIF
 	'info_site_valider' => '​​សៃថ៍ ដែល​ត្រូវធ្វើអោយសុពលភាព',
 	'info_sites_referencer' => 'យោង​ មួយវ៉ែបសៃថ៍',
 	'info_sites_refuses' => 'សៃថ៍ ​ដែល​បានត្រូវ​​បដិសេធ',
 	'info_statut_site_1' => 'សៃថ៍នេះ​ គឺ ៖',
 	'info_statut_site_2' => 'បានត្រូវ​​ផ្សព្វផ្សាយ',
 	'info_statut_site_3' => 'បាន​ត្រូវ​ស្នើ',
-	'info_statut_site_4' => 'នៅ​ធុងសំរាម',
+	'info_statut_site_4' => 'នៅ​ធុងសំរាម', # MODIF
 	'info_syndication' => 'ការ​បញ្ជាប់​គ្នា ៖',
 	'info_syndication_articles' => 'អត្ថបទ ៖',
 	'item_bloquer_liens_syndiques' => 'បញ្ឈប់​ទំនាក់ទំនង​ដែល​ត្រូវ​បាន​បញ្ចូល​ដើម្បី​ផ្ដល់​សុពលភាព',
@@ -123,13 +123,13 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	pour vous permettre ensuite de l\'importer dans votre navigateur ou dans un service en ligne', # NEW
 	'texte_expliquer_import_bookmarks' => 'Vous pouvez importer une liste de sites au format Marque-page HTML,
 	en provenance de votre navigateur ou d\'un service en ligne de gestion des Marques-pages.', # NEW
-	'texte_liens_sites_syndiques' => 'ទំនាក់ទំនង​ចេញពី​ហ្វា​ល​ដែល​បាន​បញ្ចូល​អាច​ត្រូវ​កាត់​ផ្ដាច់​ជា​មុន​។ ការ​កំណត់​ខាងក្រោម​បង្ហាញ​នូវ​ការ​កំណត់​ដើម​នៃ​វ៉ិ​ប​សាយ​ដែល​បាន​បញ្ចូល​បន្ទាប់​ពី​ការ​បង្កើត​។ ដូច្នេះ អាច​មានការ​កាត់​ផ្ដាច់​នូវ​ទំនាក់ទំនង​មួយៗ ឬ​ជ្រើសរើស​កាត់​ផ្ដាច់ទំនាក់ទំនង​ចេញពី​វ៉ិ​ប​សាយ​ជាក់លាក់ សំរាប់​វ៉ិ​ប​សាយ​នីមួយៗ​។',
+	'texte_liens_sites_syndiques' => 'ទំនាក់ទំនង​ចេញពី​ហ្វា​ល​ដែល​បាន​បញ្ចូល​អាច​ត្រូវ​កាត់​ផ្ដាច់​ជា​មុន​។ ការ​កំណត់​ខាងក្រោម​បង្ហាញ​នូវ​ការ​កំណត់​ដើម​នៃ​វ៉ិ​ប​សាយ​ដែល​បាន​បញ្ចូល​បន្ទាប់​ពី​ការ​បង្កើត​។ ដូច្នេះ អាច​មានការ​កាត់​ផ្ដាច់​នូវ​ទំនាក់ទំនង​មួយៗ ឬ​ជ្រើសរើស​កាត់​ផ្ដាច់ទំនាក់ទំនង​ចេញពី​វ៉ិ​ប​សាយ​ជាក់លាក់ សំរាប់​វ៉ិ​ប​សាយ​នីមួយៗ​។', # MODIF
 	'texte_messages_publics' => 'សារ​សាធារណៈ​នៃ​អត្ថបទ​នេះៈ',
-	'texte_non_fonction_referencement' => 'Yលោក​អ្នក​អាច​ជ្រើសរើស​មិន​ប្រេ​ប្រាស់​លក្ខណៈ​ស្វ័យប្រវត្ដិ​នេះ និង​ចូល​ទៅ​ក្នុង​ធាតុ​ដែល​ទាក់ទិន​ទៅ​នឹង​វ៉ិ​ប​សាយ​នេះ​ដោយ​ការ​បញ្ជា​របស់​លោក​អ្នក​....',
-	'texte_referencement_automatique' => '<b>ការ​យោង​ទៅ​វ៉ិ​ប​សាយ​ដោយ​ស្វ័យប្រវត្ដិ</b><br /> លោក​អ្នក​អាច​យោង​ទៅ​វ៉ិ​ប​សាយ​មួយ​យ៉ាង​រហ័ស ដោយ​ចង្អុល​ខាងក្រោមURL ដែល​ចង់បាន ឬ​អាសយដ្ឋាន​របស់​ហ្វា​ល​បញ្ចូល​នីមួយៗ​។SPIP និង​បង្ហាញ​នូវ​ព័ត៌មាន (​ចំណងជើង ់លក្ខណៈ​....) របស់​វ៉ិ​ប​សាយ​នោះ​ដោយ​ស្វ័យប្រវត្ដិ​។',
+	'texte_non_fonction_referencement' => 'Yលោក​អ្នក​អាច​ជ្រើសរើស​មិន​ប្រេ​ប្រាស់​លក្ខណៈ​ស្វ័យប្រវត្ដិ​នេះ និង​ចូល​ទៅ​ក្នុង​ធាតុ​ដែល​ទាក់ទិន​ទៅ​នឹង​វ៉ិ​ប​សាយ​នេះ​ដោយ​ការ​បញ្ជា​របស់​លោក​អ្នក​....', # MODIF
+	'texte_referencement_automatique' => '<b>ការ​យោង​ទៅ​វ៉ិ​ប​សាយ​ដោយ​ស្វ័យប្រវត្ដិ</b><br /> លោក​អ្នក​អាច​យោង​ទៅ​វ៉ិ​ប​សាយ​មួយ​យ៉ាង​រហ័ស ដោយ​ចង្អុល​ខាងក្រោមURL ដែល​ចង់បាន ឬ​អាសយដ្ឋាន​របស់​ហ្វា​ល​បញ្ចូល​នីមួយៗ​។SPIP និង​បង្ហាញ​នូវ​ព័ត៌មាន (​ចំណងជើង ់លក្ខណៈ​....) របស់​វ៉ិ​ប​សាយ​នោះ​ដោយ​ស្វ័យប្រវត្ដិ​។', # MODIF
 	'texte_referencement_automatique_verifier' => 'Veuillez vérifier les informations fournies par <tt>@url@</tt> avant d\'enregistrer.', # NEW
 	'texte_syndication' => 'បើមួយសៃថ៍ អនុញ្ញាត, វាអាចប្រមូលមកវិញ ស្វ័យប្រវត្តិ បញ្ជីនៃសំភារៈចុងក្រោយបំផុត របស់វា។ ដើម្បីសំរេចបានចឹង, អ្នកត្រូវតែធ្វើអោយសកម្ម ការភ្ជាប់។  <blockquote><i>ខំព្យូរើខ្លះ គ្មានអនុញ្ញាត មុខងារនេះ; 
-  ក្នុងករណីនេះ, អ្នកគ្មានអាចប្រើប្រាស់ ការភ្ជាប់ខ្លឹមសារ ពីវ៉ែបសៃថ៍ របស់អ្នក។</i></blockquote>',
+  ក្នុងករណីនេះ, អ្នកគ្មានអាចប្រើប្រាស់ ការភ្ជាប់ខ្លឹមសារ ពីវ៉ែបសៃថ៍ របស់អ្នក។</i></blockquote>', # MODIF
 	'titre_articles_syndiques' => 'អត្ថបទ​ដែល​បាន​បញ្ចូល​ត្រូវ​បាន​ទាញ​ចេញពី​វ៉ិ​ប​សាយ​នេះ​។',
 	'titre_dernier_article_syndique' => 'អត្ថបទ​ដែល​បាន​បញ្ចូល​ថ្មី​បំផុត',
 	'titre_exporter_bookmarks' => 'Exporter des Marques-pages', # NEW

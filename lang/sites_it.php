@@ -25,8 +25,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// B
 	'bouton_exporter' => 'Exporter', # NEW
 	'bouton_importer' => 'Importer', # NEW
-	'bouton_radio_modere_posteriori' => 'moderato a posteriori',
-	'bouton_radio_modere_priori' => 'moderato a priori',
+	'bouton_radio_modere_posteriori' => 'moderato a posteriori', # MODIF
+	'bouton_radio_modere_priori' => 'moderato a priori', # MODIF
 	'bouton_radio_non_syndication' => 'Nessuna syndication',
 	'bouton_radio_syndication' => 'Syndication:',
 
@@ -73,14 +73,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_site_propose' => 'Sito proposto il:',
 	'info_site_reference' => 'Sito repertoriato in linea',
 	'info_site_refuse' => 'Sito Web rifiutato',
-	'info_site_syndique' => 'Questo è un sito in syndication...',
+	'info_site_syndique' => 'Questo è un sito in syndication...', # MODIF
 	'info_site_valider' => 'Siti da convalidare',
 	'info_sites_referencer' => 'Inserisci un sito in repertorio',
 	'info_sites_refuses' => 'I siti rifiutati',
 	'info_statut_site_1' => 'Questo sito è:',
 	'info_statut_site_2' => 'Pubblicato',
 	'info_statut_site_3' => 'Proposto',
-	'info_statut_site_4' => 'Nel cestino',
+	'info_statut_site_4' => 'Nel cestino', # MODIF
 	'info_syndication' => 'syndication:',
 	'info_syndication_articles' => 'articolo/i',
 	'item_bloquer_liens_syndiques' => 'Blocca i link in syndication per la convalida',
@@ -127,17 +127,17 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 possono essere bloccati a priori; l\'impostazione
 qui sotto indica i criteri predefiniti dei siti in syndication.
 Sarà comunque possibile sbloccare singolarmente ogni link,
-o scegliere di bloccare i link di ogni singolo sito.',
+o scegliere di bloccare i link di ogni singolo sito.', # MODIF
 	'texte_messages_publics' => 'Messaggi pubblici dell\'articolo:',
-	'texte_non_fonction_referencement' => 'Puoi non utilizzare questa funzione automatica, e indicare direttamente gli elementi riguardanti il sito...',
-	'texte_referencement_automatique' => '<b>Inserimento automatizzato in repertorio</b><br />È possibile repertoriare rapidamente un sito Web indicandone qui sotto l\'indirizzo URL, o l\'indirizzo del file di syndication. SPIP recupererà automaticamente le informazioni riguardanti il sito (titolo, descrizione...).',
+	'texte_non_fonction_referencement' => 'Puoi non utilizzare questa funzione automatica, e indicare direttamente gli elementi riguardanti il sito...', # MODIF
+	'texte_referencement_automatique' => '<b>Inserimento automatizzato in repertorio</b><br />È possibile repertoriare rapidamente un sito Web indicandone qui sotto l\'indirizzo URL, o l\'indirizzo del file di syndication. SPIP recupererà automaticamente le informazioni riguardanti il sito (titolo, descrizione...).', # MODIF
 	'texte_referencement_automatique_verifier' => 'Controllare le informazioni fornite da <tt>@url@</tt> prima di registrare.',
 	'texte_syndication' => 'Quando un sito Web lo permette, è possibile recuperarne automaticamente
 la lista delle novità. A tal fine è necessario attivare la syndication.
 
 <blockquote><i>Alcuni provider disattivano questa funzionalità; 
 in questo caso, non potrai utilizzare la syndication del contenuto
-a partire dal tuo sito.</i></blockquote>',
+a partire dal tuo sito.</i></blockquote>', # MODIF
 	'titre_articles_syndiques' => 'Articoli in syndication raccolti da questo sito',
 	'titre_dernier_article_syndique' => 'Ultimi articoli in syndication',
 	'titre_exporter_bookmarks' => 'Exporter des Marques-pages', # NEW

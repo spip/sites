@@ -26,8 +26,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// B
 	'bouton_exporter' => 'Exporter', # NEW
 	'bouton_importer' => 'Importer', # NEW
-	'bouton_radio_modere_posteriori' => 'Muderazione dopu',
-	'bouton_radio_modere_priori' => 'muderazione in antìcipu',
+	'bouton_radio_modere_posteriori' => 'Muderazione dopu', # MODIF
+	'bouton_radio_modere_priori' => 'muderazione in antìcipu', # MODIF
 	'bouton_radio_non_syndication' => 'Nisuna sindicazione',
 	'bouton_radio_syndication' => 'Sindicazione :',
 
@@ -74,14 +74,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_site_propose' => 'Situ prupostu u :',
 	'info_site_reference' => 'Situ riferitu in ligna',
 	'info_site_refuse' => 'Situ Web rifiutatu',
-	'info_site_syndique' => 'Stu situ hè sindicatu ...',
+	'info_site_syndique' => 'Stu situ hè sindicatu ...', # MODIF
 	'info_site_valider' => 'Siti da cunvalidà',
 	'info_sites_referencer' => 'Riferisce un situ',
 	'info_sites_refuses' => 'I siti rifiutati',
 	'info_statut_site_1' => 'Stu situ hè :',
 	'info_statut_site_2' => 'Pubblicatu',
 	'info_statut_site_3' => 'Prupostu',
-	'info_statut_site_4' => 'In a rumènzula',
+	'info_statut_site_4' => 'In a rumènzula', # MODIF
 	'info_syndication' => 'sindicazione :',
 	'info_syndication_articles' => 'artìculu/i',
 	'item_bloquer_liens_syndiques' => 'Bluccà e lee sindicate per a cunvalidazione',
@@ -126,16 +126,16 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	en provenance de votre navigateur ou d\'un service en ligne de gestion des Marques-pages.', # NEW
 	'texte_liens_sites_syndiques' => 'E lee chì venenu da siti sindicati 
 			ponu esse bluccati; l\'opzione quì sottu face vede i paràmetri predefiniti di i siti sindicati dopu creati.
-			Ferma quantunque pussìbule di sbluccà ogni sìngula lea, o di sceglie di bluccà e lee d\'ogni sìngulu situ.',
+			Ferma quantunque pussìbule di sbluccà ogni sìngula lea, o di sceglie di bluccà e lee d\'ogni sìngulu situ.', # MODIF
 	'texte_messages_publics' => 'Messagi pùbblichi di l\'artìculu :',
-	'texte_non_fonction_referencement' => 'Pudete sceglie d\'ùn aduprà micca sta funzione autumàtica, ma rinsignà da per voi l\'elementi relativi à u situ ...',
+	'texte_non_fonction_referencement' => 'Pudete sceglie d\'ùn aduprà micca sta funzione autumàtica, ma rinsignà da per voi l\'elementi relativi à u situ ...', # MODIF
 	'texte_referencement_automatique' => '<b>Riferimentu autumàtizatu d\'un situ</b><br />Pudete riferisce in furia un situ web rinsignendu ne quì sottu
 		l\'indirizzu URL, o l\'indirizzu di u so schedariu di sindicazione. SPIP hà da ricuarà in autumàticu l\'infurmazioni relative à u situ
-		(tìtulu, discrizzione...).',
+		(tìtulu, discrizzione...).', # MODIF
 	'texte_referencement_automatique_verifier' => 'Cuntrullate puru l\'infurmazioni furnite da <tt>@url@</tt> prima d\'arregistrà.',
 	'texte_syndication' => 'Quandu un situ Web u permette, hè pussìbule di ricupreà ne in autumàticu a lista di e nutizie. Per quessa, Vi tocca à attivà 
 		a sindicazione.	<blockquote><i>Certi òspiti disattiveghjanu sta funziunalità; in stu casu, ùn puderete micca aduprà a sindicazione di cuntenutu
-		da u vostru situ.</i></blockquote>',
+		da u vostru situ.</i></blockquote>', # MODIF
 	'titre_articles_syndiques' => 'Artìculi sindicati racolti da stu situ',
 	'titre_dernier_article_syndique' => 'Ùltimi artìculi sindicati',
 	'titre_exporter_bookmarks' => 'Exporter des Marques-pages', # NEW

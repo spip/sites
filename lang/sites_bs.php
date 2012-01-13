@@ -25,8 +25,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// B
 	'bouton_exporter' => 'Exporter', # NEW
 	'bouton_importer' => 'Importer', # NEW
-	'bouton_radio_modere_posteriori' => '\\f1 post-moderation\\f0 ',
-	'bouton_radio_modere_priori' => '\\f1 pre-moderation\\f0 ',
+	'bouton_radio_modere_posteriori' => '\\f1 post-moderation\\f0 ', # MODIF
+	'bouton_radio_modere_priori' => '\\f1 pre-moderation\\f0 ', # MODIF
 	'bouton_radio_non_syndication' => 'Bez sindikacije',
 	'bouton_radio_syndication' => 'Sindikacija:',
 
@@ -73,14 +73,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_site_propose' => 'Stranica preporucena:',
 	'info_site_reference' => 'Preporucene stranice online',
 	'info_site_refuse' => 'Web stranica odbijena',
-	'info_site_syndique' => 'Ova stranica je sindikovana...',
+	'info_site_syndique' => 'Ova stranica je sindikovana...', # MODIF
 	'info_site_valider' => 'Stranice za ovjeriti',
 	'info_sites_referencer' => 'Preporuci stranicu',
 	'info_sites_refuses' => 'Odbijene stranice',
 	'info_statut_site_1' => 'Ova stranica je:',
 	'info_statut_site_2' => 'Objavljena',
 	'info_statut_site_3' => 'Predlozena',
-	'info_statut_site_4' => 'U korpi za smece',
+	'info_statut_site_4' => 'U korpi za smece', # MODIF
 	'info_syndication' => 'sindikacija:',
 	'info_syndication_articles' => 'clanak/ci',
 	'item_bloquer_liens_syndiques' => 'Blokiraj sindikovane linkove za validaciju',
@@ -123,9 +123,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	pour vous permettre ensuite de l\'importer dans votre navigateur ou dans un service en ligne', # NEW
 	'texte_expliquer_import_bookmarks' => 'Vous pouvez importer une liste de sites au format Marque-page HTML,
 	en provenance de votre navigateur ou d\'un service en ligne de gestion des Marques-pages.', # NEW
-	'texte_liens_sites_syndiques' => 'Linkovi izvedeni iz sindikovanih stranica mogu a priori biti blokirani; dole prikazana postavka  je standardna postavka sindikovanih stranica prije njihove kreacije. U svakom slucaju je moguce pojedinacno deblokirati  svaki link ili, stranicu po stranicu, blokirati linkove koji  dolaze sa odredjene lokacije.',
+	'texte_liens_sites_syndiques' => 'Linkovi izvedeni iz sindikovanih stranica mogu a priori biti blokirani; dole prikazana postavka  je standardna postavka sindikovanih stranica prije njihove kreacije. U svakom slucaju je moguce pojedinacno deblokirati  svaki link ili, stranicu po stranicu, blokirati linkove koji  dolaze sa odredjene lokacije.', # MODIF
 	'texte_messages_publics' => 'Javne poruke clanka:',
-	'texte_non_fonction_referencement' => 'Mozete izabrati da ne koristite ovu automatsku funkciju i sami naznaciti elemente vezane za ovu stranicu...',
+	'texte_non_fonction_referencement' => 'Mozete izabrati da ne koristite ovu automatsku funkciju i sami naznaciti elemente vezane za ovu stranicu...', # MODIF
 	'texte_referencement_automatique' => '<b>Automatska preporuka stranice</b><br />Mozete brzo preporuciti web stranicu, tako sto cete naznaciti zeljenu URL adresu ili adresu njenog backend dokumenta. SPIP ce automatski sakupiti informacije vezane za tu stranicu (naslov, opis...).', # MODIF
 	'texte_referencement_automatique_verifier' => 'Veuillez vérifier les informations fournies par <tt>@url@</tt> avant d\'enregistrer.', # NEW
 	'texte_syndication' => 'Moguce je automatsko otkrivanje spiska novosti, ako web stranica to dozvoljava. Zato trebate aktivirati sindikaciju\\tab <blockquote><i>Odredjeni hosting servisi dezaktiviraju tu funkciju; u tom slucaju ne mozete koristiti sindikaciju sadrzaja na vasoj stranici.</i></blockquote>', # MODIF

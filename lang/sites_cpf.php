@@ -25,8 +25,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// B
 	'bouton_exporter' => 'Exporter', # NEW
 	'bouton_importer' => 'Importer', # NEW
-	'bouton_radio_modere_posteriori' => 'lé modèré apré konfirmasyon ',
-	'bouton_radio_modere_priori' => 'lé modèré-dovan',
+	'bouton_radio_modere_posteriori' => 'lé modèré apré konfirmasyon ', # MODIF
+	'bouton_radio_modere_priori' => 'lé modèré-dovan', # MODIF
 	'bouton_radio_non_syndication' => 'Anpès lasindikasyon',
 	'bouton_radio_syndication' => 'Lasindikasyon :',
 
@@ -73,14 +73,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_site_propose' => 'Sitwèb propozé lo :',
 	'info_site_reference' => 'Sitwèb référansé an liyn',
 	'info_site_refuse' => 'Sitwèb-la lé arfizé',
-	'info_site_syndique' => 'Sitwèb-la lé sindiké...',
+	'info_site_syndique' => 'Sitwèb-la lé sindiké...', # MODIF
 	'info_site_valider' => 'Bann sitwèb pou konfirm',
 	'info_sites_referencer' => 'Référans inn sitwèb',
 	'info_sites_refuses' => 'Bann sitwèb lé arfizé',
 	'info_statut_site_1' => 'Sitwèb-la lé :',
 	'info_statut_site_2' => 'Publyé',
 	'info_statut_site_3' => 'Propozé',
-	'info_statut_site_4' => 'Dann korbéy',
+	'info_statut_site_4' => 'Dann korbéy', # MODIF
 	'info_syndication' => 'Lasindikasyon :',
 	'info_syndication_articles' => '(bann) lartik',
 	'item_bloquer_liens_syndiques' => 'Blok bann gatir sindiké pou lakonfirmasyon',
@@ -124,10 +124,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'texte_expliquer_import_bookmarks' => 'Vous pouvez importer une liste de sites au format Marque-page HTML,
 	en provenance de votre navigateur ou d\'un service en ligne de gestion des Marques-pages.', # NEW
 	'texte_liens_sites_syndiques' => 'Bann gatiraz sak i sort bann sit sindiké, zot i
-pé èt bloké dann modèr-dovan ; réglaz-la anba i indik lo réglaz otomatik pou bann sit sindiké kank zot la finn dèt kréé. Lé posib answit débloké sakinn gatiraz.Ou pé osi swazi bloké bann gatiraz pou inn sit byin kadré.',
+pé èt bloké dann modèr-dovan ; réglaz-la anba i indik lo réglaz otomatik pou bann sit sindiké kank zot la finn dèt kréé. Lé posib answit débloké sakinn gatiraz.Ou pé osi swazi bloké bann gatiraz pou inn sit byin kadré.', # MODIF
 	'texte_messages_publics' => 'Bann modékri-déor pou lartik-la :',
-	'texte_non_fonction_referencement' => 'Lé posib ou préfèr pa anserv lafonksyon-la akoz i lé otomatik : dann ka-la, ou pé indik ou-minm tout bann zéléman ou la désid sak i kosern lo sit...',
-	'texte_referencement_automatique' => '<b>Référansman otomatik pou inn sit</b><br />Ou pé référans vitman inn sitwèb. Pou sa minm, indik anba ladrès lo sit ou ladrès lo fisyé pou la sindikasyon. SPIP i sava rékupèr otomatikman bann zinformasyon sir lo sit minm (titr, kosa i sava trouv dodan...).',
+	'texte_non_fonction_referencement' => 'Lé posib ou préfèr pa anserv lafonksyon-la akoz i lé otomatik : dann ka-la, ou pé indik ou-minm tout bann zéléman ou la désid sak i kosern lo sit...', # MODIF
+	'texte_referencement_automatique' => '<b>Référansman otomatik pou inn sit</b><br />Ou pé référans vitman inn sitwèb. Pou sa minm, indik anba ladrès lo sit ou ladrès lo fisyé pou la sindikasyon. SPIP i sava rékupèr otomatikman bann zinformasyon sir lo sit minm (titr, kosa i sava trouv dodan...).', # MODIF
 	'texte_referencement_automatique_verifier' => 'Veuillez vérifier les informations fournies par <tt>@url@</tt> avant d\'enregistrer.', # NEW
 	'texte_syndication' => 'Lé posib rékupèr la list bann nouvelté otomatikman, sir désertin sit : ifo pou sa-la fé zwé lasindikasyon 
 <blockquote><i>Néna désertin zéberzèr sak i dégrèn lafonksyon-la ; 

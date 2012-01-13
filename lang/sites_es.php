@@ -25,8 +25,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// B
 	'bouton_exporter' => 'Exporter', # NEW
 	'bouton_importer' => 'Importer', # NEW
-	'bouton_radio_modere_posteriori' => 'moderado a posteriori',
-	'bouton_radio_modere_priori' => 'moderado a priori',
+	'bouton_radio_modere_posteriori' => 'moderado a posteriori', # MODIF
+	'bouton_radio_modere_priori' => 'moderado a priori', # MODIF
 	'bouton_radio_non_syndication' => 'Ninguna sindicación',
 	'bouton_radio_syndication' => 'Sindicación',
 
@@ -73,14 +73,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_site_propose' => 'Sitio propuesto el',
 	'info_site_reference' => 'Sitio referenciado en línea',
 	'info_site_refuse' => 'Sitio Web rechazado',
-	'info_site_syndique' => 'Este sitio está sindicado...',
+	'info_site_syndique' => 'Este sitio está sindicado...', # MODIF
 	'info_site_valider' => 'Sitios a validar',
 	'info_sites_referencer' => 'Referenciar un sitio',
 	'info_sites_refuses' => 'Los sitios rechazados',
 	'info_statut_site_1' => 'Este sitio está:',
 	'info_statut_site_2' => 'Publicado',
 	'info_statut_site_3' => 'Propuesto',
-	'info_statut_site_4' => 'A la papelera',
+	'info_statut_site_4' => 'A la papelera', # MODIF
 	'info_syndication' => 'sindicación:',
 	'info_syndication_articles' => 'artículo(s)',
 	'item_bloquer_liens_syndiques' => 'Bloquear los enlaces sindicados en validación',
@@ -130,15 +130,15 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
  de su creación. De todos modos, posteriormente
  se puede desbloquear cada enlace individualmente, o
  escoger, sitio a sitio, el bloqueo de los
- enlaces que vienen de tal o cual sitio.',
+ enlaces que vienen de tal o cual sitio.', # MODIF
 	'texte_messages_publics' => 'Mensajes públicos del artículo:',
-	'texte_non_fonction_referencement' => 'Puedes preferir no usar esta función automática, e indicar tu mismo los elementos concernientes a este sitio...',
-	'texte_referencement_automatique' => '<b>Referenciar automáticamente un sitio</b><br />Se puede referenciar rápidamente un sitio Web indicando aquí la dirección URL deseada, o la dirección de su archivo de sindicación. SPIP recuperará automáticamente las informaciones correspondientes (título, descripción...).',
+	'texte_non_fonction_referencement' => 'Puedes preferir no usar esta función automática, e indicar tu mismo los elementos concernientes a este sitio...', # MODIF
+	'texte_referencement_automatique' => '<b>Referenciar automáticamente un sitio</b><br />Se puede referenciar rápidamente un sitio Web indicando aquí la dirección URL deseada, o la dirección de su archivo de sindicación. SPIP recuperará automáticamente las informaciones correspondientes (título, descripción...).', # MODIF
 	'texte_referencement_automatique_verifier' => 'Deberías verificar la información facilitada por <tt>@url@</tt> antes de guardar.',
 	'texte_syndication' => 'Es posible recuperar automáticamente, cuando un sitio Web lo permite,
  la lista de novedades. Para ello, debes activar la sindicación.
 <blockquote><i>Algunos proveedores de hospedaje desactivan esta funcionalidad ;
- en ese caso, no podrás utilizar la sindicación de contenido desde tu sitio.</i></blockquote>',
+ en ese caso, no podrás utilizar la sindicación de contenido desde tu sitio.</i></blockquote>', # MODIF
 	'titre_articles_syndiques' => 'Artículos sindicados de este sitio',
 	'titre_dernier_article_syndique' => 'Ultimos artículos sindicados',
 	'titre_exporter_bookmarks' => 'Exporter des Marques-pages', # NEW

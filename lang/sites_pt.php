@@ -25,8 +25,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// B
 	'bouton_exporter' => 'Exporter', # NEW
 	'bouton_importer' => 'Importer', # NEW
-	'bouton_radio_modere_posteriori' => 'moderado a posteriori',
-	'bouton_radio_modere_priori' => 'moderado a priori',
+	'bouton_radio_modere_posteriori' => 'moderado a posteriori', # MODIF
+	'bouton_radio_modere_priori' => 'moderado a priori', # MODIF
 	'bouton_radio_non_syndication' => 'Não há vinculação',
 	'bouton_radio_syndication' => 'Vinculação',
 
@@ -73,14 +73,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_site_propose' => 'Sítio proposto a :',
 	'info_site_reference' => 'Sítio referenciado em linha',
 	'info_site_refuse' => 'Sítio Web recusado',
-	'info_site_syndique' => 'Este sítio está vinculado....',
+	'info_site_syndique' => 'Este sítio está vinculado....', # MODIF
 	'info_site_valider' => 'Sítios a validar',
 	'info_sites_referencer' => 'Referenciar este sítio',
 	'info_sites_refuses' => 'Os sítios recusados ',
 	'info_statut_site_1' => 'Este sítio é :',
 	'info_statut_site_2' => 'Publicado',
 	'info_statut_site_3' => 'Proposto',
-	'info_statut_site_4' => 'Para o caixote do lixo',
+	'info_statut_site_4' => 'Para o caixote do lixo', # MODIF
 	'info_syndication' => 'vinculação:',
 	'info_syndication_articles' => 'artigo(s)',
 	'item_bloquer_liens_syndiques' => 'Impedir os laços vinculados para validação',
@@ -128,9 +128,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
  a seguir indica a definição por defeito dos
  sítios vinculados depois da sua criação. Depois é
  possível, de qualquer modo, desbloquear cada laço individualmente, ou escolher
-, sítio por sítio, bloquear os laços futuros deste ou daquele sítio.',
+, sítio por sítio, bloquear os laços futuros deste ou daquele sítio.', # MODIF
 	'texte_messages_publics' => 'Mensagens públicas do artigo :',
-	'texte_non_fonction_referencement' => 'Pode preferir não utilizar esta função automática, e indicar os elementos relativos a este sítio...',
+	'texte_non_fonction_referencement' => 'Pode preferir não utilizar esta função automática, e indicar os elementos relativos a este sítio...', # MODIF
 	'texte_referencement_automatique' => '<b>Referenciamento automatizado de um sítio</b><br />Pode referenciar rapidamente um sítio Web indicando a seguir o endereço URL desejado, ou o endereço do seu backend. SPIP vai recuperar automaticamente as informações relativas a esse sítio (título, descrição...).', # MODIF
 	'texte_referencement_automatique_verifier' => 'Veuillez vérifier les informations fournies par <tt>@url@</tt> avant d\'enregistrer.', # NEW
 	'texte_syndication' => 'É possível recuperar automaticamente, quando um sítio Web o permitir, 

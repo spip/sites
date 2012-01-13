@@ -25,8 +25,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// B
 	'bouton_exporter' => 'Exporter', # NEW
 	'bouton_importer' => 'Importer', # NEW
-	'bouton_radio_modere_posteriori' => 'moderare ulterioară',
-	'bouton_radio_modere_priori' => 'moderare à priori',
+	'bouton_radio_modere_posteriori' => 'moderare ulterioară', # MODIF
+	'bouton_radio_modere_priori' => 'moderare à priori', # MODIF
 	'bouton_radio_non_syndication' => 'Fără sindicalizare',
 	'bouton_radio_syndication' => 'Sindicalizare :',
 
@@ -73,14 +73,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_site_propose' => 'Site propus la data de :',
 	'info_site_reference' => 'Site referenţiat în direct',
 	'info_site_refuse' => 'Site Web refuzat',
-	'info_site_syndique' => 'Acest site este sindicalizat...',
+	'info_site_syndique' => 'Acest site este sindicalizat...', # MODIF
 	'info_site_valider' => 'Site-uri de validat',
 	'info_sites_referencer' => 'Referenţiere site',
 	'info_sites_refuses' => 'Site-uri refuzate',
 	'info_statut_site_1' => 'Acest site este :',
 	'info_statut_site_2' => 'Publicat',
 	'info_statut_site_3' => 'Propus',
-	'info_statut_site_4' => 'La coşul de gunoi',
+	'info_statut_site_4' => 'La coşul de gunoi', # MODIF
 	'info_syndication' => 'sindicare :',
 	'info_syndication_articles' => 'articol(e)',
 	'item_bloquer_liens_syndiques' => 'Blocaţi legăturile sindicalizate pentru validare',
@@ -128,15 +128,15 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    de mai jos indică setarea implicită aplicată
    site-urilor sindicalizate după crearea lor. Este
    posibil după aceea să deblocaţi fiecare legătură în mod individual, sau să
-   alegeţi, site cu site, să blocaţi legăturile.',
+   alegeţi, site cu site, să blocaţi legăturile.', # MODIF
 	'texte_messages_publics' => 'Mesajele publice ale articolului :',
-	'texte_non_fonction_referencement' => 'Puteţi să alegeţi să nu folosiţi această funcţie automată, ci să indicaţi chiar dumneavoastră elementele legate de acest site...',
-	'texte_referencement_automatique' => '<b>Referenţierea automatică a unui site</b><br />Puteţi să referenţiaţi rapid un site Web indicând mai jos adresa sa URL, sau adresa fişierului său de sindicalizare. SPIP va recupera în mod automat informaţiile referitoare la acest site (titlu, descriere, ş.a.m.d.).',
+	'texte_non_fonction_referencement' => 'Puteţi să alegeţi să nu folosiţi această funcţie automată, ci să indicaţi chiar dumneavoastră elementele legate de acest site...', # MODIF
+	'texte_referencement_automatique' => '<b>Referenţierea automatică a unui site</b><br />Puteţi să referenţiaţi rapid un site Web indicând mai jos adresa sa URL, sau adresa fişierului său de sindicalizare. SPIP va recupera în mod automat informaţiile referitoare la acest site (titlu, descriere, ş.a.m.d.).', # MODIF
 	'texte_referencement_automatique_verifier' => 'Vă rugăm să verificaţi informaţiile furnizate de <tt>@url@</tt> înainte de a înregistra.',
 	'texte_syndication' => 'Este posibilă recuperarea îm mod automat, pentru site-urile de Web care o permit, 
   a listei noutăţilor lor. Pentru aceasta trebuie să activaţi sindicalizarea. 
   <blockquote><i>Anumiţi furnizori dezactivează această funcţionalitate ;
-  în acest caz, nu veţi putea folosi sindicalizarea conţinutului în site-ul dumneavoastră.</i></blockquote>',
+  în acest caz, nu veţi putea folosi sindicalizarea conţinutului în site-ul dumneavoastră.</i></blockquote>', # MODIF
 	'titre_articles_syndiques' => 'Articole sindicalizate luate de pe acest site',
 	'titre_dernier_article_syndique' => 'Ultimele articole sindicalizate',
 	'titre_exporter_bookmarks' => 'Exporter des Marques-pages', # NEW

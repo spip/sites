@@ -25,8 +25,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// B
 	'bouton_exporter' => 'Exporter', # NEW
 	'bouton_importer' => 'Importer', # NEW
-	'bouton_radio_modere_posteriori' => 'Modewe dèyè',
-	'bouton_radio_modere_priori' => 'modewe avan',
+	'bouton_radio_modere_posteriori' => 'Modewe dèyè', # MODIF
+	'bouton_radio_modere_priori' => 'modewe avan', # MODIF
 	'bouton_radio_non_syndication' => 'Okenn sendikasyon',
 	'bouton_radio_syndication' => 'Sendikasyon :',
 
@@ -73,14 +73,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_site_propose' => 'Sit pwopoze an jou :',
 	'info_site_reference' => 'Sit referanse an liy',
 	'info_site_refuse' => 'Sit we ki te fin refize',
-	'info_site_syndique' => 'Sit-la se sendike...',
+	'info_site_syndique' => 'Sit-la se sendike...', # MODIF
 	'info_site_valider' => 'Sit sa-yo se sit yo ki pou konfime',
 	'info_sites_referencer' => 'Referanse yon sit',
 	'info_sites_refuses' => 'Sit sa-yo ki te refize',
 	'info_statut_site_1' => 'Sit-la se :',
 	'info_statut_site_2' => 'Pibliye',
 	'info_statut_site_3' => 'Pwopoze pou parèt ',
-	'info_statut_site_4' => 'Nan bwat poubèl',
+	'info_statut_site_4' => 'Nan bwat poubèl', # MODIF
 	'info_syndication' => 'sendikasyon :',
 	'info_syndication_articles' => 'atik (yo)',
 	'item_bloquer_liens_syndiques' => 'Bloke lyen lasendikasyon sa-yo ki pou konfime',
@@ -126,9 +126,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'texte_liens_sites_syndiques' => 'Tout lyen ki sòti tout sit sendike, genyen
 posib blok azot dabò ; réglaj isit
    anba se réglaj otomatik pou tout sit apré kreasyon sendikasyon azot
-   posib déblok azot aprè, ou debloke selman lyen pa lyen, osnon chwazi bloke  sit pa sit, tput lyen ki sòit laveni sou sit sa-yo. ',
+   posib déblok azot aprè, ou debloke selman lyen pa lyen, osnon chwazi bloke  sit pa sit, tput lyen ki sòit laveni sou sit sa-yo. ', # MODIF
 	'texte_messages_publics' => 'Mesaj piblik yo ki nan atik-la :',
-	'texte_non_fonction_referencement' => 'W ka vle pa itilize fonksyon otomatik la, men endike w mèm tout éléman yo ki pale sit-la...',
+	'texte_non_fonction_referencement' => 'W ka vle pa itilize fonksyon otomatik la, men endike w mèm tout éléman yo ki pale sit-la...', # MODIF
 	'texte_referencement_automatique' => '<b>Référansman otomatik pou yon sitweb</b><br />W kapab referanse fasilman yon sitweb si w bay ladrès URL osnon bay ladrès fichye backend ali. SPIP ke pran otomatikman tout enfòmasyon posib pou sit-la (kouman li rele, dekrisyon...).', # MODIF
 	'texte_referencement_automatique_verifier' => 'Veuillez vérifier les informations fournies par <tt>@url@</tt> avant d\'enregistrer.', # NEW
 	'texte_syndication' => 'Kank sitweb-la li pèmè bagay-sa-a, se posib pran otomatikman lis tout nouvèlté ali. 

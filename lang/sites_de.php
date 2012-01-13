@@ -25,8 +25,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// B
 	'bouton_exporter' => 'Exporter', # NEW
 	'bouton_importer' => 'Importer', # NEW
-	'bouton_radio_modere_posteriori' => 'Nachträgliche Moderation',
-	'bouton_radio_modere_priori' => 'Vorgeschaltete Moderation',
+	'bouton_radio_modere_posteriori' => 'Nachträgliche Moderation', # MODIF
+	'bouton_radio_modere_priori' => 'Vorgeschaltete Moderation', # MODIF
 	'bouton_radio_non_syndication' => 'Syndikation nicht verwenden',
 	'bouton_radio_syndication' => 'Syndikation:',
 
@@ -73,14 +73,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_site_propose' => 'Website vorgeschlagen am:',
 	'info_site_reference' => 'Verlinkte Website online',
 	'info_site_refuse' => 'Abgelehnte Website',
-	'info_site_syndique' => 'Diese Website ist syndiziert...',
+	'info_site_syndique' => 'Diese Website ist syndiziert...', # MODIF
 	'info_site_valider' => 'Websites, die auf Freigabe warten',
 	'info_sites_referencer' => 'Website verlinken',
 	'info_sites_refuses' => 'Abgelehnte Websites',
 	'info_statut_site_1' => 'Diese Website ist:',
 	'info_statut_site_2' => 'Veröffentlicht',
 	'info_statut_site_3' => 'Vorgeschlagen',
-	'info_statut_site_4' => 'Gelöscht',
+	'info_statut_site_4' => 'Gelöscht', # MODIF
 	'info_syndication' => 'Syndikation:',
 	'info_syndication_articles' => 'Artikel',
 	'item_bloquer_liens_syndiques' => 'Syndizierte Websites bis zur Freigabe sperren',
@@ -123,13 +123,13 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	pour vous permettre ensuite de l\'importer dans votre navigateur ou dans un service en ligne', # NEW
 	'texte_expliquer_import_bookmarks' => 'Vous pouvez importer une liste de sites au format Marque-page HTML,
 	en provenance de votre navigateur ou d\'un service en ligne de gestion des Marques-pages.', # NEW
-	'texte_liens_sites_syndiques' => 'Links zu syndizierten Websites können bis zur Freigabe durch einen Administrator gesperrt bleiben. Hier legen Sie die Grundeinstellung fest. Sie können diese Einstellung für jede Site einzeln ändern, bzw. nach und nach entscheiden, wie die neuen Links einer Website behandelt werden sollen.',
+	'texte_liens_sites_syndiques' => 'Links zu syndizierten Websites können bis zur Freigabe durch einen Administrator gesperrt bleiben. Hier legen Sie die Grundeinstellung fest. Sie können diese Einstellung für jede Site einzeln ändern, bzw. nach und nach entscheiden, wie die neuen Links einer Website behandelt werden sollen.', # MODIF
 	'texte_messages_publics' => 'Öffentliche Beiträge des Artikels:',
-	'texte_non_fonction_referencement' => 'Sie können diese automatische Funktion ignorieren und die für Ihre Website wichtigen Elemente selber angeben ...',
-	'texte_referencement_automatique' => '<b>Automatische Verlinkung einer Website</b><br />Sie können eine Website im Schnellverfahren verlinken, indem Sie seinen URL oder den seiner Backend-Datei angeben. SPIP wird dann die Daten der Website selbständig einlesen (Titel, Beschreibung ...).',
+	'texte_non_fonction_referencement' => 'Sie können diese automatische Funktion ignorieren und die für Ihre Website wichtigen Elemente selber angeben ...', # MODIF
+	'texte_referencement_automatique' => '<b>Automatische Verlinkung einer Website</b><br />Sie können eine Website im Schnellverfahren verlinken, indem Sie seinen URL oder den seiner Backend-Datei angeben. SPIP wird dann die Daten der Website selbständig einlesen (Titel, Beschreibung ...).', # MODIF
 	'texte_referencement_automatique_verifier' => 'Bitte überprüfen Sie die Informationen von <tt>@url@</tt> vor dem Speichern.',
 	'texte_syndication' => 'Manche Websites ermöglichen den automatischen Abruf einer Liste von neuen Artikeln. Um diese Daten nutzen zu können, müssen Sie die Syndikation aktivieren.
-                <blockquote><i>Manche Provider unterbinden die Nutzung dieser Funktion. Dann können Sie keine syndizierten Inhalte nutzen.</i></blockquote>',
+                <blockquote><i>Manche Provider unterbinden die Nutzung dieser Funktion. Dann können Sie keine syndizierten Inhalte nutzen.</i></blockquote>', # MODIF
 	'titre_articles_syndiques' => 'Syndizierte Artikel dieser Website',
 	'titre_dernier_article_syndique' => 'Neue syndizierte Artikel',
 	'titre_exporter_bookmarks' => 'Exporter des Marques-pages', # NEW

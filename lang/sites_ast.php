@@ -25,8 +25,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// B
 	'bouton_exporter' => 'Exporter', # NEW
 	'bouton_importer' => 'Importer', # NEW
-	'bouton_radio_modere_posteriori' => 'moderación a posteriori',
-	'bouton_radio_modere_priori' => 'moderación a priori',
+	'bouton_radio_modere_posteriori' => 'moderación a posteriori', # MODIF
+	'bouton_radio_modere_priori' => 'moderación a priori', # MODIF
 	'bouton_radio_non_syndication' => 'Ensin sindicación',
 	'bouton_radio_syndication' => 'Sindicación:',
 
@@ -73,14 +73,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_site_propose' => 'Sitiu propuestu el:',
 	'info_site_reference' => 'Sitiu referenciáu en llinia',
 	'info_site_refuse' => 'Sitiu Web refugáu',
-	'info_site_syndique' => 'Esti sitiu ta sindicáu...',
+	'info_site_syndique' => 'Esti sitiu ta sindicáu...', # MODIF
 	'info_site_valider' => 'Sitios a validar',
 	'info_sites_referencer' => 'Referenciar un sitiu Web',
 	'info_sites_refuses' => 'Los sitios refugaos',
 	'info_statut_site_1' => 'Esti sitiu ta:',
 	'info_statut_site_2' => 'Espublizáu',
 	'info_statut_site_3' => 'Propuestu',
-	'info_statut_site_4' => 'Na basoria',
+	'info_statut_site_4' => 'Na basoria', # MODIF
 	'info_syndication' => 'sindicación:',
 	'info_syndication_articles' => 'artículu(os)',
 	'item_bloquer_liens_syndiques' => 'Torgar los enllaces sindicaos pa validación',
@@ -130,16 +130,16 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    ye posible, sicasí, desbloquiar cada
    enllaz individualmente, o escoyer, sitiu
    por sitiu, si bloquiar los enllaces que
-   vengan de tal o cual sitiu.',
+   vengan de tal o cual sitiu.', # MODIF
 	'texte_messages_publics' => 'Mensaxes públicos de l\'artículu:',
-	'texte_non_fonction_referencement' => 'Seique prefieras nun usar esta función automática, y remanar tú mesmu los elementos tocantes a esti sitiu...',
-	'texte_referencement_automatique' => '<b>Referenciamientu automatizáu d\'un sitiu</b><br />Pues referenciar rápidamente un sitiu Web conseñando embaxo les señes URL deseáes, o les señes del so archivu de sindicación. SPIP va recuperar automáticamente la información tocante a esti sitiu (títulu, descripción...).',
+	'texte_non_fonction_referencement' => 'Seique prefieras nun usar esta función automática, y remanar tú mesmu los elementos tocantes a esti sitiu...', # MODIF
+	'texte_referencement_automatique' => '<b>Referenciamientu automatizáu d\'un sitiu</b><br />Pues referenciar rápidamente un sitiu Web conseñando embaxo les señes URL deseáes, o les señes del so archivu de sindicación. SPIP va recuperar automáticamente la información tocante a esti sitiu (títulu, descripción...).', # MODIF
 	'texte_referencement_automatique_verifier' => 'Has de verificar la información ufrida por <tt>@url@</tt> enantes de grabar.',
 	'texte_syndication' => 'Ye posible recuperar automaticamente, cuando un sitiu web lo permite,
   la llista de les novedáes. Para esto, hai que activar la sindicación.
   <blockquote><i>Dellos agospiadores web desactiven esta función;
   si ye\'l casu, nun vas poder usar la sindicación de conteníos
-  dende\'l to sitiu web.</i></blockquote>',
+  dende\'l to sitiu web.</i></blockquote>', # MODIF
 	'titre_articles_syndiques' => 'Artículos sindicaos vinientes d\'esti sitiu',
 	'titre_dernier_article_syndique' => 'Caberos artículos sindicaos',
 	'titre_exporter_bookmarks' => 'Exporter des Marques-pages', # NEW

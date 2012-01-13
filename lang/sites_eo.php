@@ -25,8 +25,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// B
 	'bouton_exporter' => 'Exporter', # NEW
 	'bouton_importer' => 'Importer', # NEW
-	'bouton_radio_modere_posteriori' => 'aposteriore moderigata',
-	'bouton_radio_modere_priori' => 'apriore moderigata',
+	'bouton_radio_modere_posteriori' => 'aposteriore moderigata', # MODIF
+	'bouton_radio_modere_priori' => 'apriore moderigata', # MODIF
 	'bouton_radio_non_syndication' => 'Neniu abonrilato',
 	'bouton_radio_syndication' => 'Abonrilato:',
 
@@ -73,14 +73,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_site_propose' => 'Retejo proponita la :',
 	'info_site_reference' => 'Retejo rete referencigita',
 	'info_site_refuse' => 'Rifuzita retejo',
-	'info_site_syndique' => 'Tiu ĉi retejo estas abonligita...',
+	'info_site_syndique' => 'Tiu ĉi retejo estas abonligita...', # MODIF
 	'info_site_valider' => 'Validigotaj retejoj',
 	'info_sites_referencer' => 'Referencigi retejon',
 	'info_sites_refuses' => 'La rifuzitaj retejoj',
 	'info_statut_site_1' => 'Tiu retejo estas :',
 	'info_statut_site_2' => 'Publikigita',
 	'info_statut_site_3' => 'Proponita',
-	'info_statut_site_4' => 'En rubujo',
+	'info_statut_site_4' => 'En rubujo', # MODIF
 	'info_syndication' => 'abonrilato :',
 	'info_syndication_articles' => 'artikolo(j)',
 	'item_bloquer_liens_syndiques' => 'Bloki la abonligilojn por validigo',
@@ -129,10 +129,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    abonligitaj retejoj je ties kreo. Poste
    eblas ĉiukaze malbloki ĉiun
    ligilon unuope, aŭ elekti, retejon post retejo, bloki estigotajn
-ligilojn al jena aŭ alia retejo.',
+ligilojn al jena aŭ alia retejo.', # MODIF
 	'texte_messages_publics' => 'Publikaj mesaĝoj de la artikolo:',
-	'texte_non_fonction_referencement' => 'Vi povas preferi ne uzi tiun aŭtomatan funkcion kaj indiki mem la elementojn koncernantajn tiun ĉi retejon...',
-	'texte_referencement_automatique' => '<b>Aŭtomata retej-referenciga procezo</b><br />Vi povas rapide referencigi retejon indikante ĉi-sube la deziratan retadreson aŭ ties abonligon. SPIP aŭtomate abonŝutos la informojn kiuj koncernas tiun retejon (titolon, priskribon...).',
+	'texte_non_fonction_referencement' => 'Vi povas preferi ne uzi tiun aŭtomatan funkcion kaj indiki mem la elementojn koncernantajn tiun ĉi retejon...', # MODIF
+	'texte_referencement_automatique' => '<b>Aŭtomata retej-referenciga procezo</b><br />Vi povas rapide referencigi retejon indikante ĉi-sube la deziratan retadreson aŭ ties abonligon. SPIP aŭtomate abonŝutos la informojn kiuj koncernas tiun retejon (titolon, priskribon...).', # MODIF
 	'texte_referencement_automatique_verifier' => 'Veuillez vérifier les informations fournies par <tt>@url@</tt> avant d\'enregistrer.', # NEW
 	'texte_syndication' => 'Eblas elpreni aŭtomate la liston de novaĵoj de iu retejo,
   se tiu retejo tion permesas. Por tio, vi devas aktivigi la abonrilaton.

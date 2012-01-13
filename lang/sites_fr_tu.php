@@ -25,8 +25,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// B
 	'bouton_exporter' => 'Exporter', # NEW
 	'bouton_importer' => 'Importer', # NEW
-	'bouton_radio_modere_posteriori' => 'modération à posteriori',
-	'bouton_radio_modere_priori' => 'modération à priori',
+	'bouton_radio_modere_posteriori' => 'modération à posteriori', # MODIF
+	'bouton_radio_modere_priori' => 'modération à priori', # MODIF
 	'bouton_radio_non_syndication' => 'Pas de syndication',
 	'bouton_radio_syndication' => 'Syndication :',
 
@@ -73,14 +73,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_site_propose' => 'Site proposé le :',
 	'info_site_reference' => 'Site référencé en ligne',
 	'info_site_refuse' => 'Site Web refusé',
-	'info_site_syndique' => 'Ce site est syndiqué...',
+	'info_site_syndique' => 'Ce site est syndiqué...', # MODIF
 	'info_site_valider' => 'Sites à valider',
 	'info_sites_referencer' => 'Référencer un site',
 	'info_sites_refuses' => 'Les sites refusés',
 	'info_statut_site_1' => 'Ce site est :',
 	'info_statut_site_2' => 'Publié',
 	'info_statut_site_3' => 'Proposé',
-	'info_statut_site_4' => 'A la poubelle',
+	'info_statut_site_4' => 'A la poubelle', # MODIF
 	'info_syndication' => 'syndication :',
 	'info_syndication_articles' => 'article(s)',
 	'item_bloquer_liens_syndiques' => 'Bloquer les liens syndiqués pour validation',
@@ -130,16 +130,16 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 			est ensuite possible, de toutes façons, de
 			débloquer chaque lien individuellement, ou de
 			choisir, site par site, de bloquer les liens à venir
-			de tel ou tel site.',
+			de tel ou tel site.', # MODIF
 	'texte_messages_publics' => 'Messages publics de l\'article :',
-	'texte_non_fonction_referencement' => 'Tu peux préférer ne pas utiliser cette fonction automatique, et indiquer toi-même les éléments concernant ce site...',
-	'texte_referencement_automatique' => '<b>Référencement automatisé d\'un site</b><br />Tu peux référencer rapidement un site Web en indiquant ci-dessous l\'adresse URL désirée, ou l\'adresse de son fichier de syndication. SPIP va récupérer automatiquement les informations concernant ce site (titre, description...).',
+	'texte_non_fonction_referencement' => 'Tu peux préférer ne pas utiliser cette fonction automatique, et indiquer toi-même les éléments concernant ce site...', # MODIF
+	'texte_referencement_automatique' => '<b>Référencement automatisé d\'un site</b><br />Tu peux référencer rapidement un site Web en indiquant ci-dessous l\'adresse URL désirée, ou l\'adresse de son fichier de syndication. SPIP va récupérer automatiquement les informations concernant ce site (titre, description...).', # MODIF
 	'texte_referencement_automatique_verifier' => 'Vérifie les informations fournies par <tt>@url@</tt> avant d\'enregistrer.',
 	'texte_syndication' => 'Il est possible de récupérer automatiquement, lorsqu\'un site Web le permet,
   la liste de ses nouveautés. Pour cela, tu dois activer la syndication.
   <blockquote><i>Certains hébergeurs désactivent cette fonctionnalité ;
   dans ce cas, tu ne pourras pas utiliser la syndication de contenu
-  depuis ton site.</i></blockquote>',
+  depuis ton site.</i></blockquote>', # MODIF
 	'titre_articles_syndiques' => 'Articles syndiqués tirés de ce site',
 	'titre_dernier_article_syndique' => 'Derniers articles syndiqués',
 	'titre_exporter_bookmarks' => 'Exporter des Marques-pages', # NEW

@@ -25,8 +25,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// B
 	'bouton_exporter' => 'Exporter', # NEW
 	'bouton_importer' => 'Importer', # NEW
-	'bouton_radio_modere_posteriori' => 'moderació a posteriori',
-	'bouton_radio_modere_priori' => 'moderació a priori',
+	'bouton_radio_modere_posteriori' => 'moderació a posteriori', # MODIF
+	'bouton_radio_modere_priori' => 'moderació a priori', # MODIF
 	'bouton_radio_non_syndication' => 'Cap sindicació',
 	'bouton_radio_syndication' => 'Sindicació:',
 
@@ -73,14 +73,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_site_propose' => 'Lloc proposat el:',
 	'info_site_reference' => 'Lloc referenciat en línia',
 	'info_site_refuse' => 'Lloc Web rebutjat',
-	'info_site_syndique' => 'Aquest lloc está sindicat...',
+	'info_site_syndique' => 'Aquest lloc está sindicat...', # MODIF
 	'info_site_valider' => 'Llocs a validar',
 	'info_sites_referencer' => 'Referenciar un lloc',
 	'info_sites_refuses' => 'Els llocs rebutjats',
 	'info_statut_site_1' => 'Aquest lloc és:',
 	'info_statut_site_2' => 'Publicat',
 	'info_statut_site_3' => 'Proposat',
-	'info_statut_site_4' => 'A la paperera',
+	'info_statut_site_4' => 'A la paperera', # MODIF
 	'info_syndication' => 'sindicació:',
 	'info_syndication_articles' => 'article(s)',
 	'item_bloquer_liens_syndiques' => 'Bloquejar els enllaços sindicats per validar',
@@ -127,13 +127,13 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 ser bloquejats a priori; la norma
 que apareix a continuació indica  la regla per defecte dels llocs sindicats després de la seua creació. És
 possible inmediatament desbloquejar cada enllaç de forma individual, o 
-triar, web per web, bloquejar els enllaços que vinguen d\'un o altre web.',
+triar, web per web, bloquejar els enllaços que vinguen d\'un o altre web.', # MODIF
 	'texte_messages_publics' => 'Missatges públics de l\'article:',
-	'texte_non_fonction_referencement' => 'Es pot preferir no utilitzar aquesta funció automàtica i indicar vosté mateix els elements referits a aquest lloc...',
-	'texte_referencement_automatique' => '<b>Referenciament automatitzat d\'un lloc Web</b><br />Podeu referenciar ràpidament un lloc Web només indicant aquí baix l\'adreça URL desitjada, o l\'adreça del seu fitxer de sindicació. SPIP recuperarà automàticament les informacions pel que fa a aquest lloc Web (títol, descripció...).',
+	'texte_non_fonction_referencement' => 'Es pot preferir no utilitzar aquesta funció automàtica i indicar vosté mateix els elements referits a aquest lloc...', # MODIF
+	'texte_referencement_automatique' => '<b>Referenciament automatitzat d\'un lloc Web</b><br />Podeu referenciar ràpidament un lloc Web només indicant aquí baix l\'adreça URL desitjada, o l\'adreça del seu fitxer de sindicació. SPIP recuperarà automàticament les informacions pel que fa a aquest lloc Web (títol, descripció...).', # MODIF
 	'texte_referencement_automatique_verifier' => 'Verifiqueu les informacions subministrades per <tt>@url@</tt> abans d\'enregistrar. ',
 	'texte_syndication' => 'És possible recuperar automàticament, quan el lloc Web ho permet, la llista de novetats. Per això, heu d\'activar la sindicació.
-<blockquote><i>Alguns proveïdors d\'hostatge desactiven aquesta funcionalitat; en aquest cas, no podreu utilitzar la sindicació de contingut des del vostre lloc.</i></blockquote>',
+<blockquote><i>Alguns proveïdors d\'hostatge desactiven aquesta funcionalitat; en aquest cas, no podreu utilitzar la sindicació de contingut des del vostre lloc.</i></blockquote>', # MODIF
 	'titre_articles_syndiques' => 'Articles sindicats extrets d\'aquest lloc.',
 	'titre_dernier_article_syndique' => 'Darrers articles sindicats',
 	'titre_exporter_bookmarks' => 'Exporter des Marques-pages', # NEW

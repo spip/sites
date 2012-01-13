@@ -25,8 +25,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// B
 	'bouton_exporter' => 'Exporter', # NEW
 	'bouton_importer' => 'Importer', # NEW
-	'bouton_radio_modere_posteriori' => 'moderasi akhir',
-	'bouton_radio_modere_priori' => 'moderasi awal',
+	'bouton_radio_modere_posteriori' => 'moderasi akhir', # MODIF
+	'bouton_radio_modere_priori' => 'moderasi awal', # MODIF
 	'bouton_radio_non_syndication' => 'Tidak ada sindikasi',
 	'bouton_radio_syndication' => 'Sindikasi:',
 
@@ -73,14 +73,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_site_propose' => 'Situs dikirim pada:',
 	'info_site_reference' => 'Situs-situs referensi online',
 	'info_site_refuse' => 'Situs web ditolak',
-	'info_site_syndique' => 'Situs ini disindikasi...',
+	'info_site_syndique' => 'Situs ini disindikasi...', # MODIF
 	'info_site_valider' => 'Situs-situs yang akan divalidasi',
 	'info_sites_referencer' => 'Merujuk sebuah situs',
 	'info_sites_refuses' => 'Situs-situs yang ditolak',
 	'info_statut_site_1' => 'Situs ini adalah:',
 	'info_statut_site_2' => 'Dipublikasi',
 	'info_statut_site_3' => 'Dikirim',
-	'info_statut_site_4' => 'Dalam keranjang sampah',
+	'info_statut_site_4' => 'Dalam keranjang sampah', # MODIF
 	'info_syndication' => 'sindikasi:',
 	'info_syndication_articles' => 'artikel',
 	'item_bloquer_liens_syndiques' => 'Blokir tautan sindikasi untuk validasi',
@@ -130,10 +130,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 			memungkinkan untuk memblokir setiap tautan
 			secara individual, atau memilih, untuk setiap
 			situs, memblokir tautan yang berasal dari
-			situs-situs tertentu.',
+			situs-situs tertentu.', # MODIF
 	'texte_messages_publics' => 'Pesan umum artikel:',
-	'texte_non_fonction_referencement' => 'Anda dapat memilih untuk tidak menggunakan fitur terotomasi ini, dan masukkan elemen-elemen yang berkaitan dengan situs secara manual...',
-	'texte_referencement_automatique' => '<b>Referensi situs terotomasi</b><br>Anda dapat mereferensi sebuah situs web secara cepat dengan memberikan di bawah URL yang dimaksud, atau alamat berkas sindikasinya. SPIP secara otomatis akan mengambil informasi yang berkaitan dengan situs tersebut (judul, deskripsi...).',
+	'texte_non_fonction_referencement' => 'Anda dapat memilih untuk tidak menggunakan fitur terotomasi ini, dan masukkan elemen-elemen yang berkaitan dengan situs secara manual...', # MODIF
+	'texte_referencement_automatique' => '<b>Referensi situs terotomasi</b><br>Anda dapat mereferensi sebuah situs web secara cepat dengan memberikan di bawah URL yang dimaksud, atau alamat berkas sindikasinya. SPIP secara otomatis akan mengambil informasi yang berkaitan dengan situs tersebut (judul, deskripsi...).', # MODIF
 	'texte_referencement_automatique_verifier' => 'Veuillez vérifier les informations fournies par <tt>@url@</tt> avant d\'enregistrer.', # NEW
 	'texte_syndication' => 'Jika sebuah situs mengizinkannya, daftar isi terbaru dari situs tersebut
   dapat diambil secara otomatis. Untuk melakukannya, anda harus mengaktifkan sindikasi.

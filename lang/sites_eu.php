@@ -25,8 +25,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// B
 	'bouton_exporter' => 'Exporter', # NEW
 	'bouton_importer' => 'Importer', # NEW
-	'bouton_radio_modere_posteriori' => 'gerora moderatua',
-	'bouton_radio_modere_priori' => 'aurretiaz moderatua',
+	'bouton_radio_modere_posteriori' => 'gerora moderatua', # MODIF
+	'bouton_radio_modere_priori' => 'aurretiaz moderatua', # MODIF
 	'bouton_radio_non_syndication' => 'Sindikaziorik ez',
 	'bouton_radio_syndication' => 'Sindikazioa',
 
@@ -73,14 +73,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_site_propose' => 'Toki proposatua',
 	'info_site_reference' => 'Linean erreferentziatutako gunea',
 	'info_site_refuse' => 'Web Gune errefusatua',
-	'info_site_syndique' => 'Gune hau sindikatuta dago...',
+	'info_site_syndique' => 'Gune hau sindikatuta dago...', # MODIF
 	'info_site_valider' => 'Balidatzeko guneak',
 	'info_sites_referencer' => 'Gune bat erreferentziatu',
 	'info_sites_refuses' => 'Ezetsitako guneak',
 	'info_statut_site_1' => 'Gune hau dago :',
 	'info_statut_site_2' => 'Argitaratuta',
 	'info_statut_site_3' => 'Proposatuta',
-	'info_statut_site_4' => 'Zakarrontzian',
+	'info_statut_site_4' => 'Zakarrontzian', # MODIF
 	'info_syndication' => 'Sindikazioa :',
 	'info_syndication_articles' => 'artikulua(k)',
 	'item_bloquer_liens_syndiques' => 'Onartzeko prozesuan dauden sindikatutako loturakblokeatu',
@@ -123,14 +123,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	pour vous permettre ensuite de l\'importer dans votre navigateur ou dans un service en ligne', # NEW
 	'texte_expliquer_import_bookmarks' => 'Vous pouvez importer une liste de sites au format Marque-page HTML,
 	en provenance de votre navigateur ou d\'un service en ligne de gestion des Marques-pages.', # NEW
-	'texte_liens_sites_syndiques' => 'sindikatutakoguneetako estekak a priori blokeatu ahal dira ; azpiko konfigurazioak sindikatutakoguneen konfigurazio lehenetsia adierazten du bere sorrera ondoren. Hala ere, gero estekabakoitza banan-banan desblokeatzea posible da, edo lekuz leku, gune batetik edo bestetik datozenestekak blokeatzeko aukera izatea.',
+	'texte_liens_sites_syndiques' => 'sindikatutakoguneetako estekak a priori blokeatu ahal dira ; azpiko konfigurazioak sindikatutakoguneen konfigurazio lehenetsia adierazten du bere sorrera ondoren. Hala ere, gero estekabakoitza banan-banan desblokeatzea posible da, edo lekuz leku, gune batetik edo bestetik datozenestekak blokeatzeko aukera izatea.', # MODIF
 	'texte_messages_publics' => 'Artikuluaren mezu publikoak',
-	'texte_non_fonction_referencement' => 'Agian nahiago duzu funtzio automatiko hau ezerabili, eta zuk zeuk adierazi toki honi dagozkien osagaiak...',
+	'texte_non_fonction_referencement' => 'Agian nahiago duzu funtzio automatiko hau ezerabili, eta zuk zeuk adierazi toki honi dagozkien osagaiak...', # MODIF
 	'texte_referencement_automatique' => '<b>Leku bat automatikoki erreferentzia egitea</b>
-Leku baten URL-a edo lekuaren "backend" artxiboaren helbidea, SPIP automatikoki argibideak (izenburua, azalpena....) berreskuratuko ditu.',
+Leku baten URL-a edo lekuaren "backend" artxiboaren helbidea, SPIP automatikoki argibideak (izenburua, azalpena....) berreskuratuko ditu.', # MODIF
 	'texte_referencement_automatique_verifier' => 'Veuillez vérifier les informations fournies par <tt>@url@</tt> avant d\'enregistrer.', # NEW
 	'texte_syndication' => 'Berritasunen zerrenda, Web-guneak halauzten duenean, automatikoki berreskuratzea posible da.
-Horretarako, bilketa aktibatu behar duzu. Ostapen zuzkitzaile batzuk ez dute funtzionalitate hau aktibatzen; kasu horretan, ezin izango duzu zure gunearen edukiaren bilketa egin.',
+Horretarako, bilketa aktibatu behar duzu. Ostapen zuzkitzaile batzuk ez dute funtzionalitate hau aktibatzen; kasu horretan, ezin izango duzu zure gunearen edukiaren bilketa egin.', # MODIF
 	'titre_articles_syndiques' => 'Toki honetako elkartutako artikuluak',
 	'titre_dernier_article_syndique' => 'Azken artikulu elkartuak',
 	'titre_exporter_bookmarks' => 'Exporter des Marques-pages', # NEW

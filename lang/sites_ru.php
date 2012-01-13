@@ -25,8 +25,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// B
 	'bouton_exporter' => 'Exporter', # NEW
 	'bouton_importer' => 'Importer', # NEW
-	'bouton_radio_modere_posteriori' => 'пост-модерация',
-	'bouton_radio_modere_priori' => 'пре-модерация',
+	'bouton_radio_modere_posteriori' => 'пост-модерация', # MODIF
+	'bouton_radio_modere_priori' => 'пре-модерация', # MODIF
 	'bouton_radio_non_syndication' => 'Не объединятся',
 	'bouton_radio_syndication' => 'Объединение:',
 
@@ -73,14 +73,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_site_propose' => 'Сайт отправленный на:',
 	'info_site_reference' => 'Сайты, на которые ведут ссылки, онлайн',
 	'info_site_refuse' => 'Вебсайт отклонен',
-	'info_site_syndique' => 'Этот сайт объединен...',
+	'info_site_syndique' => 'Этот сайт объединен...', # MODIF
 	'info_site_valider' => 'Сайты, которые будут утверждены',
 	'info_sites_referencer' => 'Ссылка на сайт',
 	'info_sites_refuses' => 'Отключить сайты',
 	'info_statut_site_1' => 'Этот сайт:',
 	'info_statut_site_2' => 'Опубликованный',
 	'info_statut_site_3' => 'Отправленный',
-	'info_statut_site_4' => 'В корзину',
+	'info_statut_site_4' => 'В корзину', # MODIF
 	'info_syndication' => 'RSS:',
 	'info_syndication_articles' => 'статья(и)',
 	'item_bloquer_liens_syndiques' => 'Блокировать объединенные ссылки для утверждения',
@@ -129,16 +129,16 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 возможно в любом случае для 
    блокировки каждой ссылки индивидуально, или для 
    выбора, для каждого сайта, блокировки поступающих ссылок 
-   от какого-либо сайта.',
+   от какого-либо сайта.', # MODIF
 	'texte_messages_publics' => 'Основные сообщения статьи:',
-	'texte_non_fonction_referencement' => 'Вы можете не использовать автоматические функции, и ввести элементы касающиеся этого сайта вручную...',
-	'texte_referencement_automatique' => 'Автоматизированные ссылки сайта </b> <br /> Вы можете быстро сослаться на вебсайт, указывая ниже требуемый адрес, или адрес сайта, с которого Вы получаете статьи и файлы по RSS. SPIP автоматически соберет информацию о сайте (название, описание ...).', # b
+	'texte_non_fonction_referencement' => 'Вы можете не использовать автоматические функции, и ввести элементы касающиеся этого сайта вручную...', # MODIF
+	'texte_referencement_automatique' => 'Автоматизированные ссылки сайта </b> <br /> Вы можете быстро сослаться на вебсайт, указывая ниже требуемый адрес, или адрес сайта, с которого Вы получаете статьи и файлы по RSS. SPIP автоматически соберет информацию о сайте (название, описание ...).', # MODIF
 	'texte_referencement_automatique_verifier' => 'Пожалуйста, проверьте предоставленную  информацию, <tt>@url@</tt> перед сохранением.',
 	'texte_syndication' => 'Если сайт позволяет, то можно автоматически восстановить  
 список последнего материала. Чтобы добиться этого, Вы должны включить обмен статьями и новостями с другими сайтами по RSS. 
   <blockquote> <i> Некоторые хосты отключают эту функцию; 
   в этом случае, Вы не можете использовать 
- обмен статьями и новостями с другими сайтами по RSS. </i> </blockquote>',
+ обмен статьями и новостями с другими сайтами по RSS. </i> </blockquote>', # MODIF
 	'titre_articles_syndiques' => 'Отправка статей с этого сайта',
 	'titre_dernier_article_syndique' => 'Последний обмен статей по RSS.',
 	'titre_exporter_bookmarks' => 'Exporter des Marques-pages', # NEW

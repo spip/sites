@@ -25,8 +25,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// B
 	'bouton_exporter' => 'Exporter', # NEW
 	'bouton_importer' => 'Importer', # NEW
-	'bouton_radio_modere_posteriori' => 'နောက်မှ ထိန်းသိမ်းခြင်း',
-	'bouton_radio_modere_priori' => 'ကြိုတင် ထိန်းသိမ်းထားခြင်း',
+	'bouton_radio_modere_posteriori' => 'နောက်မှ ထိန်းသိမ်းခြင်း', # MODIF
+	'bouton_radio_modere_priori' => 'ကြိုတင် ထိန်းသိမ်းထားခြင်း', # MODIF
 	'bouton_radio_non_syndication' => 'ပူးတွဲချတ်ဆက်မှုမလို',
 	'bouton_radio_syndication' => '​ပူးတွဲချတ်ဆက်မှု',
 
@@ -73,14 +73,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_site_propose' => 'ဝက်ဘ်ဆိုက်ကို တင်သွင်းသည့်နေရာ',
 	'info_site_reference' => 'အွန်လိုင်း အညွှန်းဆိုက်များ',
 	'info_site_refuse' => 'ဝက်ဘ်ဆိုက်ငြင်းပယ်ခြင်းခံရသည်',
-	'info_site_syndique' => 'ဤဝက်ဘ်ဆိုက်သည် ပူးတွဲချိတ်ဆက်ထားသော ဝက်ဘ်ဆိုက်ဖြစ်သည်',
+	'info_site_syndique' => 'ဤဝက်ဘ်ဆိုက်သည် ပူးတွဲချိတ်ဆက်ထားသော ဝက်ဘ်ဆိုက်ဖြစ်သည်', # MODIF
 	'info_site_valider' => 'အတည်တကျဖြစ်မည့် ဝက်ဘ်ဆိုက်များ',
 	'info_sites_referencer' => 'ဆိုက်ညွှန်းခြင်း',
 	'info_sites_refuses' => 'ပယ်ဖျက်သည့် ဝက်ဘ်ဆိုက်များ',
 	'info_statut_site_1' => 'ဤဝက်ဘ်ဆိုက်သည်',
 	'info_statut_site_2' => 'ထုတ်ဝေသည်',
 	'info_statut_site_3' => 'တင်ပြထားသည်',
-	'info_statut_site_4' => 'အမှိုက်ပုံးထဲတွင်',
+	'info_statut_site_4' => 'အမှိုက်ပုံးထဲတွင်', # MODIF
 	'info_syndication' => 'ပူးတွဲချိတ်ဆက်မှု',
 	'info_syndication_articles' => 'ဆောင်းပါးများ',
 	'item_bloquer_liens_syndiques' => 'ပူးတွဲချိတ်ဆက်မှုများကို အတည်တကျရှိခြင်းမှ ပိတ်ပင်လိုက်ပါ',
@@ -123,10 +123,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	pour vous permettre ensuite de l\'importer dans votre navigateur ou dans un service en ligne', # NEW
 	'texte_expliquer_import_bookmarks' => 'Vous pouvez importer une liste de sites au format Marque-page HTML,
 	en provenance de votre navigateur ou d\'un service en ligne de gestion des Marques-pages.', # NEW
-	'texte_liens_sites_syndiques' => 'ပြန့်ပွားသော ပူးတွဲချိတ်ဆက်မှု ဆိုက်များကို ပိတ်ပင်ခြင်း ခံရမည်။ ချိတ်ဆက်မှု အချက်အလက်များကို ပူးတွဲချိတ်ဆက်ခြင်း အောင်မြင်စွာ ဖန်တီးပြီးချင်း အောက်တွင်ဖော်ပြပါသည်။ လိပ်စာတခုခြင်းကို၄င်း၊ ဆိုက်တခုလုံးကို၄င်း ပိတ်ပင်နိုင်သည်။',
+	'texte_liens_sites_syndiques' => 'ပြန့်ပွားသော ပူးတွဲချိတ်ဆက်မှု ဆိုက်များကို ပိတ်ပင်ခြင်း ခံရမည်။ ချိတ်ဆက်မှု အချက်အလက်များကို ပူးတွဲချိတ်ဆက်ခြင်း အောင်မြင်စွာ ဖန်တီးပြီးချင်း အောက်တွင်ဖော်ပြပါသည်။ လိပ်စာတခုခြင်းကို၄င်း၊ ဆိုက်တခုလုံးကို၄င်း ပိတ်ပင်နိုင်သည်။', # MODIF
 	'texte_messages_publics' => 'ဆောင်းပါး၏ လူထုမှာကြားချက်များ',
-	'texte_non_fonction_referencement' => 'ဤအလို​အလျောက် ပုံစံကိုသင်​ရွေးချယ်ခွင့်မရှိပါ ထိုဝက်ဘ်ဆိုက်မှ လက်ခံနိုင်သောအရာကို ထည့်သွင်းပါ',
-	'texte_referencement_automatique' => '<b>အလိုအလျောက် ဝက်ဘ်ဆိုက် အညွှန်းပေးခြင်း</b><br /> ပူးတွဲချိတ်ဆက်မှုလိပ်စာ သို့ ဝက်ဘ်လိပ်စာကို ပေးခြင်းအားဖြင့် ဝက်ဘ်ညွှန်းများကို အမြန်ချိတ်ဆက်နိုင်ပါသည်။ SPIP မှ ဆိုက်၏ ခေါင်းစဉ်၊ ဖော်ပြချက်အကျဉ်း စသည်များကို အလိုအလျောက် ရယူပေးမည်။',
+	'texte_non_fonction_referencement' => 'ဤအလို​အလျောက် ပုံစံကိုသင်​ရွေးချယ်ခွင့်မရှိပါ ထိုဝက်ဘ်ဆိုက်မှ လက်ခံနိုင်သောအရာကို ထည့်သွင်းပါ', # MODIF
+	'texte_referencement_automatique' => '<b>အလိုအလျောက် ဝက်ဘ်ဆိုက် အညွှန်းပေးခြင်း</b><br /> ပူးတွဲချိတ်ဆက်မှုလိပ်စာ သို့ ဝက်ဘ်လိပ်စာကို ပေးခြင်းအားဖြင့် ဝက်ဘ်ညွှန်းများကို အမြန်ချိတ်ဆက်နိုင်ပါသည်။ SPIP မှ ဆိုက်၏ ခေါင်းစဉ်၊ ဖော်ပြချက်အကျဉ်း စသည်များကို အလိုအလျောက် ရယူပေးမည်။', # MODIF
 	'texte_referencement_automatique_verifier' => 'Veuillez vérifier les informations fournies par <tt>@url@</tt> avant d\'enregistrer.', # NEW
 	'texte_syndication' => 'ဆိုက်မှခွင့်ပြုထားလျှင် နောက်ဆုံးရ အချက်အလက်များ စာရင်းကို ​အလိုအလျှာက် ထုတ်ပေးနိုင်သည်။ ဤလုပ်ဆောင်မှုကို ရယူရန် ပူးတွဲချိတ်ဆက်ခြင်းကို ခွင့်ပြုထားရန်လိုသည်။ <blockquote><i>တချို့ဆိုက်များတွင် ပိတ်ထားနေသတ်သည်</i></blockquote>', # MODIF
 	'titre_articles_syndiques' => 'ဤဝက်ဘ်ဆိုက်မှ ဆွဲထုတ်ထားသော ပူးတွဲချိတ်ဆက်ထားသော ဆောင်းပါးများ',

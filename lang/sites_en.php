@@ -25,8 +25,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// B
 	'bouton_exporter' => 'Export',
 	'bouton_importer' => 'Import',
-	'bouton_radio_modere_posteriori' => 'post-moderation',
-	'bouton_radio_modere_priori' => 'pre-moderation',
+	'bouton_radio_modere_posteriori' => 'post-moderation', # MODIF
+	'bouton_radio_modere_priori' => 'pre-moderation', # MODIF
 	'bouton_radio_non_syndication' => 'No syndication',
 	'bouton_radio_syndication' => 'Syndication:',
 
@@ -73,14 +73,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_site_propose' => 'Site submitted on:',
 	'info_site_reference' => 'Referenced sites online',
 	'info_site_refuse' => 'Website rejected',
-	'info_site_syndique' => 'This site is syndicated...',
+	'info_site_syndique' => 'This site is syndicated...', # MODIF
 	'info_site_valider' => 'Sites awaiting validation',
 	'info_sites_referencer' => 'Reference a site',
 	'info_sites_refuses' => 'Rejected sites',
 	'info_statut_site_1' => 'This site is:',
 	'info_statut_site_2' => 'Published',
 	'info_statut_site_3' => 'Submitted',
-	'info_statut_site_4' => 'In the dustbin',
+	'info_statut_site_4' => 'In the dustbin', # MODIF
 	'info_syndication' => 'syndication:',
 	'info_syndication_articles' => 'article(s)',
 	'item_bloquer_liens_syndiques' => 'Block syndicated links for moderation',
@@ -95,7 +95,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'label_exporter_id_parent' => 'Export the Web sites of the section',
 	'label_exporter_publie_seulement_1' => 'Export only the published Web sites',
 	'label_fichier_import' => 'HTML file',
-	'label_importer_les_tags_1' => 'Import tags as keywords',
+	'label_importer_les_tags_1' => 'Import tags as keywords', # MODIF
 	'label_importer_statut_publie_1' => 'Automatically publish the Web sites',
 	'lien_mise_a_jour_syndication' => 'Update now',
 	'lien_nouvelle_recuperation' => 'Try to retrieve data again',
@@ -128,16 +128,16 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    any case, it is possible to
    release each link individually, or to
    choose to block all future links
-   from a particular site.',
+   from a particular site.', # MODIF
 	'texte_messages_publics' => 'Public Messages on this article:',
-	'texte_non_fonction_referencement' => 'You can opt not to use this automated feature, and enter the elements for that site manually...',
-	'texte_referencement_automatique' => '<b>Automated site referencing</b><br />You can reference a website quickly by indicating its URL, or the location of its syndication file, below. SPIP will automatically retrieve information from that site (title, description etc.).',
+	'texte_non_fonction_referencement' => 'You can opt not to use this automated feature, and enter the elements for that site manually...', # MODIF
+	'texte_referencement_automatique' => '<b>Automated site referencing</b><br />You can reference a website quickly by indicating its URL, or the location of its syndication file, below. SPIP will automatically retrieve information from that site (title, description etc.).', # MODIF
 	'texte_referencement_automatique_verifier' => 'Please verify the information provided by <tt>@url@</tt> before saving.',
 	'texte_syndication' => 'If a site permits, it is possible to retrieve the list of
    its latest articles automatically. To do this, you must activate syndication. 
   <blockquote><i>Some hosts disable this function; 
   in which case, you cannot use RSS content syndication
-  from your site.</i></blockquote>',
+  from your site.</i></blockquote>', # MODIF
 	'titre_articles_syndiques' => 'Syndicated articles taken from this site',
 	'titre_dernier_article_syndique' => 'Latest syndicated articles',
 	'titre_exporter_bookmarks' => 'Export bookmarks',

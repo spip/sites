@@ -25,8 +25,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// B
 	'bouton_exporter' => 'Exporter', # NEW
 	'bouton_importer' => 'Importer', # NEW
-	'bouton_radio_modere_posteriori' => 'moderacja a posteriori',
-	'bouton_radio_modere_priori' => 'moderacja a priori',
+	'bouton_radio_modere_posteriori' => 'moderacja a posteriori', # MODIF
+	'bouton_radio_modere_priori' => 'moderacja a priori', # MODIF
 	'bouton_radio_non_syndication' => 'Bez syndykacji',
 	'bouton_radio_syndication' => 'Syndykacja:',
 
@@ -73,14 +73,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_site_propose' => 'Strona zaproponowana :',
 	'info_site_reference' => 'Strona zlinkowana on-line',
 	'info_site_refuse' => 'Strona internetowa odrzucona',
-	'info_site_syndique' => 'Ta strona jest syndykowana...',
+	'info_site_syndique' => 'Ta strona jest syndykowana...', # MODIF
 	'info_site_valider' => 'Strony do zatwierdzenia',
 	'info_sites_referencer' => 'Dodaj link',
 	'info_sites_refuses' => 'Odrzucone strony',
 	'info_statut_site_1' => 'Ta strona jest:',
 	'info_statut_site_2' => 'Opublikowana',
 	'info_statut_site_3' => 'Zatwierdzona',
-	'info_statut_site_4' => 'Do kosza',
+	'info_statut_site_4' => 'Do kosza', # MODIF
 	'info_syndication' => 'syndykacja :',
 	'info_syndication_articles' => 'artykuł(y)',
 	'item_bloquer_liens_syndiques' => 'Zablokuj akceptację syndykowanych linków',
@@ -128,10 +128,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    wskazuje regulacje domyślne
    stron syndykowanych po ich stworzeniu. Jest
    możliwe późniejsze odblokowanie, łączy indywidualnie, lub
-   wybór, strona po stronie, blokady linków pochodzących z danych stron.',
+   wybór, strona po stronie, blokady linków pochodzących z danych stron.', # MODIF
 	'texte_messages_publics' => 'Publiczne komentarze do artykułu :',
-	'texte_non_fonction_referencement' => 'Być może wolisz nie używać funkcji automatycznej, i samemu zaznaczyć elementy związane z tą stroną...',
-	'texte_referencement_automatique' => '<b>Zautomatyzowane dodawanie linków</b><br />Możesz szybko dodać link do jakiejś strony internetowej, wpisując poniżej jej adres, oraz adres jej pliku syndykacji. SPIP automatycznie dopisze informacje, dotyczące tej strony (tytuł, opis...).',
+	'texte_non_fonction_referencement' => 'Być może wolisz nie używać funkcji automatycznej, i samemu zaznaczyć elementy związane z tą stroną...', # MODIF
+	'texte_referencement_automatique' => '<b>Zautomatyzowane dodawanie linków</b><br />Możesz szybko dodać link do jakiejś strony internetowej, wpisując poniżej jej adres, oraz adres jej pliku syndykacji. SPIP automatycznie dopisze informacje, dotyczące tej strony (tytuł, opis...).', # MODIF
 	'texte_referencement_automatique_verifier' => 'Veuillez vérifier les informations fournies par <tt>@url@</tt> avant d\'enregistrer.', # NEW
 	'texte_syndication' => 'Jeśli dany serwis na to pozwala, jest możliwość wyciągnięcia z niego 
   listy newsów. Aby skorzystać z tej funkcji musisz włączyć <i>syndykację ?</i>. 

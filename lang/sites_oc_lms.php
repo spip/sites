@@ -25,8 +25,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// B
 	'bouton_exporter' => 'Exporter', # NEW
 	'bouton_importer' => 'Importer', # NEW
-	'bouton_radio_modere_posteriori' => 'moderat a posteriòri',
-	'bouton_radio_modere_priori' => 'moderat a priòri',
+	'bouton_radio_modere_posteriori' => 'moderat a posteriòri', # MODIF
+	'bouton_radio_modere_priori' => 'moderat a priòri', # MODIF
 	'bouton_radio_non_syndication' => 'Brisa de sindicacion',
 	'bouton_radio_syndication' => 'Sindicacion:',
 
@@ -73,14 +73,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_site_propose' => 'Sit prepausat lo:',
 	'info_site_reference' => 'Sit referenciat en linha',
 	'info_site_refuse' => 'Sit web refusat',
-	'info_site_syndique' => 'Queu sit es sindicat...',
+	'info_site_syndique' => 'Queu sit es sindicat...', # MODIF
 	'info_site_valider' => 'Sits de validar',
 	'info_sites_referencer' => 'Referenciar un sit',
 	'info_sites_refuses' => 'Los sits refusats',
 	'info_statut_site_1' => 'Queu sit es:',
 	'info_statut_site_2' => 'Publicat',
 	'info_statut_site_3' => 'Prepausat',
-	'info_statut_site_4' => 'Au bordilhier',
+	'info_statut_site_4' => 'Au bordilhier', # MODIF
 	'info_syndication' => 'sindicacion:',
 	'info_syndication_articles' => 'article(s)',
 	'item_bloquer_liens_syndiques' => 'Blocar los liams sindicats per validacion',
@@ -129,10 +129,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    sits sindicats après lor creacion. Coma que siá,
     es possible puei de 
    desblocar chasque liam individualament, o de
-   chausir, sit per sit, de blocar los liams avenidors.',
+   chausir, sit per sit, de blocar los liams avenidors.', # MODIF
 	'texte_messages_publics' => 'Messatges publics de l\'article:',
-	'texte_non_fonction_referencement' => 'Podetz chausir de pas utilizar quela foncion automatica, e indicar per vòstre franc voler los elements que pertòchan queu sit...',
-	'texte_referencement_automatique' => '<b>Referenciament automatizat d\'un sit</b><br /> Podetz referenciar de briu un sit web en indicar çai sos l\'adreiça URL desirada, o l\'adreiça de son fichier backend. SPIP atrapará automaticament las informacions que concernissen queu sit (títol, descripcion...).',
+	'texte_non_fonction_referencement' => 'Podetz chausir de pas utilizar quela foncion automatica, e indicar per vòstre franc voler los elements que pertòchan queu sit...', # MODIF
+	'texte_referencement_automatique' => '<b>Referenciament automatizat d\'un sit</b><br /> Podetz referenciar de briu un sit web en indicar çai sos l\'adreiça URL desirada, o l\'adreiça de son fichier backend. SPIP atrapará automaticament las informacions que concernissen queu sit (títol, descripcion...).', # MODIF
 	'texte_referencement_automatique_verifier' => 'Veuillez vérifier les informations fournies par <tt>@url@</tt> avant d\'enregistrer.', # NEW
 	'texte_syndication' => 'Se pòt recuperar automaticament, quand un sit web o permet, 
   la tiera de sas novetats. Per quò far, vos chau activar la sindicacion. 

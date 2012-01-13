@@ -25,8 +25,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// B
 	'bouton_exporter' => 'Exporter', # NEW
 	'bouton_importer' => 'Importer', # NEW
-	'bouton_radio_modere_posteriori' => 'moderacion à posteriòri',
-	'bouton_radio_modere_priori' => 'moderacion à priòri',
+	'bouton_radio_modere_posteriori' => 'moderacion à posteriòri', # MODIF
+	'bouton_radio_modere_priori' => 'moderacion à priòri', # MODIF
 	'bouton_radio_non_syndication' => 'Minga de sindicacion', # essai commentaire
 	'bouton_radio_syndication' => 'Sindicacion:',
 
@@ -73,14 +73,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_site_propose' => 'Sit prepauat lo :',
 	'info_site_reference' => 'Sit referençat en linha',
 	'info_site_refuse' => 'Sit web refudat',
-	'info_site_syndique' => 'Aqueu sit es sindicat...',
+	'info_site_syndique' => 'Aqueu sit es sindicat...', # MODIF
 	'info_site_valider' => 'Sits de validar',
 	'info_sites_referencer' => 'Referençar un sit',
 	'info_sites_refuses' => 'Lu sits refudats',
 	'info_statut_site_1' => 'Aqueu sit es :',
 	'info_statut_site_2' => 'Publicat',
 	'info_statut_site_3' => 'Prepauat',
-	'info_statut_site_4' => 'Au bordilhier',
+	'info_statut_site_4' => 'Au bordilhier', # MODIF
 	'info_syndication' => 'sindicacion:',
 	'info_syndication_articles' => 'article(s)',
 	'item_bloquer_liens_syndiques' => 'Blocar lu estacs sindicats per validacion',
@@ -130,10 +130,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
     es possible pi de 
    desblocar cada ligam individualament, ò de
    chausir, sit per sit, de blocar lu ligams avenidors
-   de tau ò tau sit.',
+   de tau ò tau sit.', # MODIF
 	'texte_messages_publics' => 'Messatges publics de l\'article:',
-	'texte_non_fonction_referencement' => 'Podètz chausir d\'utilisar pas aquela foncion automatica, e indicar de vos meme lu elements que tòcan aqueu sit...',
-	'texte_referencement_automatique' => '<b>Referençament automatisat d\'un sit</b><br />Podètz referençar leu un sit web en indicant çai sota l\'adreça URL desirada, ò l\'adreça dau sieu fichier de sindicacion. SPIP agantarà automaticament li informacions que concernisson aqueu sit (titre, descripcion...).',
+	'texte_non_fonction_referencement' => 'Podètz chausir d\'utilisar pas aquela foncion automatica, e indicar de vos meme lu elements que tòcan aqueu sit...', # MODIF
+	'texte_referencement_automatique' => '<b>Referençament automatisat d\'un sit</b><br />Podètz referençar leu un sit web en indicant çai sota l\'adreça URL desirada, ò l\'adreça dau sieu fichier de sindicacion. SPIP agantarà automaticament li informacions que concernisson aqueu sit (titre, descripcion...).', # MODIF
 	'texte_referencement_automatique_verifier' => 'Veuillez vérifier les informations fournies par <tt>@url@</tt> avant d\'enregistrer.', # NEW
 	'texte_syndication' => 'Si pòu recuperar automaticament, quora un sit web lo permet, 
   la tièra dei sieus noveutats. Per far aquò, vos cau activar la sindicacion. 

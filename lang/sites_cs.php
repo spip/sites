@@ -25,8 +25,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// B
 	'bouton_exporter' => 'Exporter', # NEW
 	'bouton_importer' => 'Importer', # NEW
-	'bouton_radio_modere_posteriori' => 'moderování ex post',
-	'bouton_radio_modere_priori' => 'moderování předem',
+	'bouton_radio_modere_posteriori' => 'moderování ex post', # MODIF
+	'bouton_radio_modere_priori' => 'moderování předem', # MODIF
 	'bouton_radio_non_syndication' => 'Bez syndikace',
 	'bouton_radio_syndication' => 'Syndikace:',
 
@@ -73,14 +73,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_site_propose' => 'Web navržen dne:',
 	'info_site_reference' => 'Web odkazovaný online',
 	'info_site_refuse' => 'Web byl odmítnut',
-	'info_site_syndique' => 'Toto je syndikovaný web...',
+	'info_site_syndique' => 'Toto je syndikovaný web...', # MODIF
 	'info_site_valider' => 'Weby ke schválení',
 	'info_sites_referencer' => 'Zadat odkaz na web',
 	'info_sites_refuses' => 'Odmítnuté weby',
 	'info_statut_site_1' => 'Tento web je:',
 	'info_statut_site_2' => 'Publikováno',
 	'info_statut_site_3' => 'Připraveno',
-	'info_statut_site_4' => 'Do koše',
+	'info_statut_site_4' => 'Do koše', # MODIF
 	'info_syndication' => 'syndikace:',
 	'info_syndication_articles' => 'článek/článků',
 	'item_bloquer_liens_syndiques' => 'Zablokovat syndikované odkazy pro schválení',
@@ -127,9 +127,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    Níže uvedené nastavení je standardním
    nastavením syndikovaných webů po jejich vytvoření.
    Jednotlivé odkazy můžete vždy následně odblokovat,
-   případně se rozhodnout zablokovat odkazy pocházející z konkrétních webů.',
+   případně se rozhodnout zablokovat odkazy pocházející z konkrétních webů.', # MODIF
 	'texte_messages_publics' => 'Veřejné zprávy k článku:',
-	'texte_non_fonction_referencement' => 'Tuto automatickou funkci nemusíte použít a parametry webu můžete zadat sami...',
+	'texte_non_fonction_referencement' => 'Tuto automatickou funkci nemusíte použít a parametry webu můžete zadat sami...', # MODIF
 	'texte_referencement_automatique' => '<b>Automatický odkaz na web</b><br />Odkaz na web snadno vytvoříte zadáním požadované adresy URL nebo adresy jeho syndikačního souboru. Systém SPIP automaticky převezme údaje o takovém webu (název, popis...).', # MODIF
 	'texte_referencement_automatique_verifier' => 'Please, verify the information provided by <tt>@url@</tt> before saving.', # NEW
 	'texte_syndication' => 'Pokud to web umožňuje, můžete automaticky získat seznam na něm zveřejněných

@@ -25,8 +25,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// B
 	'bouton_exporter' => 'Exporter', # NEW
 	'bouton_importer' => 'Importer', # NEW
-	'bouton_radio_modere_posteriori' => 'utólag moderált',
-	'bouton_radio_modere_priori' => 'elözőleg moderálva',
+	'bouton_radio_modere_posteriori' => 'utólag moderált', # MODIF
+	'bouton_radio_modere_priori' => 'elözőleg moderálva', # MODIF
 	'bouton_radio_non_syndication' => 'Nincs szindikálás',
 	'bouton_radio_syndication' => 'Szindikálás :',
 
@@ -73,14 +73,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_site_propose' => 'Honlap ajánlasának időpontja :',
 	'info_site_reference' => 'Felvett honlap',
 	'info_site_refuse' => 'Elutasított honlap',
-	'info_site_syndique' => 'Ez a honlap szindikálva van...',
+	'info_site_syndique' => 'Ez a honlap szindikálva van...', # MODIF
 	'info_site_valider' => 'Jóváhagyandó honlapok',
 	'info_sites_referencer' => 'Honlap felvétele',
 	'info_sites_refuses' => 'Elutasított honlapok',
 	'info_statut_site_1' => 'Ez a honlap :',
 	'info_statut_site_2' => 'Publikált',
 	'info_statut_site_3' => 'Javasolt',
-	'info_statut_site_4' => 'A szemetesben van',
+	'info_statut_site_4' => 'A szemetesben van', # MODIF
 	'info_syndication' => 'szindikálás :',
 	'info_syndication_articles' => 'cikk(ek)',
 	'item_bloquer_liens_syndiques' => 'Szindikált linkek tiltása jóváhagyás érdekében',
@@ -125,9 +125,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	en provenance de votre navigateur ou d\'un service en ligne de gestion des Marques-pages.', # NEW
 	'texte_liens_sites_syndiques' => 'A szindikált honlapokról származó linkeket lehetnek eleve tiltva ; a lenti beállítás jelzi a szindikált honlapok alapértelmezett beállítását létrehozásuk után.
 Egyébkent minden linket lehet utólag engedélyezni egyenként, vagy honlap szerint tiltani a leendő linkeket.
-',
+', # MODIF
 	'texte_messages_publics' => 'A cikk nyilvános üzenetei :',
-	'texte_non_fonction_referencement' => 'Ezt az automatikus funkciót kihagyhatja, és Önmaga jelezheti a honlapra vonatkozó elemeket...',
+	'texte_non_fonction_referencement' => 'Ezt az automatikus funkciót kihagyhatja, és Önmaga jelezheti a honlapra vonatkozó elemeket...', # MODIF
 	'texte_referencement_automatique' => '<b>egy honlap automatikus felvétele</b><br />Gyorsan felvehet egy honlapot, ha lejjebb jelzi a kivánt URL-t, vagy a backend fájl címét. SPIP automatikusan fogja megszerezni az erre vonatkozó információkat (neve, leírása...).', # MODIF
 	'texte_referencement_automatique_verifier' => 'Veuillez vérifier les informations fournies par <tt>@url@</tt> avant d\'enregistrer.', # NEW
 	'texte_syndication' => 'Ha a honlap megengedi,akkor automatikusan lehet szerezni újdonságait listáját.

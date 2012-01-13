@@ -25,8 +25,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// B
 	'bouton_exporter' => 'Exporter', # NEW
 	'bouton_importer' => 'Importer', # NEW
-	'bouton_radio_modere_posteriori' => 'Efterfølgende godkendelse (bidrag er straks synlige men en administrator kan senere slette dem)',
-	'bouton_radio_modere_priori' => 'Forhåndsgodkendelse',
+	'bouton_radio_modere_posteriori' => 'Efterfølgende godkendelse (bidrag er straks synlige men en administrator kan senere slette dem)', # MODIF
+	'bouton_radio_modere_priori' => 'Forhåndsgodkendelse', # MODIF
 	'bouton_radio_non_syndication' => 'Ingen syndikering',
 	'bouton_radio_syndication' => 'Syndikering:',
 
@@ -73,14 +73,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_site_propose' => 'Websted sendt til godkendelse den:',
 	'info_site_reference' => 'Online henvisning',
 	'info_site_refuse' => 'Websted afvist',
-	'info_site_syndique' => 'Dette websted er syndikeret...',
+	'info_site_syndique' => 'Dette websted er syndikeret...', # MODIF
 	'info_site_valider' => 'Websteder der afventer godkendelse',
 	'info_sites_referencer' => 'Link til websted',
 	'info_sites_refuses' => 'Afviste websteder',
 	'info_statut_site_1' => 'Dette websted er:',
 	'info_statut_site_2' => 'Offentliggjort',
 	'info_statut_site_3' => 'Indsendt',
-	'info_statut_site_4' => 'I papirkurven',
+	'info_statut_site_4' => 'I papirkurven', # MODIF
 	'info_syndication' => 'syndikering:',
 	'info_syndication_articles' => 'bidrag',
 	'item_bloquer_liens_syndiques' => 'Afspær syndikerede links indtil de er godkendt',
@@ -124,12 +124,12 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'texte_expliquer_import_bookmarks' => 'Vous pouvez importer une liste de sites au format Marque-page HTML,
 	en provenance de votre navigateur ou d\'un service en ligne de gestion des Marques-pages.', # NEW
 	'texte_liens_sites_syndiques' => 'Links til syndikerede sider kan spærres på forhånd; følgende indstilling er standardindstillingen for syndikerede websteder, når de er oprettet.
-			Det er således på trods heraf muligt at spærre hvert link individuelt eller at vælge for hver websted at spærre de links der kommer fra en givet websted.',
+			Det er således på trods heraf muligt at spærre hvert link individuelt eller at vælge for hver websted at spærre de links der kommer fra en givet websted.', # MODIF
 	'texte_messages_publics' => 'Offentlige bidrag til artiklen:',
-	'texte_non_fonction_referencement' => 'Du kan vælge ikke at bruge denne automatiske funktion, og selv angive de elementer, der er vigtige for webstedet...',
+	'texte_non_fonction_referencement' => 'Du kan vælge ikke at bruge denne automatiske funktion, og selv angive de elementer, der er vigtige for webstedet...', # MODIF
 	'texte_referencement_automatique' => '<b>Automatiserede webstedshenvisninger</b><br />
 		Du kan hurtigt henvise til et websted ved nedenfor at angive dens URL eller adressen på dens datakilde. 
-		SPIP vil automatisk indhente oplysninger om webstedet (titel, beskrivelse...).',
+		SPIP vil automatisk indhente oplysninger om webstedet (titel, beskrivelse...).', # MODIF
 	'texte_referencement_automatique_verifier' => 'Veuillez vérifier les informations fournies par <tt>@url@</tt> avant d\'enregistrer.', # NEW
 	'texte_syndication' => 'Hvis webstedet tillader det, er det muligt automatisk at hente en oversigt over det
 		seneste materiale. For at gøre dette, skal du igangsætte syndikering.

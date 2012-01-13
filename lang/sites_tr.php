@@ -25,8 +25,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// B
 	'bouton_exporter' => 'Exporter', # NEW
 	'bouton_importer' => 'Importer', # NEW
-	'bouton_radio_modere_posteriori' => 'sonradan onayla yönetim',
-	'bouton_radio_modere_priori' => 'önceden onayla yönetim',
+	'bouton_radio_modere_posteriori' => 'sonradan onayla yönetim', # MODIF
+	'bouton_radio_modere_priori' => 'önceden onayla yönetim', # MODIF
 	'bouton_radio_non_syndication' => 'Paylaşım (syndication) yok',
 	'bouton_radio_syndication' => 'Paylaşım :',
 
@@ -73,14 +73,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_site_propose' => 'Sitenin önerildiği tarih :',
 	'info_site_reference' => 'Atıfta bulunulan çevrimiçi site',
 	'info_site_refuse' => 'Web sitesi reddedildi',
-	'info_site_syndique' => 'Bu site paylaşımlıdır...',
+	'info_site_syndique' => 'Bu site paylaşımlıdır...', # MODIF
 	'info_site_valider' => 'Onaylanacak siteler',
 	'info_sites_referencer' => 'Bir siteye atıfta bulun',
 	'info_sites_refuses' => 'Reddedilen siteler',
 	'info_statut_site_1' => 'Bu site :',
 	'info_statut_site_2' => 'Yayınlandı',
 	'info_statut_site_3' => 'Önerildi',
-	'info_statut_site_4' => 'Çöp kutusuna',
+	'info_statut_site_4' => 'Çöp kutusuna', # MODIF
 	'info_syndication' => 'Paylaşım :',
 	'info_syndication_articles' => 'Makale',
 	'item_bloquer_liens_syndiques' => 'Paylaşımlı bağların onay için engellenmesi',
@@ -123,12 +123,12 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	pour vous permettre ensuite de l\'importer dans votre navigateur ou dans un service en ligne', # NEW
 	'texte_expliquer_import_bookmarks' => 'Vous pouvez importer une liste de sites au format Marque-page HTML,
 	en provenance de votre navigateur ou d\'un service en ligne de gestion des Marques-pages.', # NEW
-	'texte_liens_sites_syndiques' => 'Paylaşımlı sitelerden gelen bağlar önceden engellenebilir ; aşağıdaki ayarlama yaratılmalarından sonra paylaşılan sitelerin varsayılan ayarlarını gösterir. Sonradan her bir bağın engelini tek tek kaldırmak ya da her site için gelecekteki bağları engellemeyi tek tek seçmek olanaklıdır.',
+	'texte_liens_sites_syndiques' => 'Paylaşımlı sitelerden gelen bağlar önceden engellenebilir ; aşağıdaki ayarlama yaratılmalarından sonra paylaşılan sitelerin varsayılan ayarlarını gösterir. Sonradan her bir bağın engelini tek tek kaldırmak ya da her site için gelecekteki bağları engellemeyi tek tek seçmek olanaklıdır.', # MODIF
 	'texte_messages_publics' => 'Makalenin kamu mesajları : ',
-	'texte_non_fonction_referencement' => 'Bu otomatik işlevi kullanmamayı tercih edebilir, bu siteyle ilgili unsurları kendiniz belirtebilirsiniz.... ',
-	'texte_referencement_automatique' => '<b>Otomatik site referansı</b><br /> Aşağıya URL adresini ya da paylaşım dosyasının adresini belirterek bir Web sitesine hızla atıfta bulunabilirsiniz. SPIP otomatik olarak bu siteyle ilgili bilgileri toplayacaktır (başlık, tanımlama...).',
+	'texte_non_fonction_referencement' => 'Bu otomatik işlevi kullanmamayı tercih edebilir, bu siteyle ilgili unsurları kendiniz belirtebilirsiniz.... ', # MODIF
+	'texte_referencement_automatique' => '<b>Otomatik site referansı</b><br /> Aşağıya URL adresini ya da paylaşım dosyasının adresini belirterek bir Web sitesine hızla atıfta bulunabilirsiniz. SPIP otomatik olarak bu siteyle ilgili bilgileri toplayacaktır (başlık, tanımlama...).', # MODIF
 	'texte_referencement_automatique_verifier' => 'Kaydetmeden önce <tt>@url@</tt> tarafından sağlanan bilgileri doğrulayınız.',
-	'texte_syndication' => 'Bir Web sitesinin izin vermesi halinde yeniliklerinin listesini otomatik olarak listelemek olasıdır. Bunun için paylaşımı çalıştırmanız gerekir. Bazı servis sağlayıcılar bu işlevi engeller; böyle bir durumda, içerik paylaşımını kendi sitenizden kullanamazsınız.',
+	'texte_syndication' => 'Bir Web sitesinin izin vermesi halinde yeniliklerinin listesini otomatik olarak listelemek olasıdır. Bunun için paylaşımı çalıştırmanız gerekir. Bazı servis sağlayıcılar bu işlevi engeller; böyle bir durumda, içerik paylaşımını kendi sitenizden kullanamazsınız.', # MODIF
 	'titre_articles_syndiques' => 'Bu siteden alınan paylaşımlı makaleler',
 	'titre_dernier_article_syndique' => 'Son yayınlanan paylaşımlı makaleler',
 	'titre_exporter_bookmarks' => 'Exporter des Marques-pages', # NEW

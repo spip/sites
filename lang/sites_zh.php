@@ -73,14 +73,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_site_propose' => '提交的站点:',
 	'info_site_reference' => '在线引用的站点',
 	'info_site_refuse' => '丢弃的站点',
-	'info_site_syndique' => '联合的站点...',
+	'info_site_syndique' => '联合的站点...', # MODIF
 	'info_site_valider' => '使有效的站点',
 	'info_sites_referencer' => '参考站点',
 	'info_sites_refuses' => '丢弃的站点',
 	'info_statut_site_1' => '站点是:',
 	'info_statut_site_2' => '出版',
 	'info_statut_site_3' => '提交',
-	'info_statut_site_4' => '到垃圾箱',
+	'info_statut_site_4' => '到垃圾箱', # MODIF
 	'info_syndication' => '<MODIF>聚合 ：',
 	'info_syndication_articles' => '文章',
 	'item_bloquer_liens_syndiques' => '阻止联合站点确认',
@@ -130,9 +130,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    然后无论如何可分开阻止每个连接
    , 或选择,
    对每一站点, 阻止连接来自
-   任何特别的站点.',
+   任何特别的站点.', # MODIF
 	'texte_messages_publics' => '文章的公共消息:',
-	'texte_non_fonction_referencement' => '你可以选择不使用这个自动特性, 手动输入连接元素...',
+	'texte_non_fonction_referencement' => '你可以选择不使用这个自动特性, 手动输入连接元素...', # MODIF
 	'texte_referencement_automatique' => '<b>自动站点引用</b><br />通过指出以下的想得到的URL或后端文件的地址,您可以迅速引用一个站点. SPIP 将自动获得关于站点的信息 (标题, 描述...).', # MODIF
 	'texte_referencement_automatique_verifier' => 'Veuillez vérifier les informations fournies par <tt>@url@</tt> avant d\'enregistrer.', # NEW
 	'texte_syndication' => '如果站点允许, 可以自动得到最新的素材

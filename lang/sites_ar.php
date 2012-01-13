@@ -25,8 +25,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// B
 	'bouton_exporter' => 'نقل',
 	'bouton_importer' => 'جلب',
-	'bouton_radio_modere_posteriori' => 'مراقبة بعدية',
-	'bouton_radio_modere_priori' => 'مراقبة استباقية',
+	'bouton_radio_modere_posteriori' => 'مراقبة بعدية', # MODIF
+	'bouton_radio_modere_priori' => 'مراقبة استباقية', # MODIF
 	'bouton_radio_non_syndication' => 'عدم ترخيص',
 	'bouton_radio_syndication' => 'ترخيص:',
 
@@ -73,14 +73,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_site_propose' => 'موقع مقترح بتاريخ:',
 	'info_site_reference' => 'موقع مبوب على النسيج',
 	'info_site_refuse' => 'موقع مرفوض',
-	'info_site_syndique' => 'هذا الموقع مرخص...',
+	'info_site_syndique' => 'هذا الموقع مرخص...', # MODIF
 	'info_site_valider' => 'مواقع تنتظر التصديق',
 	'info_sites_referencer' => 'تبويب موقع',
 	'info_sites_refuses' => 'المواقع المرفوضة',
 	'info_statut_site_1' => 'هذا الموقع:',
 	'info_statut_site_2' => 'منشور',
 	'info_statut_site_3' => 'مقترح',
-	'info_statut_site_4' => 'الى المهملات',
+	'info_statut_site_4' => 'الى المهملات', # MODIF
 	'info_syndication' => 'ترخيص:',
 	'info_syndication_articles' => 'مقال',
 	'item_bloquer_liens_syndiques' => 'صد الوصلات المرخصة بانتظار تصديقها',
@@ -95,7 +95,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'label_exporter_id_parent' => 'نقل مواقع القسم',
 	'label_exporter_publie_seulement_1' => 'نقل المواقع المنشورة فقط',
 	'label_fichier_import' => 'ملف HTML',
-	'label_importer_les_tags_1' => 'جلب العلامات على شكل مفاتيح',
+	'label_importer_les_tags_1' => 'جلب العلامات على شكل مفاتيح', # MODIF
 	'label_importer_statut_publie_1' => 'نشر المواقع آلياً',
 	'lien_mise_a_jour_syndication' => 'تحديث الآن',
 	'lien_nouvelle_recuperation' => 'محاولة تنفيذ إسترجاع جديد للبيانات',
@@ -130,16 +130,16 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 عندها، يصبح من الممكن
 صد كل وصلة بمفردها او
 اختيار صد كل الوصلات الآتية من 
-اي موقع معين بمفرده.',
+اي موقع معين بمفرده.', # MODIF
 	'texte_messages_publics' => 'المشاركات العامة على هذا المقال:',
-	'texte_non_fonction_referencement' => 'بمكنك تفضيل عدم استخدام هذه الوظيفة الآلية والقيام بإدخال العناصر المتعلقة بهذا الموقع بنفسك...',
-	'texte_referencement_automatique' => '<b>تبويب المواقع الآلي</b><br />يمكنك تبويب موقع ما سريعاً بإدخال عنوانه أدناه أو عنوان ملف الترخيص الخلفي لديه. سيقوم SPIP آلياً بجلب المعلومات المتعلقة بهذا الموقع (الإسم والوصف...).',
+	'texte_non_fonction_referencement' => 'بمكنك تفضيل عدم استخدام هذه الوظيفة الآلية والقيام بإدخال العناصر المتعلقة بهذا الموقع بنفسك...', # MODIF
+	'texte_referencement_automatique' => '<b>تبويب المواقع الآلي</b><br />يمكنك تبويب موقع ما سريعاً بإدخال عنوانه أدناه أو عنوان ملف الترخيص الخلفي لديه. سيقوم SPIP آلياً بجلب المعلومات المتعلقة بهذا الموقع (الإسم والوصف...).', # MODIF
 	'texte_referencement_automatique_verifier' => 'الرجاء التأكد من المعلومات التي يوفرها <tt>@url@</tt> قيل الحفظ.',
 	'texte_syndication' => 'إذا كان أحد المواقع يسمح بذلك، يمكن للنظام ان يقوم آلياً
 بجلب قائمة بأحدث ما نُشر في هذا الموقع. لإتمام ذلك يجب تفعيل الترخيص.
   <blockquote>بعض خدام المواقع يعطلون هذه الوظيفة
 في هذه الحال لا يمكنك الاستفادة من ترخيص محتوى المواقع
-من موقعك. </blockquote>',
+من موقعك. </blockquote>', # MODIF
 	'titre_articles_syndiques' => 'المقالات المرخصة المسحوبة من هذا الموقع',
 	'titre_dernier_article_syndique' => 'أحدث المقالات المرخصة',
 	'titre_exporter_bookmarks' => 'نقل مرجعيات',

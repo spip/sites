@@ -25,8 +25,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// B
 	'bouton_exporter' => 'Exportovať',
 	'bouton_importer' => 'Nahrať',
-	'bouton_radio_modere_posteriori' => 'Kontrola po publikovaní',
-	'bouton_radio_modere_priori' => 'Kontrola pred publikovaním',
+	'bouton_radio_modere_posteriori' => 'Kontrola po publikovaní', # MODIF
+	'bouton_radio_modere_priori' => 'Kontrola pred publikovaním', # MODIF
 	'bouton_radio_non_syndication' => 'Žiadna syndikácia',
 	'bouton_radio_syndication' => 'Syndikácia:',
 
@@ -73,14 +73,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_site_propose' => 'Stránka odoslaná:',
 	'info_site_reference' => 'Odkazované stránky online',
 	'info_site_refuse' => 'Zamietnutá stránka',
-	'info_site_syndique' => 'This site is syndicated...',
+	'info_site_syndique' => 'This site is syndicated...', # MODIF
 	'info_site_valider' => 'Stránky, ktoré čakajú na schválenie',
 	'info_sites_referencer' => 'Odkázať na stránku',
 	'info_sites_refuses' => 'Zamietnuté stránky',
 	'info_statut_site_1' => 'Táto stránka je:',
 	'info_statut_site_2' => 'Publikovaná',
 	'info_statut_site_3' => 'Odoslaná',
-	'info_statut_site_4' => 'Do koša',
+	'info_statut_site_4' => 'Do koša', # MODIF
 	'info_syndication' => 'syndikácia:',
 	'info_syndication_articles' => 'článok (-nky)',
 	'item_bloquer_liens_syndiques' => 'Zablokovať syndikované odkazy na overenie',
@@ -95,7 +95,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'label_exporter_id_parent' => 'Exportovať stránky z rubriky',
 	'label_exporter_publie_seulement_1' => 'Exportovať iba publikované stránky',
 	'label_fichier_import' => 'Súbor HTML',
-	'label_importer_les_tags_1' => 'Nahrať tagy vo forme kľúčových slov',
+	'label_importer_les_tags_1' => 'Nahrať tagy vo forme kľúčových slov', # MODIF
 	'label_importer_statut_publie_1' => 'Automaticky publikovať stránky',
 	'lien_mise_a_jour_syndication' => 'Aktualizovať teraz',
 	'lien_nouvelle_recuperation' => 'Pokúsiť sa znova získať dáta',
@@ -128,16 +128,16 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 			is, then, possible anyway to
 			block each link individually, or to
 			choose, for each site, to block the links coming
-			from any particular site.',
+			from any particular site.', # MODIF
 	'texte_messages_publics' => 'Verejné príspevky k článku:',
-	'texte_non_fonction_referencement' => 'Môžete sa rozhodnúť nepoužívať túto automatizovanú funkciu a zadávať prvky z danej stránky manuálne.',
-	'texte_referencement_automatique' => '<b>Automatické odkazovanie na stránky</b><br />Na stránku môžete odkázať rýchlo uvedením jej adresy alebo adresy jej syndikačného súboru. SPIP automaticky získa údaje o stránke (názov, popis...).',
+	'texte_non_fonction_referencement' => 'Môžete sa rozhodnúť nepoužívať túto automatizovanú funkciu a zadávať prvky z danej stránky manuálne.', # MODIF
+	'texte_referencement_automatique' => '<b>Automatické odkazovanie na stránky</b><br />Na stránku môžete odkázať rýchlo uvedením jej adresy alebo adresy jej syndikačného súboru. SPIP automaticky získa údaje o stránke (názov, popis...).', # MODIF
 	'texte_referencement_automatique_verifier' => 'Pred uložením, prosím, skontrolujte údaje z <tt>@url@</tt>.',
 	'texte_syndication' => 'Zoznam nových funkcií sa dá získať automaticky, keď to stránka povoľuje
 Na to musíte aktivovať syndikáciu. 
   <blockquote><i>Niektorí poskytovatelia hostingu deaktivujú túto funkciu; 
  v tom prípade nemôžete využívať syndikáciu obsahu
-   zo svojej stránky.</i></blockquote>',
+   zo svojej stránky.</i></blockquote>', # MODIF
 	'titre_articles_syndiques' => 'Syndikované články stiahnuté z tejto stránky',
 	'titre_dernier_article_syndique' => 'Najnovšie syndikované články',
 	'titre_exporter_bookmarks' => 'Exportovať záložky',

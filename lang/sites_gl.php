@@ -25,8 +25,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// B
 	'bouton_exporter' => 'Exporter', # NEW
 	'bouton_importer' => 'Importer', # NEW
-	'bouton_radio_modere_posteriori' => 'moderación a posteriori',
-	'bouton_radio_modere_priori' => 'moderación a priori',
+	'bouton_radio_modere_posteriori' => 'moderación a posteriori', # MODIF
+	'bouton_radio_modere_priori' => 'moderación a priori', # MODIF
 	'bouton_radio_non_syndication' => 'Sen afiliación',
 	'bouton_radio_syndication' => 'Afiliación:',
 
@@ -73,14 +73,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_site_propose' => 'Web proposto o:',
 	'info_site_reference' => 'Web referido en liña',
 	'info_site_refuse' => 'Web rexeitado',
-	'info_site_syndique' => 'Este web está afiliado...',
+	'info_site_syndique' => 'Este web está afiliado...', # MODIF
 	'info_site_valider' => 'Webs por validar',
 	'info_sites_referencer' => 'Referenciar un web',
 	'info_sites_refuses' => 'Os webs rexeitados',
 	'info_statut_site_1' => 'Este web foi:',
 	'info_statut_site_2' => 'Publicado',
 	'info_statut_site_3' => 'Proposto',
-	'info_statut_site_4' => 'No lixo',
+	'info_statut_site_4' => 'No lixo', # MODIF
 	'info_syndication' => 'sindicación :',
 	'info_syndication_articles' => 'artigo(s)',
 	'item_bloquer_liens_syndiques' => 'Bloquear as ligazóns afiliadas para validación',
@@ -127,16 +127,16 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
   poden ser bloquedas a priori; o axuste aquí embaixo indica a configuración
   por defecto dos web afiliados logo da súa creación.
   De todos os xeitos despois é posible desbloquear cada ligazón individualmente,
-  ou escoller, web por web, o bloqueo das ligazóns futuras de tal ou cal web.',
+  ou escoller, web por web, o bloqueo das ligazóns futuras de tal ou cal web.', # MODIF
 	'texte_messages_publics' => 'Mensaxes públicas do artigo:',
-	'texte_non_fonction_referencement' => 'Pode preferir non usar esta función automática, e indicar á man os elementos concernintes a este web...',
-	'texte_referencement_automatique' => '<b>Referencia automatizada dun web</b><br />Pode referir rapidamente un  web ao indicar aquí embaixo o enderezo URL desexado, ou o enderezo do seu ficheiro de afiliación. SPIP recuperará automaticamente as informacións concernintes a este lugar (título, descrición...).',
+	'texte_non_fonction_referencement' => 'Pode preferir non usar esta función automática, e indicar á man os elementos concernintes a este web...', # MODIF
+	'texte_referencement_automatique' => '<b>Referencia automatizada dun web</b><br />Pode referir rapidamente un  web ao indicar aquí embaixo o enderezo URL desexado, ou o enderezo do seu ficheiro de afiliación. SPIP recuperará automaticamente as informacións concernintes a este lugar (título, descrición...).', # MODIF
 	'texte_referencement_automatique_verifier' => 'Comprobe os datos fornecidos por <tt>@url@</tt> antes de rexistralos.',
 	'texte_syndication' => 'Pódese recuperar automaticamente, e sempre que o sitio web o permita, 
   a súa lista de novidades. Para isto, ten que activar a afiliación.
   <blockquote><i>Algúns aloxadores desactivan esta funcionalidade;
   nese caso, non poderá empregar a afiliación de contido
-  dende o seu web.</i></blockquote>',
+  dende o seu web.</i></blockquote>', # MODIF
 	'titre_articles_syndiques' => 'Artigos afiliados extraídos deste web',
 	'titre_dernier_article_syndique' => 'Últimos artigos afiliados',
 	'titre_exporter_bookmarks' => 'Exporter des Marques-pages', # NEW
