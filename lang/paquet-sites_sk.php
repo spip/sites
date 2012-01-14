@@ -8,7 +8,7 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// S
-	'sites_description' => 'Stránky a syndikácia v SPIPe (súkromná aj verejná)',
+	'sites_description' => 'Stránky a syndikácia v SPIPe (súkromná aj verejná)',
 	'sites_slogan' => 'Riadenie stránok a syndikácie v SPIPe'
 );
 
