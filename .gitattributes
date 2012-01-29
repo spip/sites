@@ -147,4 +147,5 @@ puce_statut/site.php -text
 /sites_administrations.php -text
 /sites_autoriser.php -text
 /sites_fonctions.php -text
+/sites_ieconfig.php -text
 /sites_pipelines.php -text
