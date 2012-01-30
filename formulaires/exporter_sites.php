@@ -14,7 +14,7 @@ if (!defined("_ECRIRE_INC_VERSION")) return;
 
 function formulaires_exporter_sites_charger_dist(){
 
-	if (!autoriser('exporter','sites'))
+	if (!autoriser('exporter','_sites'))
 		return false;
 
 	return array(

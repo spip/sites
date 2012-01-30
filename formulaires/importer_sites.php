@@ -14,7 +14,7 @@ if (!defined("_ECRIRE_INC_VERSION")) return;
 
 function formulaires_importer_sites_charger_dist(){
 
-	if (!autoriser('importer', 'sites'))
+	if (!autoriser('importer', '_sites'))
 		return false;
 
 	return array(
