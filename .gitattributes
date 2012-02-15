@@ -26,6 +26,7 @@ images/actions-filigrane-24.png -text
 inc/site.php -text
 inc/syndic.php -text
 lang/paquet-sites.xml -text
+lang/paquet-sites_ar.php -text
 lang/paquet-sites_en.php -text
 lang/paquet-sites_sk.php -text
 lang/sites.xml -text
