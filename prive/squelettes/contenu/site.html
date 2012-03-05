@@ -7,7 +7,7 @@
 			[(#URL_ECRIRE{site_edit,id_syndic=#ID_SYNDIC}|icone_verticale{<:sites:icone_modifier_site:>,site,edit,right ajax preload})]
 		]
 		[(#ID_SYNDIC|afficher_qui_edite{site}|oui)
-			[(#URL_ECRIRE{site_edit,id_syndic=#ID_SYNDIC}|icone_verticale{#ID_SYNDIC|afficher_qui_edite{site},warning-24.png,'',right ajax preload})]
+			[(#URL_ECRIRE{site_edit,id_syndic=#ID_SYNDIC}|icone_verticale{#ID_SYNDIC|afficher_qui_edite{site},warning-24.png,'',right edition_deja ajax preload})]
 		]
 	]
 	<h1>[(#RANG). ](#NOM_SITE|sinon{<:info_sans_titre_2:>})[(#CHEMIN_IMAGE{site-24.png}|balise_img{site,cadre-icone})]</h1>
