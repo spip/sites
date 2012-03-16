@@ -28,6 +28,7 @@ inc/syndic.php -text
 lang/paquet-sites.xml -text
 lang/paquet-sites_ar.php -text
 lang/paquet-sites_en.php -text
+lang/paquet-sites_fa.php -text
 lang/paquet-sites_sk.php -text
 lang/sites.xml -text
 lang/sites_ar.php -text
