@@ -34,8 +34,8 @@ function formulaires_configurer_sites_traiter_dist(){
 		if (!is_null($v=_request($m)))
 			ecrire_meta($m, $v=='oui'?'oui':'non');
 
-	$v = _request('moderation_sites');
-	ecrire_meta($m, in_array($v,array('0','1','2'))?$v:'0');
+	$v = _request('proposer_sites');
+	ecrire_meta('proposer_sites', in_array($v,array('0','1','2'))?$v:'0');
 
 	$res['message_ok'] = _T('config_info_enregistree');
 	return $res;

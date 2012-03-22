@@ -22,7 +22,12 @@ function autoriser_sites_menu_dist($faire, $type='', $id=0, $qui = NULL, $opt = 
 	return 	($GLOBALS['meta']["activer_sites"] != "non");
 }
 function autoriser_sitecreer_menu_dist($faire, $type, $id, $qui, $opt){
-	return 	($GLOBALS['meta']["activer_sites"] != "non");
+	return
+		($GLOBALS['meta']["activer_sites"] != "non"
+		AND (
+			$qui['statut']=='0minirezo'
+			OR ($GLOBALS['meta']["proposer_sites"] >=
+			    ($qui['statut']=='1comite' ? 1 : 2))));
 }
 
 
@@ -45,7 +50,15 @@ function autoriser_controlersyndication_menu_dist($faire, $type, $id, $qui, $opt
 	return 	($qui['statut']=='0minirezo' AND sql_countsel('spip_syndic_articles'));
 }
 
-
+// Creer un nouveau site ?
+function autoriser_site_creer_dist($faire, $type, $id, $qui, $opt){
+	return
+		($GLOBALS['meta']["activer_sites"] != "non"
+		AND (
+			$qui['statut']=='0minirezo'
+			OR ($GLOBALS['meta']["proposer_sites"] >=
+			    ($qui['statut']=='1comite' ? 1 : 2))));
+}
 
 // Autoriser a creer un site dans la rubrique $id
 // http://doc.spip.org/@autoriser_rubrique_creersitedans_dist
