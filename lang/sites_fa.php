@@ -23,10 +23,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_sites_syndiques_probleme' => 'اين سايتهاى پيوندى به مشكلى برخورده اند',
 
 	// B
-	'bouton_exporter' => 'Exporter', # NEW
-	'bouton_importer' => 'Importer', # NEW
-	'bouton_radio_modere_posteriori' => 'بعد از تعديل ', # MODIF
-	'bouton_radio_modere_priori' => 'پيش از تعديل', # MODIF
+	'bouton_exporter' => 'صادر كردن',
+	'bouton_importer' => 'وارد كردن',
+	'bouton_radio_modere_posteriori' => 'تعديل بعدي',
+	'bouton_radio_modere_priori' => 'تعديل قبلي',
 	'bouton_radio_non_syndication' => 'بدون پيوند به سايتهاى ديگر',
 	'bouton_radio_syndication' => 'مشترك سازي: ',
 
@@ -73,14 +73,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_site_propose' => 'اين سايت در تاريخ زير پيشنهاد شده: ',
 	'info_site_reference' => 'سايت ارجاعي آنلاين',
 	'info_site_refuse' => 'سايت پذيرفته نشده',
-	'info_site_syndique' => 'اين سايت پيوند دارد . . . ', # MODIF
+	'info_site_syndique' => 'اين سايت مشترك‌سازي شده...',
 	'info_site_valider' => 'اين سايت ها بايد معتبر شوند',
 	'info_sites_referencer' => 'ارجاع يك سايت',
 	'info_sites_refuses' => 'سايت هاى پذيرفته نشده',
 	'info_statut_site_1' => 'اين سايت :',
 	'info_statut_site_2' => 'منتشر شده',
 	'info_statut_site_3' => 'پيشنهاد شده',
-	'info_statut_site_4' => 'در سطل', # MODIF
+	'info_statut_site_4' => 'در سطل باطله',
 	'info_syndication' => 'پيوند سايتى :',
 	'info_syndication_articles' => 'مقاله(ها)',
 	'item_bloquer_liens_syndiques' => 'پيوندهاى سايتى را براى تأئيد بلوكه كنيد',
@@ -123,10 +123,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	pour vous permettre ensuite de l\'importer dans votre navigateur ou dans un service en ligne', # NEW
 	'texte_expliquer_import_bookmarks' => 'Vous pouvez importer une liste de sites au format Marque-page HTML,
 	en provenance de votre navigateur ou d\'un service en ligne de gestion des Marques-pages.', # NEW
-	'texte_liens_sites_syndiques' => 'پيوندهاى مربوط به سايتهاى مرجع ميتوانند مسدود شوند، سپس ميتوانيد آنها را تك تك باز كنيد يا اينكه سايت به سايت پيوندهاى آينده را مسدود كنيد. ', # MODIF
+	'texte_liens_sites_syndiques' => 'پيوند‌هاي خروجي از سايت‌هاي مشترك‌سازي شده از پيش مسدود شده‌اند؛ تنظيم زير تنظيم پش‌ گزيده‌ سايت‌هاي مشترك‌سازي شده بعد از ايجاد آن‌ها را نشان مي‌دهد. بعداً امكان دارد هر پيوند را به طور جداگانه يا با انتخاب، سايت به سايت باز كنيد و پيوندهايي كه از اين يا آن سايت مي‌آيند را مسدود نماييد. ',
 	'texte_messages_publics' => 'پيامهاى همگانى مقاله :',
-	'texte_non_fonction_referencement' => 'شما ميتوانيد از اين كاربرد خودكار استفاده نكنيد، دراينصورت خودتان بايد مشخصات سايت را تعيين كنيد', # MODIF
-	'texte_referencement_automatique' => 'ثبت خودكار يك سايت در جستجوگرها، شما ميتوانيد ثبت تارنماى سايت را با مشخص كردن آدرس URLو يا آدرس فايل RSS در زير انجام  دهيد.اسپيپ تمام اطلاعات اعم از عنوان، توصيف،... را بطور خودكار جمع آورى خواهد كرد.', # MODIF
+	'texte_non_fonction_referencement' => 'شما ميتوانيد از اين كاركرد خودكار استفاده نكنيد، و عناصر مرتبط با اين سايت را براي خودتان مشخص سازيد...',
+	'texte_referencement_automatique' => '<br /><b>ارجاع خودكار به يك سايت</b> مي‌توانيد به سرعت يك وب سايت را با مشخص كردن نشاني يو.آر.ال دلخواه در زير، يا نشاني پرنده‌ي آن براي مشترك‌سازي، ارجاع دهيد،اسپيپ به طور خودكار اطلاعات مربوط يه آن سايت (تيتر، توصيف) را پس مي‌گيرد. ',
 	'texte_referencement_automatique_verifier' => 'لطفاً پيش از ثبت اطلاعات ارايه شده توسط <tt>@url@</tt> آن را تأييد كنيد.',
 	'texte_syndication' => 'اگر سايت اجازه دهد، مي‌توانيد بطور خودكار،  فهرست تازه‌ها را بگيريد. براى اين منظور، شما بايد گزينش پخش همزمان (سنديكاسيون) را فعال كنيد.<blockquote><i> تعدادى از ميزبانان اين عمل را غيرفعال مي‌كنند. در آن صورت نمي‌توانيد از آن استفاده كنيد.</i></blockquote>', # MODIF
 	'titre_articles_syndiques' => 'مقالات پيوندى گرفته شده از اين سايت',
