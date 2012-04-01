@@ -48,7 +48,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_articles_syndic' => 'Articles syndiqués', # NEW
 	'icone_controler_syndication' => 'Publication des articles syndiqués', # NEW
 	'icone_modifier_site' => 'Изменить этот сайт',
-	'icone_referencer_nouveau_site' => 'Ссылка на новый сайт',
+	'icone_referencer_nouveau_site' => 'Новый сайт',
 	'icone_site_reference' => 'Sites référencés', # NEW
 	'icone_supprimer_article' => 'Supprimer cet article', # NEW
 	'icone_supprimer_articles' => 'Supprimer ces articles', # NEW
@@ -150,7 +150,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_sites_proposes' => 'Представленные сайты',
 	'titre_sites_references_rubrique' => 'Ссылающиеся сайты в этом разделе',
 	'titre_sites_syndiques' => 'Объединенные сайты',
-	'titre_sites_tous' => 'Ссылающиеся сайты',
+	'titre_sites_tous' => 'Каталог сайтов',
 	'titre_syndication' => 'Объединение сайтов',
 	'tout_voir' => 'Voir tous les articles syndiqués', # NEW
 

@@ -37,8 +37,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'entree_adresse_fichier_syndication' => 'آدرس فايل براى ارتباط ميان سايتى:',
 	'entree_adresse_site' => ' </b> آدرس سايت <b>[اجبارى] ',
 	'entree_description_site' => 'توصيف سايت',
-	'erreur_fichier_format_inconnu' => 'Le format du fichier @fichier@ n\'est pas pris en charge.', # NEW
-	'erreur_fichier_incorrect' => 'Impossible de lire le fichier.', # NEW
+	'erreur_fichier_format_inconnu' => 'از فرمت پرونده‌ي @fichier@ پشتيابي نمي‌شود.',
+	'erreur_fichier_incorrect' => 'خواندن پرونده ممكن نيست. ',
 
 	// F
 	'form_prop_nom_site' => 'نام سايت',
@@ -55,15 +55,15 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_valider_article' => 'ثبت اين مقاله',
 	'icone_valider_articles' => 'ثبت اين مقاله‌ها',
 	'icone_voir_sites_references' => 'به سايتهاى ارجاعي نگاه كنيد',
-	'info_1_site_importe' => '1 site a été importé', # NEW
+	'info_1_site_importe' => '1 يك سايت وارد شده ',
 	'info_a_valider' => '[معتبر شود]',
-	'info_aucun_site_importe' => 'Aucun site n\'a pu être importé', # NEW
+	'info_aucun_site_importe' => 'هيچ سايتي وارد نشده ',
 	'info_bloquer' => 'ببندید',
 	'info_bloquer_lien' => 'اين پيوند را مسدود كنيد',
 	'info_derniere_syndication' => ':آخرين پيوند سايتى انجام شده در تاريخ ',
 	'info_liens_syndiques_1' => 'پيوند‌هاي مشترك‌سازي شده',
 	'info_liens_syndiques_2' => 'در انتظار تأئيد شدن هستند.',
-	'info_nb_sites_importes' => '@nb@ sites ont été importés', # NEW
+	'info_nb_sites_importes' => ' @nb@ سايت وارد شده ',
 	'info_nom_site_2' => ' [اجبارى] <b>نام سايت</b>',
 	'info_panne_site_syndique' => 'سايت پيوندى خراب است',
 	'info_probleme_grave' => 'مشكل',
@@ -91,12 +91,12 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'item_utiliser_syndication' => 'از پيوند سايتى خودكار استفاده كنيد',
 
 	// L
-	'label_exporter_avec_mots_cles_1' => 'Exporter les mots-clés sous forme de tags', # NEW
-	'label_exporter_id_parent' => 'Exporter les sites de la rubrique', # NEW
-	'label_exporter_publie_seulement_1' => 'Exporter uniquement les sites publiés', # NEW
-	'label_fichier_import' => 'Fichier HTML', # NEW
-	'label_importer_les_tags_1' => 'Importer les tags sous forme de mot-clé', # NEW
-	'label_importer_statut_publie_1' => 'Publier automatiquement les sites', # NEW
+	'label_exporter_avec_mots_cles_1' => 'صدور كليد واژه‌ها در فرمت برچسب ',
+	'label_exporter_id_parent' => 'صدور سايت‌هاي اين بخش ',
+	'label_exporter_publie_seulement_1' => 'صدور فقط سايت‌هاي منتشر شده ',
+	'label_fichier_import' => 'پرونده اچ.تي.ام.ال',
+	'label_importer_les_tags_1' => 'ورود تگ‌ها در قالب كليدواژه‌ها',
+	'label_importer_statut_publie_1' => 'نشر خودكار سايت‌ها',
 	'lien_mise_a_jour_syndication' => 'اكنون به روز كنيد',
 	'lien_nouvelle_recuperation' => 'اقدام به بازگيرى دوباره داده ها كنيد',
 	'lien_purger_syndication' => 'پاك سازي تمام مقاله‌هاي پيوندي',
@@ -119,21 +119,22 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'syndic_options' => 'گزینه‌هاي مشترك‌سازي:',
 
 	// T
-	'texte_expliquer_export_bookmarks' => 'Vous pouvez exporter une liste de sites au format Marque-page HTML,
-	pour vous permettre ensuite de l\'importer dans votre navigateur ou dans un service en ligne', # NEW
-	'texte_expliquer_import_bookmarks' => 'Vous pouvez importer une liste de sites au format Marque-page HTML,
-	en provenance de votre navigateur ou d\'un service en ligne de gestion des Marques-pages.', # NEW
+	'texte_expliquer_export_bookmarks' => 'مي‌توانيد يك فهرست سايت‌ها را در قالب چوب الف (بووك مارك) اچ.تي.ام.ال صدر كنيد،  به اين ترتيب مي‌توانيد آن را در مرورگر خود يا يك سرويس آنلاين وارد كنيد',
+	'texte_expliquer_import_bookmarks' => 'مي‌توانيد يك فهرست سايت‌ها را در قالب چوب الف (بووك مارك)‌ اچ.تي.ام.ال، از سرچشمه‌ي مرورگر خود يا از سرويس آنلايت مديريت چوب‌الف‌ها (بووك مارك‌ها) وارد كنيد، ',
 	'texte_liens_sites_syndiques' => 'پيوند‌هاي خروجي از سايت‌هاي مشترك‌سازي شده از پيش مسدود شده‌اند؛ تنظيم زير تنظيم پش‌ گزيده‌ سايت‌هاي مشترك‌سازي شده بعد از ايجاد آن‌ها را نشان مي‌دهد. بعداً امكان دارد هر پيوند را به طور جداگانه يا با انتخاب، سايت به سايت باز كنيد و پيوندهايي كه از اين يا آن سايت مي‌آيند را مسدود نماييد. ',
 	'texte_messages_publics' => 'پيامهاى همگانى مقاله :',
 	'texte_non_fonction_referencement' => 'شما ميتوانيد از اين كاركرد خودكار استفاده نكنيد، و عناصر مرتبط با اين سايت را براي خودتان مشخص سازيد...',
 	'texte_referencement_automatique' => '<br /><b>ارجاع خودكار به يك سايت</b> مي‌توانيد به سرعت يك وب سايت را با مشخص كردن نشاني يو.آر.ال دلخواه در زير، يا نشاني پرنده‌ي آن براي مشترك‌سازي، ارجاع دهيد،اسپيپ به طور خودكار اطلاعات مربوط يه آن سايت (تيتر، توصيف) را پس مي‌گيرد. ',
 	'texte_referencement_automatique_verifier' => 'لطفاً پيش از ثبت اطلاعات ارايه شده توسط <tt>@url@</tt> آن را تأييد كنيد.',
-	'texte_syndication' => 'اگر سايت اجازه دهد، مي‌توانيد بطور خودكار،  فهرست تازه‌ها را بگيريد. براى اين منظور، شما بايد گزينش پخش همزمان (سنديكاسيون) را فعال كنيد.<blockquote><i> تعدادى از ميزبانان اين عمل را غيرفعال مي‌كنند. در آن صورت نمي‌توانيد از آن استفاده كنيد.</i></blockquote>', # MODIF
+	'texte_syndication' => 'اگر يك وب سايت اجازه دهد، مي‌توانيد بطور خودكار،  فهرست تازه‌هاي آن سايت را دريافت كنيد. براى اين منظور، شما بايد گزينش مشترك‌سازي (سنديكاسيون) را فعال كنيد.<blockquote><i> تعدادى از ميزبانان اين كاركرد را غيرفعال مي‌كنند. در آن صورت نمي‌توانيد از مشترك‌ سازي سايت خود آن استفاده كنيد.</i></blockquote>
+
+If a site permits it, it is possible to retrieve the list of its latest articles automatically. To do this, you must activate syndication.
+<blockquote><i>Some hosts disable this function; in this case, you cannot use RSS content syndication from your site.</i></blockquote',
 	'titre_articles_syndiques' => 'مقالات پيوندى گرفته شده از اين سايت',
 	'titre_dernier_article_syndique' => 'آخرين مقالات پيوندى',
-	'titre_exporter_bookmarks' => 'Exporter des Marques-pages', # NEW
-	'titre_importer_bookmarks' => 'Importer des Marques-pages', # NEW
-	'titre_importer_exporter_bookmarks' => 'Importer et Exporter des Marques-pages', # NEW
+	'titre_exporter_bookmarks' => 'صدور چوب الف‌ها (بووك مارك‌ها)',
+	'titre_importer_bookmarks' => 'وارد كردن چوب الف‌ها ',
+	'titre_importer_exporter_bookmarks' => 'ورود و صدور چوب الف‌ها (بووك مارك‌ها)',
 	'titre_page_sites_tous' => 'سايتهاى مرجع',
 	'titre_referencement_sites' => 'ارجاع سايت‌ها و مشترك‌سازي',
 	'titre_site_numero' => 'سايت شماره :',
