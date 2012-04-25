@@ -92,10 +92,7 @@ function bookmarks_insert($tree,$id_parent,$importer_statut_publie,$importer_tag
 		if (!$id_rubrique
 			AND $id_rubrique = rubrique_inserer($id_parent)){
 			rubrique_modifier($id_rubrique,array('titre'=>$titre));
-			#echo "Creation Rubrique $id_rubrique : $titre <br />";
 		}
-		else
-			#echo "Existant Rubrique $id_rubrique : $titre <br />";
 		if ($id_rubrique){
 			$statut = 'prop';
 			if ($importer_statut_publie AND autoriser('publierdans','rubrique',$id_rubrique))
