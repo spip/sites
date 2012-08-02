@@ -52,16 +52,22 @@ function analyser_backend($rss, $url_syndic='') {
 			$les_auteurs_du_site[] = trim(textebrut(filtrer_entites($nom)));
 		}
 		$les_auteurs_du_site = join(', ', array_unique($les_auteurs_du_site));
-	} else
+	} else {
 		$les_auteurs_du_site = '';
+	}
+
+	$langue_du_site = '';
+
 	if ((preg_match(',<([^>]*xml:)?lang(uage)?'.'>([^<>]+)<,i',
 	$header, $match) AND $l = $match[3])
 	OR ($l = extraire_attribut(extraire_balise($header, 'feed'), 'xml:lang'))
-	)
+	) {
 		$langue_du_site = $l;
+	}
 	// atom
-	elseif (preg_match(',<feed\s[^>]*xml:lang=[\'"]([^<>\'"]+)[\'"],i', $header, $match))
+	elseif (preg_match(',<feed\s[^>]*xml:lang=[\'"]([^<>\'"]+)[\'"],i', $header, $match)) {
 		$langue_du_site = $match[1];
+	}
 
 	// Recuperer les blocs item et entry
 	$items = array_merge(extraire_balises($rss, 'item'), extraire_balises($rss, 'entry'));
