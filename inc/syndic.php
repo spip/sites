@@ -28,7 +28,7 @@ function analyser_backend($rss, $url_syndic='') {
 	$rss = pipeline('pre_syndication', $rss);
 
 	// si true, les URLs de type feedburner sont dereferencees
-	define('_SYNDICATION_DEREFERENCER_URL', false);
+	defined('_SYNDICATION_DEREFERENCER_URL') || define('_SYNDICATION_DEREFERENCER_URL', false);
 
 	// Echapper les CDATA
 	cdata_echappe($rss, $echappe_cdata);
