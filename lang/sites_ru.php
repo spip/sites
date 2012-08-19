@@ -31,7 +31,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_radio_syndication' => 'Импортировать материалы',
 
 	// C
-	'confirmer_purger_syndication' => 'Êtes-vous certain de vouloir supprimer tous les articles syndiqués de ce site ?', # NEW
+	'confirmer_purger_syndication' => 'Вы уверенны, что хотите удалить все импортированные статьи с этого сайта ?',
 
 	// E
 	'entree_adresse_fichier_syndication' => 'RSS лента(ы):',
@@ -55,17 +55,17 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_valider_article' => 'Valider cet article', # NEW
 	'icone_valider_articles' => 'Valider ces articles', # NEW
 	'icone_voir_sites_references' => 'Каталог сайтов',
-	'info_1_site_importe' => '1 site a été importé', # NEW
+	'info_1_site_importe' => '1 сайт был импортирован',
 	'info_a_valider' => '[проверяется]',
-	'info_aucun_site_importe' => 'Aucun site n\'a pu être importé', # NEW
+	'info_aucun_site_importe' => 'Не был импортирован ни один сайт',
 	'info_bloquer' => 'блок',
 	'info_bloquer_lien' => 'блокировать эту ссылку', # MODIF
-	'info_derniere_syndication' => 'Последний обмен этого сайта был проведен на', # MODIF
+	'info_derniere_syndication' => 'Дата последнего импорта материалов ',
 	'info_liens_syndiques_1' => 'объединенные ссылки', # MODIF
 	'info_liens_syndiques_2' => 'ожидание утверждения.', # MODIF
-	'info_nb_sites_importes' => '@nb@ sites ont été importés', # NEW
+	'info_nb_sites_importes' => 'Было импортировано @nb@ сайтов',
 	'info_nom_site_2' => '<b>Название сайта</b> [обязательно]', # MODIF
-	'info_panne_site_syndique' => 'Синдикация сайта недоступна', # MODIF
+	'info_panne_site_syndique' => 'Сайт недоступен',
 	'info_probleme_grave' => 'ошибка',
 	'info_question_proposer_site' => 'Кому разрешено предлагать ссылки на другие сайты?',
 	'info_retablir_lien' => 'восстановить эту ссылку', # MODIF
@@ -91,12 +91,12 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'item_utiliser_syndication' => 'Включить функцию импорта статей по RSS',
 
 	// L
-	'label_exporter_avec_mots_cles_1' => 'Exporter les mots-clés sous forme de tags', # NEW
-	'label_exporter_id_parent' => 'Exporter les sites de la rubrique', # NEW
-	'label_exporter_publie_seulement_1' => 'Exporter uniquement les sites publiés', # NEW
+	'label_exporter_avec_mots_cles_1' => 'Экспортировать ключевые слова как теги',
+	'label_exporter_id_parent' => 'Экспортировать сайт из раздела',
+	'label_exporter_publie_seulement_1' => 'Экспортировать только опубликованные сайты',
 	'label_fichier_import' => 'HTML файл',
-	'label_importer_les_tags_1' => 'Importer les tags sous forme de mot-clé', # NEW
-	'label_importer_statut_publie_1' => 'Publier automatiquement les sites', # NEW
+	'label_importer_les_tags_1' => 'Импортировать теги как ключевые слова',
+	'label_importer_statut_publie_1' => 'Публиковать сайты автоматически',
 	'lien_mise_a_jour_syndication' => 'Обновить сейчас',
 	'lien_nouvelle_recuperation' => 'Попробывать выполнить новый поиск данных', # MODIF
 	'lien_purger_syndication' => 'Удалить все импортированные статьи',
@@ -110,28 +110,26 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'statut_publie' => 'Опубликованные', # MODIF
 	'syndic_choix_moderation' => 'Что должно быть сделано со следующими ссылками с этого сайта?', # MODIF
 	'syndic_choix_oublier' => 'Что должно быть сделано с ссылками, которые больше не присутствуют при получении статей и новостей с других сайтов по RSS?', # MODIF
-	'syndic_choix_resume' => 'Некоторые сайты предлагают целые тексты своих статей. Когда целый текст доступен, хотите ли Вы объединить его:', # MODIF
+	'syndic_choix_resume' => 'Часть сайтов экспортируют в RSS ленту полный текст материала. Что необходимо делать в случае, если доступен для импорта полный текст материала:',
 	'syndic_lien_obsolete' => 'устаревшая ссылка',
-	'syndic_option_miroir' => 'блокировать их автоматически', # MODIF
-	'syndic_option_oubli' => 'удалить тему(после @mois@ months)', # MODIF
-	'syndic_option_resume_non' => 'полное содержание статей(HTML формат)', # MODIF
-	'syndic_option_resume_oui' => 'только краткое изложение (тестовый формат)', # MODIF
-	'syndic_options' => 'Опции объединения в синдикаты:', # MODIF
+	'syndic_option_miroir' => 'отправлять на проверку',
+	'syndic_option_oubli' => 'удалить их (через @mois@ мес.)',
+	'syndic_option_resume_non' => 'материал полностью (HTML формат)',
+	'syndic_option_resume_oui' => 'краткое содержание (тестовый формат)',
+	'syndic_options' => 'Параметры импорта:',
 
 	// T
-	'texte_expliquer_export_bookmarks' => 'Vous pouvez exporter une liste de sites au format Marque-page HTML,
-	pour vous permettre ensuite de l\'importer dans votre navigateur ou dans un service en ligne', # NEW
-	'texte_expliquer_import_bookmarks' => 'Vous pouvez importer une liste de sites au format Marque-page HTML,
-	en provenance de votre navigateur ou d\'un service en ligne de gestion des Marques-pages.', # NEW
+	'texte_expliquer_export_bookmarks' => 'Вы можете экспортировать список сайтов в HTML формате закладок, что бы в дальнейшем добавить их в свой броузер или онлайн сервис управления закладками.',
+	'texte_expliquer_import_bookmarks' => 'Вы можете добавить список сайтов в формате закладок из вашего броузера или онлайн сервиса по хранению закладок.',
 	'texte_liens_sites_syndiques' => 'Вы можете модерировать все материалы, импортированные с других сайтов. Эта настройка устанавливает правило по умолчанию для вновь добавленных сайтов. В любом случае вы можете задавать правила отдельно для каждого сайта.',
-	'texte_messages_publics' => 'Основные сообщения статьи:', # MODIF
+	'texte_messages_publics' => 'Комментарии к статье:',
 	'texte_non_fonction_referencement' => 'Вы можете не использовать автоматические функции, и ввести элементы касающиеся этого сайта вручную...', # MODIF
 	'texte_referencement_automatique' => 'Автоматизированные ссылки сайта </b> <br /> Вы можете быстро сослаться на вебсайт, указывая ниже требуемый адрес, или адрес сайта, с которого Вы получаете статьи и файлы по RSS. SPIP автоматически соберет информацию о сайте (название, описание ...).', # MODIF
 	'texte_referencement_automatique_verifier' => 'Информация о сайте <tt>@url@</tt> была импортирована автоматически. Проверьте её перед добавлением сайта.',
 	'texte_syndication' => 'Если на другом сайте есть экспорт материалов через RSS, вы можете автоматически импортировать последние статьи на ваш сайт. Для этого необходимо активировать импорт статей на вашем сайте. 
   <blockquote> <i> Необходимо отметить, что на части сайтов нет автоматического экспорта материалов через RSS ленту. В таком случае вы не сможете получать информацию с таких сайтов в автоматическом режиме. </i> </blockquote>',
 	'titre_articles_syndiques' => 'Статьи, импортированные с этого сайта',
-	'titre_dernier_article_syndique' => 'Последний обмен статей по RSS.', # MODIF
+	'titre_dernier_article_syndique' => 'Последние импортированные статьи.',
 	'titre_exporter_bookmarks' => 'Экспортировать Закладки',
 	'titre_importer_bookmarks' => 'Импортировать Закладки',
 	'titre_importer_exporter_bookmarks' => 'Импортировать и экспортировать закладки',
