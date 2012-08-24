@@ -45,7 +45,10 @@
 	<langue code="km" />
 	<langue code="lb" />
 	<langue code="my" />
-	<langue code="nl" />
+	<langue code="nl" url="http://trad.spip.net/tradlang_module/sites?lang_cible=nl">
+		<traducteur nom="gerbrand" lien="http://trad.spip.net/auteur/gerbrand" />
+		<traducteur nom="Suske" lien="http://trad.spip.net/auteur/suske" />
+	</langue>
 	<langue code="oc_auv" />
 	<langue code="oc_gsc" />
 	<langue code="oc_lms" />
