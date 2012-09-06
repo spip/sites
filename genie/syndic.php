@@ -151,13 +151,13 @@ function inserer_article_syndique ($data, $now_id_syndic, $statut, $url_site, $u
 	// si true, un lien deja syndique arrivant par une autre source est ignore
 	// par defaut [false], chaque source a sa liste de liens, eventuellement
 	// les memes
-	define('_SYNDICATION_URL_UNIQUE', false);
+	if (!defined('_SYNDICATION_URL_UNIQUE')) define('_SYNDICATION_URL_UNIQUE', false);
 
 	// Si false, on ne met pas a jour un lien deja syndique avec ses nouvelles
 	// donnees ; par defaut [true] : on met a jour si le contenu a change
 	// Attention si on modifie a la main un article syndique, les modifs sont
 	// ecrasees lors de la syndication suivante
-	define('_SYNDICATION_CORRECTION', true);
+	if (!defined('_SYNDICATION_CORRECTION')) define('_SYNDICATION_CORRECTION', true);
 
 	// Chercher les liens de meme cle
 	// S'il y a plusieurs liens qui repondent, il faut choisir le plus proche
