@@ -8,13 +8,13 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// A
-	'articles_dispo' => 'En attente', # NEW
-	'articles_meme_auteur' => 'Tous les articles de cet auteur', # NEW
-	'articles_off' => 'Bloqués', # NEW
-	'articles_publie' => 'Publiés', # NEW
-	'articles_refuse' => 'Supprimés', # NEW
-	'articles_tous' => 'Tous', # NEW
-	'aucun_article_syndic' => 'Aucun article syndiqué', # NEW
+	'articles_dispo' => 'En espera',
+	'articles_meme_auteur' => 'Todos los artículos de este autor',
+	'articles_off' => 'Bloqueados',
+	'articles_publie' => 'Publicados',
+	'articles_refuse' => 'Suprimidos',
+	'articles_tous' => 'Todos',
+	'aucun_article_syndic' => 'Ningún artículo sindicado',
 	'avis_echec_syndication_01' => 'La sindicación falló: el «backend» indicado es indescifrable o no propone ningún artículo.',
 	'avis_echec_syndication_02' => 'La sindicación falló: imposible acceder al «backend» de este sitio.',
 	'avis_site_introuvable' => 'No se encuentra el sitio',
@@ -23,41 +23,41 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_sites_syndiques_probleme' => 'Estos sitios sindicados tienen problemas',
 
 	// B
-	'bouton_exporter' => 'Exporter', # NEW
-	'bouton_importer' => 'Importer', # NEW
-	'bouton_radio_modere_posteriori' => 'moderado a posteriori', # MODIF
-	'bouton_radio_modere_priori' => 'moderado a priori', # MODIF
+	'bouton_exporter' => 'Exportar',
+	'bouton_importer' => 'Importar',
+	'bouton_radio_modere_posteriori' => 'moderado a posteriori',
+	'bouton_radio_modere_priori' => 'moderado a priori',
 	'bouton_radio_non_syndication' => 'Ninguna sindicación',
 	'bouton_radio_syndication' => 'Sindicación',
 
 	// C
-	'confirmer_purger_syndication' => 'Êtes-vous certain de vouloir supprimer tous les articles syndiqués de ce site ?', # NEW
+	'confirmer_purger_syndication' => '¿Estás seguro de querer suprimir todos los artículos sindicados de este sitio?',
 
 	// E
 	'entree_adresse_fichier_syndication' => 'Dirección del archivo de sindicación:',
 	'entree_adresse_site' => '<b>Dirección del sitio</b> [Obligatorio]',
 	'entree_description_site' => 'Descripción del sitio',
-	'erreur_fichier_format_inconnu' => 'Le format du fichier @fichier@ n\'est pas pris en charge.', # NEW
-	'erreur_fichier_incorrect' => 'Impossible de lire le fichier.', # NEW
+	'erreur_fichier_format_inconnu' => 'No se puede gestionar el formato del archivo @fichier@.',
+	'erreur_fichier_incorrect' => 'Imposible leer el archivo.',
 
 	// F
 	'form_prop_nom_site' => 'Nombre del sitio',
 
 	// I
-	'icone_article_syndic' => 'Article syndiqué', # NEW
-	'icone_articles_syndic' => 'Articles syndiqués', # NEW
-	'icone_controler_syndication' => 'Publication des articles syndiqués', # NEW
+	'icone_article_syndic' => 'Artículo sindicado',
+	'icone_articles_syndic' => 'Artículos sindicados',
+	'icone_controler_syndication' => 'Publicación de los artículos sindicados',
 	'icone_modifier_site' => 'Modificar este sitio',
 	'icone_referencer_nouveau_site' => 'Referenciar un nuevo sitio',
-	'icone_site_reference' => 'Sites référencés', # NEW
-	'icone_supprimer_article' => 'Supprimer cet article', # NEW
+	'icone_site_reference' => 'Sitios referenciados',
+	'icone_supprimer_article' => 'Suprimir este artículo',
 	'icone_supprimer_articles' => 'Supprimer ces articles', # NEW
 	'icone_valider_article' => 'Valider cet article', # NEW
 	'icone_valider_articles' => 'Valider ces articles', # NEW
 	'icone_voir_sites_references' => 'Ver los sitios referenciados',
 	'info_1_site_importe' => '1 site a été importé', # NEW
 	'info_a_valider' => '[a validar]',
-	'info_aucun_site_importe' => 'Aucun site n\'a pu être importé', # NEW
+	'info_aucun_site_importe' => 'Ningún sitio pudo ser importado',
 	'info_bloquer' => 'bloquear',
 	'info_bloquer_lien' => 'bloquear este enlace',
 	'info_derniere_syndication' => 'La última sindicación de este sitio fue realizada el',
@@ -73,14 +73,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_site_propose' => 'Sitio propuesto el',
 	'info_site_reference' => 'Sitio referenciado en línea',
 	'info_site_refuse' => 'Sitio Web rechazado',
-	'info_site_syndique' => 'Este sitio está sindicado...', # MODIF
+	'info_site_syndique' => 'Este sitio está sindicado...',
 	'info_site_valider' => 'Sitios a validar',
 	'info_sites_referencer' => 'Referenciar un sitio',
 	'info_sites_refuses' => 'Los sitios rechazados',
 	'info_statut_site_1' => 'Este sitio está:',
 	'info_statut_site_2' => 'Publicado',
 	'info_statut_site_3' => 'Propuesto',
-	'info_statut_site_4' => 'A la papelera', # MODIF
+	'info_statut_site_4' => 'A la papelera',
 	'info_syndication' => 'sindicación:',
 	'info_syndication_articles' => 'artículo(s)',
 	'item_bloquer_liens_syndiques' => 'Bloquear los enlaces sindicados en validación',
@@ -92,7 +92,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// L
 	'label_exporter_avec_mots_cles_1' => 'Exporter les mots-clés sous forme de tags', # NEW
-	'label_exporter_id_parent' => 'Exporter les sites de la rubrique', # NEW
+	'label_exporter_id_parent' => 'Exporter los sitios de la sección',
 	'label_exporter_publie_seulement_1' => 'Exporter uniquement les sites publiés', # NEW
 	'label_fichier_import' => 'Fichier HTML', # NEW
 	'label_importer_les_tags_1' => 'Importer les tags sous forme de mot-clé', # NEW
@@ -123,17 +123,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	pour vous permettre ensuite de l\'importer dans votre navigateur ou dans un service en ligne', # NEW
 	'texte_expliquer_import_bookmarks' => 'Vous pouvez importer une liste de sites au format Marque-page HTML,
 	en provenance de votre navigateur ou d\'un service en ligne de gestion des Marques-pages.', # NEW
-	'texte_liens_sites_syndiques' => 'Los enlaces salidos de los sitios sindicados pueden
- ser bloqueados a priori ; el ajuste indicado
- a continuación se refiere al ajuste
- predeterminado de los sitios sindicados después
- de su creación. De todos modos, posteriormente
- se puede desbloquear cada enlace individualmente, o
- escoger, sitio a sitio, el bloqueo de los
- enlaces que vienen de tal o cual sitio.', # MODIF
+	'texte_liens_sites_syndiques' => 'Los enlaces salientes de los sitios sindicados pueden ser bloqueados a priori; el parámetro a continuación indicae al ajuste por omisión de los sitios sindicados luego de ser creados. Luego se puede desbloquear cada enlace individualmente, o escoger, sitio por sitio, el bloqueo de los enlaces ulteriores de tal o cual sitio.',
 	'texte_messages_publics' => 'Mensajes públicos del artículo:',
-	'texte_non_fonction_referencement' => 'Puedes preferir no usar esta función automática, e indicar tu mismo los elementos concernientes a este sitio...', # MODIF
-	'texte_referencement_automatique' => '<b>Referenciar automáticamente un sitio</b><br />Se puede referenciar rápidamente un sitio Web indicando aquí la dirección URL deseada, o la dirección de su archivo de sindicación. SPIP recuperará automáticamente las informaciones correspondientes (título, descripción...).', # MODIF
+	'texte_non_fonction_referencement' => 'Puedes preferir no usar esta función automática, e indicar tú mismo los elementos relativos a este sitio...',
+	'texte_referencement_automatique' => '<b>Referenciar automáticamente un sitio</b><br />Se puede referenciar rápidamente un sitio Web indicando aquí la dirección URL deseada, o la dirección de su archivo de sindicación. SPIP recuperará automáticamente las informaciones relativas a este sitio (título, descripción...).',
 	'texte_referencement_automatique_verifier' => 'Deberías verificar la información facilitada por <tt>@url@</tt> antes de guardar.',
 	'texte_syndication' => 'Es posible recuperar automáticamente, cuando un sitio Web lo permite,
  la lista de novedades. Para ello, debes activar la sindicación.
