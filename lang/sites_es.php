@@ -51,11 +51,11 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_referencer_nouveau_site' => 'Referenciar un nuevo sitio',
 	'icone_site_reference' => 'Sitios referenciados',
 	'icone_supprimer_article' => 'Suprimir este artículo',
-	'icone_supprimer_articles' => 'Supprimer ces articles', # NEW
-	'icone_valider_article' => 'Valider cet article', # NEW
-	'icone_valider_articles' => 'Valider ces articles', # NEW
+	'icone_supprimer_articles' => 'Suprimir estos artículos',
+	'icone_valider_article' => 'Validar este artículo',
+	'icone_valider_articles' => 'Validar estos artículos',
 	'icone_voir_sites_references' => 'Ver los sitios referenciados',
-	'info_1_site_importe' => '1 site a été importé', # NEW
+	'info_1_site_importe' => '1  sitio fue importado',
 	'info_a_valider' => '[a validar]',
 	'info_aucun_site_importe' => 'Ningún sitio pudo ser importado',
 	'info_bloquer' => 'bloquear',
@@ -63,7 +63,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_derniere_syndication' => 'La última sindicación de este sitio fue realizada el',
 	'info_liens_syndiques_1' => 'enlaces sindicados',
 	'info_liens_syndiques_2' => 'están en espera de validación.',
-	'info_nb_sites_importes' => '@nb@ sites ont été importés', # NEW
+	'info_nb_sites_importes' => '@nb@ sitios fueron importados',
 	'info_nom_site_2' => '<b>Nombre del sitio</b> [Obligatorio]',
 	'info_panne_site_syndique' => 'El sitio sindicado tiene problemas',
 	'info_probleme_grave' => 'problema de',
@@ -91,23 +91,23 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'item_utiliser_syndication' => 'Utilizar la sindicación automática',
 
 	// L
-	'label_exporter_avec_mots_cles_1' => 'Exporter les mots-clés sous forme de tags', # NEW
+	'label_exporter_avec_mots_cles_1' => 'Exportar las palabras claves bajo forma de tags',
 	'label_exporter_id_parent' => 'Exporter los sitios de la sección',
-	'label_exporter_publie_seulement_1' => 'Exporter uniquement les sites publiés', # NEW
-	'label_fichier_import' => 'Fichier HTML', # NEW
-	'label_importer_les_tags_1' => 'Importer les tags sous forme de mot-clé', # NEW
-	'label_importer_statut_publie_1' => 'Publier automatiquement les sites', # NEW
+	'label_exporter_publie_seulement_1' => 'Exportar únicamente los sitios pulicados',
+	'label_fichier_import' => 'Archivo HTML',
+	'label_importer_les_tags_1' => 'Importar los tags bajo forma de palabras claves',
+	'label_importer_statut_publie_1' => 'Publicar automáticamente los sitios',
 	'lien_mise_a_jour_syndication' => 'Actualizar ahora',
 	'lien_nouvelle_recuperation' => 'Intentar recuperar nuevamente los datos',
-	'lien_purger_syndication' => 'Effacer tous les articles syndiqués', # NEW
+	'lien_purger_syndication' => 'Borrar todos los artículos sindicados',
 
 	// N
-	'nombre_articles_syndic' => '@nb@ articles syndiqués', # NEW
+	'nombre_articles_syndic' => '@nb@ aríiculos sindicados',
 
 	// S
-	'statut_off' => 'Supprimé', # NEW
-	'statut_prop' => 'En attente', # NEW
-	'statut_publie' => 'Publié', # NEW
+	'statut_off' => 'Suprimido',
+	'statut_prop' => 'En espera',
+	'statut_publie' => 'Publicado',
 	'syndic_choix_moderation' => '¿Qué hacemos con los siguientes enlaces que vengan de este sitio?',
 	'syndic_choix_oublier' => '¿Qué hacemos con los enlaces que no figuren en el archivo de sindicación?',
 	'syndic_choix_resume' => 'Algunos sitios difunden el texto completo de los artículos. Cuando esté disponible, deseas sindicar:',
@@ -119,24 +119,22 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'syndic_options' => 'Opciones de sindicación:',
 
 	// T
-	'texte_expliquer_export_bookmarks' => 'Vous pouvez exporter une liste de sites au format Marque-page HTML,
-	pour vous permettre ensuite de l\'importer dans votre navigateur ou dans un service en ligne', # NEW
-	'texte_expliquer_import_bookmarks' => 'Vous pouvez importer une liste de sites au format Marque-page HTML,
-	en provenance de votre navigateur ou d\'un service en ligne de gestion des Marques-pages.', # NEW
+	'texte_expliquer_export_bookmarks' => 'Puedes exportar una lista de sitiosal formato Marca-páginas HTML, que luego podrás importar en tu navegador o en un servicio en línea. ',
+	'texte_expliquer_import_bookmarks' => 'Puedes importar una lista de sitios en formato Marca-páginas HTML, proveniente de tu navegador o de un servicio en línea con gestión de marca-páginas. ',
 	'texte_liens_sites_syndiques' => 'Los enlaces salientes de los sitios sindicados pueden ser bloqueados a priori; el parámetro a continuación indicae al ajuste por omisión de los sitios sindicados luego de ser creados. Luego se puede desbloquear cada enlace individualmente, o escoger, sitio por sitio, el bloqueo de los enlaces ulteriores de tal o cual sitio.',
 	'texte_messages_publics' => 'Mensajes públicos del artículo:',
 	'texte_non_fonction_referencement' => 'Puedes preferir no usar esta función automática, e indicar tú mismo los elementos relativos a este sitio...',
 	'texte_referencement_automatique' => '<b>Referenciar automáticamente un sitio</b><br />Se puede referenciar rápidamente un sitio Web indicando aquí la dirección URL deseada, o la dirección de su archivo de sindicación. SPIP recuperará automáticamente las informaciones relativas a este sitio (título, descripción...).',
 	'texte_referencement_automatique_verifier' => 'Deberías verificar la información facilitada por <tt>@url@</tt> antes de guardar.',
-	'texte_syndication' => 'Es posible recuperar automáticamente, cuando un sitio Web lo permite,
+	'texte_syndication' => 'Es posible recuperar automáticamente, cuando un sitio web lo permite,
  la lista de novedades. Para ello, debes activar la sindicación.
-<blockquote><i>Algunos proveedores de hospedaje desactivan esta funcionalidad ;
- en ese caso, no podrás utilizar la sindicación de contenido desde tu sitio.</i></blockquote>', # MODIF
+<blockquote><i>Algunos proveedores de hospedaje desactivan esta funcionalidad;
+ en ese caso, no podrás utilizar la sindicación de contenido desde tu sitio.</i></blockquote>',
 	'titre_articles_syndiques' => 'Artículos sindicados de este sitio',
 	'titre_dernier_article_syndique' => 'Ultimos artículos sindicados',
-	'titre_exporter_bookmarks' => 'Exporter des Marques-pages', # NEW
-	'titre_importer_bookmarks' => 'Importer des Marques-pages', # NEW
-	'titre_importer_exporter_bookmarks' => 'Importer et Exporter des Marques-pages', # NEW
+	'titre_exporter_bookmarks' => 'Exportar los marca-páginas',
+	'titre_importer_bookmarks' => 'Importar marca-páginas',
+	'titre_importer_exporter_bookmarks' => 'Importar y exportar marca-páginas',
 	'titre_page_sites_tous' => 'Los sitios referenciados',
 	'titre_referencement_sites' => 'Agregar sitios y sindicar',
 	'titre_site_numero' => 'Sitio',
@@ -145,10 +143,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_sites_syndiques' => 'Los sitios sindicados',
 	'titre_sites_tous' => 'Los sitios referenciados',
 	'titre_syndication' => 'Sindicación de sitios',
-	'tout_voir' => 'Voir tous les articles syndiqués', # NEW
+	'tout_voir' => 'Ver todos los artículos sindicados',
 
 	// U
-	'un_article_syndic' => '1 article syndiqué' # NEW
+	'un_article_syndic' => '1 artículo sindicado'
 );
 
 ?>
