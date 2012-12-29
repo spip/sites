@@ -19,11 +19,13 @@ function sites_autoriser() {}
 
 // bouton du bandeau
 function autoriser_sites_menu_dist($faire, $type='', $id=0, $qui = NULL, $opt = NULL){
-	return 	($GLOBALS['meta']["activer_sites"] != "non");
+	return 	($GLOBALS['meta']["activer_sites"] != "non")
+		AND (sql_countsel('spip_rubriques')>0);
 }
 function autoriser_sitecreer_menu_dist($faire, $type, $id, $qui, $opt){
 	return
 		($GLOBALS['meta']["activer_sites"] != "non"
+		AND (sql_countsel('spip_rubriques')>0)
 		AND (
 			$qui['statut']=='0minirezo'
 			OR ($GLOBALS['meta']["proposer_sites"] >=
@@ -54,6 +56,7 @@ function autoriser_controlersyndication_menu_dist($faire, $type, $id, $qui, $opt
 function autoriser_site_creer_dist($faire, $type, $id, $qui, $opt){
 	return
 		($GLOBALS['meta']["activer_sites"] != "non"
+		AND (sql_countsel('spip_rubriques')>0)
 		AND (
 			$qui['statut']=='0minirezo'
 			OR ($GLOBALS['meta']["proposer_sites"] >=
