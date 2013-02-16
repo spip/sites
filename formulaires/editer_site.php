@@ -10,12 +10,40 @@
  *  Pour plus de details voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
+/**
+ * Gestion du formulaire de d'édition d'un site
+ *
+ * @package SPIP\Sites\Formulaires
+**/
+
 if (!defined("_ECRIRE_INC_VERSION")) return;
 
 include_spip('inc/actions');
 include_spip('inc/editer');
 include_spip('inc/filtres'); // pour vider_url()
 
+/**
+ * Chargement du formulaire d'édition d'un site
+ *
+ * @uses formulaires_editer_objet_charger()
+ * 
+ * @param int|string $id_syndic
+ *     Identifiant du site. 'new' pour un nouveau site.
+ * @param int $id_rubrique
+ *     Identifiant de la rubrique parente (si connue)
+ * @param string $retour
+ *     URL de redirection après le traitement
+ * @param int $lier_trad
+ *     Identifiant éventuel d'un site source de traduction
+ * @param string $config_fonc
+ *     Nom de la fonction ajoutant des configurations particulières au formulaire
+ * @param array $row
+ *     Valeurs de la ligne SQL du mot, si connu
+ * @param string $hidden
+ *     Contenu HTML ajouté en même temps que les champs cachés du formulaire.
+ * @return array
+ *     Environnement du formulaire
+**/
 function formulaires_editer_site_charger_dist($id_syndic='new', $id_rubrique=0, $retour='', $lier_trad=0, $config_fonc='sites_edit_config', $row=array(), $hidden=''){
 	$valeurs = formulaires_editer_objet_charger('site',$id_syndic,$id_rubrique,$lier_trad,$retour,$config_fonc,$row,$hidden);
 	# pour recuperer le logo issu d'analyse auto
@@ -25,14 +53,38 @@ function formulaires_editer_site_charger_dist($id_syndic='new', $id_rubrique=0, 
 }
 
 /**
- * Identifier le formulaire en faisant abstraction des parametres qui
- * ne representent pas l'objet edite
+ * Identifier le formulaire en faisant abstraction des paramètres qui
+ * ne représentent pas l'objet edité
+ * 
+ * @param int|string $id_syndic
+ *     Identifiant du site. 'new' pour un nouveau site.
+ * @param int $id_rubrique
+ *     Identifiant de la rubrique parente (si connue)
+ * @param string $retour
+ *     URL de redirection après le traitement
+ * @param int $lier_trad
+ *     Identifiant éventuel d'un site source de traduction
+ * @param string $config_fonc
+ *     Nom de la fonction ajoutant des configurations particulières au formulaire
+ * @param array $row
+ *     Valeurs de la ligne SQL du mot, si connu
+ * @param string $hidden
+ *     Contenu HTML ajouté en même temps que les champs cachés du formulaire.
+ * @return string
+ *     Hash du formulaire
  */
 function formulaires_editer_site_identifier_dist($id_syndic='new', $id_rubrique=0, $retour='', $lier_trad=0, $config_fonc='sites_edit_config', $row=array(), $hidden=''){
 	return serialize(array(intval($id_syndic),$lier_trad));
 }
 
-// Choix par defaut des options de presentation
+/**
+ * Choix par défaut des options de présentation
+ *
+ * @param array $row
+ *     Valeurs de la ligne SQL d'un site, si connu
+ * return array
+ *     Configuration pour le formulaire
+ */
 function sites_edit_config($row)
 {
 	global $spip_lang;
@@ -45,6 +97,28 @@ function sites_edit_config($row)
 	return $config;
 }
 
+/**
+ * Vérifications du formulaire d'édition de site
+ *
+ * @uses formulaires_editer_objet_verifier()
+ * 
+ * @param int|string $id_syndic
+ *     Identifiant du site. 'new' pour un nouveau site.
+ * @param int $id_rubrique
+ *     Identifiant de la rubrique parente (si connue)
+ * @param string $retour
+ *     URL de redirection après le traitement
+ * @param int $lier_trad
+ *     Identifiant éventuel d'un site source de traduction
+ * @param string $config_fonc
+ *     Nom de la fonction ajoutant des configurations particulières au formulaire
+ * @param array $row
+ *     Valeurs de la ligne SQL du mot, si connu
+ * @param string $hidden
+ *     Contenu HTML ajouté en même temps que les champs cachés du formulaire.
+ * @return array
+ *     Erreurs du formulaire
+ */
 function formulaires_editer_site_verifier_dist($id_syndic='new', $id_rubrique=0, $retour='', $lier_trad=0, $config_fonc='sites_edit_config', $row=array(), $hidden=''){
 	include_spip('inc/filtres');
 	include_spip('inc/site');
@@ -84,6 +158,28 @@ function formulaires_editer_site_verifier_dist($id_syndic='new', $id_rubrique=0,
 	return $erreurs;
 }
 
+/**
+ * Traitements du formulaire d'édition de site
+ *
+ * @uses formulaires_editer_objet_traiter()
+ * 
+ * @param int|string $id_syndic
+ *     Identifiant du site. 'new' pour un nouveau site.
+ * @param int $id_rubrique
+ *     Identifiant de la rubrique parente (si connue)
+ * @param string $retour
+ *     URL de redirection après le traitement
+ * @param int $lier_trad
+ *     Identifiant éventuel d'un site source de traduction
+ * @param string $config_fonc
+ *     Nom de la fonction ajoutant des configurations particulières au formulaire
+ * @param array $row
+ *     Valeurs de la ligne SQL du mot, si connu
+ * @param string $hidden
+ *     Contenu HTML ajouté en même temps que les champs cachés du formulaire.
+ * @return array
+ *     Erreurs du formulaire
+ */
 function formulaires_editer_site_traiter_dist($id_syndic='new', $id_rubrique=0, $retour='', $lier_trad=0, $config_fonc='sites_edit_config', $row=array(), $hidden=''){
 	// netoyer les entrees
 	if (!is_null(_request('url_site')))
