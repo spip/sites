@@ -10,6 +10,12 @@
  *  Pour plus de details voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
+/**
+ * Gestion des actualisation des sites syndiqués
+ *
+ * @package SPIP\Sites\Genie
+**/
+
 if (!defined("_ECRIRE_INC_VERSION")) return;
 include_spip('inc/syndic');
 
@@ -21,17 +27,25 @@ if (!defined('_PERIODE_SYNDICATION_SUSPENDUE'))
 	define('_PERIODE_SYNDICATION_SUSPENDUE', 24*60);
 
 
-// http://doc.spip.org/@genie_syndic_dist
+/**
+ * Cron de mise à jour des sites syndiqués
+ *
+ * @param int $t Date de dernier passage
+ * @return int
+**/
 function genie_syndic_dist($t) {
 	return executer_une_syndication();
 }
 
-//
-// Effectuer la syndication d'un unique site,
-// retourne 0 si aucun a faire ou echec lors de la tentative
-//
 
-// http://doc.spip.org/@executer_une_syndication
+/**
+ * Effectuer la syndication d'un unique site
+ *
+ * Choisit le site le plus proche à mettre à jour
+ *
+ * @return
+ *     retourne 0 si aucun a faire ou echec lors de la tentative
+**/
 function executer_une_syndication() {
 
 	// On va tenter un site 'sus' ou 'off' de plus de 24h, et le passer en 'off'
@@ -59,14 +73,14 @@ function executer_une_syndication() {
 
 
 /**
- * Mettre a jour le site
+ * Mettre à jour le site
+ * 
  * Attention, cette fonction ne doit pas etre appellee simultanement
  * sur un meme site: un verrouillage a du etre pose en amont.
  * => elle doit toujours etre appelee par job_queue_add
  *
- * http://doc.spip.org/@syndic_a_jour
- *
  * @param int $now_id_syndic
+ *     Identifiant du site à mettre à jour
  * @return bool|string
  */
 function syndic_a_jour($now_id_syndic) {
@@ -287,9 +301,10 @@ function inserer_article_syndique ($data, $now_id_syndic, $statut, $url_site, $u
 }
 
 /**
- * Nettoyer les contenus de flux qui utilisent des espaces insecables en debut
+ * Nettoyer les contenus de flux qui utilisent des espaces insécables en début
  * pour faire un retrait.
- * Peut etre sous la forme de l'entite &nbsp; ou en utf8 \xc2\xa0
+ * 
+ * Peut être sous la forme de l'entité `&nbsp;` ou en utf8 `\xc2\xa0`
  *
  * @param  string $texte
  * @return string
