@@ -10,9 +10,33 @@
  *  Pour plus de details voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
+/**
+ * Gestion de l'action editer__site et de l'API d'édition d'un site
+ * 
+ * @package SPIP\Sites\Edition
+ */
+ 
 if (!defined("_ECRIRE_INC_VERSION")) return;
 
-// http://doc.spip.org/@action_editer_site_dist
+
+/**
+ * Action d'édition d'un site dans la base de données dont
+ * l'identifiant est donné en paramètre de cette fonction ou
+ * en argument de l'action sécurisée
+ *
+ * Si aucun identifiant n'est donné, on crée alors un nouvel article,
+ * à condition que la rubrique parente (id_rubrique) puisse être obtenue
+ * (avec _request(id_parent))
+ * 
+ * @uses site_inserer()
+ * @uses site_modifier()
+ * 
+ * @param null|int $arg
+ *     Identifiant du site. En absence utilise l'argument
+ *     de l'action sécurisée.
+ * @return array
+ *     Liste (identifiant du site, Texte d'erreur éventuel)
+ */
 function action_editer_site_dist($arg=null) {
 
 	if (is_null($arg)){
@@ -40,12 +64,15 @@ function action_editer_site_dist($arg=null) {
 
 
 /**
- * Inserer un nouveau site en base
+ * Insérer un nouveau site en base
  *
- * http://doc.spip.org/@insert_syndic
- *
- * @param  $id_rubrique
- * @return bool
+ * @pipeline_appel pre_insertion
+ * @pipeline_appel post_insertion
+ * 
+ * @param int $id_rubrique
+ *     Identifiant de rubrique parente
+ * @return int
+ *     Identifiant du site créé
  */
 function site_inserer($id_rubrique) {
 
@@ -96,11 +123,20 @@ function site_inserer($id_rubrique) {
 /**
  * Modifier un site
  *
- * $c est un contenu (par defaut on prend le contenu via _request())
+ * Appelle toutes les fonctions de modification d'un site
  *
+ * @uses objet_modifier_champs()
+ * @uses objet_instituer()
+ * 
  * @param int $id_syndic
+ *     Identifiant du site à modifier
  * @param array|bool $set
+ *     Couples (colonne => valeur) de données à modifier.
+ *     En leur absence, on cherche les données dans les champs éditables
+ *     qui ont été postés (via collecter_requests())
  * @return string
+ *     - Chaîne vide si aucune erreur,
+ *     - Chaîne contenant un texte d'erreur sinon.
  */
 function site_modifier($id_syndic, $set=false) {
 	$resyndiquer = false;
@@ -128,6 +164,7 @@ function site_modifier($id_syndic, $set=false) {
 
 	// Si le site est publie, invalider les caches et demander sa reindexation
 	$t = sql_getfetsel("statut", "spip_syndic", "id_syndic=".intval($id_syndic));
+	$invalideur = $indexation = false;
 	if ($t == 'publie') {
 		$invalideur = "id='site/$id_syndic'";
 		$indexation = true;
@@ -158,16 +195,61 @@ function site_modifier($id_syndic, $set=false) {
 }
 
 
+// Fonctions Dépréciées
+// --------------------
+
+/**
+ * Insérer un site
+ *
+ * @deprecated Utiliser site_inserer()
+ * @uses site_inserer()
+ *
+ * @param int $id_rubrique
+ * @return int
+**/
 function insert_syndic($id_rubrique) {
 	return site_inserer($id_rubrique);
 }
+
+/**
+ * Modifier un site
+ *
+ * @deprecated Utiliser site_modifier()
+ * @uses site_modifier()
+ *
+ * @param int $id_syndic
+ * @param array|bool $set
+ * @return string
+**/
 function syndic_set($id_syndic, $set=false) {
 	return site_modifier($id_syndic,$set);
 }
-// http://doc.spip.org/@revisions_sites
+
+/**
+ * Créer une révision d'un site
+ *
+ * @deprecated Utiliser site_modifier()
+ * @uses site_modifier()
+ *
+ * @param int $id_syndic
+ * @param array|bool $set
+ * @return string
+**/
 function revisions_sites($id_syndic, $set=false){
 	return site_modifier($id_syndic,$set);
 }
+
+/**
+ * Instituer un site
+ *
+ * @deprecated Utiliser objet_instituer()
+ * @uses objet_instituer()
+ *
+ * @param int $id_syndic
+ * @param array $c
+ * @param bool $calcul_rub
+ * @return string
+**/
 function instituer_syndic($id_syndic, $c, $calcul_rub=true){
 	include_spip('action/editer_objet');
 	return objet_instituer('site',$id_syndic, $c, $calcul_rub);
