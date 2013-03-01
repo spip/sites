@@ -31,6 +31,8 @@ include_spip('genie/syndic');
  *
  * @param string $rss
  *     Texte du fichier de backend
+ * @param string $url_syndic
+ *     URL du site d'où à été extrait le texte
  * @return array|string
  *     - array : tableau des items lus,
  *     - string : texte d'erreur
