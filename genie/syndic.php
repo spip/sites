@@ -127,7 +127,7 @@ function syndic_a_jour($now_id_syndic) {
 
 	$faits = array();
 	foreach ($articles as $data) {
-		inserer_article_syndique ($data, $now_id_syndic, $moderation, $url_site, $url_syndic, $row['resume'], $row['documents'], $faits);
+		inserer_article_syndique($data, $now_id_syndic, $moderation, $url_site, $url_syndic, $row['resume'], $faits);
 	}
 
 	// moderation automatique des liens qui sont sortis du feed
@@ -156,7 +156,7 @@ function syndic_a_jour($now_id_syndic) {
 // un autre item du meme feed qui aurait le meme link
 //
 // http://doc.spip.org/@inserer_article_syndique
-function inserer_article_syndique ($data, $now_id_syndic, $statut, $url_site, $url_syndic, $resume, $documents, &$faits) {
+function inserer_article_syndique ($data, $now_id_syndic, $statut, $url_site, $url_syndic, $resume, &$faits) {
 	// Creer le lien s'il est nouveau - cle=(id_syndic,url)
 	// On coupe a 255 caracteres pour eviter tout doublon
 	// sur une URL de plus de 255 qui exloserait la base de donnees
@@ -243,8 +243,8 @@ function inserer_article_syndique ($data, $now_id_syndic, $statut, $url_site, $u
 	// et data['content'] si on est en mode "full syndication"
 	if ($resume != 'non') {
 		// mode "resume"
-		$desc = strlen($data['descriptif']) ?
-			$data['descriptif'] : $data['content'];
+		$desc = (isset($data['descriptif']) and strlen($data['descriptif'])) ? $data['descriptif']
+			: (isset($data['content']) ? $data['content'] : '');
 		$desc = couper(trim_more(textebrut($desc)), 300);
 	} else {
 		// mode "full syndication"
@@ -273,12 +273,12 @@ function inserer_article_syndique ($data, $now_id_syndic, $statut, $url_site, $u
 			'lesauteurs' => $data['lesauteurs'],
 			'descriptif' => $desc,
 			'lang'=> substr($data['lang'],0,10),
-			'source' => substr($data['source'],0,255),
-			'url_source' => substr($data['url_source'],0,255),
+			'source' => (isset($data['source']) ? substr($data['source'],0,255) : ''),
+			'url_source' => (isset($data['url_source']) ? substr($data['url_source'],0,255) : ''),
 			'tags' => $tags);
 
 	// Mettre a jour la date si lastbuilddate
-	if ($data['lastbuilddate'])
+	if (isset($data['lastbuilddate']) and $data['lastbuilddate'])
 		$vals['date']= date("Y-m-d H:i:s", $data['lastbuilddate']);
 				    
 	sql_updateq('spip_syndic_articles', $vals, "id_syndic_article=$id_syndic_article");
