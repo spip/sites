@@ -20,11 +20,20 @@ if (!defined("_ECRIRE_INC_VERSION")) return;
 include_spip('inc/syndic');
 
 ## valeurs modifiables dans mes_options
-## attention il est tres mal vu de prendre une periode < 20 minutes
-if (!defined('_PERIODE_SYNDICATION'))
+if (!defined('_PERIODE_SYNDICATION')) {
+	/**
+	 * Période de syndication (en minutes)
+	 *
+	 * Attention il est très mal vu de prendre une periode < 20 minutes
+	 */
 	define('_PERIODE_SYNDICATION', 2*60);
-if (!defined('_PERIODE_SYNDICATION_SUSPENDUE'))
+}
+if (!defined('_PERIODE_SYNDICATION_SUSPENDUE')) {
+	/**
+	 * Durée d'une suspension de syndication si un site ne répond pas (en minutes)
+	 */
 	define('_PERIODE_SYNDICATION_SUSPENDUE', 24*60);
+}
 
 
 /**
@@ -150,12 +159,22 @@ function syndic_a_jour($now_id_syndic) {
 }
 
 
-//
-// Insere un article syndique (renvoie true si l'article est nouveau)
-// en  verifiant qu'on ne vient pas de l'ecrire avec
-// un autre item du meme feed qui aurait le meme link
-//
-// http://doc.spip.org/@inserer_article_syndique
+/**
+ * Insère un article syndiqué
+ *
+ * Vérifie que l'article n'a pas déjà été inséré par
+ * un autre item du même feed qui aurait le meme link.
+ * 
+ * @param array $data
+ * @param int $now_id_syndic
+ * @param string $statut
+ * @param string $url_site
+ * @param string $url_syndic
+ * @param string $resume
+ * @param array $faits
+ * @return bool
+ *     true si l'article est nouveau, false sinon.
+**/
 function inserer_article_syndique ($data, $now_id_syndic, $statut, $url_site, $url_syndic, $resume, &$faits) {
 	// Creer le lien s'il est nouveau - cle=(id_syndic,url)
 	// On coupe a 255 caracteres pour eviter tout doublon
