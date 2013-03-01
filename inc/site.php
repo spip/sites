@@ -10,10 +10,23 @@
  *  Pour plus de details voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
+/**
+ * Fonctions utiles au plugin sites
+ *
+ * @package SPIP\Sites\Fonctions
+**/
 if (!defined("_ECRIRE_INC_VERSION")) return;
 
 
-// http://doc.spip.org/@analyser_site
+/**
+ * Analyser une URL de site distant, qui peut être une syndication.
+ *
+ * @param string $url
+ *     URL du site à analyser
+ * @return array|bool
+ *     - array : informations du site
+ *     - false : site impossible à récupérer
+**/
 function analyser_site($url) {
 	include_spip('inc/filtres');
 	include_spip('inc/distant');
