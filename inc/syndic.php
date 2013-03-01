@@ -10,6 +10,12 @@
  *  Pour plus de details voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
+/**
+ * Gestion de syndication (RSS,...)
+ *
+ * @package SPIP\Sites\Syndication
+**/
+
 if (!defined("_ECRIRE_INC_VERSION")) return;
 
 // ATTENTION
@@ -19,16 +25,25 @@ if (!defined("_ECRIRE_INC_VERSION")) return;
 // Voir un exemple dans action/editer/site
 include_spip('genie/syndic');
 
-// prend un fichier backend et retourne un tableau des items lus,
-// et une chaine en cas d'erreur
-// http://doc.spip.org/@analyser_backend
+
+/**
+ * Analyse un texte de backend
+ *
+ * @param string $rss
+ *     Texte du fichier de backend
+ * @return array|string
+ *     - array : tableau des items lus,
+ *     - string : texte d'erreur
+**/
 function analyser_backend($rss, $url_syndic='') {
 	include_spip('inc/texte'); # pour couper()
 
 	$rss = pipeline('pre_syndication', $rss);
 
-	// si true, les URLs de type feedburner sont dereferencees
-	defined('_SYNDICATION_DEREFERENCER_URL') || define('_SYNDICATION_DEREFERENCER_URL', false);
+	if (!defined('_SYNDICATION_DEREFERENCER_URL')) {
+		/** si true, les URLs de type feedburner sont déréférencées */
+		define('_SYNDICATION_DEREFERENCER_URL', false);
+	}
 
 	// Echapper les CDATA
 	cdata_echappe($rss, $echappe_cdata);
@@ -241,19 +256,22 @@ function analyser_backend($rss, $url_syndic='') {
 		// ou encore les media:content
 		if (!afficher_enclosures(join(', ', $tags))) {
 			if (preg_match_all(',<enclosure[[:space:]][^<>]+>,i',
-			$item, $matches, PREG_PATTERN_ORDER))
-				$data['enclosures'] = join(', ',
-					array_map('enclosure2microformat', $matches[0]));
+				$item, $matches, PREG_PATTERN_ORDER)) {
+					$data['enclosures'] = join(', ',
+						array_map('enclosure2microformat', $matches[0]));
+			}
 			else if (
-			preg_match_all(',<link\b[^<>]+rel=["\']?enclosure["\']?[^<>]+>,i',
-			$item, $matches, PREG_PATTERN_ORDER))
-				$data['enclosures'] = join(', ',
-					array_map('enclosure2microformat', $matches[0]));
+				preg_match_all(',<link\b[^<>]+rel=["\']?enclosure["\']?[^<>]+>,i',
+				$item, $matches, PREG_PATTERN_ORDER)) {
+					$data['enclosures'] = join(', ',
+						array_map('enclosure2microformat', $matches[0]));
+			}
 			else if (
-			preg_match_all(',<media:content\b[^<>]+>,i',
-			$item, $matches, PREG_PATTERN_ORDER))
-				$data['enclosures'] = join(', ',
-					array_map('enclosure2microformat', $matches[0]));
+				preg_match_all(',<media:content\b[^<>]+>,i',
+				$item, $matches, PREG_PATTERN_ORDER)) {
+					$data['enclosures'] = join(', ',
+						array_map('enclosure2microformat', $matches[0]));
+			}
 		}
 		$data['item'] = $item;
 
@@ -288,9 +306,17 @@ function analyser_backend($rss, $url_syndic='') {
 }
 
 
-// helas strtotime ne reconnait pas le format W3C
-// http://www.w3.org/TR/NOTE-datetime
-// http://doc.spip.org/@my_strtotime
+/**
+ * Strtotime même avec le format W3C !
+ *
+ * Car hélàs, strtotime ne le reconnait pas tout seul !
+ * @link http://www.w3.org/TR/NOTE-datetime Format datetime du W3C
+ * 
+ * @param string $la_date
+ *     Date à parser
+ * @return int
+ *     Timestamp
+**/
 function my_strtotime($la_date) {
 
 	// format complet
@@ -324,6 +350,7 @@ function my_strtotime($la_date) {
 	spip_log("Impossible de lire le format de date '$la_date'");
 	return false;
 }
+
 // A partir d'un <dc:subject> ou autre essayer de recuperer
 // le mot et son url ; on cree <a href="url" rel="tag">mot</a>
 // http://doc.spip.org/@creer_tag
