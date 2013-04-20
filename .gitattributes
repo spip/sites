@@ -23,6 +23,7 @@ formulaires/site.php -text
 genie/syndic.php -text
 images/actions-24.png -text
 images/actions-filigrane-24.png -text
+inc/feedfinder.php -text
 inc/site.php -text
 inc/syndic.php -text
 lang/paquet-sites.xml -text
