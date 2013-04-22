@@ -2,6 +2,7 @@
 action/editer_site.php -text
 action/exporter_bookmarks.php -text
 action/importer_bookmarks_netscape.php -text
+action/importer_bookmarks_opml.php -text
 action/instituer_syndic_article.php -text
 action/purger_site.php -text
 action/syndiquer_site.php -text

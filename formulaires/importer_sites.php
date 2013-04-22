@@ -48,7 +48,6 @@ function formulaires_importer_sites_traiter_dist(){
 	$importer_tags = _request('importer_les_tags') ? true : false;
 	$fichier_ok = info_fichiers_import('fichier_import');
 
-
 	$importer_bookmarks = charger_fonction('importer_bookmarks_'.$fichier_ok['format'],'action');
 	$nb = $importer_bookmarks($fichier_ok,$id_parent,$importer_statut_publie,$importer_tags);
 
@@ -81,6 +80,8 @@ function info_fichiers_import($name){
 		lire_fichier($fichier_ok[$name]['chemin'],$fichier_ok[$name]['contenu']);
 		if (stripos($fichier_ok[$name]['contenu'], 'NETSCAPE-Bookmark-file')!==false)
 			$fichier_ok[$name]['format'] = 'netscape';
+		if ($_FILES[$name]['type'] == 'text/xml' AND stripos($fichier_ok[$name]['contenu'], 'opml')!==false)
+			$fichier_ok[$name]['format'] = 'opml';
 	}
 
 	return $fichier_ok[$name];
