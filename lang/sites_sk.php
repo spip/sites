@@ -36,7 +36,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// E
 	'entree_adresse_fichier_syndication' => 'Adresa syndikačného súboru:',
 	'entree_adresse_site' => '<b>Adresa stránky</b> [Povinné]',
-	'entree_description_site' => 'Popis stránky',
+	'entree_description_site' => 'Opis stránky',
 	'erreur_fichier_format_inconnu' => 'Formát súboru @fichier@ nie je podporovaný.',
 	'erreur_fichier_incorrect' => 'Súbor sa nedá čítať.',
 
@@ -130,7 +130,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 			vybrať stránky, z ktorých sa budú prichádzajúce odkazy blokovať automaticky.',
 	'texte_messages_publics' => 'Verejné príspevky k článku:',
 	'texte_non_fonction_referencement' => 'Môžete sa rozhodnúť nepoužívať túto automatizovanú funkciu a zobrazovať prvky z danej stránky sami.',
-	'texte_referencement_automatique' => '<b>Automatické odkazovanie na stránky</b><br />Na stránku môžete rýchlo odkázať uvedením jej adresy alebo adresy jej syndikačného súboru. SPIP automaticky získa údaje o stránke (názov, popis...).',
+	'texte_referencement_automatique' => '<b>Automatické odkazovanie na stránky</b><br />Na stránku môžete rýchlo odkázať uvedením jej adresy alebo adresy jej syndikačného súboru. SPIP automaticky získa údaje o stránke (názov, opis...).',
 	'texte_referencement_automatique_verifier' => 'Pred uložením, prosím, skontrolujte údaje z <tt>@url@</tt>.',
 	'texte_syndication' => 'Zoznam nových funkcií sa dá získať automaticky, keď to stránka povoľuje. Na to musíte aktivovať syndikáciu. 
   <blockquote><i>Niektorí poskytovatelia webhostingu deaktivujú túto funkciu; 
