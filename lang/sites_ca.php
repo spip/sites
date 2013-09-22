@@ -9,9 +9,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// A
 	'avis_echec_syndication_01' => 'La sindicació ha fallat : el backend indicat és indescifrable o no proposa cap article.',
-	'avis_echec_syndication_02' => 'La sindicació ha fallat : impossible accedir al backend d\'aquest lloc.',
+	'avis_echec_syndication_02' => 'La sindicació ha fallat : impossible accedir al backend d’aquest lloc.',
 	'avis_site_introuvable' => 'Lloc il·localitzable',
-	'avis_site_syndique_probleme' => 'Atenció: la sindicació d\'aquest lloc s\'ha trobat amb un problema ; per tant, el sistema queda temporalment interromput. Verifiqueu l\'adreça del fitxer de sindicació d\'aquest lloc (<b>@url_syndic@</b>), i intenteu una nova recuperació de les informacions.',
+	'avis_site_syndique_probleme' => 'Atenció: la sindicació d’aquest lloc s’ha trobat amb un problema ; per tant, el sistema queda temporalment interromput. Verifiqueu l’adreça del fitxer de sindicació d’aquest lloc (<b>@url_syndic@</b>), i intenteu una nova recuperació de les informacions.',
 	'avis_sites_probleme_syndication' => 'Aquests llocs han trobat un problema de sindicació',
 	'avis_sites_syndiques_probleme' => 'Aquests llocs sindicats donen un problema ',
 
@@ -36,7 +36,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_a_valider' => '[per validar]',
 	'info_bloquer' => 'blocar',
 	'info_bloquer_lien' => 'blocar aquest enllaç',
-	'info_derniere_syndication' => 'La última sindicació d\'aquest lloc ha estat realitzada el',
+	'info_derniere_syndication' => 'La última sindicació d’aquest lloc ha estat realitzada el',
 	'info_liens_syndiques_1' => 'enllaços sindicats',
 	'info_liens_syndiques_2' => 'estan pendents de validació.',
 	'info_nom_site_2' => '<b>Nom del lloc</b> [Obligatori]',
@@ -70,7 +70,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'lien_nouvelle_recuperation' => 'Intentar una nova recuperació de les dades',
 
 	// S
-	'syndic_choix_moderation' => 'Què fer dels següents enllaços que procedeixin d\'aquest lloc Web?',
+	'syndic_choix_moderation' => 'Què fer dels següents enllaços que procedeixin d’aquest lloc Web?',
 	'syndic_choix_oublier' => 'Què fer dels enllaços que ja no figuren en el fitxer de sindicació?',
 	'syndic_choix_resume' => 'Alguns llocs Web presenten el text complet dels articles. Quan el text sencer es troba disponible desitgeu sindicar:',
 	'syndic_lien_obsolete' => 'enllaç obsolet',
@@ -85,14 +85,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 ser bloquejats a priori; la norma
 que apareix a continuació indica  la regla per defecte dels llocs sindicats després de la seua creació. És
 possible inmediatament desbloquejar cada enllaç de forma individual, o 
-triar, web per web, bloquejar els enllaços que vinguen d\'un o altre web.', # MODIF
-	'texte_messages_publics' => 'Missatges públics de l\'article:',
+triar, web per web, bloquejar els enllaços que vinguen d’un o altre web.', # MODIF
+	'texte_messages_publics' => 'Missatges públics de l’article:',
 	'texte_non_fonction_referencement' => 'Es pot preferir no utilitzar aquesta funció automàtica i indicar vosté mateix els elements referits a aquest lloc...', # MODIF
-	'texte_referencement_automatique' => '<b>Referenciament automatitzat d\'un lloc Web</b><br />Podeu referenciar ràpidament un lloc Web només indicant aquí baix l\'adreça URL desitjada, o l\'adreça del seu fitxer de sindicació. SPIP recuperarà automàticament les informacions pel que fa a aquest lloc Web (títol, descripció...).', # MODIF
-	'texte_referencement_automatique_verifier' => 'Verifiqueu les informacions subministrades per <tt>@url@</tt> abans d\'enregistrar. ',
-	'texte_syndication' => 'És possible recuperar automàticament, quan el lloc Web ho permet, la llista de novetats. Per això, heu d\'activar la sindicació.
-<blockquote><i>Alguns proveïdors d\'hostatge desactiven aquesta funcionalitat; en aquest cas, no podreu utilitzar la sindicació de contingut des del vostre lloc.</i></blockquote>', # MODIF
-	'titre_articles_syndiques' => 'Articles sindicats extrets d\'aquest lloc.',
+	'texte_referencement_automatique' => '<b>Referenciament automatitzat d’un lloc Web</b><br />Podeu referenciar ràpidament un lloc Web només indicant aquí baix l’adreça URL desitjada, o l’adreça del seu fitxer de sindicació. SPIP recuperarà automàticament les informacions pel que fa a aquest lloc Web (títol, descripció...).', # MODIF
+	'texte_referencement_automatique_verifier' => 'Verifiqueu les informacions subministrades per <tt>@url@</tt> abans d’enregistrar. ',
+	'texte_syndication' => 'És possible recuperar automàticament, quan el lloc Web ho permet, la llista de novetats. Per això, heu d’activar la sindicació.
+<blockquote><i>Alguns proveïdors d’hostatge desactiven aquesta funcionalitat; en aquest cas, no podreu utilitzar la sindicació de contingut des del vostre lloc.</i></blockquote>', # MODIF
+	'titre_articles_syndiques' => 'Articles sindicats extrets d’aquest lloc.',
 	'titre_dernier_article_syndique' => 'Darrers articles sindicats',
 	'titre_page_sites_tous' => 'Webs enllaçades',
 	'titre_referencement_sites' => 'Enllaçament de webs i sindicació',

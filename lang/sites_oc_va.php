@@ -8,10 +8,10 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// A
-	'avis_echec_syndication_01' => 'La sindicacion a mau capitat: lo backend indicat es indeschifrable o prepausa ges d\'article.',
-	'avis_echec_syndication_02' => 'La sindicacion a mau capitat: impossible d\'accedir vèrs lo backend d\'aqueu sit.',
+	'avis_echec_syndication_01' => 'La sindicacion a mau capitat: lo backend indicat es indeschifrable o prepausa ges d’article.',
+	'avis_echec_syndication_02' => 'La sindicacion a mau capitat: impossible d’accedir vèrs lo backend d’aqueu sit.',
 	'avis_site_introuvable' => 'Sit introbable',
-	'avis_site_syndique_probleme' => 'Atencion: la sindicacion d\'aquel sit a rescontrat un problèma; lo sistèma es doncas interromput temporariament. Verificatz l\'adreiça dau fichier de sindicacion d\'aquel sit (<b>@url_syndic@</b>), e tornatz assajar de recuperar las informacions.', # MODIF
+	'avis_site_syndique_probleme' => 'Atencion: la sindicacion d’aquel sit a rescontrat un problèma; lo sistèma es doncas interromput temporariament. Verificatz l’adreiça dau fichier de sindicacion d’aquel sit (<b>@url_syndic@</b>), e tornatz assajar de recuperar las informacions.', # MODIF
 	'avis_sites_probleme_syndication' => 'Aqueles sits an rescontrat un problèma de sindicacion',
 	'avis_sites_syndiques_probleme' => 'Aqueles sits sindicats an pausat un problèma',
 
@@ -36,7 +36,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_a_valider' => '[de validar]',
 	'info_bloquer' => 'blocar',
 	'info_bloquer_lien' => 'Blocar aqueu liam',
-	'info_derniere_syndication' => 'La darriera sindicacion d\'aqueu sit se faguèc lo',
+	'info_derniere_syndication' => 'La darriera sindicacion d’aqueu sit se faguèc lo',
 	'info_liens_syndiques_1' => 'liams sindicats',
 	'info_liens_syndiques_2' => 'son en espèra de validacion.',
 	'info_nom_site_2' => '<b>Nom dau sit</b> [Obligatòri]',
@@ -61,7 +61,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'item_bloquer_liens_syndiques' => 'Blocar los liams sindicats per validacion',
 	'item_gerer_annuaire_site_web' => 'Gerir un annuari de sits web',
 	'item_non_bloquer_liens_syndiques' => 'Pas blocar los liams eissits de la sindicacion',
-	'item_non_gerer_annuaire_site_web' => 'Desactivar l\'annuari de sits web',
+	'item_non_gerer_annuaire_site_web' => 'Desactivar l’annuari de sits web',
 	'item_non_utiliser_syndication' => 'Pas utilizar la sindicacion automatica',
 	'item_utiliser_syndication' => 'Utilizar la sindicacion automatica',
 
@@ -70,7 +70,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'lien_nouvelle_recuperation' => 'Assajar una novèla recuperacion de las donaas',
 
 	// S
-	'syndic_choix_moderation' => 'Que se pòt far amb los liams venents que provenon d\'aquel sit?',
+	'syndic_choix_moderation' => 'Que se pòt far amb los liams venents que provenon d’aquel sit?',
 	'syndic_choix_oublier' => 'Que se pòt far amb los liams que figuran pas pus dins lo fichier de sindicacion?',
 	'syndic_lien_obsolete' => 'liam obsolet',
 	'syndic_option_miroir' => 'los blocar sus lo còp',
@@ -85,15 +85,15 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
     es possible puei de 
    desblocar chasque liam individualament, o de
    chausir, sit per sit, de blocar los liams aveniors.', # MODIF
-	'texte_messages_publics' => 'Messatges publics de l\'article:',
+	'texte_messages_publics' => 'Messatges publics de l’article:',
 	'texte_non_fonction_referencement' => 'Poètz chausir de pas utilizar aquela foncion automatica, e indicar per vòstre franc voler los elements que pertòchan aqueu sit...', # MODIF
-	'texte_referencement_automatique' => '<b>Referenciament automatizat d\'un sit</b><br /> Poètz referenciar lèu-lèu un sit web en indicar çai sos l\'adreiça URL desiraa, o l\'adreiça de son fichier backend. SPIP agantarà automaticament las informacions que concernisson aqueu sit (títol, descripcion...).', # MODIF
+	'texte_referencement_automatique' => '<b>Referenciament automatizat d’un sit</b><br /> Poètz referenciar lèu-lèu un sit web en indicar çai sos l’adreiça URL desiraa, o l’adreiça de son fichier backend. SPIP agantarà automaticament las informacions que concernisson aqueu sit (títol, descripcion...).', # MODIF
 	'texte_syndication' => 'Se pòt recuperar automaticament, quand un sit web o permet, 
   la tiera de sas novetats. Per aquò far, vos chau activar la sindicacion. 
   <blockquote><i>Quauques auberjaors activan pas aquela foncionalitat; 
   en aqueu cas, poiretz pas utilizar la sindicacion de contengut
   dempuei vòstre sit.</i></blockquote>', # MODIF
-	'titre_articles_syndiques' => 'Articles sindicats tirats d\'aqueu sit',
+	'titre_articles_syndiques' => 'Articles sindicats tirats d’aqueu sit',
 	'titre_dernier_article_syndique' => 'Darriers articles sindicats',
 	'titre_page_sites_tous' => 'Los sits referenciats',
 	'titre_referencement_sites' => 'Referenciament de sits e sindicacion',

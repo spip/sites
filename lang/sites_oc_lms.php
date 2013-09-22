@@ -8,10 +8,10 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// A
-	'avis_echec_syndication_01' => 'La sindicacion a frolhat: lo backend indicat es indeschifrable o prepausa brisa d\'article.',
-	'avis_echec_syndication_02' => 'La sindicacion a frolhat: impossible d\'accedir au backend de queu sit.',
+	'avis_echec_syndication_01' => 'La sindicacion a frolhat: lo backend indicat es indeschifrable o prepausa brisa d’article.',
+	'avis_echec_syndication_02' => 'La sindicacion a frolhat: impossible d’accedir au backend de queu sit.',
 	'avis_site_introuvable' => 'Sit introbable',
-	'avis_site_syndique_probleme' => 'Atencion: la sindicacion de queu sit a encontrat un problema; lo sistema es doncas interromput temporàriament. Verificatz l\'adreiça dau fichier de sindicacion de queu sit (<b>@url_syndic@</b>), e tornatz assajar de recuperar las informacions.', # MODIF
+	'avis_site_syndique_probleme' => 'Atencion: la sindicacion de queu sit a encontrat un problema; lo sistema es doncas interromput temporàriament. Verificatz l’adreiça dau fichier de sindicacion de queu sit (<b>@url_syndic@</b>), e tornatz assajar de recuperar las informacions.', # MODIF
 	'avis_sites_probleme_syndication' => 'Quilhs sits an encontrat un problema de sindicacion',
 	'avis_sites_syndiques_probleme' => 'Quilhs sits sindicats an pausat un problema',
 
@@ -61,7 +61,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'item_bloquer_liens_syndiques' => 'Blocar los liams sindicats per validacion',
 	'item_gerer_annuaire_site_web' => 'Gerir un annuari de sits web',
 	'item_non_bloquer_liens_syndiques' => 'Pas blocar los liams eissits de la sindicacion',
-	'item_non_gerer_annuaire_site_web' => 'Desactivar l\'annuari de sits web',
+	'item_non_gerer_annuaire_site_web' => 'Desactivar l’annuari de sits web',
 	'item_non_utiliser_syndication' => 'Pas utilizar la sindicacion automatica',
 	'item_utiliser_syndication' => 'Utilizar la sindicacion automatica',
 
@@ -85,9 +85,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
     es possible puei de 
    desblocar chasque liam individualament, o de
    chausir, sit per sit, de blocar los liams avenidors.', # MODIF
-	'texte_messages_publics' => 'Messatges publics de l\'article:',
+	'texte_messages_publics' => 'Messatges publics de l’article:',
 	'texte_non_fonction_referencement' => 'Podetz chausir de pas utilizar quela foncion automatica, e indicar per vòstre franc voler los elements que pertòchan queu sit...', # MODIF
-	'texte_referencement_automatique' => '<b>Referenciament automatizat d\'un sit</b><br /> Podetz referenciar de briu un sit web en indicar çai sos l\'adreiça URL desirada, o l\'adreiça de son fichier backend. SPIP atrapará automaticament las informacions que concernissen queu sit (títol, descripcion...).', # MODIF
+	'texte_referencement_automatique' => '<b>Referenciament automatizat d’un sit</b><br /> Podetz referenciar de briu un sit web en indicar çai sos l’adreiça URL desirada, o l’adreiça de son fichier backend. SPIP atrapará automaticament las informacions que concernissen queu sit (títol, descripcion...).', # MODIF
 	'texte_syndication' => 'Se pòt recuperar automaticament, quand un sit web o permet, 
   la tiera de sas novetats. Per quò far, vos chau activar la sindicacion. 
   <blockquote><i>Quauques auberjadors activan pas quela foncionalitat; 

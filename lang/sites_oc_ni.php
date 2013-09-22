@@ -8,10 +8,10 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// A
-	'avis_echec_syndication_01' => 'La sindicacion a pas capitat: lo backend indicat es indeschifrable ò prepaua minga d\'article.',
-	'avis_echec_syndication_02' => 'La sindicacion a pas capitat: impossible d\'accedir au backend d\'aqueu sit.',
+	'avis_echec_syndication_01' => 'La sindicacion a pas capitat: lo backend indicat es indeschifrable ò prepaua minga d’article.',
+	'avis_echec_syndication_02' => 'La sindicacion a pas capitat: impossible d’accedir au backend d’aqueu sit.',
 	'avis_site_introuvable' => 'Sit introbable',
-	'avis_site_syndique_probleme' => 'Atencion : la sindicacion d\'aqueu sit a encontrat un problema ; lo sistema es doncas temporarament interromput per aüra. Verificatz l\'adreça dau fichier de sindicacion d\'aqueu sit (<b>@url_syndic@</b>), e provatz mai una recuperacion dei informacions.',
+	'avis_site_syndique_probleme' => 'Atencion : la sindicacion d’aqueu sit a encontrat un problema ; lo sistema es doncas temporarament interromput per aüra. Verificatz l’adreça dau fichier de sindicacion d’aqueu sit (<b>@url_syndic@</b>), e provatz mai una recuperacion dei informacions.',
 	'avis_sites_probleme_syndication' => 'Aquelu sits an encontrat un problema de sindicacion',
 	'avis_sites_syndiques_probleme' => 'Aquelu sits sindicats an pauat un problema',
 
@@ -36,7 +36,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_a_valider' => '[de validar]',
 	'info_bloquer' => 'blocar',
 	'info_bloquer_lien' => 'Blocar aquel estac',
-	'info_derniere_syndication' => 'La darriera sindicacion d\'aqueu sit si faguèt lo',
+	'info_derniere_syndication' => 'La darriera sindicacion d’aqueu sit si faguèt lo',
 	'info_liens_syndiques_1' => 'estacs sindicats',
 	'info_liens_syndiques_2' => 'son en aspèra de validacion.',
 	'info_nom_site_2' => '<b>Nom dau sit</b> [Obligatòri]',
@@ -61,7 +61,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'item_bloquer_liens_syndiques' => 'Blocar lu estacs sindicats per validacion',
 	'item_gerer_annuaire_site_web' => 'Gerar un annuari de sits web',
 	'item_non_bloquer_liens_syndiques' => 'Blocar pas lu ligams eissuts de la sindicacion',
-	'item_non_gerer_annuaire_site_web' => 'Desactivar l\'annuari de sits web',
+	'item_non_gerer_annuaire_site_web' => 'Desactivar l’annuari de sits web',
 	'item_non_utiliser_syndication' => 'Utilisar pas la sindicacion automatica',
 	'item_utiliser_syndication' => 'Utilisar la sindicacion automatica',
 
@@ -70,7 +70,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'lien_nouvelle_recuperation' => 'Temptar una novèla recuperacion de li donadas',
 
 	// S
-	'syndic_choix_moderation' => 'Que faire dei estacs venentsen provenença d\'aquèu sit ?',
+	'syndic_choix_moderation' => 'Que faire dei estacs venentsen provenença d’aquèu sit ?',
 	'syndic_choix_oublier' => 'Que faire dei estacs que figuran pas plus dins lo fichièr de syndicacion ?',
 	'syndic_choix_resume' => 'Certen sites difusan lo tèxt complet dei articles. Quora aqueste es disponible, desiratz de lo sindicar? :',
 	'syndic_lien_obsolete' => 'Estac vielh',
@@ -89,15 +89,15 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    desblocar cada ligam individualament, ò de
    chausir, sit per sit, de blocar lu ligams avenidors
    de tau ò tau sit.', # MODIF
-	'texte_messages_publics' => 'Messatges publics de l\'article:',
-	'texte_non_fonction_referencement' => 'Podètz chausir d\'utilisar pas aquela foncion automatica, e indicar de vos meme lu elements que tòcan aqueu sit...', # MODIF
-	'texte_referencement_automatique' => '<b>Referençament automatisat d\'un sit</b><br />Podètz referençar leu un sit web en indicant çai sota l\'adreça URL desirada, ò l\'adreça dau sieu fichier de sindicacion. SPIP agantarà automaticament li informacions que concernisson aqueu sit (titre, descripcion...).', # MODIF
+	'texte_messages_publics' => 'Messatges publics de l’article:',
+	'texte_non_fonction_referencement' => 'Podètz chausir d’utilisar pas aquela foncion automatica, e indicar de vos meme lu elements que tòcan aqueu sit...', # MODIF
+	'texte_referencement_automatique' => '<b>Referençament automatisat d’un sit</b><br />Podètz referençar leu un sit web en indicant çai sota l’adreça URL desirada, ò l’adreça dau sieu fichier de sindicacion. SPIP agantarà automaticament li informacions que concernisson aqueu sit (titre, descripcion...).', # MODIF
 	'texte_syndication' => 'Si pòu recuperar automaticament, quora un sit web lo permet, 
   la tièra dei sieus noveutats. Per far aquò, vos cau activar la sindicacion. 
-  <blockquote><i>D\'unu aubergadors activon pas aquela foncionalitat; 
+  <blockquote><i>D’unu aubergadors activon pas aquela foncionalitat; 
   dins aqueu cas, podretz pas utilisar la sindicacion de contengut
   despí lo voastre sit.</i></blockquote>', # MODIF
-	'titre_articles_syndiques' => 'Articles sindicats tirats d\'aqueu sit',
+	'titre_articles_syndiques' => 'Articles sindicats tirats d’aqueu sit',
 	'titre_dernier_article_syndique' => 'Darriers articles sindicats',
 	'titre_page_sites_tous' => 'Lu sits referençats',
 	'titre_referencement_sites' => 'Referençament de sits e sindicacion',

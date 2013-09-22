@@ -11,7 +11,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_echec_syndication_01' => '5ynd1c4710n f4113d: 317h3r 7h3 5313c73d b4ck3nd 15 unr34d4b13 0r 17 d035 n07 0ff3r 4ny 4r71c13.',
 	'avis_echec_syndication_02' => '5ynd1c4710n f4113d: c0u1d n07 r34ch 7h3 b4ck3nd 0f 7h15 5173.',
 	'avis_site_introuvable' => '5173 n07 f0und',
-	'avis_site_syndique_probleme' => 'W4rn1ng: 7h3 5ynd1c4710n 0f 7h15 5173 3nc0un73r3d 4 pr0b13m; c0n53qu3n71y 7h3 5y573m 15 73mp0r4r11y 1n73rrup73d. P13453 v3r1fy 7h3 4ddr355 0f 7h15 5173\'5 5ynd1c4710n f113 (<b>@url_syndic@</b>), 4nd 7ry 4g41n 70 p3rf0rm 4 n3w r3c0v3ry 0f 1nf0rm4710n.', # MODIF
+	'avis_site_syndique_probleme' => 'W4rn1ng: 7h3 5ynd1c4710n 0f 7h15 5173 3nc0un73r3d 4 pr0b13m; c0n53qu3n71y 7h3 5y573m 15 73mp0r4r11y 1n73rrup73d. P13453 v3r1fy 7h3 4ddr355 0f 7h15 5173’5 5ynd1c4710n f113 (<b>@url_syndic@</b>), 4nd 7ry 4g41n 70 p3rf0rm 4 n3w r3c0v3ry 0f 1nf0rm4710n.', # MODIF
 	'avis_sites_probleme_syndication' => '7h353 51735 3nc0un73r3d 4 5ynd1c4710n pr0b13m',
 	'avis_sites_syndiques_probleme' => '7h353 5ynd1c473d 51735 g3n3r473d 4 pr0b13m',
 

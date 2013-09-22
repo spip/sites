@@ -9,10 +9,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// A
 	'avis_echec_syndication_01' => 'Hè fiascata a sindicazione : U backend indettatu ùn hè micca leghjitoghju, o puru prupone nisun artìculu.',
-	'avis_echec_syndication_02' => 'Hè fiascata a sindicazione : Impussìbule d\'accede à u backend di stu situ.',
+	'avis_echec_syndication_02' => 'Hè fiascata a sindicazione : Impussìbule d’accede à u backend di stu situ.',
 	'avis_site_introuvable' => 'Situ inesistente',
-	'avis_site_syndique_probleme' => 'Attenti : Hè accaduta un\'errore durante a sindicazione di u situ; u sistema hè for\'d\'adopru per un tempu.
-		Verificate l\'indirizzu di u schedariu di sindicazione di stu situ (<b>@url_syndic@</b>) è pruvate di novu à ricuarà l\'infurmazioni.',
+	'avis_site_syndique_probleme' => 'Attenti : Hè accaduta un’errore durante a sindicazione di u situ; u sistema hè for’d’adopru per un tempu.
+		Verificate l’indirizzu di u schedariu di sindicazione di stu situ (<b>@url_syndic@</b>) è pruvate di novu à ricuarà l’infurmazioni.',
 	'avis_sites_probleme_syndication' => 'Ci sò stati i prublemi durante a sindicazione di sti siti',
 	'avis_sites_syndiques_probleme' => 'Ci sò stati i prublemi durante a sindicazione di sti siti',
 
@@ -37,11 +37,11 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_a_valider' => '[Da cunvalidà]',
 	'info_bloquer' => 'bluccà',
 	'info_bloquer_lien' => 'bluccà sta lea',
-	'info_derniere_syndication' => 'L\'ùltima <em>sindicazione</em> di stu situ hè stata fatta ',
+	'info_derniere_syndication' => 'L’ùltima <em>sindicazione</em> di stu situ hè stata fatta ',
 	'info_liens_syndiques_1' => 'lee sindicate',
 	'info_liens_syndiques_2' => 'stanu in attesa di cunvalidazione.',
 	'info_nom_site_2' => '<b>Nome di u situ</b> [Ubbligatoriu]',
-	'info_panne_site_syndique' => 'Situ sindicatu for\'d\'adopru',
+	'info_panne_site_syndique' => 'Situ sindicatu for’d’adopru',
 	'info_probleme_grave' => 'prublemu di',
 	'info_question_proposer_site' => 'Quale pò prupone siti riferiti ?',
 	'info_retablir_lien' => 'ristabbilisce sta lea',
@@ -62,7 +62,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'item_bloquer_liens_syndiques' => 'Bluccà e lee sindicate per a cunvalidazione',
 	'item_gerer_annuaire_site_web' => 'Gestisce un annuariu di siti Web',
 	'item_non_bloquer_liens_syndiques' => 'Ùn bluccà micca e lee chì venenu da a sindicazione',
-	'item_non_gerer_annuaire_site_web' => 'Disattivà l\'annuariu di i siti Web',
+	'item_non_gerer_annuaire_site_web' => 'Disattivà l’annuariu di i siti Web',
 	'item_non_utiliser_syndication' => 'Ùn attivà micca a sindicazione autumàtica',
 	'item_utiliser_syndication' => 'Attivà a sindicazione autumàtica',
 
@@ -73,24 +73,24 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// S
 	'syndic_choix_moderation' => 'Cumu cumpurtà si cù e pròssime lee venendu da stu situ ?',
 	'syndic_choix_oublier' => 'Cumu cumpurtà si cù e lee chì ùn ci sò più in u schedariu di sindicazione ?',
-	'syndic_choix_resume' => 'Certi siti pruponenu u testu sanu sanu di l\'artìculi. In casu ch\'ellu sia dispunìbule, u vultete mette in sindicazione :',
+	'syndic_choix_resume' => 'Certi siti pruponenu u testu sanu sanu di l’artìculi. In casu ch’ellu sia dispunìbule, u vultete mette in sindicazione :',
 	'syndic_lien_obsolete' => 'lea non più vàlida',
 	'syndic_option_miroir' => 'bluccà le in autumàticu',
 	'syndic_option_oubli' => 'sguassà le (dopu @mois@ mesi)',
-	'syndic_option_resume_non' => 'u cuntenutu sanu sanu di l\'artìculi (in furmatu HTML)',
+	'syndic_option_resume_non' => 'u cuntenutu sanu sanu di l’artìculi (in furmatu HTML)',
 	'syndic_option_resume_oui' => 'un riassuntu solu (in furmatu testu)',
 	'syndic_options' => 'Paràmetri per a sindicazione :',
 
 	// T
 	'texte_liens_sites_syndiques' => 'E lee chì venenu da siti sindicati 
-			ponu esse bluccati; l\'opzione quì sottu face vede i paràmetri predefiniti di i siti sindicati dopu creati.
-			Ferma quantunque pussìbule di sbluccà ogni sìngula lea, o di sceglie di bluccà e lee d\'ogni sìngulu situ.', # MODIF
-	'texte_messages_publics' => 'Messagi pùbblichi di l\'artìculu :',
-	'texte_non_fonction_referencement' => 'Pudete sceglie d\'ùn aduprà micca sta funzione autumàtica, ma rinsignà da per voi l\'elementi relativi à u situ ...', # MODIF
-	'texte_referencement_automatique' => '<b>Riferimentu autumàtizatu d\'un situ</b><br />Pudete riferisce in furia un situ web rinsignendu ne quì sottu
-		l\'indirizzu URL, o l\'indirizzu di u so schedariu di sindicazione. SPIP hà da ricuarà in autumàticu l\'infurmazioni relative à u situ
+			ponu esse bluccati; l’opzione quì sottu face vede i paràmetri predefiniti di i siti sindicati dopu creati.
+			Ferma quantunque pussìbule di sbluccà ogni sìngula lea, o di sceglie di bluccà e lee d’ogni sìngulu situ.', # MODIF
+	'texte_messages_publics' => 'Messagi pùbblichi di l’artìculu :',
+	'texte_non_fonction_referencement' => 'Pudete sceglie d’ùn aduprà micca sta funzione autumàtica, ma rinsignà da per voi l’elementi relativi à u situ ...', # MODIF
+	'texte_referencement_automatique' => '<b>Riferimentu autumàtizatu d’un situ</b><br />Pudete riferisce in furia un situ web rinsignendu ne quì sottu
+		l’indirizzu URL, o l’indirizzu di u so schedariu di sindicazione. SPIP hà da ricuarà in autumàticu l’infurmazioni relative à u situ
 		(tìtulu, discrizzione...).', # MODIF
-	'texte_referencement_automatique_verifier' => 'Cuntrullate puru l\'infurmazioni furnite da <tt>@url@</tt> prima d\'arregistrà.',
+	'texte_referencement_automatique_verifier' => 'Cuntrullate puru l’infurmazioni furnite da <tt>@url@</tt> prima d’arregistrà.',
 	'texte_syndication' => 'Quandu un situ Web u permette, hè pussìbule di ricupreà ne in autumàticu a lista di e nutizie. Per quessa, Vi tocca à attivà 
 		a sindicazione.	<blockquote><i>Certi òspiti disattiveghjanu sta funziunalità; in stu casu, ùn puderete micca aduprà a sindicazione di cuntenutu
 		da u vostru situ.</i></blockquote>', # MODIF

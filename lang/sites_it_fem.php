@@ -12,7 +12,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_echec_syndication_02' => 'La syndication è fallita: impossibile accedere al backend di questo sito.',
 	'avis_site_introuvable' => 'Sito introvabile',
 	'avis_site_syndique_probleme' => 'Attenzione: si è verificato un errore nella syndication del sito; il sistema è temporaneamente fuori uso.
-Verifica l\'indirizzo del file per la syndication di (<b>@url_syndic@</b>) e prova nuovamente a recuperare le informazioni remote.',
+Verifica l’indirizzo del file per la syndication di (<b>@url_syndic@</b>) e prova nuovamente a recuperare le informazioni remote.',
 	'avis_sites_probleme_syndication' => 'Si sono verificati alcuni problemi nella syndication di questi siti',
 	'avis_sites_syndiques_probleme' => 'Si sono verificati alcuni problemi nella syndication di questi siti',
 
@@ -37,7 +37,7 @@ Verifica l\'indirizzo del file per la syndication di (<b>@url_syndic@</b>) e pro
 	'info_a_valider' => '[da convalidare]',
 	'info_bloquer' => 'bloccare',
 	'info_bloquer_lien' => 'bloccare questo link',
-	'info_derniere_syndication' => 'L\'ultima <em>syndication</em> di questo sito è stata effettuata il',
+	'info_derniere_syndication' => 'L’ultima <em>syndication</em> di questo sito è stata effettuata il',
 	'info_liens_syndiques_1' => 'link in syndication',
 	'info_liens_syndiques_2' => 'sono in attesa di convalida.',
 	'info_nom_site_2' => '<b>Nome del sito</b> [Obbligatorio]',
@@ -83,13 +83,13 @@ Verifica l\'indirizzo del file per la syndication di (<b>@url_syndic@</b>) e pro
 
 	// T
 	'texte_liens_sites_syndiques' => 'I link provenienti dai siti in syndication
-possono essere bloccati a priori; l\'impostazione
+possono essere bloccati a priori; l’impostazione
 qui sotto indica i criteri predefiniti dei siti in syndication.
 Sarà comunque possibile sbloccare singolarmente ogni link,
 o scegliere di bloccare i link di ogni singolo sito.', # MODIF
-	'texte_messages_publics' => 'Messaggi pubblici dell\'articolo:',
+	'texte_messages_publics' => 'Messaggi pubblici dell’articolo:',
 	'texte_non_fonction_referencement' => 'Puoi non utilizzare questa funzione automatica, e indicare direttamente gli elementi riguardanti il sito...', # MODIF
-	'texte_referencement_automatique' => '<b>Inserimento automatizzato in repertorio</b><br />È possibile repertoriare rapidamente un sito Web indicandone qui sotto l\'indirizzo URL, o l\'indirizzo del file di syndication. SPIP recupererà automaticamente le informazioni riguardanti il sito (titolo, descrizione...).', # MODIF
+	'texte_referencement_automatique' => '<b>Inserimento automatizzato in repertorio</b><br />È possibile repertoriare rapidamente un sito Web indicandone qui sotto l’indirizzo URL, o l’indirizzo del file di syndication. SPIP recupererà automaticamente le informazioni riguardanti il sito (titolo, descrizione...).', # MODIF
 	'texte_referencement_automatique_verifier' => 'Controllare le informazioni fornite da <tt>@url@</tt> prima di registrare.',
 	'texte_syndication' => 'Quando un sito Web lo permette, è possibile recuperarne automaticamente
 la lista delle novità. A tal fine è necessario attivare la syndication.

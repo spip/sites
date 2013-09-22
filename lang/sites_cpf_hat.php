@@ -94,7 +94,7 @@ Fòk w aktive sendikasyon an.
 	'titre_dernier_article_syndique' => 'Tout denye atik sendike',
 	'titre_page_sites_tous' => 'Tout sit referanse yo',
 	'titre_referencement_sites' => 'Referansman pou tout sit yo ak sendikasyon ',
-	'titre_site_numero' => 'SIT NIMEWO  :',
+	'titre_site_numero' => 'SIT NIMEWO :',
 	'titre_sites_proposes' => 'Tout sit pwopoze ',
 	'titre_sites_references_rubrique' => 'Tout sit referanse nan pati sa a nan sit la',
 	'titre_sites_syndiques' => 'Tout sit sendike yo',

@@ -8,8 +8,8 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// A
-	'avis_echec_syndication_01' => 'Abonligo malsukcesis: la indikata abondosiero (backend-dosiero) ne estas deĉifrebla aŭ proponas neniun artikolon.',
-	'avis_echec_syndication_02' => 'Abonligo malsukcesis: ne eblas aliri abondosieron (backend-dosiero) de tiu retejo.',
+	'avis_echec_syndication_01' => 'Abonligo malsukcesis : la indikata abondosiero (backend-dosiero) ne estas deĉifrebla aŭ proponas neniun artikolon.',
+	'avis_echec_syndication_02' => 'Abonligo malsukcesis : ne eblas aliri abondosieron (backend-dosiero) de tiu retejo.',
 	'avis_site_introuvable' => 'Netrovebla retejo',
 	'avis_site_syndique_probleme' => 'Atentu, okazis problemo pri abonrilato de tiu ĉi retejo ; la sistemo estas portempe ĉesigita. Kontrolu la retadreson de la abondosiero de tiu ĉi retejo (@url_syndic@), kaj provu novan reakiron de la informoj.',
 	'avis_sites_probleme_syndication' => 'Okazis problemo pri abonrilato inter tiuj retejoj',
@@ -19,7 +19,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_radio_modere_posteriori' => 'aposteriore moderigata', # MODIF
 	'bouton_radio_modere_priori' => 'apriore moderigata', # MODIF
 	'bouton_radio_non_syndication' => 'Neniu abonrilato',
-	'bouton_radio_syndication' => 'Abonrilato:',
+	'bouton_radio_syndication' => 'Abonrilato :',
 
 	// E
 	'entree_adresse_fichier_syndication' => 'Retadreso de la abondosiero :',
@@ -45,7 +45,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_question_proposer_site' => 'Kiu povas proponi referencigitajn retejojn ?',
 	'info_retablir_lien' => 'Restaŭri tiun ligilon',
 	'info_site_attente' => 'Retejo atendanta validigon',
-	'info_site_propose' => 'Retejo proponita la :',
+	'info_site_propose' => 'Retejo proponita la :',
 	'info_site_reference' => 'Retejo rete referencigita',
 	'info_site_refuse' => 'Rifuzita retejo',
 	'info_site_syndique' => 'Tiu ĉi retejo estas abonligita...', # MODIF
@@ -82,13 +82,13 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// T
 	'texte_liens_sites_syndiques' => 'Abonligoj povas
-   esti blokataj apriore; la ĉi-suba agordo
+   esti blokataj apriore ; la ĉi-suba agordo
    indikas la defaŭltan agordon de la
    abonligitaj retejoj je ties kreo. Poste
    eblas ĉiukaze malbloki ĉiun
    ligilon unuope, aŭ elekti, retejon post retejo, bloki estigotajn
 ligilojn al jena aŭ alia retejo.', # MODIF
-	'texte_messages_publics' => 'Publikaj mesaĝoj de la artikolo:',
+	'texte_messages_publics' => 'Publikaj mesaĝoj de la artikolo :',
 	'texte_non_fonction_referencement' => 'Vi povas preferi ne uzi tiun aŭtomatan funkcion kaj indiki mem la elementojn koncernantajn tiun ĉi retejon...', # MODIF
 	'texte_referencement_automatique' => '<b>Aŭtomata retej-referenciga procezo</b><br />Vi povas rapide referencigi retejon indikante ĉi-sube la deziratan retadreson aŭ ties abonligon. SPIP aŭtomate abonŝutos la informojn kiuj koncernas tiun retejon (titolon, priskribon...).', # MODIF
 	'texte_syndication' => 'Eblas elpreni aŭtomate la liston de novaĵoj de iu retejo,

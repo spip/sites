@@ -15,10 +15,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'articles_refuse' => 'Supprimés',
 	'articles_tous' => 'Tous',
 	'aucun_article_syndic' => 'Aucun article syndiqué',
-	'avis_echec_syndication_01' => 'La syndication a échoué : le backend indiqué est indéchiffrable ou ne propose aucun article.',
-	'avis_echec_syndication_02' => 'La syndication a échoué : impossible d\'accéder au backend de ce site.',
+	'avis_echec_syndication_01' => 'La syndication a échoué : le backend indiqué est indéchiffrable ou ne propose aucun article.',
+	'avis_echec_syndication_02' => 'La syndication a échoué : impossible d’accéder au backend de ce site.',
 	'avis_site_introuvable' => 'Site introuvable',
-	'avis_site_syndique_probleme' => 'Attention : la syndication de ce site a rencontré un problème ; le système est donc temporairement interrompu pour l\'instant. Vérifie l\'adresse du fichier de syndication de ce site (<b>@url_syndic@</b>), et tente une nouvelle récupération des informations.',
+	'avis_site_syndique_probleme' => 'Attention : la syndication de ce site a rencontré un problème ; le système est donc temporairement interrompu pour l’instant. Vérifie l’adresse du fichier de syndication de ce site (<b>@url_syndic@</b>), et tente une nouvelle récupération des informations.',
 	'avis_sites_probleme_syndication' => 'Ces sites ont rencontré un problème de syndication',
 	'avis_sites_syndiques_probleme' => 'Ces sites syndiqués ont posé un problème',
 
@@ -26,10 +26,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_radio_modere_posteriori' => 'modération à posteriori', # MODIF
 	'bouton_radio_modere_priori' => 'modération à priori', # MODIF
 	'bouton_radio_non_syndication' => 'Pas de syndication',
-	'bouton_radio_syndication' => 'Syndication :',
+	'bouton_radio_syndication' => 'Syndication :',
 
 	// C
-	'confirmer_purger_syndication' => 'Es-tu certain de vouloir supprimer tous les articles syndiqués de ce site ?',
+	'confirmer_purger_syndication' => 'Es-tu certain de vouloir supprimer tous les articles syndiqués de ce site ?',
 
 	// E
 	'entree_adresse_fichier_syndication' => 'Adresse du fichier de syndication :',
@@ -63,7 +63,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_question_proposer_site' => 'Qui peut proposer des sites référencés ?',
 	'info_retablir_lien' => 'rétablir ce lien',
 	'info_site_attente' => 'Site Web en attente de validation',
-	'info_site_propose' => 'Site proposé le :',
+	'info_site_propose' => 'Site proposé le :',
 	'info_site_reference' => 'Site référencé en ligne',
 	'info_site_refuse' => 'Site Web refusé',
 	'info_site_syndique' => 'Ce site est syndiqué...', # MODIF
@@ -79,7 +79,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'item_bloquer_liens_syndiques' => 'Bloquer les liens syndiqués pour validation',
 	'item_gerer_annuaire_site_web' => 'Gérer un annuaire de sites Web',
 	'item_non_bloquer_liens_syndiques' => 'Ne pas bloquer les liens issus de la syndication',
-	'item_non_gerer_annuaire_site_web' => 'Désactiver l\'annuaire de sites Web',
+	'item_non_gerer_annuaire_site_web' => 'Désactiver l’annuaire de sites Web',
 	'item_non_utiliser_syndication' => 'Ne pas utiliser la syndication automatique',
 	'item_utiliser_syndication' => 'Utiliser la syndication automatique',
 
@@ -114,11 +114,11 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 			débloquer chaque lien individuellement, ou de
 			choisir, site par site, de bloquer les liens à venir
 			de tel ou tel site.', # MODIF
-	'texte_messages_publics' => 'Messages publics de l\'article :',
+	'texte_messages_publics' => 'Messages publics de l’article :',
 	'texte_non_fonction_referencement' => 'Tu peux préférer ne pas utiliser cette fonction automatique, et indiquer toi-même les éléments concernant ce site...', # MODIF
-	'texte_referencement_automatique' => '<b>Référencement automatisé d\'un site</b><br />Tu peux référencer rapidement un site Web en indiquant ci-dessous l\'adresse URL désirée, ou l\'adresse de son fichier de syndication. SPIP va récupérer automatiquement les informations concernant ce site (titre, description...).', # MODIF
-	'texte_referencement_automatique_verifier' => 'Vérifie les informations fournies par <tt>@url@</tt> avant d\'enregistrer.',
-	'texte_syndication' => 'Il est possible de récupérer automatiquement, lorsqu\'un site Web le permet,
+	'texte_referencement_automatique' => '<b>Référencement automatisé d’un site</b><br />Tu peux référencer rapidement un site Web en indiquant ci-dessous l’adresse URL désirée, ou l’adresse de son fichier de syndication. SPIP va récupérer automatiquement les informations concernant ce site (titre, description...).', # MODIF
+	'texte_referencement_automatique_verifier' => 'Vérifie les informations fournies par <tt>@url@</tt> avant d’enregistrer.',
+	'texte_syndication' => 'Il est possible de récupérer automatiquement, lorsqu’un site Web le permet,
   la liste de ses nouveautés. Pour cela, tu dois activer la syndication.
   <blockquote><i>Certains hébergeurs désactivent cette fonctionnalité ;
   dans ce cas, tu ne pourras pas utiliser la syndication de contenu
