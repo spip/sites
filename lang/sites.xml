@@ -48,6 +48,9 @@
 	</langue>
 	<langue code="fr" url="http://trad.spip.net/tradlang_module/sites?lang_cible=fr" total="116" traduits="116" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
 	</langue>
+	<langue code="fr_fem" url="http://trad.spip.net/tradlang_module/sites?lang_cible=fr_fem" total="116" traduits="116" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
+		<traducteur nom="denisb" lien="http://trad.spip.net/auteur/denisb" />
+	</langue>
 	<langue code="fr_tu" url="http://trad.spip.net/tradlang_module/sites?lang_cible=fr_tu" total="116" traduits="90" relire="0" modifs="8" nouveaux="18" pourcent="77.59">
 		<traducteur nom="beatnick" lien="http://trad.spip.net/auteur/beatnick" />
 	</langue>
