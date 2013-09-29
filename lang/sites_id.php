@@ -91,7 +91,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 			situs-situs tertentu.', # MODIF
 	'texte_messages_publics' => 'Pesan umum artikel:',
 	'texte_non_fonction_referencement' => 'Anda dapat memilih untuk tidak menggunakan fitur terotomasi ini, dan masukkan elemen-elemen yang berkaitan dengan situs secara manual...', # MODIF
-	'texte_referencement_automatique' => '<b>Referensi situs terotomasi</b><br>Anda dapat mereferensi sebuah situs web secara cepat dengan memberikan di bawah URL yang dimaksud, atau alamat berkas sindikasinya. SPIP secara otomatis akan mengambil informasi yang berkaitan dengan situs tersebut (judul, deskripsi...).', # MODIF
+	'texte_referencement_automatique' => '<b>Referensi situs terotomasi</b><br />Anda dapat mereferensi sebuah situs web secara cepat dengan memberikan di bawah URL yang dimaksud, atau alamat berkas sindikasinya. SPIP secara otomatis akan mengambil informasi yang berkaitan dengan situs tersebut (judul, deskripsi...).', # MODIF
 	'texte_syndication' => 'Jika sebuah situs mengizinkannya, daftar isi terbaru dari situs tersebut
   dapat diambil secara otomatis. Untuk melakukannya, anda harus mengaktifkan sindikasi.
   <blockquote><i>Sejumlah hosting menonaktifkan fungsi ini; 
