@@ -32,9 +32,11 @@ lang/paquet-sites_de.php -text
 lang/paquet-sites_en.php -text
 lang/paquet-sites_es.php -text
 lang/paquet-sites_fa.php -text
+lang/paquet-sites_fr_fem.php -text
 lang/paquet-sites_it.php -text
 lang/paquet-sites_lb.php -text
 lang/paquet-sites_nl.php -text
+lang/paquet-sites_pt.php -text
 lang/paquet-sites_pt_br.php -text
 lang/paquet-sites_ru.php -text
 lang/paquet-sites_sk.php -text
@@ -61,6 +63,7 @@ lang/sites_fa.php -text
 lang/sites_fi.php -text
 lang/sites_fon.php -text
 lang/sites_fr.php -text
+lang/sites_fr_fem.php -text
 lang/sites_fr_tu.php -text
 lang/sites_gl.php -text
 lang/sites_hac.php -text

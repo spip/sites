@@ -1,13 +1,15 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// Fichier source, a modifier dans svn://zone.spip.org/spip-zone/_core_/plugins/sites/lang/
+// extrait automatiquement de http://trad.spip.net/tradlang_module/sites?lang_cible=fr_fem
+// ** ne pas modifier le fichier **
+
 if (!defined('_ECRIRE_INC_VERSION')) return;
 
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// A
 	'articles_dispo' => 'En attente',
-	'articles_meme_auteur' => 'Tous les articles de cet auteur',
+	'articles_meme_auteur' => 'Tous les articles de cette auteure',
 	'articles_off' => 'Bloqués',
 	'articles_publie' => 'Publiés',
 	'articles_refuse' => 'Supprimés',
@@ -29,7 +31,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_radio_syndication' => 'Syndication :',
 
 	// C
-	'confirmer_purger_syndication' => 'Êtes-vous certain de vouloir supprimer tous les articles syndiqués de ce site ?',
+	'confirmer_purger_syndication' => 'Êtes-vous certaine de vouloir supprimer tous les articles syndiqués de ce site ?',
 
 	// E
 	'entree_adresse_fichier_syndication' => 'Adresse du fichier de syndication :',
