@@ -107,6 +107,7 @@ prive/objets/liste/sites.html -text
 prive/objets/liste/syndic.html -text
 prive/objets/liste/syndic_articles.html -text
 prive/objets/liste/syndic_articles_fonctions.php -text
+prive/rss/a_suivre-sites.html -text
 prive/squelettes/contenu/controler_syndication.html -text
 prive/squelettes/contenu/site.html -text
 prive/squelettes/contenu/site_edit.html -text
