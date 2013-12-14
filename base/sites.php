@@ -55,16 +55,15 @@ function sites_declarer_tables_objets_sql($tables){
 	$tables['spip_syndic'] = array(
 		'table_objet_surnoms'=>array('site'),
 		'type'=>'site',
-	  'type_surnoms' => array('syndic'),
-		
+		'type_surnoms' => array('syndic'),
 		'texte_retour' => 'icone_retour',
 		'texte_objets' => 'icone_sites_references',
 		'texte_objet' => 'sites:icone_site_reference',
 		'texte_modifier' => 'sites:icone_modifier_site',
 		'texte_creer' => 'sites:icone_referencer_nouveau_site',
-		'info_aucun_objet'=> 'info_aucun_site',
-		'info_1_objet' => 'info_1_site',
-		'info_nb_objets' => 'info_nb_sites',
+		'info_aucun_objet'=> 'sites:info_aucun_site',
+		'info_1_objet' => 'sites:info_1_site',
+		'info_nb_objets' => 'sites:info_nb_sites',
 		'titre' => "nom_site AS titre, '' AS lang",
 		'date' => 'date',
 		'principale' => 'oui',
@@ -120,9 +119,9 @@ function sites_declarer_tables_objets_sql($tables){
 		'texte_objets' => 'sites:icone_articles_syndic',
 		'texte_objet' => 'sites:icone_article_syndic',
 		'texte_modifier' => 'icone_modifier_article', # inutile en vrai
-		'info_aucun_objet'=> 'info_aucun_article_syndique',
-		'info_1_objet' => 'info_1_article_syndique',
-		'info_nb_objets' => 'info_nb_articles_syndiques',
+		'info_aucun_objet'=> 'sites:info_aucun_article_syndique',
+		'info_1_objet' => 'sites:info_1_article_syndique',
+		'info_nb_objets' => 'sites:info_nb_articles_syndiques',
 		'icone_objet' => 'site',
 
 		// pas de page propre ni dans ecrire ni dans le site public
