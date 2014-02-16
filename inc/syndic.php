@@ -328,6 +328,7 @@ function my_strtotime($la_date, $lang=null) {
 	',^(\d+-\d+-\d+[T ]\d+:\d+(:\d+)?)(\.\d+)?'
 	.'(Z|([-+]\d{2}):\d+)?$,',
 	$la_date, $match)) {
+		$match = array_pad($match, 6, null);
 		$la_date = str_replace("T", " ", $match[1])." GMT";
 		return strtotime($la_date) - intval($match[5]) * 3600;
 	}
