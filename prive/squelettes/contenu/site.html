@@ -10,8 +10,8 @@
 			[(#URL_ECRIRE{site_edit,id_syndic=#ID_SYNDIC}|icone_verticale{#ID_SYNDIC|afficher_qui_edite{site},warning-24.png,'',right edition_deja ajax preload})]
 		]
 	]
-	<h1>[(#RANG). ](#NOM_SITE|sinon{<:info_sans_titre_2:>})[(#CHEMIN_IMAGE{site-24.png}|balise_img{site,cadre-icone})]</h1>
-	[(#URL_SITE|propre|inserer_attribut{class,url_site})]
+	<h1[ class="(#EDIT{nom_site})"]>[(#RANG). ](#NOM_SITE|sinon{<:info_sans_titre_2:>})[(#CHEMIN_IMAGE{site-24.png}|balise_img{site,cadre-icone})]</h1>
+	[<div class="#EDIT{url_site}">(#URL_SITE|propre|inserer_attribut{class,url_site})</div>]
 ],simple fiche_objet})]
 
 <div id="wysiwyg">
