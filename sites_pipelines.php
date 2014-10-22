@@ -165,7 +165,9 @@ function sites_configurer_liste_metas($metas){
  */
 function sites_taches_generales_cron($taches_generales){
 
-	if ($GLOBALS['meta']["activer_syndic"] == "oui"
+	if (isset($GLOBALS['meta']["activer_syndic"])
+	AND $GLOBALS['meta']["activer_syndic"] == "oui"
+	AND isset($GLOBALS['meta']["activer_sites"])
 	AND $GLOBALS['meta']["activer_sites"]  == "oui") {
 		$taches_generales['syndic'] = 90; 
 	}
