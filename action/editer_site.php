@@ -71,10 +71,11 @@ function action_editer_site_dist($arg=null) {
  * 
  * @param int $id_rubrique
  *     Identifiant de rubrique parente
+ * @param array|null $set
  * @return int
  *     Identifiant du site créé
  */
-function site_inserer($id_rubrique) {
+function site_inserer($id_rubrique, $set=null) {
 
 	include_spip('inc/rubriques');
 
@@ -95,7 +96,10 @@ function site_inserer($id_rubrique) {
 		'id_secteur' => $id_secteur,
 		'statut' => 'prop',
 		'date' => date('Y-m-d H:i:s'));
-	
+
+	if ($set)
+		$champs = array_merge($champs, $set);
+
 	// Envoyer aux plugins
 	$champs = pipeline('pre_insertion',
 		array(
