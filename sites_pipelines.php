@@ -213,7 +213,10 @@ function sites_optimiser_base_disparus($flux){
  */
 function sites_calculer_rubriques($flux) {
 	
-	$r = sql_select("R.id_rubrique AS id, max(A.date) AS date_h", "spip_rubriques AS R, spip_syndic AS A", "R.id_rubrique = A.id_rubrique AND R.date_tmp <= A.date AND A.statut='publie' ", "R.id_rubrique");
+	$r = sql_select(
+		"R.id_rubrique AS id, max(A.date) AS date_h",
+		"spip_rubriques AS R JOIN spip_syndic AS A ON R.id_rubrique = A.id_rubrique",
+		"A.date>R.date_tmp AND A.statut='publie' ", "R.id_rubrique");
 	while ($row = sql_fetch($r))
 		sql_updateq('spip_rubriques', array('statut_tmp'=>'publie', 'date_tmp'=>$row['date_h']),"id_rubrique=".$row['id']);
 
