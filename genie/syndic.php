@@ -61,7 +61,7 @@ function executer_une_syndication() {
 	// s'il echoue
 	$where = sql_in("syndication", array('sus','off')) . "
 	AND NOT(" . sql_date_proche('date_syndic', (0 - _PERIODE_SYNDICATION_SUSPENDUE) , "MINUTE") . ')';
-	$id_syndic = sql_getfetsel("id_syndic", "spip_syndic", $where, '', "date_syndic", "1");
+	$id_syndic = sql_getfetsel("id_syndic", "spip_syndic", "statut<>".sql_quote("refuse")." AND ".$where, '', "date_syndic", "1");
 	if ($id_syndic) {
 		// inserer la tache dans la file, avec controle d'unicite
 		job_queue_add('syndic_a_jour','syndic_a_jour',array($id_syndic),'genie/syndic',true);
@@ -70,7 +70,7 @@ function executer_une_syndication() {
 	// Et un site 'oui' de plus de 2 heures, qui passe en 'sus' s'il echoue
 	$where = "syndication='oui'
 	AND NOT(" . sql_date_proche('date_syndic', (0 - _PERIODE_SYNDICATION) , "MINUTE") . ')';
-	$id_syndic = sql_getfetsel("id_syndic", "spip_syndic", $where, '', "date_syndic", "1");
+	$id_syndic = sql_getfetsel("id_syndic", "spip_syndic", "statut<>".sql_quote("refuse")." AND ".$where, '', "date_syndic", "1");
 
 	if ($id_syndic) {
 		// inserer la tache dans la file, avec controle d'unicite
