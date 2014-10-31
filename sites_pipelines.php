@@ -186,9 +186,7 @@ function sites_optimiser_base_disparus($flux){
 	$n = &$flux['data'];
 	$mydate = $flux['args']['date'];
 
-
-	sql_delete("spip_syndic", "maj < $mydate AND statut = 'refuse'");
-
+	sql_delete("spip_syndic", "maj<".sql_quote($mydate)." AND statut=".sql_quote("refuse"));
 
 	# les articles syndiques appartenant a des sites effaces
 	$res = sql_select("S.id_syndic AS id",
