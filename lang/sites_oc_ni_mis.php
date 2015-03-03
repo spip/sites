@@ -30,10 +30,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_radio_non_syndication' => 'Mìnga de sindicacioun',
 	'bouton_radio_syndication' => 'Sindicacioun :',
 
+	// C
+	'confirmer_purger_syndication' => 'Sias segur de voulé suprimà toui lu article sindicat dau sit ?',
+
 	// E
 	'entree_adresse_fichier_syndication' => 'Adressa dóu fichié de sindicacioun :',
 	'entree_adresse_site' => '<b>Adressa dóu sit</b> [Óubligatori]',
 	'entree_description_site' => 'Descricioun dóu sit',
+	'erreur_fichier_format_inconnu' => 'Lou fourmat dóu fichié @fichier@ es pas supourtat.',
 	'erreur_fichier_incorrect' => 'Empoussible de legì lou fichié.',
 
 	// F
@@ -121,6 +125,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'syndic_options' => 'Oupcioun de sindicacioun :',
 
 	// T
+	'texte_expliquer_export_bookmarks' => 'Poudès espourtà una lista de sit au fourmat Marca pàgina HTML, e poudès pi l’empourtà en lou vouòstre navigadour o un servici en ligna.',
+	'texte_expliquer_import_bookmarks' => 'Poudès empourtà una lista de sit au fourmat Marca pàgina HTML, dau vouòstre navigadour o da un servici en ligna de gestioun dei Marca pàgina.',
 	'texte_liens_sites_syndiques' => 'Lu estac que venon dei sit sindicat pouòdon estre bloucat a priòri ; lou reglage aquì souta endica lou reglage predefinit dei sit sindicat après la sieu creacioun. Es pi possible de
 desbloucà cada estac individualamen, o de chausì, sit per sit, de bloucà lu estac que venon de tau o tau sit.',
 	'texte_messages_publics' => 'Message public dau article :',
