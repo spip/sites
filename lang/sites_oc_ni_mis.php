@@ -99,7 +99,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// L
 	'label_exporter_avec_mots_cles_1' => 'Espourtà lu mot clau souta la forma de tag',
 	'label_exporter_id_parent' => 'Espourtà lu sit de la rùbrica',
-	'label_exporter_publie_seulement_1' => 'Espourtà unicamen lu sit publicat',
+	'label_exporter_publie_seulement_1' => 'Espourtà basta lu sit publicat',
 	'label_fichier_import' => 'Fichié HTML',
 	'label_importer_les_tags_1' => 'Empourtà lu tag souta la forma de mot clau',
 	'label_importer_statut_publie_1' => 'Publicà automaticamen lu sit',
