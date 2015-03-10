@@ -35,7 +35,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// E
 	'entree_adresse_fichier_syndication' => 'Adressa dóu fichié de sindicacioun :',
-	'entree_adresse_site' => '<b>Adressa dóu sit</b> [Óubligatori]',
+	'entree_adresse_site' => '<b>Adressa dóu sit</b> [Oubligatori]',
 	'entree_description_site' => 'Descricioun dóu sit',
 	'erreur_fichier_format_inconnu' => 'Lou fourmat dóu fichié @fichier@ es pas supourtat.',
 	'erreur_fichier_incorrect' => 'Empoussible de legì lou fichié.',
@@ -70,7 +70,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_nb_articles_syndiques' => '@nb@ article sindicat',
 	'info_nb_sites' => '@nb@ sit',
 	'info_nb_sites_importes' => '@nb@ sit soun estat empourtat',
-	'info_nom_site_2' => '<b>Noum dóu sit</b> [Óubligatori]',
+	'info_nom_site_2' => '<b>Noum dóu sit</b> [Oubligatori]',
 	'info_panne_site_syndique' => 'Sit sindicat en pana',
 	'info_probleme_grave' => 'proublèma de',
 	'info_question_proposer_site' => 'Qu pòu proupausà dei sit referençat ?',
