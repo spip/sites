@@ -130,11 +130,11 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'texte_liens_sites_syndiques' => 'Lu estac que venon dei sit sindicat pouòdon estre bloucat a priòri ; lou reglage aquì souta endica lou reglage predefinit dei sit sindicat après la sieu creacioun. Es pi possible de
 desbloucà cada estac individualamen, o de chausì, sit per sit, de bloucà lu estac que venon de tau o tau sit.',
 	'texte_messages_publics' => 'Message public dau article :',
-	'texte_non_fonction_referencement' => 'Poudès chausì de noun utilisà aquela founcioun automatica, e endicà vous meme lu elemen que tocon aqueu sit...',
+	'texte_non_fonction_referencement' => 'Poudès chausì de noun utilisà aquela founcioun automatica, e endicà vi meme lu elemen que tocon aqueu sit...',
 	'texte_referencement_automatique' => '<b>Referençamen automatisat d’un sit</b><br />Poudès lèu referençà un sit web en endicant aquì souta l’adressa URL desirada, o l’adressa dóu sieu fichié de sindicacioun. SPIP va cercà automaticamen li infourmacioun que councernon aqueu sit (titre, descricioun...).',
 	'texte_referencement_automatique_verifier' => 'Vourguès verificà li infourmacioun fournidi per <tt>@url@</tt> denant de registrà.',
-	'texte_syndication' => 'Si pòu recuperà automaticamen, quoura un sit web lou permet,
-la lista dei sieu nouvità. Per faire acò, vous cau ativà la sindicacioun. 
+	'texte_syndication' => 'Si pòu recuperà automaticamen, quoura un sit web lou permete,
+la lista dei sieu nouvità. Per faire acò, vi cau ativà la sindicacioun. 
 	<blockquote><i>D’unu aubergadour noun ativon aquela founciounalità ; en aqueu cas, noun pourès utilisà la sindicacioun de countengut despì lou vouòstre sit.</i></blockquote>',
 	'titre_articles_syndiques' => 'Article sindicat titrat d’aqueu sit',
 	'titre_dernier_article_syndique' => 'Darrié article sindicat',
