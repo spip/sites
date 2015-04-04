@@ -19,16 +19,12 @@ function sites_autoriser() {}
 
 // bouton du bandeau
 function autoriser_sites_menu_dist($faire, $type='', $id=0, $qui = NULL, $opt = NULL){
-	return 	($GLOBALS['meta']["activer_sites"] != "non");
+	return 	($GLOBALS['meta']["activer_sites"] != 'non');
 }
+// Le bouton de création d'un site est présent si on peut en créer un.
 function autoriser_sitecreer_menu_dist($faire, $type, $id, $qui, $opt){
 	return
-		($GLOBALS['meta']["activer_sites"] != "non"
-		AND verifier_table_non_vide()
-		AND (
-			$qui['statut']=='0minirezo'
-			OR ($GLOBALS['meta']["proposer_sites"] >=
-			    ($qui['statut']=='1comite' ? 1 : 2))));
+		autoriser_site_creer_dist($faire, $type, $id, $qui, $opt);
 }
 
 
@@ -54,25 +50,23 @@ function autoriser_controlersyndication_menu_dist($faire, $type, $id, $qui, $opt
 // Creer un nouveau site ?
 function autoriser_site_creer_dist($faire, $type, $id, $qui, $opt){
 	return
-		($GLOBALS['meta']["activer_sites"] != "non"
-		AND (sql_countsel('spip_rubriques')>0)
+		($GLOBALS['meta']["activer_sites"] != 'non'
+		AND verifier_table_non_vide()
 		AND (
 			$qui['statut']=='0minirezo'
-			OR ($GLOBALS['meta']["proposer_sites"] >=
+			OR ($GLOBALS['meta']['proposer_sites'] >=
 			    ($qui['statut']=='1comite' ? 1 : 2))));
 }
 
-// Autoriser a creer un site dans la rubrique $id
+// Pour creer un site dans la rubrique $id il faut:
+// - que la rubrique existe et soit accessible pour l'auteur
+// - que l'on puisse créer un site
 // http://doc.spip.org/@autoriser_rubrique_creersitedans_dist
 function autoriser_rubrique_creersitedans_dist($faire, $type, $id, $qui, $opt) {
 	return
 		$id
 		AND autoriser('voir','rubrique',$id)
-		AND $GLOBALS['meta']['activer_sites'] != 'non'
-		AND (
-			$qui['statut']=='0minirezo'
-			OR ($GLOBALS['meta']["proposer_sites"] >=
-			    ($qui['statut']=='1comite' ? 1 : 2)));
+		AND autoriser_site_creer_dist($faire, $type, $id, $qui, $opt);
 }
 
 
@@ -94,16 +88,19 @@ function autoriser_site_modifier_dist($faire, $type, $id, $qui, $opt) {
 // Autoriser a voir un site $id_syndic
 // http://doc.spip.org/@autoriser_site_voir_dist
 function autoriser_site_voir_dist($faire, $type, $id, $qui, $opt) {
-	return autoriser_site_modifier_dist($faire, $type, $id, $qui, $opt);
+	return
+		autoriser_site_modifier_dist($faire, $type, $id, $qui, $opt);
 }
 
 // Autoriser l'importation de sites que si on peut en créer
 function autoriser_sites_importer_dist($faire, $type, $id, $qui, $opt) {
-	return autoriser_site_creer_dist($faire, $type, $id, $qui, $opt);
+	return
+		autoriser_site_creer_dist($faire, $type, $id, $qui, $opt);
 }
 
 // Autoriser l'exportation de sites que si la table n'est pas vide
 function autoriser_sites_exporter_dist($faire, $type, $id, $qui, $opt) {
-	return verifier_table_non_vide('spip_sites');
+	return
+		verifier_table_non_vide('spip_sites');
 }
 ?>
