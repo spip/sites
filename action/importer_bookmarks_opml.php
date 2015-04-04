@@ -14,7 +14,7 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 
 function action_importer_bookmarks_opml_dist($fichier_ok,$id_parent,$importer_statut_publie,$importer_tags){
 	$nb = 0;
-	if (autoriser('importer','_bookmarks')){
+	if (autoriser('importer','_sites')){
 		$out = bookmarks_opml_parse($fichier_ok['contenu']);
 		$nb = bookmarks_opml_insert($out,$id_parent,$importer_statut_publie,$importer_tags);
 	}
