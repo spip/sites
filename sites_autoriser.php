@@ -96,4 +96,14 @@ function autoriser_site_modifier_dist($faire, $type, $id, $qui, $opt) {
 function autoriser_site_voir_dist($faire, $type, $id, $qui, $opt) {
 	return autoriser_site_modifier_dist($faire, $type, $id, $qui, $opt);
 }
+
+// Autoriser l'importation de sites que si on peut en créer
+function autoriser_sites_importer_dist($faire, $type, $id, $qui, $opt) {
+	return autoriser_site_creer_dist($faire, $type, $id, $qui, $opt);
+}
+
+// Autoriser l'exportation de sites que si la table n'est pas vide
+function autoriser_sites_exporter_dist($faire, $type, $id, $qui, $opt) {
+	return verifier_table_non_vide('spip_sites');
+}
 ?>
