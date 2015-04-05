@@ -101,6 +101,6 @@ function autoriser_sites_importer_dist($faire, $type, $id, $qui, $opt) {
 // Autoriser l'exportation de sites que si la table n'est pas vide
 function autoriser_sites_exporter_dist($faire, $type, $id, $qui, $opt) {
 	return
-		verifier_table_non_vide('spip_sites');
+		verifier_table_non_vide('spip_syndic');
 }
 ?>
