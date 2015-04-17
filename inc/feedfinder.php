@@ -113,7 +113,7 @@ echo is_feed("http://spip.net/") . "<br />"; //retoune 0
 function get_feed_from_url($url, $buffer=false){
 	global $verif_complete;
 	//j'ai prevenu ce sera pas fin
-	if (!preg_match("/^http:\/\/.*/", $url)) $url = "http://www." . $url;
+	if (!preg_match("/^http:\/\/.*/", $url)) $url = "http://" . $url;
 	if (!$buffer) $buffer = @file_get_contents($url);
 
 	include_spip("inc/filtres");
