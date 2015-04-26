@@ -17,7 +17,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// B
 	'bouton_radio_modere_posteriori' => 'moderacion à posteriòri', # MODIF
-	'bouton_radio_modere_priori' => 'moderacion à priòri',
+	'bouton_radio_modere_priori' => 'moderacion à priòri', # MODIF
 	'bouton_radio_non_syndication' => 'Minga de sindicacion', # essai commentaire
 	'bouton_radio_syndication' => 'Sindicacion:',
 
@@ -33,7 +33,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_modifier_site' => 'Modificar aqueu sit',
 	'icone_referencer_nouveau_site' => 'Referençar un novèu sit',
 	'icone_voir_sites_references' => 'Veire lu sits referençats',
-	'info_1_site' => '1 sit',
 	'info_a_valider' => '[de validar]',
 	'info_bloquer' => 'blocar',
 	'info_bloquer_lien' => 'Blocar aquel estac',
@@ -49,14 +48,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_site_propose' => 'Sit prepauat lo :',
 	'info_site_reference' => 'Sit referençat en linha',
 	'info_site_refuse' => 'Sit web refudat',
-	'info_site_syndique' => 'Aqueu sit es sindicat...',
+	'info_site_syndique' => 'Aqueu sit es sindicat...', # MODIF
 	'info_site_valider' => 'Sits de validar',
 	'info_sites_referencer' => 'Referençar un sit',
 	'info_sites_refuses' => 'Lu sits refudats',
 	'info_statut_site_1' => 'Aqueu sit es :',
 	'info_statut_site_2' => 'Publicat',
 	'info_statut_site_3' => 'Prepauat',
-	'info_statut_site_4' => 'Ai rementa',
+	'info_statut_site_4' => 'Au bordilhier', # MODIF
 	'info_syndication' => 'sindicacion:',
 	'info_syndication_articles' => 'article(s)',
 	'item_bloquer_liens_syndiques' => 'Blocar lu estacs sindicats per validacion',
