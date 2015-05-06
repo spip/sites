@@ -142,7 +142,7 @@
 	</langue>
 	<langue code="tr" url="http://trad.spip.net/tradlang_module/sites?lang_cible=tr" total="122" traduits="68" relire="0" modifs="8" nouveaux="46" pourcent="55.74">
 	</langue>
-	<langue code="uk" url="http://trad.spip.net/tradlang_module/sites?lang_cible=uk" total="122" traduits="120" relire="0" modifs="0" nouveaux="2" pourcent="98.36">
+	<langue code="uk" url="http://trad.spip.net/tradlang_module/sites?lang_cible=uk" total="122" traduits="121" relire="0" modifs="0" nouveaux="1" pourcent="99.18">
 		<traducteur nom="olly" lien="http://trad.spip.net/auteur/olly" />
 		<traducteur nom="Retenodus" lien="http://trad.spip.net/auteur/retenodus" />
 	</langue>

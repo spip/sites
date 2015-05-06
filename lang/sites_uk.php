@@ -67,6 +67,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_derniere_syndication' => 'Дата останнього імпорту материалів ',
 	'info_liens_syndiques_1' => 'імпортованих статтей',
 	'info_liens_syndiques_2' => 'чекають на затвердження.',
+	'info_nb_sites' => '@nb@ сайти',
 	'info_nb_sites_importes' => 'Було імпортовано @nb@ сайтів',
 	'info_nom_site_2' => '<b>Назва сайту</b> [обов’язково]',
 	'info_panne_site_syndique' => 'Сайт недосяжний',
