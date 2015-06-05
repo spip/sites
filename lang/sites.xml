@@ -134,6 +134,7 @@
 		<traducteur nom="vmurariu" lien="http://trad.spip.net/auteur/vmurariu" />
 	</langue>
 	<langue code="ru" url="http://trad.spip.net/tradlang_module/sites?lang_cible=ru" total="122" traduits="122" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
+		<traducteur nom="olly" lien="http://trad.spip.net/auteur/olly" />
 		<traducteur nom="Serge Markitanenko" lien="http://trad.spip.net/auteur/serge-markitanenko" />
 	</langue>
 	<langue code="sk" url="http://trad.spip.net/tradlang_module/sites?lang_cible=sk" total="122" traduits="122" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
