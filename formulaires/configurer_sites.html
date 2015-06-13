@@ -7,7 +7,7 @@
 		[(#REM) declarer les hidden qui declencheront le service du formulaire
 		parametre : url d'action ]
 		#ACTION_FORMULAIRE{#ENV{action}}
-		<ul>
+		<ul class="editer-groupe">
 			#SET{name,activer_sites}#SET{erreurs,#ENV**{erreurs}|table_valeur{#GET{name}}}
 			<li class="editer editer_[(#GET{name})][ (#GET{obli})][ (#GET{erreurs}|oui)erreur]">
 				[<span class='erreur_message'>(#GET{erreurs})</span>
@@ -39,7 +39,7 @@
 			</li>
 			<li class="fieldset"[(#ENV{activer_sites}|=={oui}|non)style='display:none;']>
 				<fieldset><legend><:sites:titre_syndication:>#AIDER{rubsyn}</legend>
-					<ul>
+					<ul class="editer-groupe">
 						#SET{name,activer_syndic}#SET{erreurs,#ENV**{erreurs}|table_valeur{#GET{name}}}
 						<li class="editer editer_[(#GET{name})][ (#GET{obli})][ (#GET{erreurs}|oui)erreur]">
 							<div class="explication"><:sites:texte_syndication:></div>[

@@ -16,12 +16,12 @@
 		[<!-- Le logo auto-detecte -->
 		<div class='previsu_logo_site'>(#ENV**{logo}|image_reduire{180,999})</div>]
 
-		<ul>
+		<ul class="editer-groupe">
 		[(#ENV{id_syndic}|intval|>{0}|sinon{#ENV{url_site}}|non)
 			[(#SESSION{statut}|=={0minirezo}|?{' ',#ENV{config}|table_valeur{proposer_sites}|>{0}|oui})
 			<li class="editer editer_referencement_automatise fieldset">
 			  <fieldset>
-				  <ul>
+				  <ul class="editer-groupe">
 					  <li class="editer editer_url_auto pleine_largeur[ (#ENV**{erreurs}|table_valeur{url_auto}|oui)erreur]">
 							[<span class='erreur_message'>(#ENV**{erreurs}|table_valeur{url_auto})</span>]
 							<p class="explication"><:sites:texte_referencement_automatique:></p>
@@ -62,7 +62,7 @@
 				<h3 class="legend"><img src='#CHEMIN_IMAGE{rss-16.png}' alt="<:sites:info_syndication:>" />
 				<:sites:bouton_radio_syndication:>
 				#AIDER{rubsyn}</h3>
-				<ul>
+				<ul class="editer-groupe">
 					<li class="editer editer_syndication pleine_largeur">
 						<div class="choix">
 							<input type='radio' class="radio" name='syndication' value='non' id='syndication_non'[ (#ENV{syndication}|match{oui|off}|?{'','checked="checked"'})] />

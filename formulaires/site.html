@@ -7,7 +7,7 @@
 	<fieldset>
 		<legend><:info_site:></legend>
 		<p class='explication'><:proposer_site:></p>
-		<ul>
+		<ul class="editer-groupe">
 			<li class='editer saisie_nom_site obligatoire[ (#ENV*{erreurs}|table_valeur{nom_site}|oui)erreur]'>
 				<label for="nom_site"><:sites:form_prop_nom_site:> <:info_obligatoire_02:></label>
 				[<span class="erreur_message">(#ENV*{erreurs}|table_valeur{nom_site})</span>]
