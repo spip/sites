@@ -136,7 +136,7 @@ function sites_declarer_tables_objets_sql($tables){
 			"id_syndic_article"	=> "bigint(21) NOT NULL",
 			"id_syndic"	=> "bigint(21) DEFAULT '0' NOT NULL",
 			"titre"	=> "text DEFAULT '' NOT NULL",
-			"url"	=> "VARCHAR(255) DEFAULT '' NOT NULL",
+			"url"	=> "text DEFAULT '' NOT NULL",
 			"date"	=> "datetime DEFAULT '0000-00-00 00:00:00' NOT NULL",
 			"lesauteurs"	=> "text DEFAULT '' NOT NULL",
 			"maj"	=> "TIMESTAMP",
