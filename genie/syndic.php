@@ -177,9 +177,7 @@ function syndic_a_jour($now_id_syndic) {
 **/
 function inserer_article_syndique ($data, $now_id_syndic, $statut, $url_site, $url_syndic, $resume, &$faits) {
 	// Creer le lien s'il est nouveau - cle=(id_syndic,url)
-	// On coupe a 255 caracteres pour eviter tout doublon
-	// sur une URL de plus de 255 qui exloserait la base de donnees
-	$le_lien = substr($data['url'], 0,255);
+	$le_lien = $data['url'];
 
 	// si true, un lien deja syndique arrivant par une autre source est ignore
 	// par defaut [false], chaque source a sa liste de liens, eventuellement
