@@ -42,6 +42,11 @@ function sites_upgrade($nom_meta_base_version,$version_cible){
 		array('sql_alter',"TABLE spip_syndic_articles CHANGE url url text DEFAULT '' NOT NULL"),
 		array('sql_alter',"TABLE spip_syndic_articles ADD INDEX url(url(255))")
 	);
+
+	$maj['1.1.1'] = array(
+		array('maj_tables',array('spip_syndic_articles')),
+	);
+
 	include_spip('base/upgrade');
 	maj_plugin($nom_meta_base_version, $version_cible, $maj);
 }
