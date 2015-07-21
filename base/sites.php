@@ -151,7 +151,7 @@ function sites_declarer_tables_objets_sql($tables){
 			"PRIMARY KEY"	=> "id_syndic_article",
 			"KEY id_syndic"	=> "id_syndic",
 			"KEY statut"	=> "statut",
-			"KEY url"	=> "url"
+			"KEY url"	=> "url(255)"
 		),
 		'join' => array(
 			"id_syndic_article"=>"id_syndic_article",
