@@ -37,6 +37,7 @@ function executer_une_syndication() {
 	// On va tenter un site 'sus' ou 'off' de plus de 24h, et le passer en 'off'
 	// s'il echoue
 	$where = sql_in("syndication", array('sus','off')) . "
+	AND statut<>'refuse'
 	AND NOT(" . sql_date_proche('date_syndic', (0 - _PERIODE_SYNDICATION_SUSPENDUE) , "MINUTE") . ')';
 	$id_syndic = sql_getfetsel("id_syndic", "spip_syndic", $where, '', "date_syndic", "1");
 	if ($id_syndic) {
@@ -46,6 +47,7 @@ function executer_une_syndication() {
 
 	// Et un site 'oui' de plus de 2 heures, qui passe en 'sus' s'il echoue
 	$where = "syndication='oui'
+	AND statut<>'refuse'
 	AND NOT(" . sql_date_proche('date_syndic', (0 - _PERIODE_SYNDICATION) , "MINUTE") . ')';
 	$id_syndic = sql_getfetsel("id_syndic", "spip_syndic", $where, '', "date_syndic", "1");
 
