@@ -326,7 +326,7 @@ function my_strtotime($la_date, $lang=null) {
 	// par la version anglaise avant de faire strtotime
 	if ($lang){
 		// "fr-fr"
-		$lang = reset(explode("-",$lang));
+		list($lang) = explode("-", $lang);
 		static $months = null;
 		if (!isset($months[$lang])){
 			$prev_lang = $GLOBALS['spip_lang'];
