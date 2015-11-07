@@ -19,7 +19,8 @@ function sites_autoriser() {}
 
 // bouton du bandeau
 function autoriser_sites_menu_dist($faire, $type='', $id=0, $qui = NULL, $opt = NULL){
-	return 	($GLOBALS['meta']["activer_sites"] != 'non');
+	return
+		autoriser('voir', '_sites', $id, $qui, $opt);
 }
 // Le bouton de création d'un site est présent si on peut en créer un.
 function autoriser_sitecreer_menu_dist($faire, $type, $id, $qui, $opt){
@@ -27,6 +28,10 @@ function autoriser_sitecreer_menu_dist($faire, $type, $id, $qui, $opt){
 		autoriser_site_creer_dist($faire, $type, $id, $qui, $opt);
 }
 
+function autoriser_sites_voir_dist($faire, $type='', $id=0, $qui = NULL, $opt = NULL){
+	return
+		($GLOBALS['meta']['activer_sites'] != 'non');
+}
 
 // Moderer la syndication ?
 // = modifier l'objet correspondant (si forum attache a un objet)
