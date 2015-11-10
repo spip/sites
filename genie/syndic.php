@@ -166,6 +166,10 @@ function syndic_a_jour($now_id_syndic) {
  *
  * Vérifie que l'article n'a pas déjà été inséré par
  * un autre item du même feed qui aurait le meme link.
+ *
+ * @pipeline_appel pre_insertion
+ * @pipeline_appel post_insertion
+ * @pipeline_appel post_syndication
  * 
  * @param array $data
  * @param int $now_id_syndic
@@ -177,20 +181,37 @@ function syndic_a_jour($now_id_syndic) {
  * @return bool
  *     true si l'article est nouveau, false sinon.
 **/
-function inserer_article_syndique ($data, $now_id_syndic, $statut, $url_site, $url_syndic, $resume, &$faits) {
+function inserer_article_syndique($data, $now_id_syndic, $statut, $url_site, $url_syndic, $resume, &$faits) {
 	// Creer le lien s'il est nouveau - cle=(id_syndic,url)
 	$le_lien = $data['url'];
 
-	// si true, un lien deja syndique arrivant par une autre source est ignore
-	// par defaut [false], chaque source a sa liste de liens, eventuellement
-	// les memes
-	if (!defined('_SYNDICATION_URL_UNIQUE')) define('_SYNDICATION_URL_UNIQUE', false);
+	/**
+	 * URL unique de syndication
+	 * 
+	 * Si true, un lien déjà syndiqué arrivant par une autre source est ignoré
+	 * par defaut `false`, chaque source a sa liste de liens, éventuellement les mêmes
+	 * @var bool */
+	if (!defined('_SYNDICATION_URL_UNIQUE')) {
+		define('_SYNDICATION_URL_UNIQUE', false);
+	}
 
-	// Si false, on ne met pas a jour un lien deja syndique avec ses nouvelles
-	// donnees ; par defaut [true] : on met a jour si le contenu a change
-	// Attention si on modifie a la main un article syndique, les modifs sont
-	// ecrasees lors de la syndication suivante
-	if (!defined('_SYNDICATION_CORRECTION')) define('_SYNDICATION_CORRECTION', true);
+	/**
+	 * Actualiser les contenus syndiqués
+	 *
+	 * Si false, on ne met pas à jour un lien déjà syndiqué avec ses nouvelles
+	 * données ; par defaut `true` : on met a jour si le contenu a changé
+	 *
+	 * Attention si on modifie à la main un article syndiqué, les modifs sont
+	 * écrasées lors de la syndication suivante
+	 * 
+	 * @var bool
+	**/
+	if (!defined('_SYNDICATION_CORRECTION')) {
+		define('_SYNDICATION_CORRECTION', true);
+	}
+
+	// est-ce un nouvel article ?
+	$ajout = false;
 
 	// Chercher les liens de meme cle
 	// S'il y a plusieurs liens qui repondent, il faut choisir le plus proche
@@ -212,8 +233,9 @@ function inserer_article_syndique ($data, $now_id_syndic, $statut, $url_site, $u
 		$n++;
 	}
 	// S'il y en avait qu'un, le prendre quel que soit le titre
-	if ($n == 1)
+	if ($n == 1) {
 		$id_syndic_article = $id;
+	}
 	// Si l'article n'existe pas, on le cree
 	elseif (!isset($id_syndic_article)) {
 		$champs = array(
@@ -232,7 +254,10 @@ function inserer_article_syndique ($data, $now_id_syndic, $statut, $url_site, $u
 			)
 		);
 		$ajout = $id_syndic_article = sql_insertq('spip_syndic_articles', $champs);
-		if (!$ajout) return;
+		if (!$ajout) {
+			return;
+		}
+
 		pipeline('post_insertion',
 			array(
 				'args' => array(
