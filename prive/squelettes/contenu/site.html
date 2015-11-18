@@ -58,6 +58,7 @@
 
 <BOUCLE_test(SYNDIC_ARTICLES){id_syndic=#ID_SYNDIC}{0,1}{si #SYNDICATION|=={non}}>
 	[(#AUTORISER{purger,site,#ID_SITE}|oui)
+		<INCLURE{fond=prive/objets/liste/syndic_articles,id_syndic,titre=<:sites:titre_articles_syndiques:>,par=date,ajax} />
 		<div class='purger_syndic'>
 			[(#BOUTON_ACTION{<:sites:lien_purger_syndication:>,#URL_ACTION_AUTEUR{purger_site,#ID_SYNDIC,#SELF},ajax,<:sites:confirmer_purger_syndication:>})]
 		</div>
