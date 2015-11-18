@@ -88,8 +88,15 @@ function analyser_site($url) {
 			$head = filtrer_entites($regs[1]);
 		} else
 			$head = $texte;
-		if (preg_match(',<title[^>]*>(.*),i', $head, $regs))
-			$result['nom_site'] = filtrer_entites(supprimer_tags(preg_replace(',</title>.*,i', '', $regs[1])));
+
+		if (preg_match(',<title[^>]*>(.*),ims', $head, $regs)){
+			$titre = trim($regs[1]);
+			if (!strlen($titre)){
+				$titre = substr($head,strpos($head,$regs[0]));
+			}
+			$result['nom_site'] = filtrer_entites(supprimer_tags(preg_replace(',</title>.*$,ims', '', $titre)));
+		}
+
 		if ($a = array_merge(
 			extraire_balises($head, 'meta'),
 			extraire_balises($head, 'http-equiv')
