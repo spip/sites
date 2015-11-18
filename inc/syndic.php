@@ -264,6 +264,21 @@ function analyser_backend($rss, $url_syndic='') {
 		// passer l'url en absolue
 		$data['url'] = url_absolue(filtrer_entites($data['url']), $url_syndic);
 
+		// si on demande un dereferencement de l'URL, il faut verifier que ce n'est pas une redirection
+		if (_SYNDICATION_DEREFERENCER_URL){
+			$target = $data['url'];
+			include_spip("inc/distant");
+			for ($i = 0; $i<10; $i++){
+				// on fait un GET et pas un HEAD car les vieux SPIP ne repondent pas la redirection avec un HEAD (honte) sur un article virtuel
+				$res = recuperer_lapage($target, false, "GET", 4096);
+				if (!$res) break; // c'est pas bon signe car on a pas trouve l'URL...
+				if (is_array($res))	break; // on a trouve la page, donc on a l'URL finale
+				$target = $res; // c'est une redirection, on la suit pour voir ou elle mene
+			}
+			// ici $target est l'URL finale de la page
+			$data['url'] = $target;
+		}
+
 		// Trouver les microformats (ecrase les <category> et <dc:subject>)
 		if (preg_match_all(
 		',<a[[:space:]]([^>]+[[:space:]])?rel=[^>]+>.*</a>,Uims',
