@@ -34,7 +34,7 @@ include_spip('inc/editer');
  * @return array
  *     Environnement du formulaire
 **/
-function formulaires_regler_moderation_site_charger_dist($id_syndic,$retour=''){
+function formulaires_regler_moderation_site_charger_dist($id_syndic, $retour = ''){
 	$valeurs = formulaires_editer_objet_charger('site',$id_syndic,0,0,$retour,'');
 	# pour recuperer le logo issu d'analyse auto
 	foreach(array('moderation','miroir','oubli','resume') as $k)
@@ -55,7 +55,7 @@ function formulaires_regler_moderation_site_charger_dist($id_syndic,$retour=''){
  * @return string
  *     Hash du formulaire
  */
-function formulaires_regler_moderation_site_identifier_dist($id_syndic,$retour=''){
+function formulaires_regler_moderation_site_identifier_dist($id_syndic, $retour = ''){
 	return serialize(array($id_syndic));
 }
 
@@ -69,7 +69,7 @@ function formulaires_regler_moderation_site_identifier_dist($id_syndic,$retour='
  * @return array
  *     Erreurs du formulaire
 **/
-function formulaires_regler_moderation_site_verifier_dist($id_syndic,$retour=''){
+function formulaires_regler_moderation_site_verifier_dist($id_syndic, $retour = ''){
 	$erreurs = array();
 	
 	foreach(array('moderation','miroir','oubli','resume') as $k){
@@ -92,7 +92,7 @@ function formulaires_regler_moderation_site_verifier_dist($id_syndic,$retour='')
  * @return array
  *     Retours des traitements
 **/
-function formulaires_regler_moderation_site_traiter_dist($id_syndic,$retour=''){
+function formulaires_regler_moderation_site_traiter_dist($id_syndic, $retour = ''){
 	$res = formulaires_editer_objet_traiter('site',$id_syndic,0,0,$retour,'');
   $res['editable'] = true;
   if (!isset($res['message_erreur']))

@@ -37,7 +37,7 @@ if (!defined("_ECRIRE_INC_VERSION")) return;
  * @return array
  *     Liste (identifiant du site, Texte d'erreur éventuel)
  */
-function action_editer_site_dist($arg=null) {
+function action_editer_site_dist($arg = null) {
 
 	if (is_null($arg)){
 		$securiser_action = charger_fonction('securiser_action', 'inc');
@@ -75,7 +75,7 @@ function action_editer_site_dist($arg=null) {
  * @return int
  *     Identifiant du site créé
  */
-function site_inserer($id_rubrique, $set=null) {
+function site_inserer($id_rubrique, $set = null) {
 
 	include_spip('inc/rubriques');
 
@@ -142,7 +142,7 @@ function site_inserer($id_rubrique, $set=null) {
  *     - Chaîne vide si aucune erreur,
  *     - Chaîne contenant un texte d'erreur sinon.
  */
-function site_modifier($id_syndic, $set=false) {
+function site_modifier($id_syndic, $set = false) {
 	$resyndiquer = false;
 
 	include_spip('inc/rubriques');
@@ -225,7 +225,7 @@ function insert_syndic($id_rubrique) {
  * @param array|bool $set
  * @return string
 **/
-function syndic_set($id_syndic, $set=false) {
+function syndic_set($id_syndic, $set = false) {
 	return site_modifier($id_syndic,$set);
 }
 
@@ -239,7 +239,7 @@ function syndic_set($id_syndic, $set=false) {
  * @param array|bool $set
  * @return string
 **/
-function revisions_sites($id_syndic, $set=false){
+function revisions_sites($id_syndic, $set = false){
 	return site_modifier($id_syndic,$set);
 }
 
@@ -254,7 +254,7 @@ function revisions_sites($id_syndic, $set=false){
  * @param bool $calcul_rub
  * @return string
 **/
-function instituer_syndic($id_syndic, $c, $calcul_rub=true){
+function instituer_syndic($id_syndic, $c, $calcul_rub = true){
 	include_spip('action/editer_objet');
 	return objet_instituer('site',$id_syndic, $c, $calcul_rub);
 }

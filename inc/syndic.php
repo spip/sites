@@ -37,7 +37,7 @@ include_spip('genie/syndic');
  *     - array : tableau des items lus,
  *     - string : texte d'erreur
 **/
-function analyser_backend($rss, $url_syndic='') {
+function analyser_backend($rss, $url_syndic = '') {
 	include_spip('inc/texte'); # pour couper()
 
 	$rss = pipeline('pre_syndication', $rss);
@@ -337,7 +337,7 @@ function analyser_backend($rss, $url_syndic='') {
  * @return int
  *     Timestamp
 **/
-function my_strtotime($la_date, $lang=null) {
+function my_strtotime($la_date, $lang = null) {
 	// format complet
 	if (preg_match(
 	',^(\d+-\d+-\d+[T ]\d+:\d+(:\d+)?)(\.\d+)?'
@@ -405,7 +405,7 @@ function my_strtotime($la_date, $lang=null) {
 // A partir d'un <dc:subject> ou autre essayer de recuperer
 // le mot et son url ; on cree <a href="url" rel="tag">mot</a>
 // http://code.spip.net/@creer_tag
-function creer_tag($mot,$type,$url) {
+function creer_tag($mot, $type, $url) {
 	if (!strlen($mot = trim($mot))) return '';
 	$mot = "<a rel=\"tag\">$mot</a>";
 	if ($url)

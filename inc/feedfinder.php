@@ -110,7 +110,7 @@ echo is_feed("http://spip.net/") . "<br />"; //retoune 0
  * @return array $feed_list
  * 		Le tableau des feed trouvés dans la page
  */
-function get_feed_from_url($url, $buffer=false){
+function get_feed_from_url($url, $buffer = false){
 	global $verif_complete;
 	//j'ai prevenu ce sera pas fin
 	if (!preg_match("/^http:\/\/.*/", $url)) $url = "http://" . $url;
