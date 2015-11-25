@@ -121,9 +121,10 @@ function sites_accueil_encours($flux){
  * @return array
  */
 function sites_affiche_enfants($flux) {
-	if ($e = trouver_objet_exec($flux['args']['exec'])
-	  AND $e['type'] == 'rubrique'
-	  AND $e['edition'] == false) {
+	if (isset($flux['args']['exec'])
+	AND $e = trouver_objet_exec($flux['args']['exec'])
+	AND $e['type'] == 'rubrique'
+	AND $e['edition'] == false) {
 		$id_rubrique = $flux['args']['id_rubrique'];
   
 		if ($GLOBALS['meta']["activer_sites"] == 'oui') {
