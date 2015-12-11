@@ -134,7 +134,7 @@ function site_inserer($id_rubrique, $set = null) {
  * 
  * @param int $id_syndic
  *     Identifiant du site à modifier
- * @param array|bool $set
+ * @param array|null $set
  *     Couples (colonne => valeur) de données à modifier.
  *     En leur absence, on cherche les données dans les champs éditables
  *     qui ont été postés (via collecter_requests())
@@ -142,7 +142,7 @@ function site_inserer($id_rubrique, $set = null) {
  *     - Chaîne vide si aucune erreur,
  *     - Chaîne contenant un texte d'erreur sinon.
  */
-function site_modifier($id_syndic, $set = false) {
+function site_modifier($id_syndic, $set = null) {
 	$resyndiquer = false;
 
 	include_spip('inc/rubriques');
@@ -176,6 +176,7 @@ function site_modifier($id_syndic, $set = false) {
 
 	if ($err = objet_modifier_champs('site', $id_syndic,
 		array(
+			'data' => $set,
 			'nonvide' => array('nom_site' => _T('info_sans_titre')),
 			'invalideur' => $invalideur,
 			'indexation' => $indexation
