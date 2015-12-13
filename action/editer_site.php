@@ -49,7 +49,7 @@ function action_editer_site_dist($arg = null) {
 	if (!$id_syndic = intval($arg)) {
 		$id_syndic = site_inserer(_request('id_parent'));
 		if ($logo = _request('logo')
-			AND $format_logo = _request('format_logo')
+			and $format_logo = _request('format_logo')
 		) {
 			include_spip('inc/distant');
 			$logo = _DIR_RACINE . copie_locale($logo);
@@ -176,7 +176,7 @@ function site_modifier($id_syndic, $set = null) {
 	// resyndiquer si un element de syndication modifie
 	if ($t = sql_fetsel('url_syndic,syndication,resume', 'spip_syndic', "id_syndic=" . intval($id_syndic))) {
 		foreach ($t as $k => $v) {
-			if (isset($c[$k]) AND $v != $c[$k]) {
+			if (isset($c[$k]) and $v != $c[$k]) {
 				$resyndiquer = true;
 			}
 		}
@@ -203,7 +203,7 @@ function site_modifier($id_syndic, $set = null) {
 	}
 
 
-	if ($resyndiquer AND sql_getfetsel('syndication', 'spip_syndic', "id_syndic=" . intval($id_syndic)) !== 'non') {
+	if ($resyndiquer and sql_getfetsel('syndication', 'spip_syndic', "id_syndic=" . intval($id_syndic)) !== 'non') {
 		$syndiquer_site = charger_fonction('syndiquer_site', 'action');
 		$syndiquer_site($id_syndic);
 	}
@@ -278,5 +278,3 @@ function instituer_syndic($id_syndic, $c, $calcul_rub = true) {
 
 	return objet_instituer('site', $id_syndic, $c, $calcul_rub);
 }
-
-?>

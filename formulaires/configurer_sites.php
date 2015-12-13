@@ -64,4 +64,3 @@ function formulaires_configurer_sites_traiter_dist() {
 
 	return $res;
 }
-

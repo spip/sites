@@ -11,5 +11,3 @@ function sites_ieconfig_metas($table) {
 
 	return $table;
 }
-
-?>

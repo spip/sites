@@ -34,16 +34,16 @@ function bookmarks_netscape_fast_parse(&$contenu) {
 
 	$po = stripos($contenu, "<h3", 4);
 	$pf = stripos($contenu, "</dl>");
-	while ($po OR $pf) {
+	while ($po or $pf) {
 		#var_dump("$po:$pf");
-		if ($po > 0 AND $po < $pf) {
+		if ($po > 0 and $po < $pf) {
 			$out['content'] .= substr($contenu, 0, $po);
 			$contenu = substr($contenu, $po);
 			$out['sub'][] = bookmarks_netscape_fast_parse($contenu);
 		} else {
 
 			$out['content'] .= substr($contenu, 0, $pf);
-			$contenu = substr($contenu, $pf+5);
+			$contenu = substr($contenu, $pf + 5);
 			#var_dump("<<".substr($contenu,0,200));
 			$out['content'] = bookmarks_extract_links($out['content']);
 
@@ -90,20 +90,20 @@ function bookmarks_insert($tree, $id_parent, $importer_statut_publie, $importer_
 
 	$nb = 0;
 	if (count($tree['content']['links'])
-		OR isset($tree['sub'])
+		or isset($tree['sub'])
 	) {
 
 		$titre = ($tree['content']['titre'] ? $tree['content']['titre'] : _T('info_sans_titre'));
 		$id_rubrique = sql_getfetsel('id_rubrique', 'spip_rubriques',
 			'id_parent=' . intval($id_parent) . " AND titre=" . sql_quote($titre));
 		if (!$id_rubrique
-			AND $id_rubrique = rubrique_inserer($id_parent)
+			and $id_rubrique = rubrique_inserer($id_parent)
 		) {
 			rubrique_modifier($id_rubrique, array('titre' => $titre));
 		}
 		if ($id_rubrique) {
 			$statut = 'prop';
-			if ($importer_statut_publie AND autoriser('publierdans', 'rubrique', $id_rubrique)) {
+			if ($importer_statut_publie and autoriser('publierdans', 'rubrique', $id_rubrique)) {
 				$statut = 'publie';
 			}
 			$now = time();
@@ -131,7 +131,7 @@ function bookmarks_insert($tree, $id_parent, $importer_statut_publie, $importer_
 			if ($level < 30) {
 				if (isset($tree['sub'])) {
 					foreach ($tree['sub'] as $sub) {
-						$nb += bookmarks_insert($sub, $id_rubrique, $importer_statut_publie, $importer_tags, $level+1);
+						$nb += bookmarks_insert($sub, $id_rubrique, $importer_statut_publie, $importer_tags, $level + 1);
 					}
 				}
 			}

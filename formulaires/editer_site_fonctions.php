@@ -34,5 +34,3 @@ function saisie_url_syndic($url_syndic, $name = 'url_syndic', $id = 'url_syndic'
 
 	return $res;
 }
-
-?>

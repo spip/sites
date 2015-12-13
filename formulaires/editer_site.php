@@ -152,7 +152,7 @@ function formulaires_editer_site_verifier_dist(
 	include_spip('inc/site');
 	$oblis = array('nom_site', 'url_site', 'id_parent');
 	// Envoi depuis le formulaire d'analyse automatique d'un site
-	if (_request('ajoute_url_auto') AND strlen(vider_url($u = _request('url_auto')))) {
+	if (_request('ajoute_url_auto') and strlen(vider_url($u = _request('url_auto')))) {
 		if ($auto = analyser_site($u)) {
 			// Si pas de logo, on va le chercher dans le ou les feeds
 			if (isset($auto['url_syndic'])
@@ -229,6 +229,3 @@ function formulaires_editer_site_traiter_dist(
 	return formulaires_editer_objet_traiter('site', $id_syndic, $id_rubrique, $lier_trad, $retour, $config_fonc, $row,
 		$hidden);
 }
-
-
-?>

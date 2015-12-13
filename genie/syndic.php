@@ -28,13 +28,13 @@ if (!defined('_PERIODE_SYNDICATION')) {
 	 *
 	 * Attention il est très mal vu de prendre une periode < 20 minutes
 	 */
-	define('_PERIODE_SYNDICATION', 2*60);
+	define('_PERIODE_SYNDICATION', 2 * 60);
 }
 if (!defined('_PERIODE_SYNDICATION_SUSPENDUE')) {
 	/**
 	 * Durée d'une suspension de syndication si un site ne répond pas (en minutes)
 	 */
-	define('_PERIODE_SYNDICATION_SUSPENDUE', 24*60);
+	define('_PERIODE_SYNDICATION_SUSPENDUE', 24 * 60);
 }
 
 
@@ -63,7 +63,7 @@ function executer_une_syndication() {
 	// s'il echoue
 	$where = sql_in("syndication", array('sus', 'off')) . "
 	AND statut<>'refuse'
-	AND NOT(" . sql_date_proche('date_syndic', (0-_PERIODE_SYNDICATION_SUSPENDUE), "MINUTE") . ')';
+	AND NOT(" . sql_date_proche('date_syndic', (0 - _PERIODE_SYNDICATION_SUSPENDUE), "MINUTE") . ')';
 	$id_syndic = sql_getfetsel("id_syndic", "spip_syndic", "statut<>" . sql_quote("refuse") . " AND " . $where, '',
 		"date_syndic", "1");
 	if ($id_syndic) {
@@ -74,7 +74,7 @@ function executer_une_syndication() {
 	// Et un site 'oui' de plus de 2 heures, qui passe en 'sus' s'il echoue
 	$where = "syndication='oui'
 	AND statut<>'refuse'
-	AND NOT(" . sql_date_proche('date_syndic', (0-_PERIODE_SYNDICATION), "MINUTE") . ')';
+	AND NOT(" . sql_date_proche('date_syndic', (0 - _PERIODE_SYNDICATION), "MINUTE") . ')';
 	$id_syndic = sql_getfetsel("id_syndic", "spip_syndic", "statut<>" . sql_quote("refuse") . " AND " . $where, '',
 		"date_syndic", "1");
 
@@ -127,7 +127,7 @@ function syndic_a_jour($now_id_syndic) {
 	$statut = 'sus';
 	if (
 		$row['statut'] == 'off'
-		OR ($row['statut'] == 'sus' AND time()-strtotime($row['date_syndic']) > _PERIODE_SYNDICATION_SUSPENDUE*60)
+		or ($row['statut'] == 'sus' and time() - strtotime($row['date_syndic']) > _PERIODE_SYNDICATION_SUSPENDUE * 60)
 	) {
 		$statut = 'off';
 	}
@@ -296,7 +296,7 @@ function inserer_article_syndique($data, $now_id_syndic, $statut, $url_site, $ur
 			return;
 		}
 		// 2. Le lien existait deja, lie a un autre spip_syndic
-		if (_SYNDICATION_URL_UNIQUE AND $id_syndic != $now_id_syndic) {
+		if (_SYNDICATION_URL_UNIQUE and $id_syndic != $now_id_syndic) {
 			return;
 		}
 	}
@@ -381,5 +381,3 @@ function trim_more($texte) {
 
 	return $texte;
 }
-
-?>

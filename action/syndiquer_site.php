@@ -33,5 +33,3 @@ function action_syndiquer_site_dist($id_syndic = null) {
 	}
 
 }
-
-?>

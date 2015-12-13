@@ -25,7 +25,7 @@ function formulaires_site_verifier_dist($id_rubrique) {
 	if (!$nom = _request('nom_site')) {
 		$erreurs['nom_site'] = _T("info_obligatoire");
 	} else {
-		if ((strlen($nom) < 2) OR (strlen(_request('nobot')) > 0)) {
+		if ((strlen($nom) < 2) or (strlen(_request('nobot')) > 0)) {
 			$erreurs['email_message_auteur'] = _T('form_prop_indiquer_nom_site');
 		}
 	}
@@ -69,5 +69,3 @@ function formulaires_site_traiter_dist($id_rubrique) {
 
 	return $res;
 }
-
-?>

@@ -77,7 +77,7 @@ function formulaires_regler_moderation_site_verifier_dist($id_syndic, $retour = 
 	$erreurs = array();
 
 	foreach (array('moderation', 'miroir', 'oubli', 'resume') as $k) {
-		if (!_request($k) OR !in_array(_request($k), array('oui', 'non'))) {
+		if (!_request($k) or !in_array(_request($k), array('oui', 'non'))) {
 			set_request($k, 'non');
 		}
 	}
@@ -106,6 +106,3 @@ function formulaires_regler_moderation_site_traiter_dist($id_syndic, $retour = '
 
 	return $res;
 }
-
-
-?>

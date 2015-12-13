@@ -22,5 +22,3 @@ function liens_implicite_site_dist($texte, $id, $type, $args, $ancre, $connect =
 
 	return $url;
 }
-
-?>

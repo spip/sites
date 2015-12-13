@@ -22,12 +22,10 @@ function action_purger_site_dist($id_syndic = null) {
 	}
 
 	if ($id_syndic = intval($id_syndic)
-		AND autoriser('purger', 'site', $id_syndic)
+		and autoriser('purger', 'site', $id_syndic)
 	) {
 
 		include_spip('base/abstract_sql');
 		sql_delete('spip_syndic_articles', 'id_syndic=' . intval($id_syndic));
 	}
 }
-
-?>

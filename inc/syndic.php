@@ -79,8 +79,8 @@ function analyser_backend($rss, $url_syndic = '') {
 	$langue_du_site = '';
 
 	if ((preg_match(',<([^>]*xml:)?lang(uage)?' . '>([^<>]+)<,i',
-				$header, $match) AND $l = $match[3])
-		OR ($l = extraire_attribut(extraire_balise($header, 'feed'), 'xml:lang'))
+				$header, $match) and $l = $match[3])
+		or ($l = extraire_attribut(extraire_balise($header, 'feed'), 'xml:lang'))
 	) {
 		$langue_du_site = $l;
 	} // atom
@@ -109,14 +109,14 @@ function analyser_backend($rss, $url_syndic = '') {
 		// attention la valeur par defaut est 'true' ce qui oblige a quelque
 		// gymnastique
 		if (preg_match(',<guid.*>[[:space:]]*(https?:[^<]*)</guid>,Uims',
-				$item, $regs) AND preg_match(',^(true|1)?$,i',
+				$item, $regs) and preg_match(',^(true|1)?$,i',
 				extraire_attribut($regs[0], 'ispermalink'))
 		) {
 			$data['url'] = $regs[1];
 		} // contourner les redirections feedburner
 		else {
 			if (_SYNDICATION_DEREFERENCER_URL
-				AND preg_match(',<feedburner:origLink>(.*)<,Uims',
+				and preg_match(',<feedburner:origLink>(.*)<,Uims',
 					$item, $regs)
 			) {
 				$data['url'] = $regs[1];
@@ -139,7 +139,7 @@ function analyser_backend($rss, $url_syndic = '') {
 							} // Aucun link ni guid, mais une enclosure
 							else {
 								if (preg_match(',<enclosure[^>]*>,ims', $item, $regs)
-									AND $url = extraire_attribut($regs[0], 'url')
+									and $url = extraire_attribut($regs[0], 'url')
 								) {
 									$data['url'] = $url;
 								} // pas d'url, c'est genre un compteur...
@@ -158,7 +158,7 @@ function analyser_backend($rss, $url_syndic = '') {
 			$data['titre'] = $match[1];
 		} else {
 			if (preg_match(',<link[[:space:]][^>]*>,Uims', $item, $mat)
-				AND $title = extraire_attribut($mat[0], 'title')
+				and $title = extraire_attribut($mat[0], 'title')
 			) {
 				$data['titre'] = $title;
 			}
@@ -174,19 +174,19 @@ function analyser_backend($rss, $url_syndic = '') {
 			cdata_echappe_retour($match[2], $echappe_cdata);
 			$la_date = my_strtotime($match[2], $langue_du_site);
 		}
-		if (!$la_date AND
+		if (!$la_date and
 			preg_match(',<(pubdate)>([^<]*)<,Uims', $item, $match)
 		) {
 			cdata_echappe_retour($match[2], $echappe_cdata);
 			$la_date = my_strtotime($match[2], $langue_du_site);
 		}
-		if (!$la_date AND
+		if (!$la_date and
 			preg_match(',<([a-z]+:date)>([^<]*)<,Uims', $item, $match)
 		) {
 			cdata_echappe_retour($match[2], $echappe_cdata);
 			$la_date = my_strtotime($match[2], $langue_du_site);
 		}
-		if (!$la_date AND
+		if (!$la_date and
 			preg_match(',<date>([^<]*)<,Uims', $item, $match)
 		) {
 			cdata_echappe_retour($match[1], $echappe_cdata);
@@ -199,7 +199,7 @@ function analyser_backend($rss, $url_syndic = '') {
 		// plus lourd que vraiment utile)
 		if ($GLOBALS['controler_dates_rss']) {
 			if (!$la_date
-				OR $la_date > time()+48*3600
+				or $la_date > time() + 48 * 3600
 			) {
 				$la_date = time();
 			}
@@ -212,9 +212,9 @@ function analyser_backend($rss, $url_syndic = '') {
 		// Honorer le <lastbuilddate> en forcant la date
 		if (preg_match(',<(lastbuilddate|updated|modified)>([^<>]+)</\1>,i',
 				$item, $regs)
-			AND $lastbuilddate = my_strtotime(trim($regs[2]), $langue_du_site)
+			and $lastbuilddate = my_strtotime(trim($regs[2]), $langue_du_site)
 			// pas dans le futur
-			AND $lastbuilddate < time()
+			and $lastbuilddate < time()
 		) {
 			$data['lastbuilddate'] = $lastbuilddate;
 		}
@@ -390,7 +390,7 @@ function my_strtotime($la_date, $lang = null) {
 		$match = array_pad($match, 6, null);
 		$la_date = str_replace("T", " ", $match[1]) . " GMT";
 
-		return strtotime($la_date)-intval($match[5])*3600;
+		return strtotime($la_date) - intval($match[5]) * 3600;
 	}
 
 	// YYYY
@@ -414,7 +414,7 @@ function my_strtotime($la_date, $lang = null) {
 	$la_date_c = preg_replace("/^\w+,\s*/ms", "", $la_date);
 	$la_date_c = preg_replace("/UT\s*$/ms", "UTC", $la_date_c);
 	if ($s = strtotime($la_date)
-		OR $s = strtotime($la_date_c)
+		or $s = strtotime($la_date_c)
 	) {
 		return $s;
 	}
@@ -478,11 +478,11 @@ function ajouter_tags($matches, $item) {
 	include_spip('inc/filtres');
 	$tags = array();
 	foreach ($matches as $match) {
-		$type = ($match[3] == 'category' OR $match[3] == 'directory')
+		$type = ($match[3] == 'category' or $match[3] == 'directory')
 			? 'directory' : 'tag';
 		$mot = supprimer_tags($match[0]);
 		if (!strlen($mot)
-			AND !strlen($mot = extraire_attribut($match[0], 'label'))
+			and !strlen($mot = extraire_attribut($match[0], 'label'))
 		) {
 			break;
 		}
@@ -497,7 +497,7 @@ function ajouter_tags($matches, $item) {
 			}
 		} else {
 			if ($url = extraire_attribut($match[0], 'resource')
-				OR $url = extraire_attribut($match[0], 'url')
+				or $url = extraire_attribut($match[0], 'url')
 			) {
 			} ## cas particuliers
 			else {
@@ -568,7 +568,7 @@ function cdata_echappe(&$rss, &$echappe_cdata) {
 function cdata_echappe_retour(&$x, &$echappe_cdata) {
 	if (is_string($x)) {
 		if (strpos($x, '@@@SPIP_CDATA') !== false
-			OR strpos($x, '&lt;') !== false
+			or strpos($x, '&lt;') !== false
 		) {
 			$x = filtrer_entites($x);
 			foreach ($echappe_cdata as $n => $e) {
@@ -583,5 +583,3 @@ function cdata_echappe_retour(&$x, &$echappe_cdata) {
 		}
 	}
 }
-
-?>

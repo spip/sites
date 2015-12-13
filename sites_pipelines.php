@@ -42,7 +42,7 @@ function sites_rubrique_encours($flux) {
 		// Les sites a probleme
 		//
 		if ($GLOBALS['meta']['activer_sites'] != 'non'
-			AND autoriser('publierdans', 'rubrique', $id_rubrique)
+			and autoriser('publierdans', 'rubrique', $id_rubrique)
 		) {
 			$flux['data'] .= $lister_objets('sites', array(
 				'titre' => _T('sites:avis_sites_syndiques_probleme'),
@@ -55,7 +55,7 @@ function sites_rubrique_encours($flux) {
 
 		// Les articles syndiques en attente de validation
 		if ($id_rubrique == 0
-			AND autoriser('publierdans', 'rubrique', $id_rubrique)
+			and autoriser('publierdans', 'rubrique', $id_rubrique)
 		) {
 
 			$cpt = sql_countsel("spip_syndic_articles", "statut='dispo'");
@@ -151,9 +151,9 @@ function sites_accueil_encours($flux) {
  */
 function sites_affiche_enfants($flux) {
 	if (isset($flux['args']['exec'])
-		AND $e = trouver_objet_exec($flux['args']['exec'])
-		AND $e['type'] == 'rubrique'
-		AND $e['edition'] == false
+		and $e = trouver_objet_exec($flux['args']['exec'])
+		and $e['type'] == 'rubrique'
+		and $e['edition'] == false
 	) {
 		$id_rubrique = $flux['args']['id_rubrique'];
 
@@ -204,9 +204,9 @@ function sites_configurer_liste_metas($metas) {
 function sites_taches_generales_cron($taches_generales) {
 
 	if (isset($GLOBALS['meta']["activer_syndic"])
-		AND $GLOBALS['meta']["activer_syndic"] == "oui"
-		AND isset($GLOBALS['meta']["activer_sites"])
-		AND $GLOBALS['meta']["activer_sites"] == "oui"
+		and $GLOBALS['meta']["activer_syndic"] == "oui"
+		and isset($GLOBALS['meta']["activer_sites"])
+		and $GLOBALS['meta']["activer_sites"] == "oui"
 	) {
 		$taches_generales['syndic'] = 90;
 	}
@@ -270,7 +270,7 @@ function sites_calculer_rubriques($flux) {
  */
 function sites_objet_compte_enfants($flux) {
 	if ($flux['args']['objet'] == 'rubrique'
-		AND $id_rubrique = intval($flux['args']['id_objet'])
+		and $id_rubrique = intval($flux['args']['id_objet'])
 	) {
 		// juste les publies ?
 		if (array_key_exists('statut', $flux['args']) and ($flux['args']['statut'] == 'publie')) {
@@ -305,7 +305,7 @@ function sites_trig_propager_les_secteurs($flux) {
  */
 function sites_boite_infos($flux) {
 	if ($flux['args']['type'] == 'rubrique'
-		AND $id_rubrique = $flux['args']['id']
+		and $id_rubrique = $flux['args']['id']
 	) {
 		if ($nb = sql_countsel('spip_syndic', "statut='publie' AND id_rubrique=" . intval($id_rubrique))) {
 			$nb = "<div>" . singulier_ou_pluriel($nb, "sites:info_1_site", "sites:info_nb_sites") . "</div>";
@@ -317,5 +317,3 @@ function sites_boite_infos($flux) {
 
 	return $flux;
 }
-
-?>

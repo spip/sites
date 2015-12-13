@@ -43,5 +43,3 @@ function balise_FORMULAIRE_SITE_stat($args, $context_compil) {
 
 	return (($GLOBALS['meta']["proposer_sites"] != 2) ? '' : $args);
 }
-
-?>

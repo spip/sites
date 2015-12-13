@@ -158,7 +158,7 @@ function get_feed_from_url($url, $buffer = false) {
 				if ($href = extraire_attribut($link, "href")) {
 					//on aura pris soin de verifier si ce lien est relatif d'en faire un absolu
 					$href = suivre_lien($url, $href);
-					if (!$verif_complete OR is_feed($href)) {
+					if (!$verif_complete or is_feed($href)) {
 						$feed_list[] = $href;
 					}
 				}
@@ -181,7 +181,7 @@ function get_feed_from_url($url, $buffer = false) {
 				if ($href = extraire_attribut($link, "href")) {
 					//on aura pris soin de verifier si ce lien est relatif d'en faire un absolu
 					$href = suivre_lien($url, $href);
-					if (!$verif_complete OR is_feed($href)) {
+					if (!$verif_complete or is_feed($href)) {
 						$feed_list[] = $href;
 					}
 				}
@@ -191,8 +191,8 @@ function get_feed_from_url($url, $buffer = false) {
 
 	// si c'est un site SPIP, tentons l'url connue
 	if (!count($feed_list)
-		AND (
-			strpos($url, "spip") OR stripos($buffer, "spip")
+		and (
+			strpos($url, "spip") or stripos($buffer, "spip")
 		)
 	) {
 		$href = suivre_lien($url, "spip.php?page=backend");
@@ -233,6 +233,4 @@ function get_feed_from_url($url, $buffer = false) {
  * [2] => http://willy.boerland.com/myblog/rss.xml
  * [3] => http://willy.boerland.com/myblog/node/feed
  * )
- ************************************************************************/
-
-?>
+ ************************************************************************/;

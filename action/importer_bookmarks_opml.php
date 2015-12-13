@@ -87,7 +87,7 @@ function bookmarks_opml_insert($tree, $id_parent, $importer_statut_publie, $impo
 			// cas d'un flux
 			if (array_key_exists('XMLURL', $item)) {
 				$statut = 'prop';
-				if ($importer_statut_publie AND autoriser('publierdans', 'rubrique', $id_parent)) {
+				if ($importer_statut_publie and autoriser('publierdans', 'rubrique', $id_parent)) {
 					$statut = 'publie';
 				}
 				$now = time();
@@ -114,7 +114,7 @@ function bookmarks_opml_insert($tree, $id_parent, $importer_statut_publie, $impo
 				$titre = $key;
 				$id_rubrique = sql_getfetsel('id_rubrique', 'spip_rubriques',
 					'id_parent=' . intval($id_parent) . " AND titre=" . sql_quote($titre));
-				if (!$id_rubrique AND $id_rubrique = rubrique_inserer($id_parent)) {
+				if (!$id_rubrique and $id_rubrique = rubrique_inserer($id_parent)) {
 					rubrique_modifier($id_rubrique, array('titre' => $titre));
 				}
 				if ($id_rubrique) {
@@ -126,5 +126,3 @@ function bookmarks_opml_insert($tree, $id_parent, $importer_statut_publie, $impo
 
 	return $nb;
 }
-
-?>

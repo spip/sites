@@ -75,7 +75,7 @@ function analyser_site($url) {
 					// on installe l'url comme url du site
 					// si c'est non vide, en donnant la priorite a rel=alternate
 					if (preg_match(',\balternate\b,', extraire_attribut($link, 'rel'))
-						OR !isset($result['url_site'])
+						or !isset($result['url_site'])
 					) {
 						$result['url_site'] = filtrer_entites($u);
 					}
@@ -85,7 +85,7 @@ function analyser_site($url) {
 		$result['url_site'] = url_absolue($result['url_site'], $url);
 
 		if ($a = extraire_balise($header, 'description')
-			OR $a = extraire_balise($header, 'tagline')
+			or $a = extraire_balise($header, 'tagline')
 		) {
 			cdata_echappe_retour($a, $echappe_cdata);
 			$result['descriptif'] = filtrer_entites(supprimer_tags($a));
@@ -93,8 +93,8 @@ function analyser_site($url) {
 
 		if (preg_match(',<image.*<url.*>(.*)</url>.*</image>,Uims',
 				$header, $r)
-			AND preg_match(',(https?://.*/.*(gif|png|jpg)),ims', $r[1], $r)
-			AND $image = recuperer_infos_distantes($r[1])
+			and preg_match(',(https?://.*/.*(gif|png|jpg)),ims', $r[1], $r)
+			and $image = recuperer_infos_distantes($r[1])
 		) {
 			if (in_array($image['extension'], array('gif', 'jpg', 'png'))) {
 				$result['format_logo'] = $image['extension'];
@@ -155,5 +155,3 @@ function analyser_site($url) {
 
 	return $result;
 }
-
-?>

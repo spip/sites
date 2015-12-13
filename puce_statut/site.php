@@ -22,7 +22,7 @@ function puce_statut_site_dist($id, $statut, $id_rubrique, $type, $ajax = '', $m
 
 	// cas particulier des sites en panne de syndic :
 	// on envoi une puce speciale, et pas de menu de changement rapide
-	if ($t == 'off' OR $t == 'sus') {
+	if ($t == 'off' or $t == 'sus') {
 		switch ($statut) {
 			case 'publie':
 				$puce = 'puce-verte-anim.gif';
@@ -44,6 +44,3 @@ function puce_statut_site_dist($id, $statut, $id_rubrique, $type, $ajax = '', $m
 		return puce_statut_changement_rapide($id, $statut, $id_rubrique, $type, $ajax, $menu_rapide);
 	}
 }
-
-
-?>

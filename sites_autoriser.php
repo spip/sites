@@ -52,17 +52,17 @@ function autoriser_site_purger_dist($faire, $type, $id, $qui, $opt) {
 
 
 function autoriser_controlersyndication_menu_dist($faire, $type, $id, $qui, $opt) {
-	return ($qui['statut'] == '0minirezo' AND sql_countsel('spip_syndic_articles'));
+	return ($qui['statut'] == '0minirezo' and sql_countsel('spip_syndic_articles'));
 }
 
 // Creer un nouveau site ?
 function autoriser_site_creer_dist($faire, $type, $id, $qui, $opt) {
 	return
 		($GLOBALS['meta']["activer_sites"] != 'non'
-			AND verifier_table_non_vide()
-			AND (
+			and verifier_table_non_vide()
+			and (
 				$qui['statut'] == '0minirezo'
-				OR ($GLOBALS['meta']['proposer_sites'] >=
+				or ($GLOBALS['meta']['proposer_sites'] >=
 					($qui['statut'] == '1comite' ? 1 : 2))));
 }
 
@@ -73,24 +73,24 @@ function autoriser_site_creer_dist($faire, $type, $id, $qui, $opt) {
 function autoriser_rubrique_creersitedans_dist($faire, $type, $id, $qui, $opt) {
 	return
 		$id
-		AND autoriser('voir', 'rubrique', $id)
-		AND autoriser_site_creer_dist($faire, $type, $id, $qui, $opt);
+		and autoriser('voir', 'rubrique', $id)
+		and autoriser_site_creer_dist($faire, $type, $id, $qui, $opt);
 }
 
 
 // Autoriser a modifier un site
 // http://code.spip.net/@autoriser_site_modifier_dist
 function autoriser_site_modifier_dist($faire, $type, $id, $qui, $opt) {
-	if ($qui['statut'] == '0minirezo' AND !$qui['restreint']) {
+	if ($qui['statut'] == '0minirezo' and !$qui['restreint']) {
 		return true;
 	}
 
 	$r = sql_fetsel("id_rubrique,statut", "spip_syndic", "id_syndic=" . intval($id));
 
 	return ($r
-		AND autoriser('voir', 'rubrique', $r['id_rubrique'])
-		AND
-		($r['statut'] == 'publie' OR (isset($opt['statut']) AND $opt['statut'] == 'publie'))
+		and autoriser('voir', 'rubrique', $r['id_rubrique'])
+		and
+		($r['statut'] == 'publie' or (isset($opt['statut']) and $opt['statut'] == 'publie'))
 			? autoriser('publierdans', 'rubrique', $r['id_rubrique'], $qui, $opt)
 			: in_array($qui['statut'], array('0minirezo', '1comite'))
 	);
@@ -114,5 +114,3 @@ function autoriser_sites_exporter_dist($faire, $type, $id, $qui, $opt) {
 	return
 		verifier_table_non_vide('spip_syndic');
 }
-
-?>

@@ -71,8 +71,8 @@ function info_fichiers_import($name) {
 
 	if (!isset($fichier_ok[$name])) {
 		if (sizeof($_FILES) < 0
-			OR !isset($_FILES[$name])
-			OR !$_FILES[$name]['size'] > 0
+			or !isset($_FILES[$name])
+			or !$_FILES[$name]['size'] > 0
 		) {
 			return false;
 		}
@@ -91,7 +91,7 @@ function info_fichiers_import($name) {
 		if (stripos($fichier_ok[$name]['contenu'], 'NETSCAPE-Bookmark-file') !== false) {
 			$fichier_ok[$name]['format'] = 'netscape';
 		}
-		if ($_FILES[$name]['type'] == 'text/xml' AND stripos($fichier_ok[$name]['contenu'], 'opml') !== false) {
+		if ($_FILES[$name]['type'] == 'text/xml' and stripos($fichier_ok[$name]['contenu'], 'opml') !== false) {
 			$fichier_ok[$name]['format'] = 'opml';
 		}
 	}
