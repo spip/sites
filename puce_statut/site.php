@@ -10,13 +10,15 @@
  *  Pour plus de details voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
-if (!defined("_ECRIRE_INC_VERSION")) return;
+if (!defined("_ECRIRE_INC_VERSION")) {
+	return;
+}
 
 
 // http://code.spip.net/@puce_statut_site_dist
-function puce_statut_site_dist($id, $statut, $id_rubrique, $type, $ajax = '', $menu_rapide = _ACTIVER_PUCE_RAPIDE){
+function puce_statut_site_dist($id, $statut, $id_rubrique, $type, $ajax = '', $menu_rapide = _ACTIVER_PUCE_RAPIDE) {
 
-	$t = sql_getfetsel("syndication", "spip_syndic", "id_syndic=".intval($id));
+	$t = sql_getfetsel("syndication", "spip_syndic", "id_syndic=" . intval($id));
 
 	// cas particulier des sites en panne de syndic :
 	// on envoi une puce speciale, et pas de menu de changement rapide
@@ -36,10 +38,11 @@ function puce_statut_site_dist($id, $statut, $id_rubrique, $type, $ajax = '', $m
 				$title = _T('sites:info_site_refuse');
 				break;
 		}
+
 		return http_img_pack($puce, $title);
+	} else {
+		return puce_statut_changement_rapide($id, $statut, $id_rubrique, $type, $ajax, $menu_rapide);
 	}
-	else
-		return puce_statut_changement_rapide($id,$statut,$id_rubrique,$type,$ajax,$menu_rapide);
 }
 
 

@@ -14,9 +14,11 @@
  * Gestion des actualisation des sites syndiqués
  *
  * @package SPIP\Sites\Genie
-**/
+ **/
 
-if (!defined("_ECRIRE_INC_VERSION")) return;
+if (!defined("_ECRIRE_INC_VERSION")) {
+	return;
+}
 include_spip('inc/syndic');
 
 ## valeurs modifiables dans mes_options
@@ -41,7 +43,7 @@ if (!defined('_PERIODE_SYNDICATION_SUSPENDUE')) {
  *
  * @param int $t Date de dernier passage
  * @return int
-**/
+ **/
 function genie_syndic_dist($t) {
 	return executer_une_syndication();
 }
@@ -54,29 +56,31 @@ function genie_syndic_dist($t) {
  *
  * @return
  *     retourne 0 si aucun a faire ou echec lors de la tentative
-**/
+ **/
 function executer_une_syndication() {
 
 	// On va tenter un site 'sus' ou 'off' de plus de 24h, et le passer en 'off'
 	// s'il echoue
-	$where = sql_in("syndication", array('sus','off')) . "
+	$where = sql_in("syndication", array('sus', 'off')) . "
 	AND statut<>'refuse'
-	AND NOT(" . sql_date_proche('date_syndic', (0 - _PERIODE_SYNDICATION_SUSPENDUE) , "MINUTE") . ')';
-	$id_syndic = sql_getfetsel("id_syndic", "spip_syndic", "statut<>".sql_quote("refuse")." AND ".$where, '', "date_syndic", "1");
+	AND NOT(" . sql_date_proche('date_syndic', (0-_PERIODE_SYNDICATION_SUSPENDUE), "MINUTE") . ')';
+	$id_syndic = sql_getfetsel("id_syndic", "spip_syndic", "statut<>" . sql_quote("refuse") . " AND " . $where, '',
+		"date_syndic", "1");
 	if ($id_syndic) {
 		// inserer la tache dans la file, avec controle d'unicite
-		job_queue_add('syndic_a_jour','syndic_a_jour',array($id_syndic),'genie/syndic',true);
+		job_queue_add('syndic_a_jour', 'syndic_a_jour', array($id_syndic), 'genie/syndic', true);
 	}
 
 	// Et un site 'oui' de plus de 2 heures, qui passe en 'sus' s'il echoue
 	$where = "syndication='oui'
 	AND statut<>'refuse'
-	AND NOT(" . sql_date_proche('date_syndic', (0 - _PERIODE_SYNDICATION) , "MINUTE") . ')';
-	$id_syndic = sql_getfetsel("id_syndic", "spip_syndic", "statut<>".sql_quote("refuse")." AND ".$where, '', "date_syndic", "1");
+	AND NOT(" . sql_date_proche('date_syndic', (0-_PERIODE_SYNDICATION), "MINUTE") . ')';
+	$id_syndic = sql_getfetsel("id_syndic", "spip_syndic", "statut<>" . sql_quote("refuse") . " AND " . $where, '',
+		"date_syndic", "1");
 
 	if ($id_syndic) {
 		// inserer la tache dans la file, avec controle d'unicite
-		job_queue_add('syndic_a_jour','syndic_a_jour',array($id_syndic),'genie/syndic',true);
+		job_queue_add('syndic_a_jour', 'syndic_a_jour', array($id_syndic), 'genie/syndic', true);
 	}
 
 	return 0;
@@ -85,7 +89,7 @@ function executer_une_syndication() {
 
 /**
  * Mettre à jour le site
- * 
+ *
  * Attention, cette fonction ne doit pas etre appellee simultanement
  * sur un meme site: un verrouillage a du etre pose en amont.
  * => elle doit toujours etre appelee par job_queue_add
@@ -97,42 +101,53 @@ function executer_une_syndication() {
 function syndic_a_jour($now_id_syndic) {
 	include_spip('inc/texte');
 	$call = debug_backtrace();
-	if ($call[1]['function']!=='queue_start_job')
-		spip_log("syndic_a_jour doit etre appelee par JobQueue Cf. http://trac.rezo.net/trac/spip/changeset/10294",_LOG_ERREUR);
+	if ($call[1]['function'] !== 'queue_start_job') {
+		spip_log("syndic_a_jour doit etre appelee par JobQueue Cf. http://trac.rezo.net/trac/spip/changeset/10294",
+			_LOG_ERREUR);
+	}
 
-	$row = sql_fetsel("*", "spip_syndic", "id_syndic=".intval($now_id_syndic));
+	$row = sql_fetsel("*", "spip_syndic", "id_syndic=" . intval($now_id_syndic));
 
-	if (!$row) return;
+	if (!$row) {
+		return;
+	}
 
 	$url_syndic = $row['url_syndic'];
 	$url_site = $row['url_site'];
 
-	if ($row['moderation'] == 'oui')
-		$moderation = 'dispo';	// a valider
-	else
-		$moderation = 'publie';	// en ligne sans validation
+	if ($row['moderation'] == 'oui') {
+		$moderation = 'dispo';
+	}  // a valider
+	else {
+		$moderation = 'publie';
+	}  // en ligne sans validation
 
 	// determiner le statut a poser en cas d'echec : sus par defaut
 	// off si le site est deja off, ou sus depuis trop longtemps
 	$statut = 'sus';
 	if (
-		$row['statut']=='off'
-	  OR ($row['statut']=='sus' AND time()-strtotime($row['date_syndic'])>_PERIODE_SYNDICATION_SUSPENDUE*60)
-	  )
+		$row['statut'] == 'off'
+		OR ($row['statut'] == 'sus' AND time()-strtotime($row['date_syndic']) > _PERIODE_SYNDICATION_SUSPENDUE*60)
+	) {
 		$statut = 'off';
+	}
 
-	sql_updateq('spip_syndic', array('syndication'=>$statut, 'date_syndic'=>date('Y-m-d H:i:s')), "id_syndic=".intval($now_id_syndic));
+	sql_updateq('spip_syndic', array('syndication' => $statut, 'date_syndic' => date('Y-m-d H:i:s')),
+		"id_syndic=" . intval($now_id_syndic));
 
 	// Aller chercher les donnees du RSS et les analyser
 	include_spip('inc/distant');
 	$rss = recuperer_page($url_syndic, true);
-	if (!$rss)
+	if (!$rss) {
 		$articles = _T('sites:avis_echec_syndication_02');
-	else
+	} else {
 		$articles = analyser_backend($rss, $url_syndic);
+	}
 
 	// Renvoyer l'erreur le cas echeant
-	if (!is_array($articles)) return $articles;
+	if (!is_array($articles)) {
+		return $articles;
+	}
 
 	// Les enregistrer dans la base
 
@@ -145,17 +160,19 @@ function syndic_a_jour($now_id_syndic) {
 	if (count($faits) > 0) {
 		$faits = sql_in("id_syndic_article", $faits, 'NOT');
 		if ($row['miroir'] == 'oui') {
-			sql_update('spip_syndic_articles', array('statut'=>"'off'", 'maj'=>'maj'), "id_syndic=$now_id_syndic AND $faits");
+			sql_update('spip_syndic_articles', array('statut' => "'off'", 'maj' => 'maj'),
+				"id_syndic=$now_id_syndic AND $faits");
 		}
-	// suppression apres 2 mois des liens qui sont sortis du feed
+		// suppression apres 2 mois des liens qui sont sortis du feed
 		if ($row['oubli'] == 'oui') {
 
-		  sql_delete('spip_syndic_articles', "id_syndic=$now_id_syndic AND NOT(" . sql_date_proche('maj', -2, 'MONTH') . ') AND NOT(' . sql_date_proche('date', -2, 'MONTH') . ") AND $faits");
+			sql_delete('spip_syndic_articles', "id_syndic=$now_id_syndic AND NOT(" . sql_date_proche('maj', -2,
+					'MONTH') . ') AND NOT(' . sql_date_proche('date', -2, 'MONTH') . ") AND $faits");
 		}
 	}
 
 	// Noter que la syndication est OK
-	sql_updateq("spip_syndic", array("syndication" => 'oui'), "id_syndic=".intval($now_id_syndic));
+	sql_updateq("spip_syndic", array("syndication" => 'oui'), "id_syndic=" . intval($now_id_syndic));
 
 	return false; # c'est bon
 }
@@ -170,7 +187,7 @@ function syndic_a_jour($now_id_syndic) {
  * @pipeline_appel pre_insertion
  * @pipeline_appel post_insertion
  * @pipeline_appel post_syndication
- * 
+ *
  * @param array $data
  * @param int $now_id_syndic
  * @param string $statut
@@ -180,17 +197,19 @@ function syndic_a_jour($now_id_syndic) {
  * @param array $faits
  * @return bool
  *     true si l'article est nouveau, false sinon.
-**/
+ **/
 function inserer_article_syndique($data, $now_id_syndic, $statut, $url_site, $url_syndic, $resume, &$faits) {
 	// Creer le lien s'il est nouveau - cle=(id_syndic,url)
 	$le_lien = $data['url'];
 
 	/**
 	 * URL unique de syndication
-	 * 
+	 *
 	 * Si true, un lien déjà syndiqué arrivant par une autre source est ignoré
 	 * par defaut `false`, chaque source a sa liste de liens, éventuellement les mêmes
-	 * @var bool */
+	 *
+	 * @var bool
+	 */
 	if (!defined('_SYNDICATION_URL_UNIQUE')) {
 		define('_SYNDICATION_URL_UNIQUE', false);
 	}
@@ -203,9 +222,9 @@ function inserer_article_syndique($data, $now_id_syndic, $statut, $url_site, $ur
 	 *
 	 * Attention si on modifie à la main un article syndiqué, les modifs sont
 	 * écrasées lors de la syndication suivante
-	 * 
+	 *
 	 * @var bool
-	**/
+	 **/
 	if (!defined('_SYNDICATION_CORRECTION')) {
 		define('_SYNDICATION_CORRECTION', true);
 	}
@@ -222,9 +241,9 @@ function inserer_article_syndique($data, $now_id_syndic, $statut, $url_site, $ur
 		. (_SYNDICATION_URL_UNIQUE
 			? ''
 			: " AND id_syndic=$now_id_syndic")
-		." AND " . sql_in('id_syndic_article', $faits, 'NOT'), "", "maj DESC");
+		. " AND " . sql_in('id_syndic_article', $faits, 'NOT'), "", "maj DESC");
 	while ($a = sql_fetch($s)) {
-		$id =  $a['id_syndic_article'];
+		$id = $a['id_syndic_article'];
 		$id_syndic = $a['id_syndic'];
 		if ($a['titre'] == $data['titre']) {
 			$id_syndic_article = $id;
@@ -235,14 +254,13 @@ function inserer_article_syndique($data, $now_id_syndic, $statut, $url_site, $ur
 	// S'il y en avait qu'un, le prendre quel que soit le titre
 	if ($n == 1) {
 		$id_syndic_article = $id;
-	}
-	// Si l'article n'existe pas, on le cree
+	} // Si l'article n'existe pas, on le cree
 	elseif (!isset($id_syndic_article)) {
 		$champs = array(
 			'id_syndic' => $now_id_syndic,
 			'url' => $le_lien,
 			'date' => date("Y-m-d H:i:s", $data['date'] ? $data['date'] : $data['lastbuilddate']),
-			'statut'  => $statut
+			'statut' => $statut
 		);
 		// Envoyer aux plugins
 		$champs = pipeline('pre_insertion',
@@ -278,8 +296,9 @@ function inserer_article_syndique($data, $now_id_syndic, $statut, $url_site, $ur
 			return;
 		}
 		// 2. Le lien existait deja, lie a un autre spip_syndic
-		if (_SYNDICATION_URL_UNIQUE AND $id_syndic != $now_id_syndic)
+		if (_SYNDICATION_URL_UNIQUE AND $id_syndic != $now_id_syndic) {
 			return;
+		}
 	}
 
 	// Descriptif, en mode resume ou mode 'full text'
@@ -300,12 +319,12 @@ function inserer_article_syndique($data, $now_id_syndic, $statut, $url_site, $ur
 	}
 
 	// tags & enclosures (preparer spip_syndic_articles.tags)
-	$tags = ($data['enclosures']?$data['enclosures']:'');
+	$tags = ($data['enclosures'] ? $data['enclosures'] : '');
 	# eviter les doublons (cle = url+titre) et passer d'un tableau a une chaine
 	if ($data['tags']) {
 		$vus = array();
 		foreach ($data['tags'] as $tag) {
-			$cle = supprimer_tags($tag).extraire_attribut($tag,'href');
+			$cle = supprimer_tags($tag) . extraire_attribut($tag, 'href');
 			$vus[$cle] = $tag;
 		}
 		$tags .= ($tags ? ', ' : '') . join(', ', $vus);
@@ -313,18 +332,20 @@ function inserer_article_syndique($data, $now_id_syndic, $statut, $url_site, $ur
 
 	// Mise a jour du contenu (titre,auteurs,description,date?,source...)
 	$vals = array(
-			'titre' => $data['titre'],
-			'lesauteurs' => $data['lesauteurs'],
-			'descriptif' => $desc,
-			'lang'=> substr($data['lang'],0,10),
-			'source' => (isset($data['source']) ? substr($data['source'],0,255) : ''),
-			'url_source' => (isset($data['url_source']) ? substr($data['url_source'],0,255) : ''),
-			'tags' => $tags);
+		'titre' => $data['titre'],
+		'lesauteurs' => $data['lesauteurs'],
+		'descriptif' => $desc,
+		'lang' => substr($data['lang'], 0, 10),
+		'source' => (isset($data['source']) ? substr($data['source'], 0, 255) : ''),
+		'url_source' => (isset($data['url_source']) ? substr($data['url_source'], 0, 255) : ''),
+		'tags' => $tags
+	);
 
 	// Mettre a jour la date si lastbuilddate
-	if (isset($data['lastbuilddate']) and $data['lastbuilddate'])
-		$vals['date']= date("Y-m-d H:i:s", $data['lastbuilddate']);
-				    
+	if (isset($data['lastbuilddate']) and $data['lastbuilddate']) {
+		$vals['date'] = date("Y-m-d H:i:s", $data['lastbuilddate']);
+	}
+
 	sql_updateq('spip_syndic_articles', $vals, "id_syndic_article=$id_syndic_article");
 
 	// Point d'entree post_syndication
@@ -347,16 +368,18 @@ function inserer_article_syndique($data, $now_id_syndic, $statut, $url_site, $ur
 /**
  * Nettoyer les contenus de flux qui utilisent des espaces insécables en début
  * pour faire un retrait.
- * 
+ *
  * Peut être sous la forme de l'entité `&nbsp;` ou en utf8 `\xc2\xa0`
  *
  * @param  string $texte
  * @return string
  */
-function trim_more($texte){
+function trim_more($texte) {
 	$texte = trim($texte);
 	// chr(194)chr(160)
-	$texte = preg_replace(",^(\s|(&nbsp;)|(\xc2\xa0))+,ums","",$texte);
-	return  $texte;
+	$texte = preg_replace(",^(\s|(&nbsp;)|(\xc2\xa0))+,ums", "", $texte);
+
+	return $texte;
 }
+
 ?>

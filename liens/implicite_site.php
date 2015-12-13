@@ -10,12 +10,16 @@
  *  Pour plus de details voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
-if (!defined("_ECRIRE_INC_VERSION")) return;
+if (!defined("_ECRIRE_INC_VERSION")) {
+	return;
+}
 
-function liens_implicite_site_dist($texte, $id, $type, $args, $ancre, $connect = ''){
-	if (!$id = intval($id))
+function liens_implicite_site_dist($texte, $id, $type, $args, $ancre, $connect = '') {
+	if (!$id = intval($id)) {
 		return false;
-	$url = sql_getfetsel('url_site', 'spip_syndic', "id_syndic=".intval($id),'','','','',$connect);
+	}
+	$url = sql_getfetsel('url_site', 'spip_syndic', "id_syndic=" . intval($id), '', '', '', '', $connect);
+
 	return $url;
 }
 

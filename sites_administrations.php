@@ -10,7 +10,9 @@
  *  Pour plus de details voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
-if (!defined('_ECRIRE_INC_VERSION')) return;
+if (!defined('_ECRIRE_INC_VERSION')) {
+	return;
+}
 
 /**
  * Installation/maj des tables syndic et syndic articles
@@ -18,33 +20,34 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
  * @param string $nom_meta_base_version
  * @param string $version_cible
  */
-function sites_upgrade($nom_meta_base_version, $version_cible){
+function sites_upgrade($nom_meta_base_version, $version_cible) {
 	// cas particulier :
 	// si plugin pas installe mais que la table existe
 	// considerer que c'est un upgrade depuis v 1.0.0
 	// pour gerer l'historique des installations SPIP <=2.1
-	if (!isset($GLOBALS['meta'][$nom_meta_base_version])){
-		$trouver_table = charger_fonction('trouver_table','base');
+	if (!isset($GLOBALS['meta'][$nom_meta_base_version])) {
+		$trouver_table = charger_fonction('trouver_table', 'base');
 		if ($desc = $trouver_table('spip_syndic')
-		  AND isset($desc['exist']) AND $desc['exist']){
-			ecrire_meta($nom_meta_base_version,'1.0.0');
+			AND isset($desc['exist']) AND $desc['exist']
+		) {
+			ecrire_meta($nom_meta_base_version, '1.0.0');
 		}
 		// si pas de table en base, on fera une simple creation de base
 	}
 
 	$maj = array();
 	$maj['create'] = array(
-		array('maj_tables',array('spip_syndic','spip_syndic_articles')),
+		array('maj_tables', array('spip_syndic', 'spip_syndic_articles')),
 	);
 
 	$maj['1.1.0'] = array(
-		array('sql_alter',"TABLE spip_syndic_articles DROP key url"),
-		array('sql_alter',"TABLE spip_syndic_articles CHANGE url url text DEFAULT '' NOT NULL"),
-		array('sql_alter',"TABLE spip_syndic_articles ADD INDEX url(url(255))")
+		array('sql_alter', "TABLE spip_syndic_articles DROP key url"),
+		array('sql_alter', "TABLE spip_syndic_articles CHANGE url url text DEFAULT '' NOT NULL"),
+		array('sql_alter', "TABLE spip_syndic_articles ADD INDEX url(url(255))")
 	);
 
 	$maj['1.1.1'] = array(
-		array('maj_tables',array('spip_syndic_articles')),
+		array('maj_tables', array('spip_syndic_articles')),
 	);
 
 	include_spip('base/upgrade');

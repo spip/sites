@@ -14,8 +14,10 @@
  * Déclarations de fonctions pour le compilateur
  *
  * @package SPIP\Sites\Compilateur
-**/
-if (!defined('_ECRIRE_INC_VERSION')) return;
+ **/
+if (!defined('_ECRIRE_INC_VERSION')) {
+	return;
+}
 
 /**
  * Compile la boucle `SITES` qui retourne la liste des sites référencés
@@ -26,12 +28,14 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
  *     AST du squelette
  * @return string
  *     Code PHP compilé de la boucle
-**/
+ **/
 function boucle_SITES_dist($id_boucle, &$boucles) {
 	$boucle = &$boucles[$id_boucle];
 	$boucle->type_requete = 'syndication'; // pas sur que ce soit indispensable
-	if (!function_exists($f='boucle_SYNDICATION') AND !function_exists($f=$f.'_dist'))
+	if (!function_exists($f = 'boucle_SYNDICATION') AND !function_exists($f = $f . '_dist')) {
 		$f = 'calculer_boucle';
+	}
+
 	return $f($id_boucle, $boucles);
 }
 
