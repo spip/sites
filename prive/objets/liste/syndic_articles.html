@@ -25,7 +25,8 @@
 		<tr class="[(#COMPTEUR_BOUCLE|alterner{row_odd,row_even})]">
 			<td class='statut'>[(#STATUT|puce_statut{syndic_article})]</td>
 			<td class='titre principale'>[<a
-					href="(#URL_ARTICLE)"
+					href="(#URL_ARTICLE)"[
+					(#LANG|=={#ENV{lang}}|non)hreflang="#LANG"]
 						title="<:info_numero_abbreviation|attribut_html:> #ID_SYNDIC_ARTICLE">#SET{a,'</a>'}]#TITRE[(#GET{a})]
 				<span class="auteurs">([(#LESAUTEURS), ][(#DATE|affdate_court)])</span>
 				[(#TAGS|afficher_enclosures)]
