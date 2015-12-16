@@ -346,7 +346,8 @@ function inserer_article_syndique($data, $now_id_syndic, $statut, $url_site, $ur
 		$vals['date'] = date("Y-m-d H:i:s", $data['lastbuilddate']);
 	}
 
-	sql_updateq('spip_syndic_articles', $vals, "id_syndic_article=$id_syndic_article");
+	include_spip('inc/modifier');
+	objet_modifier_champs('syndic_article',$id_syndic_article,array('data'=>$vals),$vals);
 
 	// Point d'entree post_syndication
 	pipeline('post_syndication',
