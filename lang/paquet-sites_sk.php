@@ -13,4 +13,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'sites_description' => 'Stránky a syndikácia v SPIPe (súkromná aj verejná)',
 	'sites_slogan' => 'Riadenie stránok a syndikácie v SPIPe'
 );
-

@@ -13,4 +13,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'sites_description' => 'Verwaltung verlinkter und syndizierter Websites mit  SPIP (im öffentlichen und Redaktionsbereich)',
 	'sites_slogan' => 'Verwaltung verlinkter und syndizierter Websites mit  SPIP'
 );
-

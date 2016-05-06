@@ -13,4 +13,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'sites_description' => 'Підключення інших сайтів по RSS',
 	'sites_slogan' => 'Підключення інших сайтів по RSS'
 );
-
