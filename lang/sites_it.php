@@ -159,4 +159,3 @@ RSS a partire dal tuo sito.</i></blockquote>',
 	'un_article_syndic' => '1 articolo sindacato'
 );
 
-?>

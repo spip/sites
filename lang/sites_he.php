@@ -66,4 +66,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 		depuis votre site.</i></blockquote>' # MODIF
 );
 
-?>

@@ -110,4 +110,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_syndication' => 'Sindicacion de sits'
 );
 
-?>

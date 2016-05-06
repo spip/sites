@@ -105,4 +105,3 @@ Fòk w aktive sendikasyon an.
 	'titre_syndication' => 'Sendikasyon pou tout sit yo'
 );
 
-?>

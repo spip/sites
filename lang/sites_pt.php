@@ -160,4 +160,3 @@ a partir do seu sítio.</i></blockquote>',
 	'un_article_syndic' => '1 artigo vinculado'
 );
 
-?>

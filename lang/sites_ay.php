@@ -51,4 +51,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_syndication_articles' => 'qillqat(anaka)'
 );
 
-?>

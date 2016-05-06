@@ -116,4 +116,3 @@ ligilojn al jena aŭ alia retejo.', # MODIF
 	'titre_syndication' => 'Reteja abonligo'
 );
 
-?>

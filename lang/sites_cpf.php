@@ -105,4 +105,3 @@ dopwi out pro sit sa-minm.</i></blockquote>', # MODIF
 	'titre_syndication' => 'Sindikasyon bann sitwèb'
 );
 
-?>

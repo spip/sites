@@ -17,4 +17,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_1_article_syndique' => '1 article syndiqué'
 );
 
-?>

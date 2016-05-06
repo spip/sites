@@ -17,4 +17,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_a_valider' => '[staðfesta]'
 );
 
-?>

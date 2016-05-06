@@ -112,4 +112,3 @@ triar, web per web, bloquejar els enllaços que vinguen d’un o altre web.', # 
 	'titre_syndication' => 'Sindicació de webs'
 );
 
-?>

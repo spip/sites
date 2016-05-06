@@ -108,4 +108,3 @@ Horretarako, bilketa aktibatu behar duzu. Ostapen zuzkitzaile batzuk ez dute fun
 	'titre_syndication' => 'Tokien elkarpena'
 );
 
-?>

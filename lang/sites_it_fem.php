@@ -112,4 +112,3 @@ a partire dal tuo sito.</i></blockquote>', # MODIF
 	'titre_syndication' => 'Syndication di siti'
 );
 
-?>

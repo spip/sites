@@ -30,4 +30,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_syndication_articles' => 'بابەت(ی)'
 );
 
-?>

@@ -107,4 +107,3 @@ Egyébkent minden linket lehet utólag engedélyezni egyenként, vagy honlap sze
 	'titre_syndication' => 'Honlapok szindikálása'
 );
 
-?>
