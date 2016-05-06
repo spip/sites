@@ -14,4 +14,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'sites_slogan' => 'مديريت سايت‌ها و مشترك‌سازي در اسپيپ'
 );
 
-?>
