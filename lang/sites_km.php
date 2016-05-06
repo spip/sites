@@ -101,4 +101,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_sites_tous' => 'រាល់សៃថ៍យោង',
 	'titre_syndication' => 'បញ្ជាប់សៃថ៍'
 );
-

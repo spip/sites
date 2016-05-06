@@ -128,4 +128,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_sites_tous' => 'Al lec’hiennoù menegeret',
 	'titre_syndication' => 'Sindikadañ lec’hiennoù'
 );
-

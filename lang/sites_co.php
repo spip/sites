@@ -110,4 +110,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_sites_tous' => 'I siti riferiti',
 	'titre_syndication' => 'Sindicazione di siti'
 );
-

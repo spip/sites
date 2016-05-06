@@ -159,4 +159,3 @@ a partir do seu sítio.</i></blockquote>',
 	// U
 	'un_article_syndic' => '1 artigo vinculado'
 );
-

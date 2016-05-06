@@ -106,4 +106,3 @@ Egyébkent minden linket lehet utólag engedélyezni egyenként, vagy honlap sze
 	'titre_sites_tous' => 'A felvett honlapok',
 	'titre_syndication' => 'Honlapok szindikálása'
 );
-

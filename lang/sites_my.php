@@ -100,4 +100,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_sites_tous' => 'ကိုးကားဝက်ဘ်ဆိုက်များ',
 	'titre_syndication' => 'ဝက်ဘ်ဆိုက် ပူးတွဲချိတ်ဆက်စေခြင်း'
 );
-

@@ -112,4 +112,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_sites_tous' => 'Site-urile referenţiate',
 	'titre_syndication' => 'Sindicalizarea site-urilor'
 );
-

@@ -94,4 +94,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_sites_tous' => 'Websteder der henvises til',
 	'titre_syndication' => 'Webstedssyndikering'
 );
-

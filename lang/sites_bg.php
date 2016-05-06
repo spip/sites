@@ -111,4 +111,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_sites_tous' => 'Свързани сайтове',
 	'titre_syndication' => 'Обединяване на сайтовете'
 );
-

@@ -66,4 +66,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_sites_syndiques' => 'Syndikoidut sivustot',
 	'titre_sites_tous' => 'Viitatut sivustot'
 );
-

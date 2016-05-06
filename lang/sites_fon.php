@@ -88,4 +88,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_sites_tous' => 'gblogblojí yé ná àcɛ ná ',
 	'titre_syndication' => ' Mímá ɔ Gblogblojí tɔn'
 );
-

@@ -101,4 +101,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_sites_tous' => '参照されたサイト',
 	'titre_syndication' => 'サイトの配給'
 );
-

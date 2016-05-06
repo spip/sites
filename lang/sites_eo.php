@@ -115,4 +115,3 @@ ligilojn al jena aŭ alia retejo.', # MODIF
 	'titre_sites_tous' => 'La referencigitaj retejoj',
 	'titre_syndication' => 'Reteja abonligo'
 );
-

@@ -156,4 +156,3 @@ If a site permits it, it is possible to retrieve the list of its latest articles
 	// U
 	'un_article_syndic' => '1 مقاله پيوندي'
 );
-

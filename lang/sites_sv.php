@@ -92,4 +92,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_sites_references_rubrique' => 'Refererade webbplatser i den här avdelningen',
 	'titre_sites_tous' => 'Refererade webbplatser'
 );
-

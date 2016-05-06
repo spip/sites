@@ -16,4 +16,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_modifier_site' => 'Breyta þessari heimasíðu',
 	'info_a_valider' => '[staðfesta]'
 );
-

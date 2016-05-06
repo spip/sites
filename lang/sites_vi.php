@@ -97,4 +97,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_sites_tous' => 'Trang tham khảo',
 	'titre_syndication' => 'Syndicate trang web'
 );
-

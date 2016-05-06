@@ -104,4 +104,3 @@ dopwi out pro sit sa-minm.</i></blockquote>', # MODIF
 	'titre_sites_tous' => 'List bann sitwèb référansé',
 	'titre_syndication' => 'Sindikasyon bann sitwèb'
 );
-

@@ -100,4 +100,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_sites_tous' => 'Preporucene stranice',
 	'titre_syndication' => 'Sindikacija stranica'
 );
-

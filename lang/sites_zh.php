@@ -99,4 +99,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_sites_tous' => '参考站点',
 	'titre_syndication' => '站点联合'
 );
-

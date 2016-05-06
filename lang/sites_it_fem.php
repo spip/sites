@@ -111,4 +111,3 @@ a partire dal tuo sito.</i></blockquote>', # MODIF
 	'titre_sites_tous' => 'I siti repertoriati',
 	'titre_syndication' => 'Syndication di siti'
 );
-

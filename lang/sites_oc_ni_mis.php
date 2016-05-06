@@ -156,4 +156,3 @@ la lista dei sieu nouvità. Per faire acò, vi cau ativà la sindicacioun.
 	// U
 	'un_article_syndic' => '1 article sindicat'
 );
-

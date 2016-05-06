@@ -99,4 +99,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_sites_tous' => 'R3f3r3nc3d 51735',
 	'titre_syndication' => '51735 5ynd1c4710n'
 );
-

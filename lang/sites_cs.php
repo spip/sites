@@ -107,4 +107,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_sites_tous' => 'Odkazované weby',
 	'titre_syndication' => 'Syndikace webů'
 );
-

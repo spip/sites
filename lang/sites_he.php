@@ -65,4 +65,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 		dans ce cas, vous ne pourrez pas utiliser la syndication de contenu
 		depuis votre site.</i></blockquote>' # MODIF
 );
-

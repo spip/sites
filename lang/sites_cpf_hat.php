@@ -104,4 +104,3 @@ Fòk w aktive sendikasyon an.
 	'titre_sites_tous' => 'Tout sit referanse andan sit la',
 	'titre_syndication' => 'Sendikasyon pou tout sit yo'
 );
-
