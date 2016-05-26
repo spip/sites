@@ -73,8 +73,13 @@ function analyser_backend($rss, $url_syndic='') {
 
 	if (!count($items)) return _T('sites:avis_echec_syndication_01');
 
+	if (!defined('_SYNDICATION_MAX_ITEMS')) define('_SYNDICATION_MAX_ITEMS',1000);
+	$nb_items = 0;
 	foreach ($items as $item) {
 		$data = array();
+		if ($nb_items++>_SYNDICATION_MAX_ITEMS){
+			break;
+		}
 
 		// URL (semi-obligatoire, sert de cle)
 
@@ -451,9 +456,14 @@ function cdata_echappe(&$rss, &$echappe_cdata) {
 	if (preg_match_all(',<!\[CDATA\[(.*)]]>,Uims', $rss,
 	$regs, PREG_SET_ORDER)) {
 		foreach ($regs as $n => $reg) {
-			if (preg_match(',[<>],', $reg[1])) {
-				$echappe_cdata[$n] = $reg[1];
-				$rss = str_replace($reg[0], "@@@SPIP_CDATA$n@@@", $rss);
+			if (strpos($reg[1],'<')!==false
+			  or strpos($reg[1],'>')!==false) {
+				// verifier que la chaine est encore dans le flux, car on peut avoir X fois la meme
+				// inutile de (sur)peupler le tableau avec des substitutions identiques
+				if (strpos($rss,$reg[0])!==false){
+					$echappe_cdata["@@@SPIP_CDATA$n@@@"] = $reg[1];
+					$rss = str_replace($reg[0], "@@@SPIP_CDATA$n@@@", $rss);
+				}
 			} else
 				$rss = str_replace($reg[0], $reg[1], $rss);
 		}
@@ -464,11 +474,11 @@ function cdata_echappe(&$rss, &$echappe_cdata) {
 // http://code.spip.net/@cdata_echappe_retour
 function cdata_echappe_retour(&$x, &$echappe_cdata) {
 	if (is_string($x)) {
-		if (strpos($x, '@@@SPIP_CDATA') !== false
-		OR strpos($x, '&lt;') !== false) {
+		if (strpos($x, '&lt;') !== false){
 			$x = filtrer_entites($x);
-			foreach ($echappe_cdata as $n => $e)
-				$x = str_replace("@@@SPIP_CDATA$n@@@", $e, $x);
+		}
+		if (strpos($x, '@@@SPIP_CDATA') !== false){
+			$x = str_replace( array_keys($echappe_cdata), array_values($echappe_cdata), $x);
 		}
 	}
 
