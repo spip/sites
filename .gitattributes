@@ -109,6 +109,7 @@ prive/modeles/syndic_article.html -text
 prive/objets/contenu/site.html -text
 prive/objets/contenu/syndic_article.html -text
 prive/objets/infos/site.html -text
+prive/objets/liste/sites-sansidsyndic.html -text
 prive/objets/liste/sites.html -text
 prive/objets/liste/syndic.html -text
 prive/objets/liste/syndic_articles.html -text
