@@ -124,6 +124,7 @@ prive/squelettes/contenu/sites_import.html -text
 prive/squelettes/extra/site.html -text
 prive/squelettes/inclure/boutons-filtres-statut-syndic.html -text
 prive/squelettes/inclure/plan-syndic.html -text
+prive/squelettes/inclure/syndic_articles_recherche.html -text
 prive/squelettes/navigation/site.html -text
 prive/squelettes/navigation/site_edit.html -text
 prive/squelettes/navigation/sites.html -text
