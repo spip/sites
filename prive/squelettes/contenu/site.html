@@ -34,7 +34,7 @@
 			[(#BOUTON_ACTION{<:sites:lien_nouvelle_recuperation:>,#URL_ACTION_AUTEUR{editer_site,#ID_SYNDIC,#SELF}|parametre_url{reload,oui},ajax})]
 		</div>
 	]
-	<INCLURE{fond=prive/squelettes/inclure/syndic_articles_recherche, id_syndic, env, ajax} />
+		<INCLURE{fond=prive/objets/liste/syndic_articles,id_syndic,titre=<:sites:titre_articles_syndiques:>, par=date, env, ajax, recherche_integree=1} />
 
 	[(#DATE_SYNDIC|oui)
 		<div class='date_syndic'><:sites:info_derniere_syndication:>[ (#DATE_SYNDIC|affdate_heure)]</div>
