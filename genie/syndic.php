@@ -21,7 +21,7 @@ if (!defined('_PERIODE_SYNDICATION_SUSPENDUE'))
 	define('_PERIODE_SYNDICATION_SUSPENDUE', 24*60);
 
 
-// http://code.spip.net/@genie_syndic_dist
+// https://code.spip.net/@genie_syndic_dist
 function genie_syndic_dist($t) {
 	return executer_une_syndication();
 }
@@ -31,7 +31,7 @@ function genie_syndic_dist($t) {
 // retourne 0 si aucun a faire ou echec lors de la tentative
 //
 
-// http://code.spip.net/@executer_une_syndication
+// https://code.spip.net/@executer_une_syndication
 function executer_une_syndication() {
 
 	// On va tenter un site 'sus' ou 'off' de plus de 24h, et le passer en 'off'
@@ -66,7 +66,7 @@ function executer_une_syndication() {
  * sur un meme site: un verrouillage a du etre pose en amont.
  * => elle doit toujours etre appelee par job_queue_add
  *
- * http://code.spip.net/@syndic_a_jour
+ * https://code.spip.net/@syndic_a_jour
  *
  * @param int $now_id_syndic
  * @return bool|string
@@ -143,7 +143,7 @@ function syndic_a_jour($now_id_syndic) {
 // en  verifiant qu'on ne vient pas de l'ecrire avec
 // un autre item du meme feed qui aurait le meme link
 //
-// http://code.spip.net/@inserer_article_syndique
+// https://code.spip.net/@inserer_article_syndique
 function inserer_article_syndique ($data, $now_id_syndic, $statut, $url_site, $url_syndic, $resume, $documents, &$faits) {
 	// Creer le lien s'il est nouveau - cle=(id_syndic,url)
 	// On coupe a 255 caracteres pour eviter tout doublon

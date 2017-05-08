@@ -35,7 +35,7 @@ function autoriser_sitecreer_menu_dist($faire, $type, $id, $qui, $opt){
 // Moderer la syndication ?
 // = modifier l'objet correspondant (si forum attache a un objet)
 // = droits par defaut sinon (admin complet pour moderation complete)
-// http://code.spip.net/@autoriser_modererforum_dist
+// https://code.spip.net/@autoriser_modererforum_dist
 function autoriser_site_moderer_dist($faire, $type, $id, $qui, $opt) {
 	return
 		autoriser('modifier', 'site', $id, $qui, $opt);
@@ -62,7 +62,7 @@ function autoriser_site_creer_dist($faire, $type, $id, $qui, $opt){
 }
 
 // Autoriser a creer un site dans la rubrique $id
-// http://code.spip.net/@autoriser_rubrique_creersitedans_dist
+// https://code.spip.net/@autoriser_rubrique_creersitedans_dist
 function autoriser_rubrique_creersitedans_dist($faire, $type, $id, $qui, $opt) {
 	return
 		$id
@@ -76,7 +76,7 @@ function autoriser_rubrique_creersitedans_dist($faire, $type, $id, $qui, $opt) {
 
 
 // Autoriser a modifier un site
-// http://code.spip.net/@autoriser_site_modifier_dist
+// https://code.spip.net/@autoriser_site_modifier_dist
 function autoriser_site_modifier_dist($faire, $type, $id, $qui, $opt) {
 	if ($qui['statut'] == '0minirezo' AND !$qui['restreint'])
 		return true;
@@ -91,7 +91,7 @@ function autoriser_site_modifier_dist($faire, $type, $id, $qui, $opt) {
 	);
 }
 // Autoriser a voir un site $id_syndic
-// http://code.spip.net/@autoriser_site_voir_dist
+// https://code.spip.net/@autoriser_site_voir_dist
 function autoriser_site_voir_dist($faire, $type, $id, $qui, $opt) {
 	return autoriser_site_modifier_dist($faire, $type, $id, $qui, $opt);
 }
