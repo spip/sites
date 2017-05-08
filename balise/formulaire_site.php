@@ -17,12 +17,12 @@ if (!defined("_ECRIRE_INC_VERSION")) {
 // Le contexte indique dans quelle rubrique le visiteur peut proposer le site
 
 
-// http://code.spip.net/@balise_FORMULAIRE_SITE
+// https://code.spip.net/@balise_FORMULAIRE_SITE
 function balise_FORMULAIRE_SITE($p) {
 	return calculer_balise_dynamique($p, 'FORMULAIRE_SITE', array('id_rubrique'));
 }
 
-// http://code.spip.net/@balise_FORMULAIRE_SITE_stat
+// https://code.spip.net/@balise_FORMULAIRE_SITE_stat
 function balise_FORMULAIRE_SITE_stat($args, $context_compil) {
 
 	// Pas d'id_rubrique ? Erreur de contexte
