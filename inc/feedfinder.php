@@ -132,7 +132,7 @@ function is_feed($url) {
 function get_feed_from_url($url, $buffer = false) {
 	global $verif_complete;
 	//j'ai prevenu ce sera pas fin
-	if (!preg_match("/^http:\/\/.*/", $url)) {
+	if (!preg_match("/^https?:\/\/.*/", $url)) {
 		$url = "http://" . $url;
 	}
 	if (!$buffer) {
