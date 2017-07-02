@@ -6,7 +6,7 @@
 	<form method='post' action='#ENV{action}'><div>
 		[(#REM) declarer les hidden qui declencheront le service du formulaire 
 		parametre : url d'action ]
-		#ACTION_FORMULAIRE{#ENV{action}}
+		#ACTION_FORMULAIRE
 	  <input type='hidden' name='id_syndic' value='#ENV{id_syndic}' />
 		<input type='hidden' name='syndication_old' value="#ENV**{syndication}" />
 		[<input type='hidden' name='logo' value='(#ENV**{logo,''})' />]
