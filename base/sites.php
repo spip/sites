@@ -97,6 +97,7 @@ function sites_declarer_tables_objets_sql($tables) {
 			"KEY id_secteur" => "id_secteur",
 			"KEY statut" => "statut, date_syndic",
 		),
+		'parent' => array('type' => 'rubrique', 'champ' => 'id_rubrique'),
 		'join' => array(
 			"id_syndic" => "id_syndic",
 			"id_rubrique" => "id_rubrique"
