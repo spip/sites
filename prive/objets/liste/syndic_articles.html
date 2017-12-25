@@ -29,9 +29,9 @@
 		<tr class="[(#COMPTEUR_BOUCLE|alterner{row_odd,row_even})]">
 			<td class='statut'>[(#STATUT|puce_statut{syndic_article})]</td>
 			<td class='titre principale'>[<a
-					href="(#URL_ARTICLE)"[
-					(#LANG|=={#ENV{lang}}|non)hreflang="#LANG"]
-						title="<:info_numero_abbreviation|attribut_html:> #ID_SYNDIC_ARTICLE">#SET{a,'</a>'}]#TITRE[(#GET{a})]
+				href="(#URL_ARTICLE)"[
+				(#LANG|=={#ENV{lang}}|non)hreflang="#LANG"]
+				title="<:info_numero_abbreviation|attribut_html:> #ID_SYNDIC_ARTICLE">#SET{a,'</a>'}]#TITRE[(#GET{a})]
 				<span class="auteurs">([(#LESAUTEURS), ][(#DATE|affdate_court)])</span>
 				[(#TAGS|afficher_enclosures)]
 				[<span class="tags"><em>(#TAGS|afficher_tags)</em></span>]
@@ -39,7 +39,7 @@
 			</td>
 			[(#ENV{id_syndic,''}|non)
 			<td class='site'><a href="[(#ID_SYNDIC|generer_url_entite{site})]"
-						title="<:info_numero_abbreviation|attribut_html:> #ID_SYNDIC">#INFO_TITRE{syndic,#ID_SYNDIC}</a></td>
+				title="<:info_numero_abbreviation|attribut_html:> #ID_SYNDIC">#INFO_TITRE{syndic,#ID_SYNDIC}</a></td>
 			]
 			<td class='date secondaire'>[(#DATE|affdate_jourcourt)]</td>
 			<td class='action'>[(#AUTORISER{moderer,site,#ID_SYNDIC}|oui) 
