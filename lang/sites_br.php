@@ -16,6 +16,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'articles_publie' => 'Embannnet',
 	'articles_refuse' => 'Lazhet', # RELIRE
 	'articles_tous' => 'Pep tra',
+	'aucun_article_syndic' => 'N’eus pennad-skrid sindikaturet ebet',
 	'avis_echec_syndication_01' => 'C’hwitet eo bet ar sindikadur : dilennus eo ar backend kinniget, pe ne ginnig pennad ebet.',
 	'avis_echec_syndication_02' => 'C’hwitet eo bet ar sindikadur : n’eus ket tu da dizhout backend al lec’hienn-mañ.',
 	'avis_site_introuvable' => 'N’haller ket kavout al lec’hienn-se',
@@ -41,9 +42,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'form_prop_nom_site' => 'Anv al lec’hienn',
 
 	// I
+	'icone_article_syndic' => 'Pennad-skrid sindikaturet',
+	'icone_articles_syndic' => 'Pennadoù-skrid sindikaturet',
+	'icone_controler_syndication' => 'Embannadenn ar pennadoù-skrid sindikaturet',
 	'icone_modifier_site' => 'Kemmañ al lec’hienn-mañ',
 	'icone_referencer_nouveau_site' => 'Menegeriñ ul lec’hienn nevez',
+	'icone_site_reference' => 'Lec’hioù daveennet',
 	'icone_supprimer_article' => 'Larzh ar pennad-mañ',
+	'icone_supprimer_articles' => 'Dilemel ar pennadoù-skrid-mañ',
 	'icone_valider_article' => 'Gwirian ar pennad-mañ',
 	'icone_valider_articles' => 'Gwirian ar pennad-mañ',
 	'icone_voir_sites_references' => 'Gwelet al lec’hiennoù menegeret',
