@@ -68,6 +68,10 @@
 #PIPELINE{afficher_complement_objet,#ARRAY{args,#ARRAY{type,site,id,#ID_SYNDIC},data,'<div class="nettoyeur"></div>'}}
 
 #BOITE_FERMER
+
+#SET{enfants,''}
+[(#PIPELINE{affiche_enfants,[(#ARRAY{args,#ARRAY{exec,#ENV**{exec},objet,site,id_objet,#ID_SYNDIC},data,#GET{enfants}})]})]
+
 [(#CONST{_AJAX}|oui)
 	<script type="text/javascript">/*<!\[CDATA\[*/reloadExecPage('#ENV{exec}','#navigation,#chemin');/*\]\]>*/</script>
 ]
