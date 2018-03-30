@@ -134,8 +134,9 @@ function syndic_a_jour($now_id_syndic) {
 	sql_updateq('spip_syndic', array('syndication' => $statut, 'date_syndic' => date('Y-m-d H:i:s')),
 		"id_syndic=" . intval($now_id_syndic));
 
-	include_spip('inc/syndic');
-	$articles = syndic_http_dist($url_syndic);
+	$methode_syndication = 'http';
+	$syndic = charger_fonction($methode_syndication, 'syndic');
+	$articles = $syndic($url_syndic);
 
 	// Renvoyer l'erreur le cas echeant
 	if (!is_array($articles)) {
