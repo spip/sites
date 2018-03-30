@@ -37,14 +37,16 @@ function syndic_http_dist($url_syndic) {
 
 	// Aller chercher les donnees du RSS et les analyser
 	include_spip('inc/distant');
-	$rss = recuperer_page($url_syndic, true);
-	if (!$rss) {
-		$articles = _T('sites:avis_echec_syndication_02');
+	$res = recuperer_url($url_syndic, array('transcoder' => true));
+	if (!$res
+	  or !$res['page']
+	  or intval($res['status']/100) != 2) {
+		$items = _T('sites:avis_echec_syndication_02');
 	} else {
-		$articles = analyser_backend($rss, $url_syndic);
+		$items = analyser_backend($res['page'], $url_syndic);
 	}
 
-	return $articles;
+	return $items;
 }
 
 /**
