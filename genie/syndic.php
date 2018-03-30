@@ -19,7 +19,6 @@
 if (!defined("_ECRIRE_INC_VERSION")) {
 	return;
 }
-include_spip('inc/syndic');
 
 ## valeurs modifiables dans mes_options
 if (!defined('_PERIODE_SYNDICATION')) {
@@ -135,14 +134,8 @@ function syndic_a_jour($now_id_syndic) {
 	sql_updateq('spip_syndic', array('syndication' => $statut, 'date_syndic' => date('Y-m-d H:i:s')),
 		"id_syndic=" . intval($now_id_syndic));
 
-	// Aller chercher les donnees du RSS et les analyser
-	include_spip('inc/distant');
-	$rss = recuperer_page($url_syndic, true);
-	if (!$rss) {
-		$articles = _T('sites:avis_echec_syndication_02');
-	} else {
-		$articles = analyser_backend($rss, $url_syndic);
-	}
+	include_spip('inc/syndic');
+	$articles = syndic_http_dist($url_syndic);
 
 	// Renvoyer l'erreur le cas echeant
 	if (!is_array($articles)) {

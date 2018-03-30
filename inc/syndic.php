@@ -29,6 +29,25 @@ include_spip('genie/syndic');
 
 
 /**
+ * Analyse d'une URL au format RSS/Atom
+ * @param string $url_syndic
+ * @return array|string
+ */
+function syndic_http_dist($url_syndic) {
+
+	// Aller chercher les donnees du RSS et les analyser
+	include_spip('inc/distant');
+	$rss = recuperer_page($url_syndic, true);
+	if (!$rss) {
+		$articles = _T('sites:avis_echec_syndication_02');
+	} else {
+		$articles = analyser_backend($rss, $url_syndic);
+	}
+
+	return $articles;
+}
+
+/**
  * Analyse un texte de backend
  *
  * @param string $rss
