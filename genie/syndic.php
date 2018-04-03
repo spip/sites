@@ -105,28 +105,28 @@ function syndic_a_jour($now_id_syndic) {
 			_LOG_ERREUR);
 	}
 
-	$row = sql_fetsel("*", "spip_syndic", "id_syndic=" . intval($now_id_syndic));
+	$site = sql_fetsel("*", "spip_syndic", "id_syndic=" . intval($now_id_syndic));
 
-	if (!$row) {
+	if (!$site) {
 		return;
 	}
 
-	$url_syndic = $row['url_syndic'];
-	$url_site = $row['url_site'];
+	$url_syndic = $site['url_syndic'];
+	$url_site = $site['url_site'];
 
-	if ($row['moderation'] == 'oui') {
-		$moderation = 'dispo';
+	if ($site['moderation'] == 'oui') {
+		$statut = 'dispo';
 	}  // a valider
 	else {
-		$moderation = 'publie';
+		$statut = 'publie';
 	}  // en ligne sans validation
 
 	// determiner le statut a poser en cas d'echec : sus par defaut
 	// off si le site est deja off, ou sus depuis trop longtemps
 	$statut = 'sus';
 	if (
-		$row['statut'] == 'off'
-		or ($row['statut'] == 'sus' and time() - strtotime($row['date_syndic']) > _PERIODE_SYNDICATION_SUSPENDUE * 60)
+		$site['statut'] == 'off'
+		or ($site['statut'] == 'sus' and time() - strtotime($site['date_syndic']) > _PERIODE_SYNDICATION_SUSPENDUE * 60)
 	) {
 		$statut = 'off';
 	}
@@ -136,32 +136,32 @@ function syndic_a_jour($now_id_syndic) {
 
 	$methode_syndication = 'http';
 	$syndic = charger_fonction($methode_syndication, 'syndic');
-	$articles = $syndic($url_syndic);
+	$items = $syndic($url_syndic);
 
 	// Renvoyer l'erreur le cas echeant
-	if (!is_array($articles)) {
-		return $articles;
+	if (!is_array($items)) {
+		return $items;
 	}
 
 	// Les enregistrer dans la base
 
 	$faits = array();
-	foreach ($articles as $data) {
-		inserer_article_syndique($data, $now_id_syndic, $moderation, $url_site, $url_syndic, $row['resume'], $faits);
+	foreach ($items as $item) {
+		inserer_article_syndique($item, $now_id_syndic, $statut, $url_site, $url_syndic, $site['resume'], $faits);
 	}
 
 	// moderation automatique des liens qui sont sortis du feed
 	if (count($faits) > 0) {
-		$faits = sql_in("id_syndic_article", $faits, 'NOT');
-		if ($row['miroir'] == 'oui') {
+		$not_faits = sql_in("id_syndic_article", $faits, 'NOT');
+		if ($site['miroir'] == 'oui') {
 			sql_update('spip_syndic_articles', array('statut' => "'off'", 'maj' => 'maj'),
-				"id_syndic=$now_id_syndic AND $faits");
+				"id_syndic=".intval($now_id_syndic). "AND $not_faits");
 		}
 		// suppression apres 2 mois des liens qui sont sortis du feed
-		if ($row['oubli'] == 'oui') {
+		if ($site['oubli'] == 'oui') {
 
-			sql_delete('spip_syndic_articles', "id_syndic=$now_id_syndic AND NOT(" . sql_date_proche('maj', -2,
-					'MONTH') . ') AND NOT(' . sql_date_proche('date', -2, 'MONTH') . ") AND $faits");
+			sql_delete('spip_syndic_articles', 'id_syndic='.intval($now_id_syndic) . ' AND NOT(' . sql_date_proche('maj', -2,
+					'MONTH') . ') AND NOT(' . sql_date_proche('date', -2, 'MONTH') . ") AND $not_faits");
 		}
 	}
 
