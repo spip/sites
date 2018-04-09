@@ -115,10 +115,10 @@ function syndic_a_jour($now_id_syndic) {
 	$url_site = $site['url_site'];
 
 	if ($site['moderation'] == 'oui') {
-		$statut = 'dispo';
+		$statut_article = 'dispo';
 	}  // a valider
 	else {
-		$statut = 'publie';
+		$statut_article = 'publie';
 	}  // en ligne sans validation
 
 	// determiner le statut a poser en cas d'echec : sus par defaut
@@ -147,7 +147,7 @@ function syndic_a_jour($now_id_syndic) {
 
 	$faits = array();
 	foreach ($items as $item) {
-		inserer_article_syndique($item, $now_id_syndic, $statut, $url_site, $url_syndic, $site['resume'], $faits, $methode_syndication);
+		inserer_article_syndique($item, $now_id_syndic, $statut_article, $url_site, $url_syndic, $site['resume'], $faits, $methode_syndication);
 	}
 
 	// moderation automatique des liens qui sont sortis du feed
