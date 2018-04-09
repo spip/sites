@@ -5,7 +5,7 @@
 	etat="dev"
 	compatibilite="[3.3.0-dev;3.3.*]"
 	logo="prive/themes/spip/images/site-32.png"
-	schema="1.1.1"
+	schema="1.2.0"
 >
 
 	<nom>Sites</nom>

@@ -153,7 +153,10 @@ function sites_declarer_tables_objets_sql($tables) {
 			"lang" => "VARCHAR(10) DEFAULT '' NOT NULL",
 			"url_source" => "TINYTEXT DEFAULT '' NOT NULL",
 			"source" => "TINYTEXT DEFAULT '' NOT NULL",
-			"tags" => "TEXT DEFAULT '' NOT NULL"
+			"tags" => "TEXT DEFAULT '' NOT NULL",
+			"raw_data" => "TEXT DEFAULT '' NOT NULL",
+			"raw_format" => "TINYTEXT DEFAULT '' NOT NULL",
+			"raw_methode" => "TINYTEXT DEFAULT '' NOT NULL",
 		),
 		'key' => array(
 			"PRIMARY KEY" => "id_syndic_article",

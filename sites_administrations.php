@@ -49,6 +49,10 @@ function sites_upgrade($nom_meta_base_version, $version_cible) {
 	$maj['1.1.1'] = array(
 		array('maj_tables', array('spip_syndic_articles')),
 	);
+	/* Ajout des champs raw_data raw_format raw_methode */
+	$maj['1.2.0'] = array(
+		array('maj_tables', array('spip_syndic_articles')),
+	);
 
 	include_spip('base/upgrade');
 	maj_plugin($nom_meta_base_version, $version_cible, $maj);
