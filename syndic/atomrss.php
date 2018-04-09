@@ -342,12 +342,16 @@ function analyser_backend($rss, $url_syndic = '') {
 			$data['enclosures'] = join(', ', array_unique($enclosures));
 			unset($enclosures);
 		}
-		$data['raw_data'] = $item;
-		$data['raw_format'] = 'xml';
+		$data['item'] = $item;
 
 		// Nettoyer les donnees et remettre les CDATA en place
 		cdata_echappe_retour($data, $echappe_cdata);
 		cdata_echappe_retour($tags, $echappe_cdata);
+
+		$data['raw_data'] = $item;
+		cdata_echappe_retour($data['raw_data'], $echappe_cdata, false);
+		$data['raw_format'] = 'xml';
+
 
 		// passer l'url en absolue
 		$data['url'] = url_absolue(filtrer_entites($data['url']), $url_syndic);
@@ -374,13 +378,13 @@ function analyser_backend($rss, $url_syndic = '') {
 		// Trouver les microformats (ecrase les <category> et <dc:subject>)
 		if (preg_match_all(
 			',<a[[:space:]]([^>]+[[:space:]])?rel=[^>]+>.*</a>,Uims',
-			$data['raw_data'], $regs, PREG_PATTERN_ORDER)) {
+			$data['item'], $regs, PREG_PATTERN_ORDER)) {
 			$tags = $regs[0];
 		}
 		// Cas particulier : tags Connotea sous la forme <a class="postedtag">
 		if (preg_match_all(
 			',<a[[:space:]][^>]+ class="postedtag"[^>]*>.*</a>,Uims',
-			$data['raw_data'], $regs, PREG_PATTERN_ORDER)) {
+			$data['item'], $regs, PREG_PATTERN_ORDER)) {
 			$tags = preg_replace(', class="postedtag",i',
 				' rel="tag"', $regs[0]);
 		}
@@ -388,9 +392,6 @@ function analyser_backend($rss, $url_syndic = '') {
 		$data['tags'] = $tags;
 		// enlever le html des titre pour etre homogene avec les autres objets spip
 		$data['titre'] = textebrut($data['titre']);
-
-		// compat avec du code ancien qui utiliserait $data['item']
-		$data['item'] = &$data['raw_data'];
 
 		$articles[] = $data;
 	}
@@ -600,9 +601,9 @@ function cdata_echappe(&$rss, &$echappe_cdata) {
 
 // Retablit le contenu des blocs [[CDATA]] dans une chaine ou un tableau
 // https://code.spip.net/@cdata_echappe_retour
-function cdata_echappe_retour(&$x, &$echappe_cdata) {
+function cdata_echappe_retour(&$x, &$echappe_cdata, $filtrer_entites = true) {
 	if (is_string($x)) {
-		if (strpos($x, '&lt;') !== false){
+		if ($filtrer_entites and strpos($x, '&lt;') !== false){
 			$x = filtrer_entites($x);
 		}
 		if (strpos($x, '@@@SPIP_CDATA') !== false){
@@ -611,7 +612,7 @@ function cdata_echappe_retour(&$x, &$echappe_cdata) {
 	} else {
 		if (is_array($x)) {
 			foreach ($x as $k => &$v) {
-				cdata_echappe_retour($v, $echappe_cdata);
+				cdata_echappe_retour($v, $echappe_cdata, $filtrer_entites);
 			}
 		}
 	}
