@@ -50,6 +50,20 @@ function syndic_atomrss_dist($url_syndic) {
 }
 
 /**
+ * @param string $raw_data
+ * @param string $raw_format
+ * @return array
+ */
+function syndic_atomrss_raw_data_to_array_dist($raw_data, $raw_format) {
+	$data = array();
+	if ($raw_format == 'xml') {
+		$simplexml_to_array = charger_fonction('simplexml_to_array', 'inc');
+		$data = $simplexml_to_array($raw_data);
+	}
+	return $data;
+}
+
+/**
  * Analyse un texte de backend
  *
  * @param string $rss

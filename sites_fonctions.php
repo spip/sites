@@ -38,3 +38,21 @@ function boucle_SITES_dist($id_boucle, &$boucles) {
 
 	return $f($id_boucle, $boucles);
 }
+
+/**
+ * Decoder le champ raw_data d'un article syndique en tableau de donnees utilisable
+ * @param string $methode_syndication
+ * @param string $raw_data
+ * @param string $raw_format
+ * @return array
+ */
+function syndic_article_raw_data_to_array($methode_syndication, $raw_data, $raw_format) {
+	$data = array();
+	if ($methode_syndication
+	  and $syndic = charger_fonction($methode_syndication, 'syndic', true)
+		and $methode_row_data_to_array = charger_fonction($methode_syndication . "_raw_data_to_array", 'syndic', true)) {
+		$data = $methode_row_data_to_array($raw_data, $raw_format);
+	}
+
+	return $data;
+}
