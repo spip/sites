@@ -147,7 +147,7 @@ function syndic_a_jour($now_id_syndic) {
 
 	$faits = array();
 	foreach ($items as $item) {
-		inserer_article_syndique($item, $now_id_syndic, $statut, $url_site, $url_syndic, $site['resume'], $faits);
+		inserer_article_syndique($item, $now_id_syndic, $statut, $url_site, $url_syndic, $site['resume'], $faits, $methode_syndication);
 	}
 
 	// moderation automatique des liens qui sont sortis du feed
@@ -189,10 +189,11 @@ function syndic_a_jour($now_id_syndic) {
  * @param string $url_syndic
  * @param string $resume
  * @param array $faits
+ * @param string $methode_syndication
  * @return bool
  *     true si l'article est nouveau, false sinon.
  **/
-function inserer_article_syndique($data, $now_id_syndic, $statut, $url_site, $url_syndic, $resume, &$faits) {
+function inserer_article_syndique($data, $now_id_syndic, $statut, $url_site, $url_syndic, $resume, &$faits, $methode_syndication = '') {
 	// Creer le lien s'il est nouveau - cle=(id_syndic,url)
 	$le_lien = $data['url'];
 
@@ -334,6 +335,20 @@ function inserer_article_syndique($data, $now_id_syndic, $statut, $url_site, $ur
 		'url_source' => (isset($data['url_source']) ? substr($data['url_source'], 0, 255) : ''),
 		'tags' => $tags
 	);
+
+	// donnees brutes completes si fournies par la methode de syndication
+	if (isset($data['raw_data'])) {
+		$vals['raw_data'] = $data['raw_data'];
+		if (isset($data['raw_format'])) {
+			$vals['raw_format'] = $data['raw_format'];
+		}
+		if (isset($data['raw_methode'])) {
+			$vals['raw_methode'] = $data['raw_methode'];
+		}
+		else {
+			$vals['raw_methode'] = $methode_syndication;
+		}
+	}
 
 	// Mettre a jour la date si lastbuilddate
 	if (isset($data['lastbuilddate']) and $data['lastbuilddate']) {
