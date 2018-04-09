@@ -134,7 +134,7 @@ function syndic_a_jour($now_id_syndic) {
 	sql_updateq('spip_syndic', array('syndication' => $statut, 'date_syndic' => date('Y-m-d H:i:s')),
 		"id_syndic=" . intval($now_id_syndic));
 
-	$methode_syndication = 'http';
+	$methode_syndication = 'atomrss';
 	$syndic = charger_fonction($methode_syndication, 'syndic');
 	$items = $syndic($url_syndic);
 

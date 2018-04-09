@@ -26,5 +26,5 @@ if (!defined("_ECRIRE_INC_VERSION")) {
 // il faut passer par cron() pour avoir un verrou portable
 // Voir un exemple dans action/editer/site
 include_spip('genie/syndic');
-include_spip('syndic/http');
+include_spip('syndic/atomrss');
 

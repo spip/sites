@@ -29,11 +29,11 @@ include_spip('genie/syndic');
 
 
 /**
- * Analyse d'une URL au format RSS/Atom
+ * Analyse d'une URL au format Atom/RSS
  * @param string $url_syndic
  * @return array|string
  */
-function syndic_http_dist($url_syndic) {
+function syndic_atomrss_dist($url_syndic) {
 
 	// Aller chercher les donnees du RSS et les analyser
 	include_spip('inc/distant');
