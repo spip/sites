@@ -342,7 +342,8 @@ function analyser_backend($rss, $url_syndic = '') {
 			$data['enclosures'] = join(', ', array_unique($enclosures));
 			unset($enclosures);
 		}
-		$data['item'] = $item;
+		$data['raw_data'] = $item;
+		$data['raw_format'] = 'xml';
 
 		// Nettoyer les donnees et remettre les CDATA en place
 		cdata_echappe_retour($data, $echappe_cdata);
@@ -373,13 +374,13 @@ function analyser_backend($rss, $url_syndic = '') {
 		// Trouver les microformats (ecrase les <category> et <dc:subject>)
 		if (preg_match_all(
 			',<a[[:space:]]([^>]+[[:space:]])?rel=[^>]+>.*</a>,Uims',
-			$data['item'], $regs, PREG_PATTERN_ORDER)) {
+			$data['raw_data'], $regs, PREG_PATTERN_ORDER)) {
 			$tags = $regs[0];
 		}
 		// Cas particulier : tags Connotea sous la forme <a class="postedtag">
 		if (preg_match_all(
 			',<a[[:space:]][^>]+ class="postedtag"[^>]*>.*</a>,Uims',
-			$data['item'], $regs, PREG_PATTERN_ORDER)) {
+			$data['raw_data'], $regs, PREG_PATTERN_ORDER)) {
 			$tags = preg_replace(', class="postedtag",i',
 				' rel="tag"', $regs[0]);
 		}
@@ -387,6 +388,9 @@ function analyser_backend($rss, $url_syndic = '') {
 		$data['tags'] = $tags;
 		// enlever le html des titre pour etre homogene avec les autres objets spip
 		$data['titre'] = textebrut($data['titre']);
+
+		// compat avec du code ancien qui utiliserait $data['item']
+		$data['item'] = &$data['raw_data'];
 
 		$articles[] = $data;
 	}
