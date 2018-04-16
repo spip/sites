@@ -39,6 +39,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'entree_description_site' => 'Description du site',
 	'erreur_fichier_format_inconnu' => 'Le format du fichier @fichier@ n’est pas pris en charge.',
 	'erreur_fichier_incorrect' => 'Impossible de lire le fichier.',
+	'erreur_methode_syndication_inconnue' => 'Methode de syndication @methode@ inconnue',
 
 	// F
 	'form_prop_nom_site' => 'Nom du site',

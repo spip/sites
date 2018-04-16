@@ -135,7 +135,16 @@ function syndic_a_jour($now_id_syndic) {
 		"id_syndic=" . intval($now_id_syndic));
 
 	$methode_syndication = 'atomrss';
-	$syndic = charger_fonction($methode_syndication, 'syndic');
+	if (preg_match(',^(\w+:)\w+://,', $url_syndic, $m)) {
+		$methode_syndication = rtrim($m[1], ':');
+		$url_syndic = substr($url_syndic, strlen($m[1]));
+	}
+
+
+	if (!$syndic = charger_fonction($methode_syndication, 'syndic', true)) {
+		spip_log("methode syndication $methode_syndication inconnue pour $url_syndic", 'sites' . _LOG_ERREUR);
+		return _T('sites:erreur_methode_syndication_inconnue', array('methode' => $methode_syndication));
+	}
 	$items = $syndic($url_syndic);
 
 	// Renvoyer l'erreur le cas echeant
