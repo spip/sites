@@ -1,5 +1,5 @@
 <traduction module="sites" gestionnaire="salvatore" url="https://trad.spip.net" source="svn://zone.spip.org/spip-zone/_core_/plugins/sites/lang/" reference="fr">
-	<langue code="ar" url="https://trad.spip.net/tradlang_module/sites?lang_cible=ar" total="123" traduits="122" relire="0" modifs="0" nouveaux="1" pourcent="99.19">
+	<langue code="ar" url="https://trad.spip.net/tradlang_module/sites?lang_cible=ar" total="123" traduits="123" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
 		<traducteur nom="George" lien="https://trad.spip.net/auteur/جورج-قندلفت" />
 	</langue>
 	<langue code="ast" url="https://trad.spip.net/tradlang_module/sites?lang_cible=ast" total="123" traduits="73" relire="0" modifs="8" nouveaux="42" pourcent="59.35">
@@ -33,9 +33,10 @@
 	<langue code="de" url="https://trad.spip.net/tradlang_module/sites?lang_cible=de" total="123" traduits="122" relire="0" modifs="0" nouveaux="1" pourcent="99.19">
 		<traducteur nom="klaus++" lien="https://trad.spip.net/auteur/klaus" />
 	</langue>
-	<langue code="en" url="https://trad.spip.net/tradlang_module/sites?lang_cible=en" total="123" traduits="122" relire="0" modifs="0" nouveaux="1" pourcent="99.19">
+	<langue code="en" url="https://trad.spip.net/tradlang_module/sites?lang_cible=en" total="123" traduits="123" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
 		<traducteur nom="b_b" lien="https://trad.spip.net/auteur/b_b" />
 		<traducteur nom="Davood Hossein" lien="https://trad.spip.net/auteur/davood-hossein" />
+		<traducteur nom="George" lien="https://trad.spip.net/auteur/جورج-قندلفت" />
 		<traducteur nom="kent1" lien="https://trad.spip.net/auteur/kent1" />
 		<traducteur nom="sQuonk" lien="https://trad.spip.net/auteur/squonk" />
 	</langue>
