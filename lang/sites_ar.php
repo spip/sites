@@ -41,6 +41,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'entree_description_site' => 'وصف الموقع',
 	'erreur_fichier_format_inconnu' => 'تنسيق الملف @fichier@ غير مدعوم.',
 	'erreur_fichier_incorrect' => 'لا يمكن قراءة الملف.',
+	'erreur_methode_syndication_inconnue' => 'طريقة ترخيص @methode@ غير معروفة',
 
 	// F
 	'form_prop_nom_site' => 'اسم الموقع',
