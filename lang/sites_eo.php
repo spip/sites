@@ -41,6 +41,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'entree_description_site' => 'Priskribo de la retejo',
 	'erreur_fichier_format_inconnu' => 'La dosierformo el @fichier@ ne estas subtenata.',
 	'erreur_fichier_incorrect' => 'Ne eblas legi la dosieron.',
+	'erreur_methode_syndication_inconnue' => 'Abonrilato-metodo @methode@ ne konata',
 
 	// F
 	'form_prop_nom_site' => 'Nomo de la retejo',
