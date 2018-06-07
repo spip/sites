@@ -51,8 +51,22 @@ function autoriser_site_purger_dist($faire, $type, $id, $qui, $opt) {
 }
 
 
-function autoriser_controlersyndication_menu_dist($faire, $type, $id, $qui, $opt) {
+/**
+ * Autorisation de voir la page controler_syndication
+ *
+ * @param  string $faire Action demandée
+ * @param  string $type Type d'objet sur lequel appliquer l'action
+ * @param  int $id Identifiant de l'objet
+ * @param  array $qui Description de l'auteur demandant l'autorisation
+ * @param  array $opt Options de cette autorisation
+ * @return bool          true s'il a le droit, false sinon
+ **/
+function autoriser_controlersyndication_voir_dist($faire, $type, $id, $qui, $opt) {
 	return ($qui['statut'] == '0minirezo' and sql_countsel('spip_syndic_articles'));
+}
+
+function autoriser_controlersyndication_menu_dist($faire, $type, $id, $qui, $opt) {
+	return autoriser('voir', '_controlersyndication', $id, $qui, $opt);
 }
 
 // Creer un nouveau site ?

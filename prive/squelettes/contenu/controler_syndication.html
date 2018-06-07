@@ -1,3 +1,4 @@
+[(#AUTORISER{voir,_controlersyndication}|sinon_interdire_acces)]
 <h1 class="grostitre"><:sites:icone_controler_syndication:></h1>
 #SET{self,#SELF|parametre_url{id_syndic_article|lesauteurs|debut_id_syndic_article,''}}
 <BOUCLE_repart(SITES){id_syndic}><a class='annule_filtre' href='[(#GET{self}|parametre_url{id_syndic,''})]' title="<:sites:tout_voir|attribut_html:>">[(#CHEMIN_IMAGE{fermer-16.png}|balise_img|inserer_attribut{alt,<:sites:tout_voir:>})]</a>
