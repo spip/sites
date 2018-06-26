@@ -41,6 +41,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'entree_description_site' => 'Omschrijving van de site',
 	'erreur_fichier_format_inconnu' => 'Formaat van het bestand @fichier@ wordt niet aanvaard.',
 	'erreur_fichier_incorrect' => 'Het bestand kon niet gelezen worden.',
+	'erreur_methode_syndication_inconnue' => 'Syndicatie methode @methode@ is onbekend',
 
 	// F
 	'form_prop_nom_site' => 'Naam van de website',
