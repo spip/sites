@@ -95,7 +95,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'item_bloquer_liens_syndiques' => 'Gesyndiceerde koppelingen ter goedkeuring tegenhouden',
 	'item_gerer_annuaire_site_web' => 'Een adresboek van websites aanmaken',
 	'item_non_bloquer_liens_syndiques' => 'Koppelingen komende van de syndicatie niet blokkeren',
-	'item_non_gerer_annuaire_site_web' => 'Adresboek van websites desactiveren',
+	'item_non_gerer_annuaire_site_web' => 'Adresboek van websites deactiveren',
 	'item_non_utiliser_syndication' => 'Automatische syndicatie niet gebruiken',
 	'item_utiliser_syndication' => 'Automatische syndicatie gebruiken',
 
