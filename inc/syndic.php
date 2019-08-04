@@ -277,6 +277,11 @@ function analyser_backend($rss, $url_syndic = '') {
 				trim(extraire_attribut($match[1], 'url')));
 		}
 
+		// GitHub : Identification du commit
+		if (preg_match(',<id>[^/]+/(\w+)</id>,Uims', $item, $regs)) {
+			$data['id_commit'] = $regs[1];
+		}
+
 		// tags
 		# a partir de "<dc:subject>", (del.icio.us)
 		# ou <media:category> (flickr)
