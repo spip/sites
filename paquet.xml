@@ -1,7 +1,7 @@
 <paquet
 	prefix="sites"
 	categorie="edition"
-	version="2.0.2"
+	version="2.0.3"
 	etat="dev"
 	compatibilite="[3.3.0-dev;3.3.*]"
 	logo="prive/themes/spip/images/site-32.png"
