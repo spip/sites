@@ -164,7 +164,7 @@ function syndic_a_jour($now_id_syndic) {
 		$not_faits = sql_in("id_syndic_article", $faits, 'NOT');
 		if ($site['miroir'] == 'oui') {
 			sql_update('spip_syndic_articles', array('statut' => "'off'", 'maj' => 'maj'),
-				"id_syndic=".intval($now_id_syndic). "AND $not_faits");
+				"id_syndic=".intval($now_id_syndic). " AND $not_faits");
 		}
 		// suppression apres 2 mois des liens qui sont sortis du feed
 		if ($site['oubli'] == 'oui') {
