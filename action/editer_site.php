@@ -154,19 +154,10 @@ function site_modifier($id_syndic, $set = null) {
 
 	include_spip('inc/rubriques');
 	include_spip('inc/modifier');
+	include_spip('inc/filtres');
 	$c = collecter_requests(
-	// white list
-		array(
-			'nom_site',
-			'url_site',
-			'descriptif',
-			'url_syndic',
-			'syndication',
-			'moderation',
-			'miroir',
-			'oubli',
-			'resume'
-		),
+		// white list
+		objet_info('site', 'champs_editables'),
 		// black list
 		array('statut', 'id_parent', 'date'),
 		// donnees eventuellement fournies
