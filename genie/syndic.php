@@ -317,7 +317,7 @@ function inserer_article_syndique($data, $now_id_syndic, $statut, $url_site, $ur
 		// mode "full syndication"
 		// choisir le contenu pertinent
 		// & refaire les liens relatifs
-		$desc = strlen($data['content']) ?
+		$desc = (isset($data['content']) and strlen($data['content'])) ?
 			$data['content'] : $data['descriptif'];
 		$desc = liens_absolus($desc, $url_syndic);
 	}
