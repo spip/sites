@@ -39,11 +39,14 @@ function analyser_site($url) {
 		$url = 'http://' . $url;
 	}
 
-	$texte = recuperer_page($url, true);
-	if (!$texte) {
+	$res = recuperer_url($url, array('transcoder' => true));
+	if (!$res or !$res['page'] or intval($res['status']/100) != 2) {
 		return false;
+	} else {
+		$texte = $res['page'];
+		$url = $res['url'];
 	}
-
+	
 	include_spip('inc/syndic');
 	cdata_echappe($texte, $echappe_cdata);
 
