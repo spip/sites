@@ -101,7 +101,7 @@ function syndic_a_jour($now_id_syndic) {
 	include_spip('inc/texte');
 	$call = debug_backtrace();
 	if ($call[1]['function'] !== 'queue_start_job') {
-		spip_log("syndic_a_jour doit etre appelee par JobQueue Cf. http://trac.rezo.net/trac/spip/changeset/10294",
+		spip_log("syndic_a_jour doit etre appelee par JobQueue Cf. https://core.spip.net/projects/spip/repository/revisions/10294",
 			_LOG_ERREUR);
 	}
 
