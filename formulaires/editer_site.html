@@ -59,7 +59,7 @@
 	    [(#ENV**{config}|table_valeur{activer_syndic}|=={non}|?{'',' '})
 	    <div class="editer editer_syndications fieldset">
 			<fieldset>
-				<h3 class="legend"><img src='#CHEMIN_IMAGE{rss-16.png}' alt="<:sites:info_syndication:>" />
+				<h3 class="legend">[(#CHEMIN_IMAGE{rss-16.png}|balise_img{'',<:sites:info_syndication:>})]
 				<:sites:bouton_radio_syndication:>
 				#AIDER{rubsyn}</h3>
 				<div class="editer-groupe">
