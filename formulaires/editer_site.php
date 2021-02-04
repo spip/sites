@@ -61,6 +61,10 @@ function formulaires_editer_site_charger_dist(
 	$valeurs['logo'] = '';
 	$valeurs['format_logo'] = '';
 
+	if (intval($id_syndic) and !autoriser('modifier', 'site', intval($id_syndic))) {
+		$valeurs['editable'] = '';
+	}
+
 	return $valeurs;
 }
 
