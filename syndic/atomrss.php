@@ -165,7 +165,11 @@ function analyser_backend($rss, $url_syndic = '') {
 				if (preg_match(
 					',<link[^>]*[[:space:]]rel=["\']?alternate[^>]*>(.*)</link>,Uims',
 					$item, $regs)) {
-					$data['url'] = $regs[1];
+					$data['url'] = trim($regs[1]);
+					// c'est pas impossible d'avoir l'URL dans un href quand meme :)
+					if (empty($data['url'])) {
+						$data['url'] = extraire_attribut($regs[0], 'href');
+					}
 				} else {
 					if (preg_match(',<link[^>]*[[:space:]]rel=.alternate[^>]*>,Uims',
 						$item, $regs)) {
