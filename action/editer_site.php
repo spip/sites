@@ -53,7 +53,9 @@ function action_editer_site_dist($arg = null) {
 		) {
 			include_spip('inc/distant');
 			$logo = _DIR_RACINE . copie_locale($logo);
-			@rename($logo, _DIR_IMG . 'siteon' . $id_syndic . '.' . $format_logo);
+			include_spip('action/editer_logo');
+			logo_modifier('site', $id_syndic, 'on', $logo);
+			@unlink($logo);
 		}
 	}
 
