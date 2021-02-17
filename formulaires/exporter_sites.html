@@ -1,7 +1,7 @@
 <div class="formulaire_spip formulaire_exporter formulaire_#FORM">
 	<h3 class="titrem"><:sites:titre_exporter_bookmarks:></h3>
-	[<p class="reponse_formulaire reponse_formulaire_ok">(#ENV**{message_ok})</p>]
-	[<p class="reponse_formulaire reponse_formulaire_erreur">(#ENV*{message_erreur})</p>]
+	[<p class="reponse_formulaire reponse_formulaire_ok" role="status">(#ENV**{message_ok})</p>]
+	[<p class="reponse_formulaire reponse_formulaire_erreur" role="alert">(#ENV*{message_erreur})</p>]
 	[(#ENV{editable})
 	<p class="explication"><:sites:texte_expliquer_export_bookmarks:></p>
 	<form method='post' action='#ENV{action}'><div>
