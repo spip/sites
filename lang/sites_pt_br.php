@@ -134,7 +134,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'texte_messages_publics' => 'Mensagens públicas da matéria:',
 	'texte_non_fonction_referencement' => 'Você pode preferir não usar esta função automática, e indicar você mesmo os elementos relativos a este site...',
 	'texte_referencement_automatique' => '<b>Referenciamento automatizado de um site</b><br />Você pode referenciar rapidamente um websites indicando abaixo o URL desejado, ou o endereço do seu arquivo de sindicação. O SPIP recuperará automaticamente as informações relativas ao site (título, descrição...).',
-	'texte_referencement_automatique_verifier' => 'Por favor, verifique as informações fornecidas em <tt>@url@</tt> antes de se registrar.',
+	'texte_referencement_automatique_verifier' => 'Por favor, verifique as informações fornecidas em <tt>@url@</tt> antes de gravar.',
 	'texte_syndication' => 'É possível baixar automaticamente a lista de novidades de um site, desde que ele o permita. Para isso, você deverá ativar a sindicação.
 <blockquote><i>Alguns serviços de hospedagem desativam esta funcionalidade; neste caso, você não poderá usar a sindicação de conteúdo no seu site.</i></blockquote>',
 	'titre_articles_syndiques' => 'Matérias sindicadas extraídas deste site',
