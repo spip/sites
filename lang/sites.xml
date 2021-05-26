@@ -126,9 +126,10 @@
 	</langue>
 	<langue code="sv" url="https://trad.spip.net/tradlang_module/sites?lang_cible=sv" total="123" traduits="57" relire="0" modifs="6" nouveaux="60" pourcent="46.34" />
 	<langue code="tr" url="https://trad.spip.net/tradlang_module/sites?lang_cible=tr" total="123" traduits="68" relire="0" modifs="8" nouveaux="47" pourcent="55.28" />
-	<langue code="uk" url="https://trad.spip.net/tradlang_module/sites?lang_cible=uk" total="123" traduits="122" relire="0" modifs="0" nouveaux="1" pourcent="99.19">
+	<langue code="uk" url="https://trad.spip.net/tradlang_module/sites?lang_cible=uk" total="123" traduits="123" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
 		<traducteur nom="olly" lien="https://trad.spip.net/auteur/olly" />
 		<traducteur nom="Retenodus" lien="https://trad.spip.net/auteur/retenodus" />
+		<traducteur nom="Serge Markitanenko" lien="https://trad.spip.net/auteur/serge-markitanenko" />
 	</langue>
 	<langue code="vi" url="https://trad.spip.net/tradlang_module/sites?lang_cible=vi" total="123" traduits="62" relire="0" modifs="10" nouveaux="51" pourcent="50.41" />
 	<langue code="zh" url="https://trad.spip.net/tradlang_module/sites?lang_cible=zh" total="123" traduits="54" relire="0" modifs="11" nouveaux="58" pourcent="43.90" />

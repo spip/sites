@@ -41,6 +41,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'entree_description_site' => 'Опис сайту',
 	'erreur_fichier_format_inconnu' => 'Формат файлу @fichier@ не підтримується системою.',
 	'erreur_fichier_incorrect' => 'Неможливо прочитати файл.',
+	'erreur_methode_syndication_inconnue' => 'Невідомий метод імпорту @methode@',
 
 	// F
 	'form_prop_nom_site' => 'Назва сайту',
