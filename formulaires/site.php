@@ -36,7 +36,7 @@ function formulaires_site_verifier_dist($id_rubrique) {
 	if (!count($erreurs)) {
 		// Tester l'URL du site
 		include_spip('inc/distant');
-		if (!recuperer_page($url)) {
+		if (!recuperer_url($url)) {
 			$erreurs['url_site'] = _T('form_pet_url_invalide');
 		}
 	}

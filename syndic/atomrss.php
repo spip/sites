@@ -385,7 +385,8 @@ function analyser_backend($rss, $url_syndic = '') {
 			include_spip("inc/distant");
 			for ($i = 0; $i < 10; $i++) {
 				// on fait un GET et pas un HEAD car les vieux SPIP ne repondent pas la redirection avec un HEAD (honte) sur un article virtuel
-				$res = recuperer_lapage($target, false, "GET", 4096);
+				$res = recuperer_url($target, ['taille_max' => 4096]);
+				$res = $res['status'] !== 200 ? false : $res;
 				if (!$res) {
 					break;
 				} // c'est pas bon signe car on a pas trouve l'URL...

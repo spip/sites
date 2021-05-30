@@ -56,7 +56,7 @@ function is_feed($url) {
 	/**
 	 * méthode SPIP
 	 */
-	if (function_exists('recuperer_page')) {
+	if (function_exists('recuperer_url')) {
 		$buffer = recuperer_url($url);
 		$buffer = $buffer['page'] ?? '';
 		if (preg_match("/<(\w*) .*/", $buffer, $matches)) {
