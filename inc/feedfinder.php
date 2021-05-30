@@ -57,7 +57,8 @@ function is_feed($url) {
 	 * méthode SPIP
 	 */
 	if (function_exists('recuperer_page')) {
-		$buffer = recuperer_page($url);
+		$buffer = recuperer_url($url);
+		$buffer = $buffer['page'] ?? '';
 		if (preg_match("/<(\w*) .*/", $buffer, $matches)) {
 			//ici on detecte la premiere balise
 			$type_feed = $matches[1];
