@@ -383,20 +383,14 @@ function analyser_backend($rss, $url_syndic = '') {
 		if (_SYNDICATION_DEREFERENCER_URL) {
 			$target = $data['url'];
 			include_spip("inc/distant");
-			for ($i = 0; $i < 10; $i++) {
-				// on fait un GET et pas un HEAD car les vieux SPIP ne repondent pas la redirection avec un HEAD (honte) sur un article virtuel
-				$res = recuperer_url($target, ['taille_max' => 4096]);
-				$res = $res['status'] !== 200 ? false : $res;
-				if (!$res) {
-					break;
-				} // c'est pas bon signe car on a pas trouve l'URL...
-				if (is_array($res)) {
-					break;
-				} // on a trouve la page, donc on a l'URL finale
-				$target = $res; // c'est une redirection, on la suit pour voir ou elle mene
+			// on fait un GET et pas un HEAD car les vieux SPIP ne repondent pas la redirection avec un HEAD (honte) sur un article virtuel
+			// mais on limite la taille de ce qu'on telecharge
+			$res = recuperer_url($target, ['taille_max' => 4096]);
+
+			// et récuperer l'URL finale de la page apres redirections eventuelles
+			if (!empty($res['url'])) {
+				$data['url'] = $res['url'];
 			}
-			// ici $target est l'URL finale de la page
-			$data['url'] = $target;
 		}
 
 		// Trouver les microformats (ecrase les <category> et <dc:subject>)
