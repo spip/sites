@@ -27,7 +27,7 @@
 					title="<:info_numero_abbreviation|attribut_html:> #ID_SYNDIC">#NOM_SITE</a> [<span class='visiter'>&#91;<a href='(#URL_SITE)'><:lien_visite_site:></a>&#93;</span>]
 			</td>
 			<td class='syndication'>[(#SYNDICATION|match{off|sus}|oui)
-				<span class="etat #SYNDICATION">[(#CHEMIN{puce-orange-anim.gif}|balise_img|inserer_attribut{alt,<:sites:info_panne_site_syndique:>})<:sites:info_probleme_grave:>]</span>
+				<span class="etat #SYNDICATION">[(#CHEMIN{puce-orange-anim-xx.svg}|balise_img|inserer_attribut{alt,<:sites:info_panne_site_syndique:>})<:sites:info_probleme_grave:>]</span>
 			]<BOUCLE_articlesyndic(SYNDIC_ARTICLES){id_syndic}{statut==.*}{tout} />[
 				(#SYNDICATION|match{oui|off|sus}|oui)
 				[(#TOTAL_BOUCLE)] <:sites:info_syndication_articles:>

@@ -25,16 +25,16 @@ function puce_statut_site_dist($id, $statut, $id_rubrique, $type, $ajax = '', $m
 	if ($t == 'off' or $t == 'sus') {
 		switch ($statut) {
 			case 'publie':
-				$puce = 'puce-verte-anim.gif';
+				$puce = 'puce-verte-anim-xx.svg';
 				$title = _T('sites:info_site_reference');
 				break;
 			case 'prop':
-				$puce = 'puce-orange-anim.gif';
+				$puce = 'puce-orange-anim-xx.svg';
 				$title = _T('sites:info_site_attente');
 				break;
 			case 'refuse':
 			default:
-				$puce = 'puce-poubelle-anim.gif';
+				$puce = 'puce-poubelle-anim-xx.svg';
 				$title = _T('sites:info_site_refuse');
 				break;
 		}

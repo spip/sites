@@ -196,7 +196,7 @@ function sites_declarer_tables_objets_sql($tables) {
 			),
 		),
 		'statut_images' => array(
-			'puce-rouge-anim.gif',
+			'puce-rouge-anim-xx.svg',
 			'publie' => 'puce-publier-8.png',
 			'refuse' => 'puce-supprimer-8.png',
 			'dispo' => 'puce-proposer-8.png',
