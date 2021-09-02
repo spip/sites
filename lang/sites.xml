@@ -44,7 +44,8 @@
 		<traducteur nom="gpl" lien="https://trad.spip.net/auteur/gpl" />
 		<traducteur nom="Matthieu Marcillaud" lien="https://trad.spip.net/auteur/matthieu-marcillaud" />
 	</langue>
-	<langue code="es" url="https://trad.spip.net/tradlang_module/sites?lang_cible=es" total="123" traduits="122" relire="0" modifs="0" nouveaux="1" pourcent="99.19">
+	<langue code="es" url="https://trad.spip.net/tradlang_module/sites?lang_cible=es" total="123" traduits="123" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
+		<traducteur nom="comcinco" lien="https://trad.spip.net/auteur/comcinco-7293" />
 		<traducteur nom="dani" lien="https://trad.spip.net/auteur/dani" />
 		<traducteur nom="Raquel S. Bujaldón" lien="https://trad.spip.net/auteur/raquel-s-bujaldon" />
 	</langue>
