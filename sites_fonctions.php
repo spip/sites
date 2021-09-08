@@ -47,10 +47,12 @@ function boucle_SITES_dist($id_boucle, &$boucles) {
  * @return array
  */
 function syndic_article_raw_data_to_array($methode_syndication, $raw_data, $raw_format) {
-	$data = array();
-	if ($methode_syndication
-	  and $syndic = charger_fonction($methode_syndication, 'syndic', true)
-		and $methode_row_data_to_array = charger_fonction($methode_syndication . "_raw_data_to_array", 'syndic', true)) {
+	$data = [];
+	if (
+		$methode_syndication
+		and $syndic = charger_fonction($methode_syndication, 'syndic', true)
+		and $methode_row_data_to_array = charger_fonction($methode_syndication . '_raw_data_to_array', 'syndic', true)
+	) {
 		$data = $methode_row_data_to_array($raw_data, $raw_format);
 	}
 

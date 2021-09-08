@@ -16,7 +16,7 @@
  * @package SPIP\Sites\Edition
  */
 
-if (!defined("_ECRIRE_INC_VERSION")) {
+if (!defined('_ECRIRE_INC_VERSION')) {
 	return;
 }
 
@@ -48,7 +48,8 @@ function action_editer_site_dist($arg = null) {
 
 	if (!$id_syndic = intval($arg)) {
 		$id_syndic = site_inserer(_request('id_parent'));
-		if ($logo = _request('logo')
+		if (
+			$logo = _request('logo')
 			and $format_logo = _request('format_logo')
 		) {
 			include_spip('inc/distant');
@@ -60,12 +61,12 @@ function action_editer_site_dist($arg = null) {
 	}
 
 	if (!$id_syndic) {
-		return array(0, '');
+		return [0, ''];
 	}
 
 	$err = site_modifier($id_syndic);
 
-	return array($id_syndic, $err);
+	return [$id_syndic, $err];
 }
 
 
@@ -88,46 +89,48 @@ function site_inserer($id_rubrique, $set = null) {
 	// Si id_rubrique vaut 0 ou n'est pas definie, creer le site
 	// dans la premiere rubrique racine
 	if (!$id_rubrique = intval($id_rubrique)) {
-		$id_rubrique = sql_getfetsel("id_rubrique", "spip_rubriques", "id_parent=0", '', '0+titre,titre', "1");
+		$id_rubrique = sql_getfetsel('id_rubrique', 'spip_rubriques', 'id_parent=0', '', '0+titre,titre', '1');
 	}
 
 	// Le secteur a la creation : c'est le secteur de la rubrique
-	$id_secteur = sql_getfetsel("id_secteur", "spip_rubriques", "id_rubrique=" . intval($id_rubrique));
+	$id_secteur = sql_getfetsel('id_secteur', 'spip_rubriques', 'id_rubrique=' . intval($id_rubrique));
 	// eviter un null si la rubrique n'existe pas (rubrique -1 par exemple)
 	if (!$id_secteur) {
 		$id_secteur = 0;
 	}
 
-	$champs = array(
+	$champs = [
 		'id_rubrique' => $id_rubrique,
 		'id_secteur' => $id_secteur,
 		'statut' => 'prop',
 		'date' => date('Y-m-d H:i:s')
-	);
+	];
 
 	if ($set) {
 		$champs = array_merge($champs, $set);
 	}
 
 	// Envoyer aux plugins
-	$champs = pipeline('pre_insertion',
-		array(
-			'args' => array(
+	$champs = pipeline(
+		'pre_insertion',
+		[
+			'args' => [
 				'table' => 'spip_syndic',
-			),
+			],
 			'data' => $champs
-		)
+		]
 	);
 
-	$id_syndic = sql_insertq("spip_syndic", $champs);
-	pipeline('post_insertion',
-		array(
-			'args' => array(
+	$id_syndic = sql_insertq('spip_syndic', $champs);
+	pipeline(
+		'post_insertion',
+		[
+			'args' => [
 				'table' => 'spip_syndic',
 				'id_objet' => $id_syndic
-			),
+			],
 			'data' => $champs
-		)
+		]
 	);
 
 	return $id_syndic;
@@ -161,13 +164,13 @@ function site_modifier($id_syndic, $set = null) {
 		// white list
 		objet_info('site', 'champs_editables'),
 		// black list
-		array('statut', 'id_parent', 'date'),
+		['statut', 'id_parent', 'date'],
 		// donnees eventuellement fournies
 		$set
 	);
 
 	// resyndiquer si un element de syndication modifie
-	if ($t = sql_fetsel('url_syndic,syndication,resume', 'spip_syndic', "id_syndic=" . intval($id_syndic))) {
+	if ($t = sql_fetsel('url_syndic,syndication,resume', 'spip_syndic', 'id_syndic=' . intval($id_syndic))) {
 		foreach ($t as $k => $v) {
 			if (isset($c[$k]) and $v != $c[$k]) {
 				$resyndiquer = true;
@@ -176,34 +179,38 @@ function site_modifier($id_syndic, $set = null) {
 	}
 
 	// Si le site est publie, invalider les caches et demander sa reindexation
-	$t = sql_getfetsel("statut", "spip_syndic", "id_syndic=" . intval($id_syndic));
+	$t = sql_getfetsel('statut', 'spip_syndic', 'id_syndic=' . intval($id_syndic));
 	$invalideur = $indexation = false;
 	if ($t == 'publie') {
 		$invalideur = "id='site/$id_syndic'";
 		$indexation = true;
 	}
 
-	if ($err = objet_modifier_champs('site', $id_syndic,
-		array(
+	if (
+		$err = objet_modifier_champs(
+			'site',
+			$id_syndic,
+			[
 			'data' => $set,
-			'nonvide' => array('nom_site' => _T('info_sans_titre')),
+			'nonvide' => ['nom_site' => _T('info_sans_titre')],
 			'invalideur' => $invalideur,
 			'indexation' => $indexation
-		),
-		$c)
+			],
+			$c
+		)
 	) {
 		return $err;
 	}
 
 
-	if ($resyndiquer and sql_getfetsel('syndication', 'spip_syndic', "id_syndic=" . intval($id_syndic)) !== 'non') {
+	if ($resyndiquer and sql_getfetsel('syndication', 'spip_syndic', 'id_syndic=' . intval($id_syndic)) !== 'non') {
 		$syndiquer_site = charger_fonction('syndiquer_site', 'action');
 		$syndiquer_site($id_syndic);
 	}
 
 
 	// Modification de statut, changement de rubrique ?
-	$c = collecter_requests(array('date', 'statut', 'id_parent'), array(), $set);
+	$c = collecter_requests(['date', 'statut', 'id_parent'], [], $set);
 	include_spip('action/editer_objet');
 	$err = objet_instituer('site', $id_syndic, $c);
 

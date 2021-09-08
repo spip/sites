@@ -16,7 +16,7 @@
  * @package SPIP\Sites\Formulaires
  **/
 
-if (!defined("_ECRIRE_INC_VERSION")) {
+if (!defined('_ECRIRE_INC_VERSION')) {
 	return;
 }
 
@@ -52,11 +52,19 @@ function formulaires_editer_site_charger_dist(
 	$retour = '',
 	$lier_trad = 0,
 	$config_fonc = 'sites_edit_config',
-	$row = array(),
+	$row = [],
 	$hidden = ''
 ) {
-	$valeurs = formulaires_editer_objet_charger('site', $id_syndic, $id_rubrique, $lier_trad, $retour, $config_fonc, $row,
-		$hidden);
+	$valeurs = formulaires_editer_objet_charger(
+		'site',
+		$id_syndic,
+		$id_rubrique,
+		$lier_trad,
+		$retour,
+		$config_fonc,
+		$row,
+		$hidden
+	);
 	# pour recuperer le logo issu d'analyse auto
 	$valeurs['logo'] = '';
 	$valeurs['format_logo'] = '';
@@ -95,10 +103,10 @@ function formulaires_editer_site_identifier_dist(
 	$retour = '',
 	$lier_trad = 0,
 	$config_fonc = 'sites_edit_config',
-	$row = array(),
+	$row = [],
 	$hidden = ''
 ) {
-	return serialize(array(intval($id_syndic), $lier_trad));
+	return serialize([intval($id_syndic), $lier_trad]);
 }
 
 /**
@@ -149,17 +157,18 @@ function formulaires_editer_site_verifier_dist(
 	$retour = '',
 	$lier_trad = 0,
 	$config_fonc = 'sites_edit_config',
-	$row = array(),
+	$row = [],
 	$hidden = ''
 ) {
 	include_spip('inc/filtres');
 	include_spip('inc/site');
-	$oblis = array('nom_site', 'url_site', 'id_parent');
+	$oblis = ['nom_site', 'url_site', 'id_parent'];
 	// Envoi depuis le formulaire d'analyse automatique d'un site
 	if (_request('ajoute_url_auto') and strlen(vider_url($u = _request('url_auto')))) {
 		if ($auto = analyser_site($u)) {
 			// Si pas de logo, on va le chercher dans le ou les feeds
-			if (isset($auto['url_syndic'])
+			if (
+				isset($auto['url_syndic'])
 				&& !(isset($auto['logo']) and $auto['logo'])
 				&& ($auto['url_syndic'] != _request('ajouter_url_auto'))
 				&& preg_match(',^select: (.+),', $auto['url_syndic'], $regs)
@@ -177,7 +186,7 @@ function formulaires_editer_site_verifier_dist(
 			foreach ($auto as $k => $v) {
 				set_request($k, $v);
 			}
-			$erreurs['verif_url_auto'] = _T('sites:texte_referencement_automatique_verifier', array('url' => $u));
+			$erreurs['verif_url_auto'] = _T('sites:texte_referencement_automatique_verifier', ['url' => $u]);
 			$erreurs['message_erreur'] = '';
 		} else {
 			$erreurs['url_auto'] = _T('sites:avis_site_introuvable');
@@ -185,9 +194,9 @@ function formulaires_editer_site_verifier_dist(
 	} else {
 		// auto-renseigner le titre si il n'existe pas
 		// d'abord a partir du descriptif en coupant
-		titre_automatique('nom_site', array('descriptif'));
+		titre_automatique('nom_site', ['descriptif']);
 		// et sinon l'url du site, sans couper
-		titre_automatique('nom_site', array('url_site'), 255);
+		titre_automatique('nom_site', ['url_site'], 255);
 		$erreurs = formulaires_editer_objet_verifier('site', $id_syndic, $oblis);
 	}
 
@@ -222,7 +231,7 @@ function formulaires_editer_site_traiter_dist(
 	$retour = '',
 	$lier_trad = 0,
 	$config_fonc = 'sites_edit_config',
-	$row = array(),
+	$row = [],
 	$hidden = ''
 ) {
 	// netoyer les entrees
@@ -230,6 +239,14 @@ function formulaires_editer_site_traiter_dist(
 		set_request('url_site', vider_url(_request('url_site')));
 	}
 
-	return formulaires_editer_objet_traiter('site', $id_syndic, $id_rubrique, $lier_trad, $retour, $config_fonc, $row,
-		$hidden);
+	return formulaires_editer_objet_traiter(
+		'site',
+		$id_syndic,
+		$id_rubrique,
+		$lier_trad,
+		$retour,
+		$config_fonc,
+		$row,
+		$hidden
+	);
 }

@@ -10,7 +10,7 @@
  *  Pour plus de détails voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
-if (!defined("_ECRIRE_INC_VERSION")) {
+if (!defined('_ECRIRE_INC_VERSION')) {
 	return;
 }
 
@@ -20,16 +20,16 @@ function formulaires_importer_sites_charger_dist() {
 		return false;
 	}
 
-	return array(
+	return [
 		'fichier_import' => 0,
 		'id_parent' => 0,
 		'importer_statut_publie' => 0,
 		'importer_les_tags' => 1,
-	);
+	];
 }
 
 function formulaires_importer_sites_verifier_dist() {
-	$erreurs = array();
+	$erreurs = [];
 
 	if (!_request('id_parent')) {
 		$erreurs['id_parent'] = _T('info_obligatoire');
@@ -39,8 +39,10 @@ function formulaires_importer_sites_verifier_dist() {
 	if (!$fichier_ok) {
 		$erreurs['fichier_import'] = _T('sites:erreur_fichier_incorrect');
 	} elseif (!charger_fonction('importer_bookmarks_' . $fichier_ok['format'], 'action', true)) {
-		$erreurs['fichier_import'] = _T('sites:erreur_fichier_format_inconnu',
-			array('fichier' => "<tt>" . $fichier_ok['name'] . "</tt>"));
+		$erreurs['fichier_import'] = _T(
+			'sites:erreur_fichier_format_inconnu',
+			['fichier' => '<tt>' . $fichier_ok['name'] . '</tt>']
+		);
 	}
 
 	return $erreurs;
@@ -56,21 +58,22 @@ function formulaires_importer_sites_traiter_dist() {
 	$nb = $importer_bookmarks($fichier_ok, $id_parent, $importer_statut_publie, $importer_tags);
 
 	if (!$nb) {
-		$res = array('message_erreur' => _T('sites:info_aucun_site_importe'));
+		$res = ['message_erreur' => _T('sites:info_aucun_site_importe')];
 	} else {
-		$res = array(
+		$res = [
 			'message_ok' => singulier_ou_pluriel($nb, 'sites:info_1_site_importe', 'sites:info_nb_sites_importes')
-		);
+		];
 	}
 
 	return $res;
 }
 
 function info_fichiers_import($name) {
-	static $fichier_ok = array();
+	static $fichier_ok = [];
 
 	if (!isset($fichier_ok[$name])) {
-		if (sizeof($_FILES) < 0
+		if (
+			sizeof($_FILES) < 0
 			or !isset($_FILES[$name])
 			or !$_FILES[$name]['size'] > 0
 		) {
@@ -81,7 +84,7 @@ function info_fichiers_import($name) {
 			return false;
 		}
 
-		$fichier_ok[$name] = array();
+		$fichier_ok[$name] = [];
 		$fichier_ok[$name]['name'] = $_FILES[$name]['name'];
 		$fichier_ok[$name]['chemin'] = $_FILES[$name]['tmp_name'];
 

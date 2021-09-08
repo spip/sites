@@ -10,7 +10,7 @@
  *  Pour plus de détails voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
-if (!defined("_ECRIRE_INC_VERSION")) {
+if (!defined('_ECRIRE_INC_VERSION')) {
 	return;
 }
 
@@ -22,19 +22,21 @@ function action_exporter_bookmarks_dist($arg = null) {
 	}
 
 	if (autoriser('exporter', '_sites')) {
-		list($id_parent, $exporter_publie_seulement, $exporter_avec_mots_cles) = explode("-", $arg);
-		$statut = ($exporter_publie_seulement ? array('publie') : array('prop', 'publie'));
+		list($id_parent, $exporter_publie_seulement, $exporter_avec_mots_cles) = explode('-', $arg);
+		$statut = ($exporter_publie_seulement ? ['publie'] : ['prop', 'publie']);
 
-		$f = "bookmarks-" . date('Y-m-d') . ".html";
+		$f = 'bookmarks-' . date('Y-m-d') . '.html';
 		header('Content-Type: text/html');
 		header("Content-Disposition: attachment; filename=\"$f\";");
-		header("Content-Transfer-Encoding: 8bit");
+		header('Content-Transfer-Encoding: 8bit');
 
 		// fix for IE catching or PHP bug issue
-		header("Pragma: public");
-		header("Expires: 0"); // set expiration time
-		header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
-		echo recuperer_fond("prive/transmettre/bookmarks",
-			array('statut' => $statut, 'id_parent' => intval($id_parent), 'tags' => $exporter_avec_mots_cles));
+		header('Pragma: public');
+		header('Expires: 0'); // set expiration time
+		header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
+		echo recuperer_fond(
+			'prive/transmettre/bookmarks',
+			['statut' => $statut, 'id_parent' => intval($id_parent), 'tags' => $exporter_avec_mots_cles]
+		);
 	}
 }

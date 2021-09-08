@@ -10,7 +10,7 @@
  *  Pour plus de détails voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
-if (!defined("_ECRIRE_INC_VERSION")) {
+if (!defined('_ECRIRE_INC_VERSION')) {
 	return;
 }
 
@@ -23,13 +23,12 @@ function action_syndiquer_site_dist($id_syndic = null) {
 	}
 
 
-	$id_job = job_queue_add('syndic_a_jour', 'syndic_a_jour', array($id_syndic), 'genie/syndic', true);
+	$id_job = job_queue_add('syndic_a_jour', 'syndic_a_jour', [$id_syndic], 'genie/syndic', true);
 	// l'executer immediatement si possible
 	if ($id_job) {
 		include_spip('inc/queue');
-		queue_schedule(array($id_job));
+		queue_schedule([$id_job]);
 	} else {
 		spip_log("Erreur insertion syndic_a_jour($id_syndic) dans la file des travaux", _LOG_ERREUR);
 	}
-
 }

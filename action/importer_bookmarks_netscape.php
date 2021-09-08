@@ -10,7 +10,7 @@
  *  Pour plus de détails voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
-if (!defined("_ECRIRE_INC_VERSION")) {
+if (!defined('_ECRIRE_INC_VERSION')) {
 	return;
 }
 
@@ -29,11 +29,11 @@ function action_importer_bookmarks_netscape_dist($fichier_ok, $id_parent, $impor
 }
 
 function bookmarks_netscape_fast_parse(&$contenu) {
-	$out = array();
+	$out = [];
 	#var_dump(">>".substr($contenu,0,200));
 
-	$po = stripos($contenu, "<h3", 4);
-	$pf = stripos($contenu, "</dl>");
+	$po = stripos($contenu, '<h3', 4);
+	$pf = stripos($contenu, '</dl>');
 	while ($po or $pf) {
 		#var_dump("$po:$pf");
 		if ($po > 0 and $po < $pf) {
@@ -41,7 +41,6 @@ function bookmarks_netscape_fast_parse(&$contenu) {
 			$contenu = substr($contenu, $po);
 			$out['sub'][] = bookmarks_netscape_fast_parse($contenu);
 		} else {
-
 			$out['content'] .= substr($contenu, 0, $pf);
 			$contenu = substr($contenu, $pf + 5);
 			#var_dump("<<".substr($contenu,0,200));
@@ -49,8 +48,8 @@ function bookmarks_netscape_fast_parse(&$contenu) {
 
 			return $out;
 		}
-		$po = stripos($contenu, "<h3");
-		$pf = stripos($contenu, "</dl>");
+		$po = stripos($contenu, '<h3');
+		$pf = stripos($contenu, '</dl>');
 	}
 	$out['content'] = bookmarks_extract_links($out['content']);
 
@@ -58,23 +57,23 @@ function bookmarks_netscape_fast_parse(&$contenu) {
 }
 
 function bookmarks_extract_links($contenu) {
-	$out = array();
-	$contenu = str_ireplace("<DT>", "<dt>", $contenu);
-	$contenu = explode("<dt>", $contenu);
+	$out = [];
+	$contenu = str_ireplace('<DT>', '<dt>', $contenu);
+	$contenu = explode('<dt>', $contenu);
 
 	$h3 = array_shift($contenu);
-	$h3 = extraire_balise($h3, "h3");
+	$h3 = extraire_balise($h3, 'h3');
 	$out['titre'] = strip_tags($h3);
 
 	foreach ($contenu as $item) {
-		$link = array();
+		$link = [];
 		if ($a = extraire_balise($item, 'a')) {
 			$link['url'] = extraire_attribut($a, 'href');
 			$link['titre'] = strip_tags($a);
-			$link['date'] = extraire_attribut($a, "add_date");
-			$link['descriptif'] = "";
+			$link['date'] = extraire_attribut($a, 'add_date');
+			$link['descriptif'] = '';
 
-			if ($p = stripos($item, "<dd>")) {
+			if ($p = stripos($item, '<dd>')) {
 				$link['descriptif'] = textebrut(substr($item, $p));
 			}
 			$out['links'][] = $link;
@@ -89,17 +88,21 @@ function bookmarks_insert($tree, $id_parent, $importer_statut_publie, $importer_
 	include_spip('action/editer_site');
 
 	$nb = 0;
-	if (count($tree['content']['links'])
+	if (
+		count($tree['content']['links'])
 		or isset($tree['sub'])
 	) {
-
 		$titre = ($tree['content']['titre'] ? $tree['content']['titre'] : _T('info_sans_titre'));
-		$id_rubrique = sql_getfetsel('id_rubrique', 'spip_rubriques',
-			'id_parent=' . intval($id_parent) . " AND titre=" . sql_quote($titre));
-		if (!$id_rubrique
+		$id_rubrique = sql_getfetsel(
+			'id_rubrique',
+			'spip_rubriques',
+			'id_parent=' . intval($id_parent) . ' AND titre=' . sql_quote($titre)
+		);
+		if (
+			!$id_rubrique
 			and $id_rubrique = rubrique_inserer($id_parent)
 		) {
-			rubrique_modifier($id_rubrique, array('titre' => $titre));
+			rubrique_modifier($id_rubrique, ['titre' => $titre]);
 		}
 		if ($id_rubrique) {
 			$statut = 'prop';
@@ -108,18 +111,21 @@ function bookmarks_insert($tree, $id_parent, $importer_statut_publie, $importer_
 			}
 			$now = time();
 			foreach ($tree['content']['links'] as $link) {
-				if (!$id_syndic = sql_getfetsel('id_syndic',
-					'spip_syndic',
-					'id_rubrique=' . intval($id_rubrique) . " AND url_site=" . sql_quote($link['url']))
+				if (
+					!$id_syndic = sql_getfetsel(
+						'id_syndic',
+						'spip_syndic',
+						'id_rubrique=' . intval($id_rubrique) . ' AND url_site=' . sql_quote($link['url'])
+					)
 				) {
 					$id_syndic = site_inserer($id_rubrique);
-					$set = array(
+					$set = [
 						'url_site' => $link['url'],
 						'nom_site' => $link['titre'],
 						'date' => date('Y-m-d H:i:s', $link['date'] ? $link['date'] : $now),
 						'statut' => $statut,
 						'descriptif' => $link['descriptif']
-					);
+					];
 					#echo "creation site $id_syndic ".$set['url_site']." <br />";
 					site_modifier($id_syndic, $set);
 					$nb++;

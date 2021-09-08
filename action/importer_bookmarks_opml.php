@@ -63,7 +63,7 @@ function opml_startElement($xp, $element, $attr) {
 
 function opml_endElement($xp, $element) {
 	global $blogs, $folder, $inOpmlfolder, $inOpmlItem;
-	if (strcasecmp($element, "outline") === 0) {
+	if (strcasecmp($element, 'outline') === 0) {
 		if (!$inOpmlItem && $inOpmlfolder) {
 			// end of folder element!
 			$inOpmlfolder = false;
@@ -91,11 +91,15 @@ function bookmarks_opml_insert($tree, $id_parent, $importer_statut_publie, $impo
 					$statut = 'publie';
 				}
 				$now = time();
-				if (!$id_syndic = sql_getfetsel('id_syndic', 'spip_syndic',
-					'id_rubrique=' . intval($id_parent) . " AND url_site=" . sql_quote($item['HTMLURL']))
+				if (
+					!$id_syndic = sql_getfetsel(
+						'id_syndic',
+						'spip_syndic',
+						'id_rubrique=' . intval($id_parent) . ' AND url_site=' . sql_quote($item['HTMLURL'])
+					)
 				) {
 					$id_syndic = site_inserer($id_parent);
-					$set = array(
+					$set = [
 						'url_site' => $item['HTMLURL'],
 						'nom_site' => $item['TITLE'],
 						'url_syndic' => $item['XMLURL'],
@@ -103,7 +107,7 @@ function bookmarks_opml_insert($tree, $id_parent, $importer_statut_publie, $impo
 						'resume' => 'non',
 						'date' => date('Y-m-d H:i:s', $now),
 						'statut' => $statut
-					);
+					];
 					site_modifier($id_syndic, $set);
 					$nb++;
 				} else {
@@ -112,10 +116,13 @@ function bookmarks_opml_insert($tree, $id_parent, $importer_statut_publie, $impo
 			} else {
 				// cas d'un dossier
 				$titre = $key;
-				$id_rubrique = sql_getfetsel('id_rubrique', 'spip_rubriques',
-					'id_parent=' . intval($id_parent) . " AND titre=" . sql_quote($titre));
+				$id_rubrique = sql_getfetsel(
+					'id_rubrique',
+					'spip_rubriques',
+					'id_parent=' . intval($id_parent) . ' AND titre=' . sql_quote($titre)
+				);
 				if (!$id_rubrique and $id_rubrique = rubrique_inserer($id_parent)) {
-					rubrique_modifier($id_rubrique, array('titre' => $titre));
+					rubrique_modifier($id_rubrique, ['titre' => $titre]);
 				}
 				if ($id_rubrique) {
 					$nb += bookmarks_opml_insert($item, $id_rubrique, $importer_statut_publie, $importer_tags);
