@@ -16,7 +16,7 @@
  * @package SPIP\Sites\Syndication
  **/
 
-if (!defined("_ECRIRE_INC_VERSION")) {
+if (!defined('_ECRIRE_INC_VERSION')) {
 	return;
 }
 
@@ -37,10 +37,12 @@ function syndic_atomrss_dist($url_syndic) {
 
 	// Aller chercher les donnees du RSS et les analyser
 	include_spip('inc/distant');
-	$res = recuperer_url($url_syndic, array('transcoder' => true));
-	if (!$res
-	  or !$res['page']
-	  or intval($res['status']/100) != 2) {
+	$res = recuperer_url($url_syndic, ['transcoder' => true]);
+	if (
+		!$res
+		or !$res['page']
+		or intval($res['status'] / 100) != 2
+	) {
 		$items = _T('sites:avis_echec_syndication_02');
 	} else {
 		$items = analyser_backend($res['page'], $url_syndic);
@@ -55,7 +57,7 @@ function syndic_atomrss_dist($url_syndic) {
  * @return array
  */
 function syndic_atomrss_raw_data_to_array_dist($raw_data, $raw_format) {
-	$data = array();
+	$data = [];
 	if ($raw_format == 'xml') {
 		$simplexml_to_array = charger_fonction('simplexml_to_array', 'inc');
 		$data = $simplexml_to_array($raw_data);
@@ -95,10 +97,15 @@ function analyser_backend($rss, $url_syndic = '') {
 
 	// chercher auteur/lang dans le fil au cas ou les items n'en auraient pas
 	list($header) = preg_split(',<(item|entry)\b,', $rss, 2);
-	if (preg_match_all(
-		',<(author|creator)\b(.*)</\1>,Uims',
-		$header, $regs, PREG_SET_ORDER)) {
-		$les_auteurs_du_site = array();
+	if (
+		preg_match_all(
+			',<(author|creator)\b(.*)</\1>,Uims',
+			$header,
+			$regs,
+			PREG_SET_ORDER
+		)
+	) {
+		$les_auteurs_du_site = [];
 		foreach ($regs as $reg) {
 			$nom = $reg[2];
 			if (preg_match(',<name>(.*)</name>,Uims', $nom, $reg)) {
@@ -113,8 +120,12 @@ function analyser_backend($rss, $url_syndic = '') {
 
 	$langue_du_site = '';
 
-	if ((preg_match(',<([^>]*xml:)?lang(uage)?' . '>([^<>]+)<,i',
-				$header, $match) and $l = $match[3])
+	if (
+		(preg_match(
+			',<([^>]*xml:)?lang(uage)?' . '>([^<>]+)<,i',
+			$header,
+			$match
+		) and $l = $match[3])
 		or ($l = extraire_attribut(extraire_balise($header, 'feed'), 'xml:lang'))
 	) {
 		$langue_du_site = $l;
@@ -135,11 +146,12 @@ function analyser_backend($rss, $url_syndic = '') {
 		return _T('sites:avis_echec_syndication_01');
 	}
 
-	if (!defined('_SYNDICATION_MAX_ITEMS')) define('_SYNDICATION_MAX_ITEMS',1000);
+	if (!defined('_SYNDICATION_MAX_ITEMS')) { define('_SYNDICATION_MAX_ITEMS', 1000);
+	}
 	$nb_items = 0;
 	foreach ($items as $item) {
-		$data = array();
-		if ($nb_items++>_SYNDICATION_MAX_ITEMS){
+		$data = [];
+		if ($nb_items++ > _SYNDICATION_MAX_ITEMS) {
 			break;
 		}
 
@@ -148,31 +160,50 @@ function analyser_backend($rss, $url_syndic = '') {
 		// guid n'est un URL que si marque de <guid ispermalink="true"> ;
 		// attention la valeur par defaut est 'true' ce qui oblige a quelque
 		// gymnastique
-		if (preg_match(',<guid.*>[[:space:]]*(https?:[^<]*)</guid>,Uims',
-				$item, $regs) and preg_match(',^(true|1)?$,i',
-				extraire_attribut($regs[0], 'ispermalink'))
+		if (
+			preg_match(
+				',<guid.*>[[:space:]]*(https?:[^<]*)</guid>,Uims',
+				$item,
+				$regs
+			) and preg_match(
+				',^(true|1)?$,i',
+				extraire_attribut($regs[0], 'ispermalink')
+			)
 		) {
 			$data['url'] = $regs[1];
 		} // contourner les redirections feedburner
 		else {
-			if (_SYNDICATION_DEREFERENCER_URL
-				and preg_match(',<feedburner:origLink>(.*)<,Uims',
-					$item, $regs)
+			if (
+				_SYNDICATION_DEREFERENCER_URL
+				and preg_match(
+					',<feedburner:origLink>(.*)<,Uims',
+					$item,
+					$regs
+				)
 			) {
 				$data['url'] = $regs[1];
 			} // <link>, plus classique
 			else {
-				if (preg_match(
-					',<link[^>]*[[:space:]]rel=["\']?alternate[^>]*>(.*)</link>,Uims',
-					$item, $regs)) {
+				if (
+					preg_match(
+						',<link[^>]*[[:space:]]rel=["\']?alternate[^>]*>(.*)</link>,Uims',
+						$item,
+						$regs
+					)
+				) {
 					$data['url'] = trim($regs[1]);
 					// c'est pas impossible d'avoir l'URL dans un href quand meme :)
 					if (empty($data['url'])) {
 						$data['url'] = extraire_attribut($regs[0], 'href');
 					}
 				} else {
-					if (preg_match(',<link[^>]*[[:space:]]rel=.alternate[^>]*>,Uims',
-						$item, $regs)) {
+					if (
+						preg_match(
+							',<link[^>]*[[:space:]]rel=.alternate[^>]*>,Uims',
+							$item,
+							$regs
+						)
+					) {
 						$data['url'] = extraire_attribut($regs[0], 'href');
 					} else {
 						if (preg_match(',<link[^>]*>\s*([^\s]+)\s*</link>,Uims', $item, $regs)) {
@@ -182,7 +213,8 @@ function analyser_backend($rss, $url_syndic = '') {
 								$data['url'] = extraire_attribut($regs[0], 'href');
 							} // Aucun link ni guid, mais une enclosure
 							else {
-								if (preg_match(',<enclosure[^>]*>,ims', $item, $regs)
+								if (
+									preg_match(',<enclosure[^>]*>,ims', $item, $regs)
 									and $url = extraire_attribut($regs[0], 'url')
 								) {
 									$data['url'] = $url;
@@ -198,10 +230,11 @@ function analyser_backend($rss, $url_syndic = '') {
 		}
 
 		// Titre (semi-obligatoire)
-		if (preg_match(",<title[^>]*>(.*?)</title>,ims", $item, $match)) {
+		if (preg_match(',<title[^>]*>(.*?)</title>,ims', $item, $match)) {
 			$data['titre'] = $match[1];
 		} else {
-			if (preg_match(',<link[[:space:]][^>]*>,Uims', $item, $mat)
+			if (
+				preg_match(',<link[[:space:]][^>]*>,Uims', $item, $mat)
 				and $title = extraire_attribut($mat[0], 'title')
 			) {
 				$data['titre'] = $title;
@@ -213,24 +246,32 @@ function analyser_backend($rss, $url_syndic = '') {
 
 		// Date
 		$la_date = '';
-		if (preg_match(',<(published|modified|issued)>([^<]*)<,Uims',
-			$item, $match)) {
+		if (
+			preg_match(
+				',<(published|modified|issued)>([^<]*)<,Uims',
+				$item,
+				$match
+			)
+		) {
 			cdata_echappe_retour($match[2], $echappe_cdata);
 			$la_date = my_strtotime($match[2], $langue_du_site);
 		}
-		if (!$la_date and
+		if (
+			!$la_date and
 			preg_match(',<(pubdate)>([^<]*)<,Uims', $item, $match)
 		) {
 			cdata_echappe_retour($match[2], $echappe_cdata);
 			$la_date = my_strtotime($match[2], $langue_du_site);
 		}
-		if (!$la_date and
+		if (
+			!$la_date and
 			preg_match(',<([a-z]+:date)>([^<]*)<,Uims', $item, $match)
 		) {
 			cdata_echappe_retour($match[2], $echappe_cdata);
 			$la_date = my_strtotime($match[2], $langue_du_site);
 		}
-		if (!$la_date and
+		if (
+			!$la_date and
 			preg_match(',<date>([^<]*)<,Uims', $item, $match)
 		) {
 			cdata_echappe_retour($match[1], $echappe_cdata);
@@ -242,7 +283,8 @@ function analyser_backend($rss, $url_syndic = '') {
 		// (note: ca pourrait etre defini site par site, mais ca risque d'etre
 		// plus lourd que vraiment utile)
 		if ($GLOBALS['controler_dates_rss']) {
-			if (!$la_date
+			if (
+				!$la_date
 				or $la_date > time() + 48 * 3600
 			) {
 				$la_date = time();
@@ -254,8 +296,12 @@ function analyser_backend($rss, $url_syndic = '') {
 		}
 
 		// Honorer le <lastbuilddate> en forcant la date
-		if (preg_match(',<(lastbuilddate|updated|modified)>([^<>]+)</\1>,i',
-				$item, $regs)
+		if (
+			preg_match(
+				',<(lastbuilddate|updated|modified)>([^<>]+)</\1>,i',
+				$item,
+				$regs
+			)
 			and $lastbuilddate = my_strtotime(trim($regs[2]), $langue_du_site)
 			// pas dans le futur
 			and $lastbuilddate < time()
@@ -264,10 +310,15 @@ function analyser_backend($rss, $url_syndic = '') {
 		}
 
 		// Auteur(s)
-		if (preg_match_all(
-			',<(author|creator)\b[^>]*>(.*)</\1>,Uims',
-			$item, $regs, PREG_SET_ORDER)) {
-			$auteurs = array();
+		if (
+			preg_match_all(
+				',<(author|creator)\b[^>]*>(.*)</\1>,Uims',
+				$item,
+				$regs,
+				PREG_SET_ORDER
+			)
+		) {
+			$auteurs = [];
 			foreach ($regs as $reg) {
 				$nom = $reg[2];
 				if (preg_match(',<name\b[^>]*>(.*)</name>,Uims', $nom, $reg)) {
@@ -285,18 +336,27 @@ function analyser_backend($rss, $url_syndic = '') {
 		}
 
 		// Description
-		if (preg_match(',<(description|summary)\b.*'
-			. '>(.*)</\1\b,Uims', $item, $match)) {
+		if (
+			preg_match(',<(description|summary)\b.*'
+			. '>(.*)</\1\b,Uims', $item, $match)
+		) {
 			$data['descriptif'] = trim($match[2]);
 		}
-		if (preg_match(',<(content)\b.*'
-			. '>(.*)</\1\b,Uims', $item, $match)) {
+		if (
+			preg_match(',<(content)\b.*'
+			. '>(.*)</\1\b,Uims', $item, $match)
+		) {
 			$data['content'] = trim($match[2]);
 		}
 
 		// lang
-		if (preg_match(',<([^>]*xml:)?lang(uage)?' . '>([^<>]+)<,i',
-			$item, $match)) {
+		if (
+			preg_match(
+				',<([^>]*xml:)?lang(uage)?' . '>([^<>]+)<,i',
+				$item,
+				$match
+			)
+		) {
 			$data['lang'] = trim($match[3]);
 		} else {
 			if ($lang = trim(extraire_attribut($item, 'xml:lang'))) {
@@ -309,11 +369,19 @@ function analyser_backend($rss, $url_syndic = '') {
 		// source et url_source  (pas trouve d'exemple en ligne !!)
 		# <source url="http://www.truc.net/music/uatsap.mp3" length="19917" />
 		# <source url="http://www.truc.net/rss">Site source</source>
-		if (preg_match(',(<source[^>]*>)(([^<>]+)</source>)?,i',
-			$item, $match)) {
+		if (
+			preg_match(
+				',(<source[^>]*>)(([^<>]+)</source>)?,i',
+				$item,
+				$match
+			)
+		) {
 			$data['source'] = trim($match[3]);
-			$data['url_source'] = str_replace('&amp;', '&',
-				trim(extraire_attribut($match[1], 'url')));
+			$data['url_source'] = str_replace(
+				'&amp;',
+				'&',
+				trim(extraire_attribut($match[1], 'url'))
+			);
 		}
 
 		// GitHub : Identification du commit
@@ -327,17 +395,27 @@ function analyser_backend($rss, $url_syndic = '') {
 		# ou <itunes:category> (apple)
 		# on cree nos tags microformat <a rel="directory" href="url">titre</a>
 		# http://microformats.org/wiki/rel-directory-fr
-		$tags = array();
-		if (preg_match_all(
-			',<(([a-z]+:)?(subject|category|directory|keywords?|tags?|type))[^>]*>'
-			. '(.*?)</\1>,ims',
-			$item, $matches, PREG_SET_ORDER)) {
+		$tags = [];
+		if (
+			preg_match_all(
+				',<(([a-z]+:)?(subject|category|directory|keywords?|tags?|type))[^>]*>'
+				. '(.*?)</\1>,ims',
+				$item,
+				$matches,
+				PREG_SET_ORDER
+			)
+		) {
 			$tags = ajouter_tags($matches, $item);
 		} # array()
-		elseif (preg_match_all(
-			',<(([a-z]+:)?(subject|category|directory|keywords?|tags?|type))[^>]*/>'
-			. ',ims',
-			$item, $matches, PREG_SET_ORDER)) {
+		elseif (
+			preg_match_all(
+				',<(([a-z]+:)?(subject|category|directory|keywords?|tags?|type))[^>]*/>'
+				. ',ims',
+				$item,
+				$matches,
+				PREG_SET_ORDER
+			)
+		) {
 			$tags = ajouter_tags($matches, $item);
 		} # array()
 		// Pieces jointes :
@@ -346,20 +424,38 @@ function analyser_backend($rss, $url_syndic = '') {
 		// ou encore les media:content
 		if (!afficher_enclosures(join(', ', $tags))) {
 			// on prend toutes les pièces jointes possibles, et on essaie de les rendre uniques.
-			$enclosures = array();
+			$enclosures = [];
 			# rss 2
-			if (preg_match_all(',<enclosure[[:space:]][^<>]+>,i',
-				$item, $matches, PREG_PATTERN_ORDER)) {
+			if (
+				preg_match_all(
+					',<enclosure[[:space:]][^<>]+>,i',
+					$item,
+					$matches,
+					PREG_PATTERN_ORDER
+				)
+			) {
 				$enclosures += array_map('enclosure2microformat', $matches[0]);
 			}
 			# atom
-			if (preg_match_all(',<link\b[^<>]+rel=["\']?enclosure["\']?[^<>]+>,i',
-				$item, $matches, PREG_PATTERN_ORDER)) {
+			if (
+				preg_match_all(
+					',<link\b[^<>]+rel=["\']?enclosure["\']?[^<>]+>,i',
+					$item,
+					$matches,
+					PREG_PATTERN_ORDER
+				)
+			) {
 				$enclosures += array_map('enclosure2microformat', $matches[0]);
 			}
 			# media rss
-			if (preg_match_all(',<media:content\b[^<>]+>,i',
-				$item, $matches, PREG_PATTERN_ORDER)) {
+			if (
+				preg_match_all(
+					',<media:content\b[^<>]+>,i',
+					$item,
+					$matches,
+					PREG_PATTERN_ORDER
+				)
+			) {
 				$enclosures += array_map('enclosure2microformat', $matches[0]);
 			}
 			$data['enclosures'] = join(', ', array_unique($enclosures));
@@ -382,7 +478,7 @@ function analyser_backend($rss, $url_syndic = '') {
 		// si on demande un dereferencement de l'URL, il faut verifier que ce n'est pas une redirection
 		if (_SYNDICATION_DEREFERENCER_URL) {
 			$target = $data['url'];
-			include_spip("inc/distant");
+			include_spip('inc/distant');
 			// on fait un GET et pas un HEAD car les vieux SPIP ne repondent pas la redirection avec un HEAD (honte) sur un article virtuel
 			// mais on limite la taille de ce qu'on telecharge
 			$res = recuperer_url($target, ['taille_max' => 4096]);
@@ -394,17 +490,30 @@ function analyser_backend($rss, $url_syndic = '') {
 		}
 
 		// Trouver les microformats (ecrase les <category> et <dc:subject>)
-		if (preg_match_all(
-			',<a[[:space:]]([^>]+[[:space:]])?rel=[^>]+>.*</a>,Uims',
-			$data['item'], $regs, PREG_PATTERN_ORDER)) {
+		if (
+			preg_match_all(
+				',<a[[:space:]]([^>]+[[:space:]])?rel=[^>]+>.*</a>,Uims',
+				$data['item'],
+				$regs,
+				PREG_PATTERN_ORDER
+			)
+		) {
 			$tags = $regs[0];
 		}
 		// Cas particulier : tags Connotea sous la forme <a class="postedtag">
-		if (preg_match_all(
-			',<a[[:space:]][^>]+ class="postedtag"[^>]*>.*</a>,Uims',
-			$data['item'], $regs, PREG_PATTERN_ORDER)) {
-			$tags = preg_replace(', class="postedtag",i',
-				' rel="tag"', $regs[0]);
+		if (
+			preg_match_all(
+				',<a[[:space:]][^>]+ class="postedtag"[^>]*>.*</a>,Uims',
+				$data['item'],
+				$regs,
+				PREG_PATTERN_ORDER
+			)
+		) {
+			$tags = preg_replace(
+				', class="postedtag",i',
+				' rel="tag"',
+				$regs[0]
+			);
 		}
 
 		$data['tags'] = $tags;
@@ -432,24 +541,28 @@ function analyser_backend($rss, $url_syndic = '') {
  **/
 function my_strtotime($la_date, $lang = null) {
 	// format complet
-	if (preg_match(
-		',^(\d+-\d+-\d+[T ]\d+:\d+(:\d+)?)(\.\d+)?'
-		. '(Z|([-+]\d{2}):\d+)?$,',
-		$la_date, $match)) {
+	if (
+		preg_match(
+			',^(\d+-\d+-\d+[T ]\d+:\d+(:\d+)?)(\.\d+)?'
+			. '(Z|([-+]\d{2}):\d+)?$,',
+			$la_date,
+			$match
+		)
+	) {
 		$match = array_pad($match, 6, null);
-		$la_date = str_replace("T", " ", $match[1]) . " GMT";
+		$la_date = str_replace('T', ' ', $match[1]) . ' GMT';
 
 		return strtotime($la_date) - intval($match[5]) * 3600;
 	}
 
 	// YYYY
 	if (preg_match(',^\d{4}$,', $la_date, $match)) {
-		return strtotime($match[0] . "-01-01");
+		return strtotime($match[0] . '-01-01');
 	}
 
 	// YYYY-MM
 	if (preg_match(',^\d{4}-\d{2}$,', $la_date, $match)) {
-		return strtotime($match[0] . "-01");
+		return strtotime($match[0] . '-01');
 	}
 
 	// YYYY-MM-DD hh:mm:ss
@@ -460,9 +573,10 @@ function my_strtotime($la_date, $lang = null) {
 	// utiliser strtotime en dernier ressort
 	// en nettoyant le jour qui prefixe parfois la date, suivi d'une virgule
 	// et les UT qui sont en fait des UTC
-	$la_date_c = preg_replace("/^\w+,\s*/ms", "", $la_date);
-	$la_date_c = preg_replace("/UT\s*$/ms", "UTC", $la_date_c);
-	if ($s = strtotime($la_date)
+	$la_date_c = preg_replace('/^\w+,\s*/ms', '', $la_date);
+	$la_date_c = preg_replace('/UT\s*$/ms', 'UTC', $la_date_c);
+	if (
+		$s = strtotime($la_date)
 		or $s = strtotime($la_date_c)
 	) {
 		return $s;
@@ -472,21 +586,21 @@ function my_strtotime($la_date, $lang = null) {
 	// par la version anglaise avant de faire strtotime
 	if ($lang) {
 		// "fr-fr"
-		list($lang) = explode("-", $lang);
+		list($lang) = explode('-', $lang);
 		static $months = null;
 		if (!isset($months[$lang])) {
 			$prev_lang = $GLOBALS['spip_lang'];
 			changer_langue($lang);
 			foreach (range(1, 12) as $m) {
 				$s = _T("date_mois_$m");
-				$months[$lang][$s] = date("M", strtotime("2013-$m-01"));
-				$s = _T("date_mois_" . $m . "_abbr");
-				$months[$lang][$s] = date("M", strtotime("2013-$m-01"));
-				$months[$lang][trim($s, ".")] = date("M", strtotime("2013-$m-01"));
+				$months[$lang][$s] = date('M', strtotime("2013-$m-01"));
+				$s = _T('date_mois_' . $m . '_abbr');
+				$months[$lang][$s] = date('M', strtotime("2013-$m-01"));
+				$months[$lang][trim($s, '.')] = date('M', strtotime("2013-$m-01"));
 			}
 			changer_langue($prev_lang);
 		}
-		spip_log($la_date_c, "dbgs");
+		spip_log($la_date_c, 'dbgs');
 		foreach ($months[$lang] as $loc => $en) {
 			if (stripos($la_date_c, $loc) !== false) {
 				$s = str_ireplace($loc, $en, $la_date_c);
@@ -525,12 +639,13 @@ function creer_tag($mot, $type, $url) {
 // https://code.spip.net/@ajouter_tags
 function ajouter_tags($matches, $item) {
 	include_spip('inc/filtres');
-	$tags = array();
+	$tags = [];
 	foreach ($matches as $match) {
 		$type = ($match[3] == 'category' or $match[3] == 'directory')
 			? 'directory' : 'tag';
 		$mot = supprimer_tags($match[0]);
-		if (!strlen($mot)
+		if (
+			!strlen($mot)
 			and !strlen($mot = extraire_attribut($match[0], 'label'))
 		) {
 			break;
@@ -545,15 +660,20 @@ function ajouter_tags($matches, $item) {
 				$url .= rawurlencode($mot);
 			}
 		} else {
-			if ($url = extraire_attribut($match[0], 'resource')
+			if (
+				$url = extraire_attribut($match[0], 'resource')
 				or $url = extraire_attribut($match[0], 'url')
 			) {
 			} ## cas particuliers
 			else {
 				if (extraire_attribut($match[0], 'scheme') == 'urn:flickr:tags') {
 					foreach (explode(' ', $mot) as $petit) {
-						if ($t = creer_tag($petit, $type,
-							'http://www.flickr.com/photos/tags/' . rawurlencode($petit) . '/')
+						if (
+							$t = creer_tag(
+								$petit,
+								$type,
+								'http://www.flickr.com/photos/tags/' . rawurlencode($petit) . '/'
+							)
 						) {
 							$tags[] = $t;
 						}
@@ -562,7 +682,7 @@ function ajouter_tags($matches, $item) {
 				} else {
 					if (
 						// cas atom1, a faire apres flickr
-					$term = extraire_attribut($match[0], 'term')
+						$term = extraire_attribut($match[0], 'term')
 					) {
 						if ($scheme = extraire_attribut($match[0], 'scheme')) {
 							$url = suivre_lien($scheme, $term);
@@ -572,9 +692,14 @@ function ajouter_tags($matches, $item) {
 					} else {
 						# type delicious.com
 						foreach (explode(' ', $mot) as $petit) {
-							if (preg_match(',<rdf\b[^>]*\bresource=["\']([^>]*/'
-								. preg_quote(rawurlencode($petit), ',') . ')["\'],i',
-								$item, $m)) {
+							if (
+								preg_match(
+									',<rdf\b[^>]*\bresource=["\']([^>]*/'
+									. preg_quote(rawurlencode($petit), ',') . ')["\'],i',
+									$item,
+									$m
+								)
+							) {
 								$mot = '';
 								if ($t = creer_tag($petit, $type, $m[1])) {
 									$tags[] = $t;
@@ -598,15 +723,23 @@ function ajouter_tags($matches, $item) {
 // Lit contenu des blocs [[CDATA]] dans un flux
 // https://code.spip.net/@cdata_echappe_retour
 function cdata_echappe(&$rss, &$echappe_cdata) {
-	$echappe_cdata = array();
-	if (preg_match_all(',<!\[CDATA\[(.*)]]>,Uims', $rss,
-		$regs, PREG_SET_ORDER)) {
+	$echappe_cdata = [];
+	if (
+		preg_match_all(
+			',<!\[CDATA\[(.*)]]>,Uims',
+			$rss,
+			$regs,
+			PREG_SET_ORDER
+		)
+	) {
 		foreach ($regs as $n => $reg) {
-			if (strpos($reg[1],'<')!==false
-			  or strpos($reg[1],'>')!==false) {
+			if (
+				strpos($reg[1], '<') !== false
+				or strpos($reg[1], '>') !== false
+			) {
 				// verifier que la chaine est encore dans le flux, car on peut avoir X fois la meme
 				// inutile de (sur)peupler le tableau avec des substitutions identiques
-				if (strpos($rss,$reg[0])!==false){
+				if (strpos($rss, $reg[0]) !== false) {
 					$echappe_cdata["@@@SPIP_CDATA$n@@@"] = $reg[1];
 					$rss = str_replace($reg[0], "@@@SPIP_CDATA$n@@@", $rss);
 				}
@@ -621,11 +754,11 @@ function cdata_echappe(&$rss, &$echappe_cdata) {
 // https://code.spip.net/@cdata_echappe_retour
 function cdata_echappe_retour(&$x, &$echappe_cdata, $filtrer_entites = true) {
 	if (is_string($x)) {
-		if ($filtrer_entites and strpos($x, '&lt;') !== false){
+		if ($filtrer_entites and strpos($x, '&lt;') !== false) {
 			$x = filtrer_entites($x);
 		}
-		if (strpos($x, '@@@SPIP_CDATA') !== false){
-			$x = str_replace( array_keys($echappe_cdata), array_values($echappe_cdata), $x);
+		if (strpos($x, '@@@SPIP_CDATA') !== false) {
+			$x = str_replace(array_keys($echappe_cdata), array_values($echappe_cdata), $x);
 		}
 	} else {
 		if (is_array($x)) {

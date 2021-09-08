@@ -10,7 +10,7 @@
  *  Pour plus de détails voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
-if (!defined("_ECRIRE_INC_VERSION")) {
+if (!defined('_ECRIRE_INC_VERSION')) {
 	return;
 }
 
@@ -20,11 +20,11 @@ function formulaires_exporter_sites_charger_dist() {
 		return false;
 	}
 
-	return array(
+	return [
 		'id_parent' => 0,
 		'exporter_publie_seulement' => 0,
 		'exporter_avec_mots_cles' => 1,
-	);
+	];
 }
 
 function formulaires_exporter_sites_traiter_dist() {
@@ -33,8 +33,10 @@ function formulaires_exporter_sites_traiter_dist() {
 	$exporter_avec_mots_cles = _request('exporter_avec_mots_cles') ? 1 : 0;
 
 	include_spip('inc/actions');
-	$redirect = generer_action_auteur('exporter_bookmarks',
-		"$id_parent-$exporter_publie_seulement-$exporter_avec_mots_cles");
+	$redirect = generer_action_auteur(
+		'exporter_bookmarks',
+		"$id_parent-$exporter_publie_seulement-$exporter_avec_mots_cles"
+	);
 
-	return array('redirect' => $redirect);
+	return ['redirect' => $redirect];
 }

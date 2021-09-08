@@ -15,9 +15,9 @@ if (!defined('_ECRIRE_INC_VERSION')) {
 }
 
 function saisie_url_syndic($url_syndic, $name = 'url_syndic', $id = 'url_syndic') {
-	$res = "";
+	$res = '';
 	if (strlen($url_syndic) < 8) {
-		$url_syndic = "http://";
+		$url_syndic = 'http://';
 	}
 
 	// cas d'une liste de flux detectee par feedfinder : menu

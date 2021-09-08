@@ -1,4 +1,5 @@
 <?php
+
 /**
  * adaptation en php de feedfinder.py :
  *
@@ -34,6 +35,7 @@
  *   [3] => http://willy.boerland.com/myblog/node/feed
  * )
  */
+
 if (!defined('_ECRIRE_INC_VERSION')) {
 	return;
 }
@@ -59,46 +61,46 @@ function is_feed($url) {
 	if (function_exists('recuperer_url')) {
 		$buffer = recuperer_url($url);
 		$buffer = $buffer['page'] ?? '';
-		if (preg_match("/<(\w*) .*/", $buffer, $matches)) {
+		if (preg_match('/<(\w*) .*/', $buffer, $matches)) {
 			//ici on detecte la premiere balise
 			$type_feed = $matches[1];
 			switch ($type_feed) {
-				case "rss":
-					return "rss";
-				case "feed":
-					return "atom";
-				case "rdf":
-					return "rdf";
+				case 'rss':
+					return 'rss';
+				case 'feed':
+					return 'atom';
+				case 'rdf':
+					return 'rdf';
 			}
 		}
 
 		return '';
 	}
 
-	$fp = @fopen($url, "r");
+	$fp = @fopen($url, 'r');
 	if (!$fp) {
 		return 0;
 	}
 	//verifion la nature de ce fichier
 	while (!feof($fp)) {
 		$buffer = fgets($fp, 4096);
-		if (preg_match("/<(\w*) .*/", $buffer, $matches)) {
+		if (preg_match('/<(\w*) .*/', $buffer, $matches)) {
 			//ici on detecte la premiere balise
 			$type_feed = $matches[1];
 			switch ($type_feed) {
-				case "rss":
+				case 'rss':
 					fclose($fp);
 
-					return "rss";
-				case "feed":
+					return 'rss';
+				case 'feed':
 					fclose($fp);
 
-					return "atom";
-				case "rdf":
+					return 'atom';
+				case 'rdf':
 					fclose($fp);
 
-					return "rdf";
-				default :
+					return 'rdf';
+				default:
 					fclose($fp);
 
 					return 0;
@@ -133,30 +135,30 @@ function is_feed($url) {
 function get_feed_from_url($url, $buffer = false) {
 	global $verif_complete;
 	//j'ai prevenu ce sera pas fin
-	if (!preg_match("/^https?:\/\/.*/", $url)) {
-		$url = "http://" . $url;
+	if (!preg_match('/^https?:\/\/.*/', $url)) {
+		$url = 'http://' . $url;
 	}
 	if (!$buffer) {
 		$buffer = @file_get_contents($url);
 	}
 
-	include_spip("inc/filtres");
+	include_spip('inc/filtres');
 
-	$feed_list = array();
+	$feed_list = [];
 	//extraction des <link>
-	if ($links = extraire_balises($buffer, "link")) {
+	if ($links = extraire_balises($buffer, 'link')) {
 		//y a t-y rss atom rdf ou xml dans ces balises
 		foreach ($links as $link) {
 			if (
-				(strpos($link, "rss")
-					|| strpos($link, "rdf")
-					|| strpos($link, "atom")
-					|| strpos($link, "xml"))
+				(strpos($link, 'rss')
+					|| strpos($link, 'rdf')
+					|| strpos($link, 'atom')
+					|| strpos($link, 'xml'))
 				&&
 				(!strpos($link, 'opensearch') && !strpos($link, 'oembed'))
 			) {
 				//voila un candidat on va extraire sa partie href et la placer dans notre tableau
-				if ($href = extraire_attribut($link, "href")) {
+				if ($href = extraire_attribut($link, 'href')) {
 					//on aura pris soin de verifier si ce lien est relatif d'en faire un absolu
 					$href = suivre_lien($url, $href);
 					if (!$verif_complete or is_feed($href)) {
@@ -167,19 +169,19 @@ function get_feed_from_url($url, $buffer = false) {
 		}
 	}
 	//extraction des <a>
-	if ($links = extraire_balises($buffer, "a")) {
+	if ($links = extraire_balises($buffer, 'a')) {
 		//y a t-y rss atom rdf ou xml dans ces balises
 		foreach ($links as $link) {
 			if (
-				(strpos($link, "rss")
-					|| strpos($link, "rdf")
-					|| strpos($link, "atom")
-					|| strpos($link, "xml"))
+				(strpos($link, 'rss')
+					|| strpos($link, 'rdf')
+					|| strpos($link, 'atom')
+					|| strpos($link, 'xml'))
 				&&
 				(!strpos($link, 'opensearch') && !strpos($link, 'oembed'))
 			) {
 				//voila un candidat on va extraire sa partie href et la placer dans notre tableau
-				if ($href = extraire_attribut($link, "href")) {
+				if ($href = extraire_attribut($link, 'href')) {
 					//on aura pris soin de verifier si ce lien est relatif d'en faire un absolu
 					$href = suivre_lien($url, $href);
 					if (!$verif_complete or is_feed($href)) {
@@ -191,12 +193,13 @@ function get_feed_from_url($url, $buffer = false) {
 	}
 
 	// si c'est un site SPIP, tentons l'url connue
-	if (!count($feed_list)
+	if (
+		!count($feed_list)
 		and (
-			strpos($url, "spip") or stripos($buffer, "spip")
+			strpos($url, 'spip') or stripos($buffer, 'spip')
 		)
 	) {
-		$href = suivre_lien($url, "spip.php?page=backend");
+		$href = suivre_lien($url, 'spip.php?page=backend');
 		if (is_feed($href)) {
 			$feed_list[] = $href;
 		}

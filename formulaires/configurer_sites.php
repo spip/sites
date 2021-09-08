@@ -16,7 +16,7 @@
  * @package SPIP\Sites\Formulaires
  **/
 
-if (!defined("_ECRIRE_INC_VERSION")) {
+if (!defined('_ECRIRE_INC_VERSION')) {
 	return;
 }
 
@@ -27,12 +27,14 @@ if (!defined("_ECRIRE_INC_VERSION")) {
  *     Environnement du formulaire
  **/
 function formulaires_configurer_sites_charger_dist() {
-	foreach (array(
-		         "activer_sites",
-		         "activer_syndic",
-		         "proposer_sites",
-		         "moderation_sites",
-	         ) as $m) {
+	foreach (
+		[
+				 'activer_sites',
+				 'activer_syndic',
+				 'proposer_sites',
+				 'moderation_sites',
+			 ] as $m
+	) {
 		$valeurs[$m] = isset($GLOBALS['meta'][$m]) ? $GLOBALS['meta'][$m] : '';
 	}
 
@@ -46,19 +48,21 @@ function formulaires_configurer_sites_charger_dist() {
  *     Retours du traitement
  **/
 function formulaires_configurer_sites_traiter_dist() {
-	$res = array('editable' => true);
-	foreach (array(
-		         "activer_sites",
-		         "activer_syndic",
-		         "moderation_sites",
-	         ) as $m) {
+	$res = ['editable' => true];
+	foreach (
+		[
+				 'activer_sites',
+				 'activer_syndic',
+				 'moderation_sites',
+			 ] as $m
+	) {
 		if (!is_null($v = _request($m))) {
 			ecrire_meta($m, $v == 'oui' ? 'oui' : 'non');
 		}
 	}
 
 	$v = _request('proposer_sites');
-	ecrire_meta('proposer_sites', in_array($v, array('0', '1', '2')) ? $v : '0');
+	ecrire_meta('proposer_sites', in_array($v, ['0', '1', '2']) ? $v : '0');
 
 	$res['message_ok'] = _T('config_info_enregistree');
 

@@ -27,7 +27,8 @@ function sites_upgrade($nom_meta_base_version, $version_cible) {
 	// pour gerer l'historique des installations SPIP <=2.1
 	if (!isset($GLOBALS['meta'][$nom_meta_base_version])) {
 		$trouver_table = charger_fonction('trouver_table', 'base');
-		if ($desc = $trouver_table('spip_syndic')
+		if (
+			$desc = $trouver_table('spip_syndic')
 			and isset($desc['exist']) and $desc['exist']
 		) {
 			ecrire_meta($nom_meta_base_version, '1.0.0');
@@ -35,24 +36,24 @@ function sites_upgrade($nom_meta_base_version, $version_cible) {
 		// si pas de table en base, on fera une simple creation de base
 	}
 
-	$maj = array();
-	$maj['create'] = array(
-		array('maj_tables', array('spip_syndic', 'spip_syndic_articles')),
-	);
+	$maj = [];
+	$maj['create'] = [
+		['maj_tables', ['spip_syndic', 'spip_syndic_articles']],
+	];
 
-	$maj['1.1.0'] = array(
-		array('sql_alter', "TABLE spip_syndic_articles DROP key url"),
-		array('sql_alter', "TABLE spip_syndic_articles CHANGE url url text DEFAULT '' NOT NULL"),
-		array('sql_alter', "TABLE spip_syndic_articles ADD INDEX url (url(255))")
-	);
+	$maj['1.1.0'] = [
+		['sql_alter', 'TABLE spip_syndic_articles DROP key url'],
+		['sql_alter', "TABLE spip_syndic_articles CHANGE url url text DEFAULT '' NOT NULL"],
+		['sql_alter', 'TABLE spip_syndic_articles ADD INDEX url (url(255))']
+	];
 
-	$maj['1.1.1'] = array(
-		array('maj_tables', array('spip_syndic_articles')),
-	);
+	$maj['1.1.1'] = [
+		['maj_tables', ['spip_syndic_articles']],
+	];
 	/* Ajout des champs raw_data raw_format raw_methode */
-	$maj['1.2.0'] = array(
-		array('maj_tables', array('spip_syndic_articles')),
-	);
+	$maj['1.2.0'] = [
+		['maj_tables', ['spip_syndic_articles']],
+	];
 
 	include_spip('base/upgrade');
 	maj_plugin($nom_meta_base_version, $version_cible, $maj);
@@ -65,8 +66,8 @@ function sites_upgrade($nom_meta_base_version, $version_cible) {
  * @param string $nom_meta_base_version
  */
 function sites_vider_tables($nom_meta_base_version) {
-	sql_drop_table("spip_syndic");
-	sql_drop_table("spip_syndic_articles");
+	sql_drop_table('spip_syndic');
+	sql_drop_table('spip_syndic_articles');
 
 	effacer_meta($nom_meta_base_version);
 }

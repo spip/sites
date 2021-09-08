@@ -10,7 +10,7 @@
  *  Pour plus de détails voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
-if (!defined("_ECRIRE_INC_VERSION")) {
+if (!defined('_ECRIRE_INC_VERSION')) {
 	return;
 }  #securite
 
@@ -19,7 +19,7 @@ if (!defined("_ECRIRE_INC_VERSION")) {
 
 // https://code.spip.net/@balise_FORMULAIRE_SITE
 function balise_FORMULAIRE_SITE($p) {
-	return calculer_balise_dynamique($p, 'FORMULAIRE_SITE', array('id_rubrique'));
+	return calculer_balise_dynamique($p, 'FORMULAIRE_SITE', ['id_rubrique']);
 }
 
 // https://code.spip.net/@balise_FORMULAIRE_SITE_stat
@@ -27,13 +27,13 @@ function balise_FORMULAIRE_SITE_stat($args, $context_compil) {
 
 	// Pas d'id_rubrique ? Erreur de contexte
 	if (!$args[0]) {
-		$msg = array(
+		$msg = [
 			'zbug_champ_hors_motif',
-			array(
+			[
 				'champ' => 'FORMULAIRE_SITE',
 				'motif' => 'RUBRIQUES'
-			)
-		);
+			]
+		];
 		erreur_squelette($msg, $context_compil);
 
 		return '';
@@ -41,5 +41,5 @@ function balise_FORMULAIRE_SITE_stat($args, $context_compil) {
 
 	// Verifier que les visisteurs sont autorises a proposer un site
 
-	return (($GLOBALS['meta']["proposer_sites"] != 2) ? '' : $args);
+	return (($GLOBALS['meta']['proposer_sites'] != 2) ? '' : $args);
 }

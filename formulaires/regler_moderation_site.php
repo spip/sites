@@ -16,7 +16,7 @@
  * @package SPIP\Sites\Formulaires
  **/
 
-if (!defined("_ECRIRE_INC_VERSION")) {
+if (!defined('_ECRIRE_INC_VERSION')) {
 	return;
 }
 
@@ -39,7 +39,7 @@ include_spip('inc/editer');
 function formulaires_regler_moderation_site_charger_dist($id_syndic, $retour = '') {
 	$valeurs = formulaires_editer_objet_charger('site', $id_syndic, 0, 0, $retour, '');
 	# pour recuperer le logo issu d'analyse auto
-	foreach (array('moderation', 'miroir', 'oubli', 'resume') as $k) {
+	foreach (['moderation', 'miroir', 'oubli', 'resume'] as $k) {
 		if (!$valeurs[$k]) {
 			$valeurs[$k] = 'non';
 		}
@@ -60,7 +60,7 @@ function formulaires_regler_moderation_site_charger_dist($id_syndic, $retour = '
  *     Hash du formulaire
  */
 function formulaires_regler_moderation_site_identifier_dist($id_syndic, $retour = '') {
-	return serialize(array($id_syndic));
+	return serialize([$id_syndic]);
 }
 
 /**
@@ -74,10 +74,10 @@ function formulaires_regler_moderation_site_identifier_dist($id_syndic, $retour 
  *     Erreurs du formulaire
  **/
 function formulaires_regler_moderation_site_verifier_dist($id_syndic, $retour = '') {
-	$erreurs = array();
+	$erreurs = [];
 
-	foreach (array('moderation', 'miroir', 'oubli', 'resume') as $k) {
-		if (!_request($k) or !in_array(_request($k), array('oui', 'non'))) {
+	foreach (['moderation', 'miroir', 'oubli', 'resume'] as $k) {
+		if (!_request($k) or !in_array(_request($k), ['oui', 'non'])) {
 			set_request($k, 'non');
 		}
 	}

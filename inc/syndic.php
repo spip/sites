@@ -16,7 +16,7 @@
  * @package SPIP\Sites\Syndication
  **/
 
-if (!defined("_ECRIRE_INC_VERSION")) {
+if (!defined('_ECRIRE_INC_VERSION')) {
 	return;
 }
 
@@ -27,4 +27,3 @@ if (!defined("_ECRIRE_INC_VERSION")) {
 // Voir un exemple dans action/editer/site
 include_spip('genie/syndic');
 include_spip('syndic/atomrss');
-

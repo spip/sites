@@ -15,7 +15,7 @@
  *
  * @package SPIP\Sites\Fonctions
  **/
-if (!defined("_ECRIRE_INC_VERSION")) {
+if (!defined('_ECRIRE_INC_VERSION')) {
 	return;
 }
 
@@ -39,19 +39,21 @@ function analyser_site($url) {
 		$url = 'http://' . $url;
 	}
 
-	$res = recuperer_url($url, array('transcoder' => true));
-	if (!$res or !$res['page'] or intval($res['status']/100) != 2) {
+	$res = recuperer_url($url, ['transcoder' => true]);
+	if (!$res or !$res['page'] or intval($res['status'] / 100) != 2) {
 		return false;
 	} else {
 		$texte = $res['page'];
 		$url = $res['url'];
 	}
-	
+
 	include_spip('inc/syndic');
 	cdata_echappe($texte, $echappe_cdata);
 
-	if (preg_match(',<(channel|feed)([\:[:space:]][^>]*)?'
-		. '>(.*)</\1>,ims', $texte, $regs)) {
+	if (
+		preg_match(',<(channel|feed)([\:[:space:]][^>]*)?'
+		. '>(.*)</\1>,ims', $texte, $regs)
+	) {
 		$result['syndication'] = 'oui';
 		$result['url_syndic'] = $url;
 		$channel = $regs[3];
@@ -61,7 +63,7 @@ function analyser_site($url) {
 			extraire_balises($channel, 'item'),
 			extraire_balises($channel, 'entry')
 		);
-		$header = str_replace($b, array(), $channel);
+		$header = str_replace($b, [], $channel);
 
 		if ($t = extraire_balise($header, 'title')) {
 			cdata_echappe_retour($t, $echappe_cdata);
@@ -77,7 +79,8 @@ function analyser_site($url) {
 				if (strlen($u)) {
 					// on installe l'url comme url du site
 					// si c'est non vide, en donnant la priorite a rel=alternate
-					if (preg_match(',\balternate\b,', extraire_attribut($link, 'rel'))
+					if (
+						preg_match(',\balternate\b,', extraire_attribut($link, 'rel'))
 						or !isset($result['url_site'])
 					) {
 						$result['url_site'] = filtrer_entites($u);
@@ -87,19 +90,24 @@ function analyser_site($url) {
 		}
 		$result['url_site'] = url_absolue($result['url_site'], $url);
 
-		if ($a = extraire_balise($header, 'description')
+		if (
+			$a = extraire_balise($header, 'description')
 			or $a = extraire_balise($header, 'tagline')
 		) {
 			cdata_echappe_retour($a, $echappe_cdata);
 			$result['descriptif'] = filtrer_entites(supprimer_tags($a));
 		}
 
-		if (preg_match(',<image.*<url.*>(.*)</url>.*</image>,Uims',
-				$header, $r)
+		if (
+			preg_match(
+				',<image.*<url.*>(.*)</url>.*</image>,Uims',
+				$header,
+				$r
+			)
 			and preg_match(',(https?://.*/.*(gif|png|jpg)),ims', $r[1], $r)
 			and $image = recuperer_infos_distantes($r[1])
 		) {
-			if (in_array($image['extension'], array('gif', 'jpg', 'png'))) {
+			if (in_array($image['extension'], ['gif', 'jpg', 'png'])) {
 				$result['format_logo'] = $image['extension'];
 				$result['logo'] = $r[1];
 			} else {
@@ -125,10 +133,11 @@ function analyser_site($url) {
 			$result['nom_site'] = filtrer_entites(supprimer_tags(preg_replace(',</title>.*$,ims', '', $titre)));
 		}
 
-		if ($a = array_merge(
-			extraire_balises($head, 'meta'),
-			extraire_balises($head, 'http-equiv')
-		)
+		if (
+			$a = array_merge(
+				extraire_balises($head, 'meta'),
+				extraire_balises($head, 'http-equiv')
+			)
 		) {
 			foreach ($a as $meta) {
 				if (extraire_attribut($meta, 'name') == 'description') {
@@ -150,7 +159,7 @@ function analyser_site($url) {
 		// si on syndique, et quelle url.
 		if (count($feeds) >= 1) {
 			spip_log("feedfinder.php :\n" . join("\n", $feeds));
-			$result['url_syndic'] = "select: " . join(' ', $feeds);
+			$result['url_syndic'] = 'select: ' . join(' ', $feeds);
 		}
 	}
 

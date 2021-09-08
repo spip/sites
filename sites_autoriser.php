@@ -10,13 +10,13 @@
  *  Pour plus de détails voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
-
 if (!defined('_ECRIRE_INC_VERSION')) {
 	return;
 }
 
 // fonction pour le pipeline
-function sites_autoriser() { }
+function sites_autoriser() {
+}
 
 
 // bouton du bandeau
@@ -72,7 +72,7 @@ function autoriser_controlersyndication_menu_dist($faire, $type, $id, $qui, $opt
 // Creer un nouveau site ?
 function autoriser_site_creer_dist($faire, $type, $id, $qui, $opt) {
 	return
-		($GLOBALS['meta']["activer_sites"] != 'non'
+		($GLOBALS['meta']['activer_sites'] != 'non'
 			and verifier_table_non_vide()
 			and (
 				$qui['statut'] == '0minirezo'
@@ -99,14 +99,14 @@ function autoriser_site_modifier_dist($faire, $type, $id, $qui, $opt) {
 		return true;
 	}
 
-	$r = sql_fetsel("id_rubrique,statut", "spip_syndic", "id_syndic=" . intval($id));
+	$r = sql_fetsel('id_rubrique,statut', 'spip_syndic', 'id_syndic=' . intval($id));
 
 	return ($r
 		and autoriser('voir', 'rubrique', $r['id_rubrique'])
 		and
 		($r['statut'] == 'publie' or (isset($opt['statut']) and $opt['statut'] == 'publie'))
 			? autoriser('publierdans', 'rubrique', $r['id_rubrique'], $qui, $opt)
-			: in_array($qui['statut'], array('0minirezo', '1comite'))
+			: in_array($qui['statut'], ['0minirezo', '1comite'])
 	);
 }
 
