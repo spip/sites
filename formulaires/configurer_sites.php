@@ -29,11 +29,11 @@ if (!defined('_ECRIRE_INC_VERSION')) {
 function formulaires_configurer_sites_charger_dist() {
 	foreach (
 		[
-				 'activer_sites',
-				 'activer_syndic',
-				 'proposer_sites',
-				 'moderation_sites',
-			 ] as $m
+			'activer_sites',
+			'activer_syndic',
+			'proposer_sites',
+			'moderation_sites',
+		] as $m
 	) {
 		$valeurs[$m] = isset($GLOBALS['meta'][$m]) ? $GLOBALS['meta'][$m] : '';
 	}
