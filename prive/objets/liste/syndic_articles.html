@@ -32,7 +32,7 @@
 				href="(#URL_ARTICLE)"[
 				(#LANG|=={#ENV{lang}}|non)hreflang="#LANG"]
 				title="<:info_numero_abbreviation|attribut_html:> #ID_SYNDIC_ARTICLE">#SET{a,'</a>'}]#TITRE[(#GET{a})]
-				<span class="auteurs">([(#LESAUTEURS), ][(#DATE|affdate_court)])</span>
+				<span class="auteurs">([(#LESAUTEURS)])</span>
 				[(#TAGS|afficher_enclosures)]
 				[<span class="tags"><em>(#TAGS|afficher_tags)</em></span>]
 				[<span class="source">[<a href="(#URL_SOURCE)">#SET{b,'</a>'}](#SOURCE|sinon{#URL_SOURCE})#GET{b}</span>]
