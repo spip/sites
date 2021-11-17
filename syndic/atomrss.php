@@ -399,13 +399,6 @@ function analyser_backend($rss, $url_syndic = '') {
 			$data['item'], $regs, PREG_PATTERN_ORDER)) {
 			$tags = $regs[0];
 		}
-		// Cas particulier : tags Connotea sous la forme <a class="postedtag">
-		if (preg_match_all(
-			',<a[[:space:]][^>]+ class="postedtag"[^>]*>.*</a>,Uims',
-			$data['item'], $regs, PREG_PATTERN_ORDER)) {
-			$tags = preg_replace(', class="postedtag",i',
-				' rel="tag"', $regs[0]);
-		}
 
 		$data['tags'] = $tags;
 		// enlever le html des titre pour etre homogene avec les autres objets spip
