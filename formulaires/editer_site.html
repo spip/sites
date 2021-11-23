@@ -25,7 +25,7 @@
 					  <div class="editer editer_url_auto pleine_largeur[ (#ENV**{erreurs}|table_valeur{url_auto}|oui)erreur]">
 							[<span class='erreur_message'>(#ENV**{erreurs}|table_valeur{url_auto})</span>]
 							<p class="explication"><:sites:texte_referencement_automatique:></p>
-							<input type="text" name="url_auto" id="url_auto" class='text' size='40' value="[(#ENV{url_site}|sinon{http://})]" />
+							<input type="text" name="url_auto" id="url_auto" class='text' size='40' placeholder="https://" value="#ENV{url_site}" />
 					  </div>
 				  </div>
 				  <p class="boutons"><input type='submit' class='btn submit' name='ajoute_url_auto' value='<:bouton_ajouter:>' /></p>
@@ -41,7 +41,7 @@
 	    <div class="editer editer_url_site obligatoire[ (#ENV**{erreurs}|table_valeur{url_site}|oui)erreur]">
 		    	<label for="url_site"><:sites:entree_adresse_site:></label>[
 				<span class='erreur_message'>(#ENV**{erreurs}|table_valeur{url_site})</span>
-		    	]<input type='text' class='text' name='url_site' id='url_site' value="[(#ENV**{url_site})]" />
+		    	]<input type='text' class='text' name='url_site' id='url_site' placeholder="https://" value="[(#ENV**{url_site})]" />
 	    </div>
 
 	 		[<div class="editer editer_parent[ (#ENV**{erreurs}|table_valeur{id_parent}|oui)erreur]">
