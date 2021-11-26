@@ -75,7 +75,8 @@
 	<langue code="hu" url="https://trad.spip.net/tradlang_module/sites?lang_cible=hu" total="123" traduits="66" relire="0" modifs="9" nouveaux="48" pourcent="53.66" />
 	<langue code="id" url="https://trad.spip.net/tradlang_module/sites?lang_cible=id" total="123" traduits="66" relire="0" modifs="9" nouveaux="48" pourcent="53.66" />
 	<langue code="is" url="https://trad.spip.net/tradlang_module/sites?lang_cible=is" total="123" traduits="3" relire="0" modifs="0" nouveaux="120" pourcent="2.44" />
-	<langue code="it" url="https://trad.spip.net/tradlang_module/sites?lang_cible=it" total="123" traduits="122" relire="0" modifs="0" nouveaux="1" pourcent="99.19">
+	<langue code="it" url="https://trad.spip.net/tradlang_module/sites?lang_cible=it" total="123" traduits="123" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
+		<traducteur nom="Alberto" lien="https://trad.spip.net/auteur/alberto" />
 		<traducteur nom="phante" lien="https://trad.spip.net/auteur/phante" />
 	</langue>
 	<langue code="it_fem" url="https://trad.spip.net/tradlang_module/sites?lang_cible=it_fem" total="123" traduits="68" relire="0" modifs="8" nouveaux="47" pourcent="55.28" />
