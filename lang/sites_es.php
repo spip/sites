@@ -41,6 +41,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'entree_description_site' => 'Descripción del sitio',
 	'erreur_fichier_format_inconnu' => 'No se puede gestionar el formato del archivo @fichier@.',
 	'erreur_fichier_incorrect' => 'Imposible leer el archivo.',
+	'erreur_methode_syndication_inconnue' => 'Método de sindicación @methode@ desconocido',
 
 	// F
 	'form_prop_nom_site' => 'Nombre del sitio',
