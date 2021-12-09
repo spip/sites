@@ -111,6 +111,7 @@
 	</langue>
 	<langue code="pt" url="https://trad.spip.net/tradlang_module/sites?lang_cible=pt" total="123" traduits="122" relire="0" modifs="0" nouveaux="1" pourcent="99.19">
 		<traducteur nom="Cláudia Anjos Lopes" lien="https://trad.spip.net/auteur/claudia_a_lopes" />
+		<traducteur nom="Miguel" lien="https://trad.spip.net/auteur/miguel" />
 	</langue>
 	<langue code="pt_br" url="https://trad.spip.net/tradlang_module/sites?lang_cible=pt_br" total="123" traduits="123" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
 		<traducteur nom="Ricardo Porto" lien="https://trad.spip.net/auteur/ricardo-porto" />
