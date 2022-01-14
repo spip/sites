@@ -48,7 +48,7 @@ function opml_startElement($xp, $element, $attr) {
 	}
 	if (!array_key_exists('XMLURL', $attr) && (array_key_exists('TEXT', $attr) || array_key_exists('TITLE', $attr))) {
 		//some opml use title instead of text to define a folder (ex: newzcrawler)
-		$folder = $attr['TEXT'] ? $attr['TEXT'] : $attr['TITLE'];
+		$folder = $attr['TEXT'] ?: $attr['TITLE'];
 		$inOpmlfolder = true;
 		$inOpmlItem = false;
 	} else {
@@ -82,7 +82,7 @@ function bookmarks_opml_insert($tree, $id_parent, $importer_statut_publie, $impo
 
 	$nb = 0;
 
-	if (count($tree)) {
+	if (is_countable($tree) ? count($tree) : 0) {
 		foreach ($tree as $key => $item) {
 			// cas d'un flux
 			if (array_key_exists('XMLURL', $item)) {

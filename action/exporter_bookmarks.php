@@ -22,7 +22,7 @@ function action_exporter_bookmarks_dist($arg = null) {
 	}
 
 	if (autoriser('exporter', '_sites')) {
-		list($id_parent, $exporter_publie_seulement, $exporter_avec_mots_cles) = explode('-', $arg);
+		[$id_parent, $exporter_publie_seulement, $exporter_avec_mots_cles] = explode('-', $arg);
 		$statut = ($exporter_publie_seulement ? ['publie'] : ['prop', 'publie']);
 
 		$f = 'bookmarks-' . date('Y-m-d') . '.html';

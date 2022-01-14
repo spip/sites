@@ -77,6 +77,7 @@ function syndic_atomrss_raw_data_to_array_dist($raw_data, $raw_format) {
  *     - string : texte d'erreur
  **/
 function analyser_backend($rss, $url_syndic = '') {
+	$articles = [];
 	include_spip('inc/texte'); # pour couper()
 
 	$rss = pipeline('pre_syndication', $rss);
@@ -96,7 +97,7 @@ function analyser_backend($rss, $url_syndic = '') {
 	$rss = preg_replace(',<(/?)(dc):,i', '<\1', $rss);
 
 	// chercher auteur/lang dans le fil au cas ou les items n'en auraient pas
-	list($header) = preg_split(',<(item|entry)\b,', $rss, 2);
+	[$header] = preg_split(',<(item|entry)\b,', $rss, 2);
 	if (
 		preg_match_all(
 			',<(author|creator)\b(.*)</\1>,Uims',
@@ -115,7 +116,7 @@ function analyser_backend($rss, $url_syndic = '') {
 		}
 		$les_auteurs_du_site = join(', ', array_unique($les_auteurs_du_site));
 	} else {
-		$les_auteurs_du_site = '';
+		$les_auteurs_du_site = [];
 	}
 
 	$langue_du_site = '';
@@ -571,7 +572,7 @@ function my_strtotime($la_date, $lang = null) {
 	// par la version anglaise avant de faire strtotime
 	if ($lang) {
 		// "fr-fr"
-		list($lang) = explode('-', $lang);
+		[$lang] = explode('-', $lang);
 		static $months = null;
 		if (!isset($months[$lang])) {
 			$prev_lang = $GLOBALS['spip_lang'];
@@ -587,7 +588,7 @@ function my_strtotime($la_date, $lang = null) {
 		}
 		spip_log($la_date_c, 'dbgs');
 		foreach ($months[$lang] as $loc => $en) {
-			if (stripos($la_date_c, $loc) !== false) {
+			if (stripos($la_date_c, (string) $loc) !== false) {
 				$s = str_ireplace($loc, $en, $la_date_c);
 				if ($s = strtotime($s)) {
 					return $s;
@@ -724,7 +725,7 @@ function cdata_echappe(&$rss, &$echappe_cdata) {
 			) {
 				// verifier que la chaine est encore dans le flux, car on peut avoir X fois la meme
 				// inutile de (sur)peupler le tableau avec des substitutions identiques
-				if (strpos($rss, $reg[0]) !== false) {
+				if (strpos($rss, (string) $reg[0]) !== false) {
 					$echappe_cdata["@@@SPIP_CDATA$n@@@"] = $reg[1];
 					$rss = str_replace($reg[0], "@@@SPIP_CDATA$n@@@", $rss);
 				}

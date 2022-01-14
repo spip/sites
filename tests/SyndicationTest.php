@@ -25,7 +25,7 @@ class SyndicationTest extends TestCase {
 		include_spip('inc/syndic');
 		$GLOBALS['controler_dates_rss'] = false;
 
-		$xml = file_get_contents(dirname(__FILE__).'/data/test-atom1-1.xml');
+		$xml = file_get_contents(__DIR__.'/data/test-atom1-1.xml');
 		$rss = analyser_backend($xml);
 
 		$this->assertEquals('http://localhost/spip/spip.php?article1', $rss[0]['url'], "erreur d'url item 0 sur test-atom1-1.xml");
@@ -69,7 +69,7 @@ class SyndicationTest extends TestCase {
 		include_spip('inc/syndic');
 		$GLOBALS['controler_dates_rss'] = false;
 
-		$rdf = file_get_contents(dirname(__FILE__).'/data/libre-en-fete.rdf');
+		$rdf = file_get_contents(__DIR__.'/data/libre-en-fete.rdf');
 		$rss = analyser_backend($rdf);
 
 		$this->assertEquals(strtotime('2007-03-20T14:00+01:00'),$rss[0]['date'],"erreur de date item 0 sur libre-en-fete.rdf");
@@ -79,7 +79,7 @@ class SyndicationTest extends TestCase {
 		include_spip('inc/syndic');
 		$GLOBALS['controler_dates_rss'] = false;
 
-		$xml = file_get_contents(dirname(__FILE__) . '/data/test-rss2-1.xml');
+		$xml = file_get_contents(__DIR__ . '/data/test-rss2-1.xml');
 		$rss = analyser_backend($xml);
 
 		$this->assertEquals('http://localhost/spip/spip.php?article1', $rss[0]['url'], "erreur d'url item 0 sur test-rss2-1.xml");
@@ -99,7 +99,7 @@ class SyndicationTest extends TestCase {
 		include_spip('inc/syndic');
 		$GLOBALS['controler_dates_rss'] = false;
 
-		$xml = file_get_contents(dirname(__FILE__).'/data/dailymotion.rss');
+		$xml = file_get_contents(__DIR__.'/data/dailymotion.rss');
 		$rss = analyser_backend($xml);
 
 		$this->assertCount(4,extraire_balises($rss[0]['enclosures'], 'a'),"mauvais compte d'enclosures sur le premier item");

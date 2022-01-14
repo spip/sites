@@ -89,10 +89,10 @@ function bookmarks_insert($tree, $id_parent, $importer_statut_publie, $importer_
 
 	$nb = 0;
 	if (
-		count($tree['content']['links'])
+		is_countable($tree['content']['links']) ? count($tree['content']['links']) : 0
 		or isset($tree['sub'])
 	) {
-		$titre = ($tree['content']['titre'] ? $tree['content']['titre'] : _T('info_sans_titre'));
+		$titre = ($tree['content']['titre'] ?: _T('info_sans_titre'));
 		$id_rubrique = sql_getfetsel(
 			'id_rubrique',
 			'spip_rubriques',
@@ -122,7 +122,7 @@ function bookmarks_insert($tree, $id_parent, $importer_statut_publie, $importer_
 					$set = [
 						'url_site' => $link['url'],
 						'nom_site' => $link['titre'],
-						'date' => date('Y-m-d H:i:s', $link['date'] ? $link['date'] : $now),
+						'date' => date('Y-m-d H:i:s', $link['date'] ?: $now),
 						'statut' => $statut,
 						'descriptif' => $link['descriptif']
 					];

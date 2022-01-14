@@ -177,7 +177,7 @@ function syndic_a_jour($now_id_syndic) {
 	}
 
 	// moderation automatique des liens qui sont sortis du feed
-	if (count($faits) > 0) {
+	if ((is_countable($faits) ? count($faits) : 0) > 0) {
 		$not_faits = sql_in('id_syndic_article', $faits, 'NOT');
 		if ($site['miroir'] == 'oui') {
 			sql_update(
@@ -225,6 +225,7 @@ function syndic_a_jour($now_id_syndic) {
  *     true si l'article est nouveau, false sinon.
  **/
 function inserer_article_syndique($data, $now_id_syndic, $statut, $url_site, $url_syndic, $resume, &$faits, $methode_syndication = '') {
+	$id_syndic = null;
 	// Creer le lien s'il est nouveau - cle=(id_syndic,url)
 	$le_lien = $data['url'];
 
@@ -290,7 +291,7 @@ function inserer_article_syndique($data, $now_id_syndic, $statut, $url_site, $ur
 		$champs = [
 			'id_syndic' => $now_id_syndic,
 			'url' => $le_lien,
-			'date' => date('Y-m-d H:i:s', $data['date'] ? $data['date'] : $data['lastbuilddate']),
+			'date' => date('Y-m-d H:i:s', $data['date'] ?: $data['lastbuilddate']),
 			'statut' => $statut
 		];
 		// Envoyer aux plugins
@@ -340,7 +341,7 @@ function inserer_article_syndique($data, $now_id_syndic, $statut, $url_site, $ur
 	if ($resume != 'non') {
 		// mode "resume"
 		$desc = (isset($data['descriptif']) and strlen($data['descriptif'])) ? $data['descriptif']
-			: (isset($data['content']) ? $data['content'] : '');
+			: ($data['content'] ?? '');
 		$desc = couper(trim_more(textebrut($desc)), 300);
 	} else {
 		// mode "full syndication"
@@ -352,7 +353,7 @@ function inserer_article_syndique($data, $now_id_syndic, $statut, $url_site, $ur
 	}
 
 	// tags & enclosures (preparer spip_syndic_articles.tags)
-	$tags = ($data['enclosures'] ? $data['enclosures'] : '');
+	$tags = ($data['enclosures'] ?: '');
 	# eviter les doublons (cle = url+titre) et passer d'un tableau a une chaine
 	if ($data['tags']) {
 		$vus = [];

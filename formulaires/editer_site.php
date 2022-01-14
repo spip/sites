@@ -160,6 +160,7 @@ function formulaires_editer_site_verifier_dist(
 	$row = [],
 	$hidden = ''
 ) {
+	$erreurs = [];
 	include_spip('inc/filtres');
 	include_spip('inc/site');
 	$oblis = ['nom_site', 'url_site', 'id_parent'];

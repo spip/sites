@@ -20,7 +20,7 @@ function action_instituer_syndic_article_dist() {
 	$securiser_action = charger_fonction('securiser_action', 'inc');
 	$arg = $securiser_action();
 
-	list($id_syndic_article, $statut) = preg_split('/\W/', $arg);
+	[$id_syndic_article, $statut] = preg_split('/\W/', $arg);
 
 	if (
 		$id_syndic_article = intval($id_syndic_article)

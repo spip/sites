@@ -80,7 +80,7 @@ function syndic_article_raw_data_to_array($methode_syndication, $raw_data, $raw_
  *     Pile complétée par le code à générer
  **/
 function balise_RAW_DATA_dist($p) {
-	$b = $p->nom_boucle ? $p->nom_boucle : $p->id_boucle;
+	$b = $p->nom_boucle ?: $p->id_boucle;
 	$_raw_data = index_pile($p->id_boucle, 'raw_data', $p->boucles, $b);
 
 	if ($p->etoile) {

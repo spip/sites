@@ -30,6 +30,7 @@ if (!defined('_ECRIRE_INC_VERSION')) {
  *     - false : site impossible à récupérer
  **/
 function analyser_site($url) {
+	$result = [];
 	include_spip('inc/filtres');
 	include_spip('inc/distant');
 
@@ -128,7 +129,7 @@ function analyser_site($url) {
 		if (preg_match(',<title[^>]*>(.*),ims', $head, $regs)) {
 			$titre = trim($regs[1]);
 			if (!strlen($titre)) {
-				$titre = substr($head, strpos($head, $regs[0]));
+				$titre = substr($head, strpos($head, (string) $regs[0]));
 			}
 			$result['nom_site'] = filtrer_entites(supprimer_tags(preg_replace(',</title>.*$,ims', '', $titre)));
 		}

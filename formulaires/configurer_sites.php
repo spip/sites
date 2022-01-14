@@ -35,7 +35,7 @@ function formulaires_configurer_sites_charger_dist() {
 			'moderation_sites',
 		] as $m
 	) {
-		$valeurs[$m] = isset($GLOBALS['meta'][$m]) ? $GLOBALS['meta'][$m] : '';
+		$valeurs[$m] = $GLOBALS['meta'][$m] ?? '';
 	}
 
 	return $valeurs;
