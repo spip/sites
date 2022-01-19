@@ -561,11 +561,6 @@ parameters:
 			path: inc/feedfinder.php
 
 		-
-			message: "#^Function recuperer_url not found\\.$#"
-			count: 1
-			path: inc/feedfinder.php
-
-		-
 			message: "#^Function suivre_lien not found\\.$#"
 			count: 3
 			path: inc/feedfinder.php
