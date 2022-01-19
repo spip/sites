@@ -15,7 +15,6 @@ if (!defined('_ECRIRE_INC_VERSION')) {
 }
 
 
-// https://code.spip.net/@puce_statut_site_dist
 function puce_statut_site_dist($id, $statut, $id_rubrique, $type, $ajax = '', $menu_rapide = _ACTIVER_PUCE_RAPIDE) {
 
 	$t = sql_getfetsel('syndication', 'spip_syndic', 'id_syndic=' . intval($id));

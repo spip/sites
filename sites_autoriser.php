@@ -39,7 +39,6 @@ function autoriser_sites_voir_dist($faire, $type = '', $id = 0, $qui = null, $op
 // Moderer la syndication ?
 // = modifier l'objet correspondant (si forum attache a un objet)
 // = droits par defaut sinon (admin complet pour moderation complete)
-// https://code.spip.net/@autoriser_modererforum_dist
 function autoriser_site_moderer_dist($faire, $type, $id, $qui, $opt) {
 	return
 		autoriser('modifier', 'site', $id, $qui, $opt);
@@ -83,7 +82,6 @@ function autoriser_site_creer_dist($faire, $type, $id, $qui, $opt) {
 // Pour creer un site dans la rubrique $id il faut:
 // - que la rubrique existe et soit accessible pour l'auteur
 // - que l'on puisse créer un site
-// https://code.spip.net/@autoriser_rubrique_creersitedans_dist
 function autoriser_rubrique_creersitedans_dist($faire, $type, $id, $qui, $opt) {
 	return
 		$id
@@ -93,7 +91,6 @@ function autoriser_rubrique_creersitedans_dist($faire, $type, $id, $qui, $opt) {
 
 
 // Autoriser a modifier un site
-// https://code.spip.net/@autoriser_site_modifier_dist
 function autoriser_site_modifier_dist($faire, $type, $id, $qui, $opt) {
 	if ($qui['statut'] == '0minirezo' and !$qui['restreint']) {
 		return true;
@@ -111,7 +108,6 @@ function autoriser_site_modifier_dist($faire, $type, $id, $qui, $opt) {
 }
 
 // Autoriser a voir un site $id_syndic
-// https://code.spip.net/@autoriser_site_voir_dist
 function autoriser_site_voir_dist($faire, $type, $id, $qui, $opt) {
 	return
 		autoriser_site_modifier_dist($faire, $type, $id, $qui, $opt);

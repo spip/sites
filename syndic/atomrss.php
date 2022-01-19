@@ -605,7 +605,6 @@ function my_strtotime($la_date, $lang = null) {
 
 // A partir d'un <dc:subject> ou autre essayer de recuperer
 // le mot et son url ; on cree <a href="url" rel="tag">mot</a>
-// https://code.spip.net/@creer_tag
 function creer_tag($mot, $type, $url) {
 	if (!strlen($mot = trim($mot))) {
 		return '';
@@ -622,7 +621,6 @@ function creer_tag($mot, $type, $url) {
 }
 
 
-// https://code.spip.net/@ajouter_tags
 function ajouter_tags($matches, $item) {
 	include_spip('inc/filtres');
 	$tags = [];
@@ -707,7 +705,6 @@ function ajouter_tags($matches, $item) {
 
 
 // Lit contenu des blocs [[CDATA]] dans un flux
-// https://code.spip.net/@cdata_echappe_retour
 function cdata_echappe(&$rss, &$echappe_cdata) {
 	$echappe_cdata = [];
 	if (
@@ -737,7 +734,6 @@ function cdata_echappe(&$rss, &$echappe_cdata) {
 }
 
 // Retablit le contenu des blocs [[CDATA]] dans une chaine ou un tableau
-// https://code.spip.net/@cdata_echappe_retour
 function cdata_echappe_retour(&$x, &$echappe_cdata, $filtrer_entites = true) {
 	if (is_string($x)) {
 		if ($filtrer_entites and strpos($x, '&lt;') !== false) {
