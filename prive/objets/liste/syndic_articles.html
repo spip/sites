@@ -38,7 +38,7 @@
 				[<span class="source">[<a href="(#URL_SOURCE)">#SET{b,'</a>'}](#SOURCE|sinon{#URL_SOURCE})#GET{b}</span>]
 			</td>
 			[(#ENV{id_syndic,''}|non)
-			<td class='site'><a href="[(#ID_SYNDIC|generer_url_entite{site})]"
+			<td class='site'><a href="[(#ID_SYNDIC|generer_objet_url{site})]"
 				title="<:info_numero_abbreviation|attribut_html:> #ID_SYNDIC">#INFO_TITRE{syndic,#ID_SYNDIC}</a></td>
 			]
 			<td class='date secondaire'>[(#DATE|affdate_jourcourt)]</td>

@@ -23,7 +23,7 @@
 				{si #GET{lister}}
 				>
 				<li id="site-#ID_SYNDIC" class="item" data-jstree='{"type":"site"}' data-objet="site">
-					<a href="[(#ID_SYNDIC|generer_url_entite{site})]"
+					<a href="[(#ID_SYNDIC|generer_objet_url{site})]"
 						title="[(#VAL{site}|objet_info{texte_objet}|_T) #ID_SYNDIC]">
 						[(#STATUT|puce_statut{site}) ][(#NOM_SITE|couper{80}|sinon{<:info_sans_titre:>})]
 					</a>
