@@ -116,7 +116,7 @@ function analyser_backend($rss, $url_syndic = '') {
 		}
 		$les_auteurs_du_site = join(', ', array_unique($les_auteurs_du_site));
 	} else {
-		$les_auteurs_du_site = [];
+		$les_auteurs_du_site = '';
 	}
 
 	$langue_du_site = '';
