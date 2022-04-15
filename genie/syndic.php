@@ -35,7 +35,12 @@ if (!defined('_PERIODE_SYNDICATION_SUSPENDUE')) {
 	 */
 	define('_PERIODE_SYNDICATION_SUSPENDUE', 24 * 60);
 }
-
+if (!defined ('_SYNDIC_ARTICLE_DESCRIPTIF_MAX_LONGUEUR')) {
+	/**
+	 * Longueur maximale du texte d'un article syndiqué
+	 */
+	define('_SYNDIC_ARTICLE_DESCRIPTIF_MAX_LONGUEUR', 300);
+}
 
 /**
  * Cron de mise à jour des sites syndiqués
@@ -342,7 +347,7 @@ function inserer_article_syndique($data, $now_id_syndic, $statut, $url_site, $ur
 		// mode "resume"
 		$desc = (isset($data['descriptif']) and strlen($data['descriptif'])) ? $data['descriptif']
 			: ($data['content'] ?? '');
-		$desc = couper(trim_more(textebrut($desc)), 300);
+		$desc = couper(trim_more(textebrut($desc)), _SYNDIC_ARTICLE_DESCRIPTIF_MAX_LONGUEUR);
 	} else {
 		// mode "full syndication"
 		// choisir le contenu pertinent
