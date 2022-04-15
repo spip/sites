@@ -148,6 +148,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_sites_proposes' => 'Les sites proposés',
 	'titre_sites_references_rubrique' => 'Les sites référencés dans cette rubrique',
 	'titre_sites_syndiques' => 'Les sites syndiqués',
+	'titre_sites_non_syndiques' => 'Les sites non syndiqués',
 	'titre_sites_tous' => 'Les sites référencés',
 	'titre_syndication' => 'Syndication de sites',
 	'tout_voir' => 'Voir tous les articles syndiqués',
