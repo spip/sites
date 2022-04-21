@@ -18,7 +18,7 @@
 
 		<div class="editer-groupe">
 		[(#ENV{id_syndic}|intval|>{0}|sinon{#ENV{url_site}}|non)
-			[(#SESSION{statut}|=={0minirezo}|?{' ',#ENV{config}|table_valeur{proposer_sites}|>{0}|oui})
+			[(#SESSION{statut}|=={0minirezo}|?{' ',#CONFIG{proposer_sites}|>{0}|oui})
 			<div class="editer editer_referencement_automatise fieldset">
 			  <fieldset>
 				  <div class="editer-groupe">
