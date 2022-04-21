@@ -1,7 +1,7 @@
 <div class="formulaire_spip formulaire_editer formulaire_editer_site formulaire_editer_site-#ENV{id_syndic,nouveau}[ (#ENV**{logo}|oui)withlogo]">
 	[<p class="reponse_formulaire reponse_formulaire_ok" role="status">(#ENV**{message_ok})</p>]
 	[<p class="reponse_formulaire reponse_formulaire_erreur" role="alert">(#ENV*{message_erreur})</p>]
-	[<p class="notice">(#ENV*{erreurs}|table_valeur{verif_url_auto})</p>]
+	[<p class="notice">(#ENV*{erreurs/verif_url_auto})</p>]
 	[(#ENV{editable})
 	<form method='post' action='#ENV{action}'><div>
 		[(#REM) declarer les hidden qui declencheront le service du formulaire 
@@ -22,8 +22,8 @@
 			<div class="editer editer_referencement_automatise fieldset">
 			  <fieldset>
 				  <div class="editer-groupe">
-					  <div class="editer editer_url_auto pleine_largeur[ (#ENV**{erreurs}|table_valeur{url_auto}|oui)erreur]">
-							[<span class='erreur_message'>(#ENV**{erreurs}|table_valeur{url_auto})</span>]
+					  <div class="editer editer_url_auto pleine_largeur[ (#ENV**{erreurs/url_auto}|oui)erreur]">
+							[<span class='erreur_message'>(#ENV**{erreurs/url_auto})</span>]
 							<p class="explication"><:sites:texte_referencement_automatique:></p>
 							<input type="text" name="url_auto" id="url_auto" class='text' size='40' placeholder="https://" value="#ENV{url_site}" />
 					  </div>
@@ -33,27 +33,27 @@
 				</fieldset>
 		  </div>
 			]]
-	    <div class="editer editer_nom_site obligatoire[ (#ENV**{erreurs}|table_valeur{nom_site}|oui)erreur]">
+	    <div class="editer editer_nom_site obligatoire[ (#ENV**{erreurs/nom_site}|oui)erreur]">
 		    	<label for="nom_site"><:sites:info_nom_site_2:></label>[
-				<span class='erreur_message'>(#ENV**{erreurs}|table_valeur{nom_site})</span>
+				<span class='erreur_message'>(#ENV**{erreurs/nom_site})</span>
 		      	]<input type='text' class='text' name='nom_site' id='nom_site' value="[(#ENV**{nom_site})]" />
 	    </div>
-	    <div class="editer editer_url_site obligatoire[ (#ENV**{erreurs}|table_valeur{url_site}|oui)erreur]">
+	    <div class="editer editer_url_site obligatoire[ (#ENV**{erreurs/url_site}|oui)erreur]">
 		    	<label for="url_site"><:sites:entree_adresse_site:></label>[
-				<span class='erreur_message'>(#ENV**{erreurs}|table_valeur{url_site})</span>
+				<span class='erreur_message'>(#ENV**{erreurs/url_site})</span>
 		    	]<input type='text' class='text' name='url_site' id='url_site' placeholder="https://" value="[(#ENV**{url_site})]" />
 	    </div>
 
-	 		[<div class="editer editer_parent[ (#ENV**{erreurs}|table_valeur{id_parent}|oui)erreur]">
+	 		[<div class="editer editer_parent[ (#ENV**{erreurs/id_parent}|oui)erreur]">
 				<label for="titreparent"><:titre_cadre_interieur_rubrique:>[
-				<span class='erreur_message'>(#ENV**{erreurs}|table_valeur{id_parent})</span>
+				<span class='erreur_message'>(#ENV**{erreurs/id_parent})</span>
 				]
-				</label>(#VAL|chercher_rubrique{#ENV{id_syndic},#ENV{id_rubrique}|sinon{#ENV{id_parent}},'site',#ENV{id_secteur},#ENV**{config}|table_valeur{restreint},0,form_simple})
+				</label>(#VAL|chercher_rubrique{#ENV{id_syndic},#ENV{id_rubrique}|sinon{#ENV{id_parent}},'site',#ENV{id_secteur},#ENV**{config/restreint},0,form_simple})
 	    </div>]
 	    
-	    <div class="editer editer_descriptif[ (#ENV**{erreurs}|table_valeur{descriptif}|oui)erreur]">
+	    <div class="editer editer_descriptif[ (#ENV**{erreurs/descriptif}|oui)erreur]">
 		    	<label for="descriptif"><:sites:entree_description_site:></label>[
-				<span class='erreur_message'>(#ENV**{erreurs}|table_valeur{descriptif})</span>
+				<span class='erreur_message'>(#ENV**{erreurs/descriptif})</span>
 		    	]<textarea name='descriptif' id='descriptif' rows='4' cols='40'>[(#ENV**{descriptif})]</textarea>
 	    </div>
 	    [(#CONFIG{activer_syndic}|=={non}|?{'',' '})
