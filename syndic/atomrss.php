@@ -360,7 +360,7 @@ function analyser_backend($rss, $url_syndic = '') {
 		) {
 			$data['lang'] = trim($match[3]);
 		} else {
-			if ($lang = trim(extraire_attribut($item, 'xml:lang'))) {
+			if ($lang = trim(extraire_attribut($item, 'xml:lang') ?? '')) {
 				$data['lang'] = $lang;
 			} else {
 				$data['lang'] = trim($langue_du_site);
