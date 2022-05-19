@@ -81,7 +81,7 @@ function analyser_site($url) {
 					// on installe l'url comme url du site
 					// si c'est non vide, en donnant la priorite a rel=alternate
 					if (
-						preg_match(',\balternate\b,', extraire_attribut($link, 'rel'))
+						preg_match(',\balternate\b,', extraire_attribut($link, 'rel') ?? '')
 						or !isset($result['url_site'])
 					) {
 						$result['url_site'] = filtrer_entites($u);
