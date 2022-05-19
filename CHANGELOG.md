@@ -4,6 +4,7 @@
 
 ### Added
 
+- #4838 Constante `_SYNDIC_ARTICLE_DESCRIPTIF_MAX_LONGUEUR` définit la taille max du texte enregistré d'un article syndiqué (en mode résumé)
 - Fichiers `README.md` et `CHANGELOG.md`
 
 ### Changed
