@@ -145,6 +145,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_page_sites_tous' => 'Referenced sites',
 	'titre_referencement_sites' => 'Sites referencing and syndication',
 	'titre_site_numero' => 'SITE NUMBER:',
+	'titre_sites_non_syndiques' => 'Non syndicated sites',
 	'titre_sites_proposes' => 'Submitted sites',
 	'titre_sites_references_rubrique' => 'Referenced sites in this section',
 	'titre_sites_syndiques' => 'Syndicated sites',
