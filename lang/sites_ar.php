@@ -147,6 +147,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_page_sites_tous' => 'المواقع المبوبة',
 	'titre_referencement_sites' => 'تبويب وترخيص المواقع',
 	'titre_site_numero' => 'موقع رقم:',
+	'titre_sites_non_syndiques' => 'المواقع غير المرخصة',
 	'titre_sites_proposes' => 'المواقع المقترحة',
 	'titre_sites_references_rubrique' => 'المواقع المبوبة في هذا القسم',
 	'titre_sites_syndiques' => 'المواقع المرخصة',
